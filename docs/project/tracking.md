@@ -19,7 +19,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | merged (talk side) | Opus 5.5 | b4dd0b8 | non-locked top-3 65.2% (45/69); n=87 (no taps after 09-16); Grailith branch awaits Gerald's merge gate |
 | Presentation plan swarm (Marp) | plan/* → plan/synthesis | merged; proceeding (D10) | Sonnet ×3 + Opus 5.5 ×2, Fable review | see log | talk/plan/presentation-plan.md §6 has 8 questions; build swarm L1–L5 ready to launch on approval |
 | Build L1 scaffold | build/scaffold | merged | Sonnet → coordinator check | c3182ea | + deps triage and --no-stdin (da1f055); chart filenames to reconcile in L6 |
-| Build L2 charts | build/charts | review fixes in progress | Sonnet → coordinator check | c5643c8 | 4 fixes: E79 and D4 rows misstated, label clipping, whisker/label overlap |
+| Build L2 charts | build/charts | merged | Sonnet → coordinator check | 3142b3e | 7 SVGs; 4 review fixes (2 content) confirmed by render |
+| Build L6 integrate | build/integrate | running | Sonnet → Opus 5.5 | — | reference remap (4 charts, 3 shots), notes into deck, all 22 slides looked at |
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
@@ -28,6 +29,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:4x PDT — All five build lanes merged (L1–L5). L6 integrate launched with the exact reference remap from the coordinator's deck-vs-assets diff. Next: Opus 5.5 review of the deck, then L7 persona critique and rehearsal.
 
 - 2026-09-24 10:3x PDT — L3 shots merged (e6dd10c). Dependabot 12 → 2 after rescan (the accepted extract-zip chain). L2 charts returned for 4 review fixes, two of them content errors in the remembered-vs-recorded table. Then L6 integrate.
 
