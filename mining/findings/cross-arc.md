@@ -16,3 +16,4 @@ outside its own arc files it here instead of editing another arc's doc.
   a *built* artifact) is structurally the same pattern arc F (agents-as-labelers) uses for agent
   verdict-of-record vs. human review — worth comparing gate designs across the two arcs.
   [src: memory `design-panel-is-the-done-gate` · 2026-09-13; arc C]
+- Arc A (index/language): `docs/plan/2026-09-08-card-identification-problem-brief.md` §7/§9 gives a measured "artwork accuracy 64.8%" (E62) and a shadow-served "language head" re-rank moving print@1 64.7%→77.6% — this is the primary document for reconciling Gerald's "index composition / dedup / cross-language art" recollection (D4) against the record; it also directly evidences arc B's identify-speed pivot context (same brief's §5 "Speed work is parked" note). [src: mine/pivots lane, 2026-09-24]
