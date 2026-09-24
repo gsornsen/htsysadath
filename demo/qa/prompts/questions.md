@@ -15,7 +15,8 @@ Rules:
 - `why` is one short sentence: what on the slides or in the notes provokes it.
 - `slide_ref` is the slide number (an integer) the question is about, or 0 if it's about the talk
   as a whole.
-- Do not name any real person, company or customer other than the speaker (Gerald).
+- Address the speaker as "you" in the question; in `why`, call him "the speaker". Never write
+  his name or the word "founder". Do not name any real person, company or customer.
 - Output STRICT JSON only: no Markdown fences, no prose before or after. The exact shape:
 
 {"questions":[{"question":"…","likelihood":4,"why":"…","slide_ref":12}]}

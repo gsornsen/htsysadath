@@ -41,6 +41,10 @@ const K_GRAILITH = 3; // grailith excerpts per answer (live + GRAILITH_DIR only)
 const CHUNK_MAX = 1600; // max chars per excerpt
 const MAX_WORDS = 120;
 const GRAILITH_GLOBS = ['docs/experiments', 'docs/plan/2026-09-18-trunk-consolidation/experiment-ledger.md'];
+// The answers are Gerald's own, in the first person; outputs never refer to him in the third person.
+const THIRD_PERSON = /founder|gerald/i;
+// Left out of the Grailith pool: the operator's own working-lane notes (about the person, not an experiment).
+const GRAILITH_EXCLUDE = /founder/i;
 const DISALLOWED_TOOLS = 'Bash,Edit,Write,Read,Glob,Grep,WebFetch,WebSearch,Task,NotebookEdit';
 
 // ---- args ----
@@ -91,7 +95,7 @@ const STOP = new Set(('a an the and or but if then than so of to in on at by for
   'be been being do does did done have has had having it its this that these those there here what which who whom whose ' +
   'when where why how you your yours i me my we our us they them their he she his her not no yes can could would should ' +
   'will shall may might must just also about over under more most less least very really any all each every some such ' +
-  'only own same other both few many much one two three get got make made like actually talk slide slides gerald said ' +
+  'only own same other both few many much get got make made like actually talk slide slides gerald said ' +
   'say says mean means did didnt dont doesnt isnt wasnt youre youve ive thats whats vs via per').split(/\s+/));
 function stem(t) {
   if (t.length > 5 && t.endsWith('ing')) return t.slice(0, -3);
@@ -127,7 +131,7 @@ function grailithPaths(dir) {
     if (fs.statSync(abs).isDirectory()) out.push(...listMd(abs, false).map((p) => path.relative(dir, p).split(path.sep).join('/')));
     else out.push(g);
   }
-  return [...new Set(out)].sort(cmp);
+  return [...new Set(out)].filter((p) => !GRAILITH_EXCLUDE.test(p)).sort(cmp);
 }
 function pass0() {
   const repo = repoCorpusPaths().map((p) => {
@@ -181,8 +185,14 @@ function extractJson(text) {
 }
 async function modelJson(prompt, validate) {
   let lastErr;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try { return validate(extractJson(await callClaude(prompt, args.model))); } catch (e) { lastErr = e; }
+  let p = prompt;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try { return validate(extractJson(await callClaude(p, args.model))); } catch (e) {
+      lastErr = e;
+      // Re-ask with the rejection reason appended (the fixture key stays that of the base prompt).
+      p = `${prompt}\n\n=== YOUR PREVIOUS OUTPUT WAS REJECTED ===\n${e.message}. ` +
+        'Follow every rule above (first person only: never "Gerald" or "the founder"), and output STRICT JSON only.';
+    }
   }
   throw lastErr;
 }
@@ -196,10 +206,13 @@ async function pool(items, n, fn) {
 
 // ---- pass 1: questions ----
 function validateQuestions(obj) {
-  if (!obj || !Array.isArray(obj.questions) || obj.questions.length < 3) throw new Error('questions: bad shape');
+  if (!obj || !Array.isArray(obj.questions)) throw new Error('questions: bad shape');
+  // Questions that name the speaker in the third person are dropped, not rewritten.
+  const kept = obj.questions.filter((q) => q && typeof q.question === 'string' && q.question.trim() &&
+    !THIRD_PERSON.test(q.question) && !THIRD_PERSON.test(String(q.why ?? '')));
+  if (kept.length < 5) throw new Error('questions: too few usable questions');
   return {
-    questions: obj.questions.map((q) => {
-      if (typeof q.question !== 'string' || !q.question.trim()) throw new Error('questions: empty question');
+    questions: kept.map((q) => {
       const lk = Math.round(Number(q.likelihood));
       return { question: q.question.trim(), likelihood: Math.min(5, Math.max(1, Number.isFinite(lk) ? lk : 1)),
         why: String(q.why ?? '').trim(), slide_ref: Math.max(0, Math.round(Number(q.slide_ref)) || 0) };
@@ -293,26 +306,41 @@ function chunkFile(p, text) {
   }
   return chunks;
 }
+// BM25 (k1 1.2, b 0.75) over heading-cut chunks; idf computed within each pool (repo, grailith).
+const BM25_K1 = 1.2;
+const BM25_B = 0.75;
+const RETRIEVAL_VERSION = 'bm25-v3';
 function buildIndex(files) {
   const chunks = files.flatMap((f) => chunkFile(f.path, f.text));
   const df = new Map();
-  for (const c of chunks) { c.toks = tokenSet(c.text); for (const t of c.toks) df.set(t, (df.get(t) || 0) + 1); }
+  let totalLen = 0;
+  for (const c of chunks) {
+    const toks = tokens(c.text);
+    c.len = toks.length;
+    totalLen += c.len;
+    c.tf = new Map();
+    for (const t of toks) c.tf.set(t, (c.tf.get(t) || 0) + 1);
+    for (const t of c.tf.keys()) df.set(t, (df.get(t) || 0) + 1);
+  }
   const N = chunks.length;
-  const idf = (t) => Math.log(1 + N / (df.get(t) || N));
-  return { chunks, idf };
+  const avgdl = N ? totalLen / N : 1;
+  const idf = (t) => { const d = df.get(t) || 0; return Math.log(1 + (N - d + 0.5) / (d + 0.5)); };
+  return { chunks, idf, avgdl };
 }
 function retrieve(index, qToks, k) {
   if (!index) return [];
   const scored = [];
   for (const c of index.chunks) {
     let s = 0;
-    for (const t of qToks) if (c.toks.has(t)) s += index.idf(t);
+    for (const t of qToks) {
+      const tf = c.tf.get(t);
+      if (tf) s += index.idf(t) * (tf * (BM25_K1 + 1)) / (tf + BM25_K1 * (1 - BM25_B + BM25_B * c.len / index.avgdl));
+    }
     if (s > 0) scored.push({ c, s: Math.round(s * 1e6) });
   }
   scored.sort((a, b) => b.s - a.s || cmp(a.c.path, b.c.path) || a.c.seq - b.c.seq);
   return scored.slice(0, k).map((x) => x.c);
 }
-const locatorOf = (c) => c.heading;
 const headerOf = (c, n) => `[${n}] ${c.path} § ${c.heading}${c.part ? ` (part ${c.part})` : ''}`;
 
 // ---- pass 3: answers ----
@@ -320,7 +348,12 @@ function validateAnswer(obj) {
   const G = ['sourced', 'testimony', 'not in the record'];
   if (!obj || typeof obj.answer !== 'string' || !obj.answer.trim()) throw new Error('answer: empty');
   if (!G.includes(obj.grounding)) throw new Error(`answer: bad grounding ${obj.grounding}`);
+  const words = obj.answer.trim().split(/\s+/).length;
+  if (words > MAX_WORDS) throw new Error(`answer: ${words} words`);
   const citations = Array.isArray(obj.citations) ? obj.citations : [];
+  if (THIRD_PERSON.test(obj.answer) || citations.some((c) => THIRD_PERSON.test(String(c?.locator ?? '')))) {
+    throw new Error('answer: third-person reference to the speaker');
+  }
   return { answer: obj.answer.trim().replace(/\s+/g, ' '), grounding: obj.grounding,
     citations: citations.filter((c) => c && typeof c.path === 'string')
       .map((c) => ({ path: c.path.trim(), locator: String(c.locator ?? '').trim() })) };
@@ -335,7 +368,7 @@ async function pass3(ranked, questionsById, snap, used) {
     const qText = r.members.map((id) => questionsById.get(id).question).join(' ');
     const qToks = [...tokenSet(qText)].sort(cmp);
     const repoEx = retrieve(repoIndex, qToks, K_REPO);
-    const key = sha256(JSON.stringify(['answer', sha256(tmpl), r.id, r.question,
+    const key = sha256(JSON.stringify(['answer', RETRIEVAL_VERSION, K_GRAILITH, sha256(tmpl), r.id, r.question,
       repoEx.map((c) => [c.path, c.heading, c.part, sha256(c.text)]), snap.grailithHash]));
     used.answers.add(key);
     return { r, qToks, repoEx, key };
@@ -351,7 +384,7 @@ async function pass3(ranked, questionsById, snap, used) {
       console.error(`  answers: calling ${args.model} for ${r.id} (rank ${r.rank})`);
       const output = await modelJson(prompt, validateAnswer);
       fx = { pass: 'answers', key, id: r.id, model: args.model,
-        excerpts: ex.map((c) => ({ path: c.path, locator: locatorOf(c), part: c.part })), output };
+        excerpts: ex.map((c) => ({ path: c.path, chunk: c.seq, sha256: sha256(c.text) })), output };
       writeJson(fixturePath('answers', key), fx);
     }
     if (!fx) die(`missing replay fixture replay/answers/${key}.json (question ${r.id}); run --live`);
@@ -367,6 +400,9 @@ const normLoose = (s) => s.toLowerCase().replace(/[*`_>|\\]/g, '').replace(/[“
 function cleanLocator(loc) {
   return loc.replace(/\s*\(part \d+\)\s*$/i, '').replace(/^§\s*/, '').replace(/^#+\s*/, '').trim();
 }
+// Schema shared with render.mjs: [{id, ok, citations:[{path, locator, status}]}], where status is
+// "verified" | "failed" | "unverifiable". ok is false when any citation failed, the answer runs
+// over MAX_WORDS, or a sourced/testimony answer cites nothing. Reasons go to stderr only.
 function pass4(answers, snap) {
   const corpusPaths = new Set(snap.corpus.files.map((f) => f.path));
   const repoText = new Map(snap.repo.map((f) => [f.path, normLoose(f.text)]));
@@ -377,24 +413,26 @@ function pass4(answers, snap) {
     const words = a.answer.split(/\s+/).filter(Boolean).length;
     if (words > MAX_WORDS) issues.push(`answer is ${words} words (> ${MAX_WORDS})`);
     if (a.grounding !== 'not in the record' && a.citations.length === 0) issues.push(`grounding "${a.grounding}" but no citations`);
-    let unverifiable = false;
     const citations = a.citations.map((c) => {
       let status;
+      let why = '';
       const needle = normLoose(cleanLocator(c.locator));
-      if (!corpusPaths.has(c.path)) status = 'path not in corpus';
-      else if (!needle) status = 'empty locator';
+      if (!corpusPaths.has(c.path)) { status = 'failed'; why = 'path not in corpus'; }
+      else if (!needle) { status = 'failed'; why = 'empty locator'; }
       else if (c.path.startsWith('grailith:')) {
         const p = c.path.slice('grailith:'.length);
         const abs = envG ? path.join(envG, p) : null;
         if (abs && fs.existsSync(abs) && sha256(fs.readFileSync(abs)) === gSha.get(c.path)) {
-          status = normLoose(readText(abs)).includes(needle) ? 'ok' : 'locator not found';
-        } else { status = 'unverifiable in public replay'; unverifiable = true; }
-      } else status = repoText.get(c.path).includes(needle) ? 'ok' : 'locator not found';
-      if (status !== 'ok' && status !== 'unverifiable in public replay') issues.push(`${c.path}: ${status}`);
+          status = normLoose(readText(abs)).includes(needle) ? 'verified' : 'failed';
+          if (status === 'failed') why = 'locator not found';
+        } else status = 'unverifiable';
+      } else if (repoText.get(c.path).includes(needle)) status = 'verified';
+      else { status = 'failed'; why = 'locator not found'; }
+      if (status === 'failed') issues.push(`${c.path}: ${why}`);
       return { path: c.path, locator: c.locator, status };
     });
-    const status = issues.length ? 'flagged' : unverifiable ? 'unverifiable' : 'ok';
-    return { id: a.id, status, words, issues, citations };
+    for (const i of issues) console.error(`    verify ${a.id}: ${i}`);
+    return { id: a.id, ok: issues.length === 0, citations };
   });
 }
 
@@ -426,8 +464,9 @@ async function main() {
 
   const verify = pass4(answers, snap);
   writeJson(path.join(args.out, 'verify.json'), verify);
-  const vs = verify.reduce((m, v) => ({ ...m, [v.status]: (m[v.status] || 0) + 1 }), {});
-  console.error(`  pass 4 verify: ${Object.entries(vs).map(([k, v]) => `${k} ${v}`).join(', ')}`);
+  const cs = verify.flatMap((v) => v.citations).reduce((m, c) => ({ ...m, [c.status]: (m[c.status] || 0) + 1 }), {});
+  console.error(`  pass 4 verify: ${verify.filter((v) => v.ok).length}/${verify.length} answers ok; citations ` +
+    `${Object.entries(cs).sort(([x], [y]) => cmp(x, y)).map(([k, v]) => `${k} ${v}`).join(', ')}`);
 
   // Live runs prune fixtures no longer referenced, so replay/ holds exactly one run's calls.
   if (args.live) {
