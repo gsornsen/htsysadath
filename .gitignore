@@ -13,3 +13,6 @@ mining/raw/
 node_modules/
 __pycache__/
 scratch/
+
+# demo/fanout run output — regenerated each run, not versioned
+demo/out/

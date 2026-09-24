@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+# demo/fanout — Demo 1: start four persona drafts of talk/abstract-rough.md in parallel.
+#
+# Kicked off on stage at slide 4 (talk/plan/presentation-plan.md #4, "What changed");
+# revealed at slide 15 via `demo/viewer` on :8090. See talk/plan/02-live-demos.md Demo 1 and
+# prompts/04-audience-drafts.md Part 2.
+#
+# Usage:
+#   demo/fanout
+#
+# Prints exactly one line and returns immediately (< 1 s). The four `claude -p` runs continue
+# in the background; poll their progress with the viewer or by reading demo/out/*.status.
+#
+# Model: Sonnet tier for all four lanes (--model sonnet), per docs/agents/coordinator.md.
+# Auth: whatever `claude` is already logged in as on this machine (Gerald's CLI session).
+# This script never reads, passes, or echoes a key or token.
+
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ABSTRACT="$ROOT/talk/abstract-rough.md"
+PROMPT_DIR="$ROOT/demo/fanout.d"
+OUT_DIR="$ROOT/demo/out"
+MODEL="sonnet"
+
+PERSONAS=(engineer pm designer exec)
+
+if [[ ! -f "$ABSTRACT" ]]; then
+  echo "fanout: missing $ABSTRACT" >&2
+  exit 1
+fi
+
+mkdir -p "$OUT_DIR"
+
+now_iso() { date -u +%Y-%m-%dT%H:%M:%SZ; }
+
+run_lane() {
+  local persona="$1"
+  local prompt_file="$PROMPT_DIR/${persona}.md"
+  local draft_file="$OUT_DIR/${persona}.md"
+  local err_file="$OUT_DIR/${persona}.err"
+  local status_file="$OUT_DIR/${persona}.status"
+  local start_ts
+
+  if [[ ! -f "$prompt_file" ]]; then
+    {
+      echo "state=failed"
+      echo "start=$(now_iso)"
+      echo "end=$(now_iso)"
+      echo "error=missing prompt file $prompt_file"
+    } > "$status_file"
+    return
+  fi
+
+  start_ts="$(now_iso)"
+  {
+    echo "state=running"
+    echo "start=$start_ts"
+    echo "end="
+  } > "$status_file"
+
+  local prompt
+  prompt="$(cat "$prompt_file")
+
+---
+ROUGH DRAFT (Gerald's own words, unedited):
+---
+$(cat "$ABSTRACT")"
+
+  if claude -p "$prompt" \
+      --model "$MODEL" \
+      --output-format text \
+      --disallowed-tools "Bash,Edit,Write,Read,Glob,Grep,WebFetch,WebSearch,Task" \
+      > "$draft_file" 2> "$err_file"; then
+    {
+      echo "state=done"
+      echo "start=$start_ts"
+      echo "end=$(now_iso)"
+    } > "$status_file"
+  else
+    {
+      echo "state=failed"
+      echo "start=$start_ts"
+      echo "end=$(now_iso)"
+    } > "$status_file"
+  fi
+}
+
+for persona in "${PERSONAS[@]}"; do
+  {
+    echo "state=queued"
+    echo "start="
+    echo "end="
+  } > "$OUT_DIR/${persona}.status"
+done
+
+for persona in "${PERSONAS[@]}"; do
+  ( run_lane "$persona" ) &
+  disown
+done
+
+echo "fanout: 4 lanes started (${PERSONAS[*]}), model=sonnet, writing demo/out/*.{status,md} — view: PORT=8090 node demo/viewer/server.mjs"
