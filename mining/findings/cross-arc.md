@@ -58,3 +58,8 @@ outside its own arc files it here instead of editing another arc's doc.
   wrong. The 09-13 B1 replay compared two single crops (b00 vs b17), never the vote; E79b's single
   crop beat the vote 31 vs 26 of 41 and stands. Now a counter-example ("a 'replication' that tested
   different arms"), not a record-corrects-memory instance. [src: EXP-E79 177749ea6; ledger E79; D12]
+- CORRECTION (D18, 2026-09-24): D12's "single crop beat the vote" is narrowed. E79's vote was over
+  PADDING variants of one chosen quad; the extension votes over five different rectangles. On a replay
+  of recorded fires, a single rank-1 crop locked wrong cards (e.g. a shelf as "Pikachu 160") where the
+  vote was right. Padding helps; dropping the rectangle vote doesn't. [src: EXP-E79 lines 5–8;
+  demo lane replay on the dev box, 2026-09-24; D18]

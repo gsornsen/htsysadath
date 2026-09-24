@@ -357,3 +357,28 @@ bidder's avatars and usernames pixelated for the public repo; the original is in
 Demo 2 is kept pending Gerald (he didn't mention it). Details: structure-v2.md § v3.
 **D17 addendum (Gerald, 11:2x):** Demo 2 (the repo-record replay) is CUT too. 18 slides + backup; its
 minutes go to the live card-scout demo and the gates slide. The only live moment is now the card-scout demo.
+
+## D18 · 2026-09-24 · D12 narrowed: E79 tested padding, not "one rectangle vs the vote"
+
+**What the Demo 0 lane found (coordinator verified E79's setup text, lines 5–8).** E79's "vote" was across
+six PADDING variants of one already-chosen quad (b00 tight; b08/b17/b25/b34 = tight + N px; outer17).
+The extension's five crops are five DIFFERENT rectangles from the proposer. So E79's "one b17 crop beats
+the vote, 31 vs 26 of 41" means **padding one good crop ~17 px beats voting over paddings of it**. It says
+nothing about dropping the rectangle vote. Replayed today on the dev box (no production):
+- in 4,723 recorded fires the vote picked the proposer's rank-1 rectangle only 37 % of the time;
+- where the vote locked a card (443 fires), rank-1 alone gave a DIFFERENT card above the lock floor on 148;
+- a "single" build (rank-1 + 17 px) locked a background shelf as "Pikachu 160" (0.71) where the vote
+  served Zekrom ex. Single mode is NOT safe to demo.
+- Side effect: production's scout beta gate only inspects multi-crop requests, so a single-crop build
+  pointed at production would bypass it (`services/pregrade/src/index.ts` ~779–840).
+
+**Correction to D12.** D12 said "the single-crop win stands" and treated it as settled. The E79 numbers
+stand; the INTERPRETATION ("drop the proposer's vote") doesn't carry over to the extension. The verify
+lane flagged this as an open question before D12 was written ("E79's vote was a stand-in"); the
+coordinator didn't raise it. Gerald's "single crop raised accuracy" is true for padding. The extension
+still needs the vote until something better than rank-1 picks the quad.
+
+**Demo.** Run the live card-scout demo on `cropMode: "proposals"` (a one-line storage flip; ~0.5–0.75 s
+on the dev box). The Grailith branch `demo/scout-single-crop` (7afd3587, be24b57d, aa2104f6; tests
+1857 → 1864, all green) is NOT merged. Its default "single" should flip to "proposals" before any use
+(Gerald decides).

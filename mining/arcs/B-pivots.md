@@ -77,8 +77,8 @@ and the server keeps the best-scoring crop. The ship gate scored 19 correct / 0 
 founder called it "a hack/optimization around poor accuracy prior to fixing catalog issues". On
 41 scenes, E79b scored the vote 26/41 at 1,893 ms and one padded crop 31/41 at 337 ms
 [src: docs/experiments/EXP-E79-single-crop-vs-proposal-vote-2026-09-09.md]. The ledger's verdict: "drop the vote
-hack" (E79 status done, not shipped). The extension still sends five crops; the follow-up never reached
-it [src: experiment-ledger E79 @ f75d531d; content.ts captureProposals; D12].
+hack", but E79's vote was over padding variants of one quad, not the extension's five rectangles.
+Replayed on 2026-09-24, dropping the rectangle vote locks wrong cards; the extension keeps it [D18].
 
 **The counter-example (D5).** A review lane read the overlapping commit dates as parallel work
 and rebuilt this arc as concurrent spines. The founder corrected it: dates show when commits
