@@ -141,7 +141,7 @@ the answer was in two of them. Finding which two is what the loop bought.
 
 ## Demo · the card scout, live
 
-<span class="stage-target">the scout, live →</span>
+<span class="stage-target">the scout</span>
 
 <!--
 Enough history. Here it is, live, on a real stream. The extension cuts a few candidate boxes around
