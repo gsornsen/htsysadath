@@ -121,3 +121,27 @@ This is now the third instance of the same lesson (with D4's framing and D5's or
 **the remembered number is tidier than the record.** That pattern has earned its own slide.
 Gerald still owes an answer on where his ~3 min came from — if it is a real stopwatch memory,
 it is worth instrumenting once and quoting properly rather than dropping.
+
+## D7 · 2026-09-24 · D6 reversed: the 3-min baseline is founder testimony, and it stays
+
+**Context.** D6 dropped "~3 min per label by hand" as unsourced. Gerald (08:2x PDT): he timed
+himself with the first labeler build and shared the average in a session message. The
+coordinator then searched every human-typed message in all 30 transcript files on this laptop
+(the 28 inventoried plus `-git-grAIde-main` and one worktree folder the inventory missed):
+no timing message. The 09-07 session brief records sessions running on a second account;
+the first labeling sessions most plausibly live there, outside the mined corpus.
+
+**Decision.** D6's drop is reversed. The talk quotes **~3 min/label by hand** as Gerald's own
+measurement, attributed as founder testimony with the original message "not in the mined
+corpus". Absence from a partial corpus is not evidence against a firsthand measurement; D6
+treated it as if it were. The agent side stays as measured: **11–16 s agent wall time per task
+(E84), agent-only, excluding human review.**
+
+**New evidence from the same search, which the talk should use.** Gerald, 2026-09-14 05:02
+(session `403300ff`): "~30+ label tasks as admin in like 10 minutes" after the P0/P1 redesign,
+roughly **20 s per task by a human**. So the 3-min figure fell through two levers, not one:
+agents doing the first pass (11–16 s) and a redesigned UI making human review fast (~20 s).
+The honest slide shows both. Crediting agents alone would overclaim.
+
+**Lesson (method).** D6's mistake: "not found in what we mined" became "not sourced" without
+first asking the one person who was there. The corpus-coverage gap is logged in tracking.md.
