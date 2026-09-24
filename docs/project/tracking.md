@@ -35,8 +35,9 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Visuals V1: diagrams (svg-infographic) | visuals/diagrams | merged | Opus 5.5 → coordinator | 53d87b9 | 7 diagrams incl. gates-flags; 2 honesty fixes |
 | Visuals V2: charts (svg-linyaosky) | visuals/charts2 | merged | Sonnet → coordinator | see log | jitter-drops, d4-slope (556), lot-bar tiles, lot-days |
 | Critique round 2 | critique2/* → talk/plan/critique2.md | converged | Opus 5.5 ×4 → Fable | 5fb7adb | 12/14/11/12 of 20; fix contract F1/F2/F3 |
-| Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | F2+F3 merged; F1 running | Opus 5.5 ×2 + Sonnet | 1ef7ab4 | polish ON HOLD until v4 is settled |
-| Deck v4 (audience-first), PROPOSAL | story/deck-v4 | running | Opus 5.5 → coordinator → Gerald | — | structure-v4.md; merge only on Gerald's approval |
+| Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | all merged | Opus 5.5 ×2 + Sonnet | 1de0c23 | polish after Gerald's v4 review |
+| Deck v4 (audience-first) | story/deck-v4 | MERGED on Gerald's call (fix forward) | Opus 5.5 | 2538683 | Gerald reviewing at localhost:8080 |
+| V4 visuals: four-problems + plain labels | fix/v4-visuals | running | Opus 5.5 → coordinator | — | assets only; deck text untouched while Gerald reviews |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | merged; public replay verified | Opus 5.5 → coordinator | see log | site sha 8ed55e42…; check.sh OK with GRAILITH unset; 1 answer flagged stale (by design); re-run --live once the deck settles |
@@ -48,6 +49,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 13:1x PDT — Gerald: merge v4 and fix forward. F1 visuals + deck v4 merged (2538683), pushed, opened at localhost:8080. The V4 visuals lane is drawing four-problems.svg and stripping internal labels from the charts.
 
 - 2026-09-24 13:0x PDT — Q&A demo complete: public replay reproduces the committed page byte for byte (check.sh OK with GRAILITH_DIR unset). Fixture keys no longer hash drifting excerpts (the lane corrected the coordinator's diagnosis). Awaiting Gerald: deck v4 merge; the JA code fix merge/deploy; the JA branch on dev.
 
