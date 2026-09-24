@@ -44,7 +44,7 @@ card detection, or how we generate embeddings. Each area had about three parts o
 explore, and each part had about five experiments [abstract]. 3 areas × 3 parts × ~5 experiments
 = 45+ forks for one bug.
 
-<!-- ending: pending verify/jitter-ending -->
+<!-- ending (D14; WHERE it is said depends on Gerald's story-plan answer Q2, early vs payoff): "The data showed us where it was flapping. A 3x faster server cut thrown-away answers from 36 to 15 in every 100; then one behaviour change, cancel the request but keep the answer, took it to about 1 in 700. Three days from the first instrumented complaint." [D14; E19: 35.8 -> 15.4 -> 0.14 per 100, against a control] -->
 
 ## Slide 3 · Why we push through
 
@@ -276,7 +276,7 @@ and a starter kit at starter/. Thanks.
 All of the Claude work ran within Gerald's Claude Max subscription budget — no separate Claude
 spend. The only metered model spend in the record is the labeling pilots' vision-model calls:
 about $9 for a 760-task run [D13]. Hold-out check (E67's 201 test crops vs the E65a head's 432
-real training crops): ⟨pending verify/holdout⟩.
+real training crops): held out: 0 of the 201 test photos were used to train or tune the head. It trained on catalogue images only, and its one knob was set on a separate dev split [D14]. Caveat if pressed: the head has seen the catalogue render of the true card, which is the gallery, known at inference, not leakage.
 
 ---
 
