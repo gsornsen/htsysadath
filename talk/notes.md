@@ -1,14 +1,14 @@
-# Speaker notes v3
+# Speaker notes v4
 
-Lane `story/S1-deck-v2` · Opus 5.5 · 2026-09-24 11:1x PDT. Built on structure v2
-(`talk/plan/structure-v2.md`, D16) with Gerald's D17 changes on top (coordinator message, 11:3x):
-the talk opens on a screenshot of the scout today and goes live at slide 8; a new focus slide on
-gates and flags; persona drafts, Demo 1, Demo 2 and "Against paralysis" are cut. D18: the crop
-vote stays (E79 was about padding one crop), so nothing here claims a single crop beat it. Gerald is protagonist and
-narrator. Remembered-vs-recorded is cut from the talk; the D-log stays in the repo. The spoken part
-is written to be said out loud (60–150 words a slide); stage directions sit in **Stage** blocks and
-don't count. This file and the Marp notes in `talk/slides/deck.md` are kept in sync by hand.
-`⟨…⟩` marks a placeholder; placeholders live here only, never on a slide.
+Lane `fix/F2-deck` · Opus 5.5 · 2026-09-24 11:48 PDT. v3 (lane `story/S1-deck-v2`, built on
+structure v2 and D17) revised against critique round 2 (`talk/plan/critique2.md`, section F2): old
+slide 13 splits into 13 (top-3 halves the gain) and 14 (the bar, live), so every later slide moves
+up by one; slide 6 carries the definitions and the cost line; slide 12 says the shipped arm was
+found after the kill; slide 19 gives each action a first step and a starter path. D18 still holds:
+the crop vote stays, and nothing here claims a single crop beat it. Gerald is protagonist and
+narrator. The spoken part is written to be said out loud (60–150 words a slide); stage directions
+sit in **Stage** blocks and don't count. This file and the Marp notes in `talk/slides/deck.md` are
+kept in sync by hand. There are no placeholders left in either.
 
 ## Citation key
 
@@ -18,8 +18,9 @@ don't count. This file and the Marp notes in `talk/slides/deck.md` are kept in s
 | `[D1]`…`[D18]` | `docs/project/decisions.md` |
 | `[arc A]` `[arc B]` `[arc C]` `[arc E]` `[arc F]` | `mining/arcs/{A-experiments,B-pivots,C-personas-review,E-coordinator,F-agent-labeling}.md` |
 | `[E67-top3]` `[lot-top3]` `[top3-traj]` | `mining/findings/{E67-top3-replay,lot-top3-unlocked,top3-trajectory}.md` |
-| `[gates-and-flags]` | `mining/findings/gates-and-flags.md` (main `fe50602`) |
+| `[gates-and-flags]` | `mining/findings/gates-and-flags.md` |
 | `[brief]` | `docs/project/brief.md` |
+| `[starter]` | `starter/` in this repo: `two-lanes/`, `two-lanes/unattended.md`, `persona-gate/` |
 | `[P1]`…`[P6]` | the provenance rows at the end of this file |
 | `[G:<sha>]` | a Grailith (grAIde-main) commit, read-only |
 | `[G:ledger]` | Grailith `docs/plan/2026-09-18-trunk-consolidation/experiment-ledger.md` |
@@ -27,7 +28,8 @@ don't count. This file and the Marp notes in `talk/slides/deck.md` are kept in s
 
 **Testimony vs evidence.** Three things in these notes are Gerald's own account, not the record,
 and are said that way on stage: the 3 × 3 × 5 fork grid [P5], the ~3 min a label by hand [D7], and
-~30 minutes a day of his time [D16].
+~30 minutes a day of his time [D16]. One more line is his framing, not a finding: the sentence for
+your boss on slide 19.
 
 ---
 
@@ -36,28 +38,31 @@ and are said that way on stage: the 3 × 3 × 5 fork grid [P5], the ~3 min a lab
 Hi, I'm Gerald. This talk is about what to do at a fork in the road: when a hard problem lands in
 the middle of a project and your instinct says push through. I'm going to show you how I apply
 three things, orchestration, gates and experiments, and which method fits which kind of problem.
-It's my own project, told in first person. Everything I claim is in a public repo with its source,
-so you can check me [D1; D16]. But first, here's where it ended up.
+It's my own project, told in first person. Every claim I make is written up in a public repo with
+where it came from, so you can trace it [D1; D16]. But first, here's where it ended up.
 
 ## Slide 2 · The scout today
 
 This is the scout, today. It's a browser extension I built that identifies trading cards on live
 auction streams [arc B]. A card comes up on the stream, and the scout's overlay says which card it
-is here Gengar, Stormfront 18 of 100: my capture beside the reference art, then the raw prices by condition and the graded comps. The usernames are pixelated; the rest is as it looked. What
+is, here Gengar, Stormfront 18 of 100: my capture beside the reference art, then the raw prices by
+condition and the graded comps. The usernames are pixelated; the rest is as it looked [D17]. What
 you can't see in a still is the part I care about: it lands and it stays put. In August the same
 step took somewhere between six and fifteen seconds, and then it changed its mind on screen
 [arc B; D14]. I'll show it to you live in a few minutes. First, how it got here.
 
 ## Slide 3 · How we got here
 
-Here's the whole trip on one line. In August the scout's identify was an LLM vision call: six to
-fifteen seconds live, and a 10.4-second median when we benchmarked it overnight on August 18th
-[arc B; G:3f5eabd7e · 08-18]. Two nights later an image-embedding model won on speed, at 44 ms
-[arc B; G:423e2e894 · 08-20]. By September 11th one identify round trip was about 375 ms at the
-median [P1]. Along the way there were seven places that, in my experience, could each have eaten
-weeks: latency, the jitter, accuracy across languages, the crop policy, labeling throughput,
-knowing when the UI was done, and measuring the right bar [arc B; D14; arc A; D18; D7; arc C;
-lot-top3]. The rest of this talk is how each one went, and which method it took.
+Here's the whole trip on one line, and both ends measure the same thing: identify latency as the
+client sees it, from sending the card to getting an answer back. In August identify was an LLM
+vision call: six to fifteen seconds live, and a 10.4-second median in the August 18th bakeoff,
+though that median is only six captures [arc B; G:3f5eabd7e · 08-18]. Two nights later an
+image-embedding model won on speed [arc B; G:423e2e894 · 08-20]. By September 11th the client's
+round trip was about 375 ms at the median [P1]. Along the way there were seven places that, in my
+experience, could each have eaten weeks: latency, the jitter, accuracy across languages, the crop
+policy, labeling throughput, knowing when the UI was done, and measuring the right bar [arc B; D14;
+arc A; D18; D7; arc C; lot-top3]. The rest of this talk is how each one went, and which method it
+took.
 
 ## Slide 4 · The first sign
 
@@ -81,13 +86,16 @@ through, and hope.
 
 ## Slide 6 · What changed
 
-What changed wasn't a smarter model. It was three steps. Instrument the key transitions, so I
-could see where it flapped: PostHog events, plus a record of every fire [P2; G:1267e680e · 08-22;
-G:3c52c2b72 · 09-04]. Replay that data offline, so an experiment doesn't need a live stream [P2].
-Then run gated experiments, each in its own git worktree, many of them overnight [P3; P4]. When a
-gate cleared, the work merged and the next experiment unlocked [abstract; P4]. That came to about
-a hundred experiments in two weeks [D13]. My part was about half an hour a day, spread across the
-day, setting agents up for the night. That's my estimate, not a measurement [D16].
+What changed wasn't a smarter model. Three words first. A worktree is a second checkout of the same
+repo, so two agents never edit the same files. A gate is a pass-or-fail bar written before the
+run. A flag is a switch that keeps new code off in production until I turn it on. Then the loop:
+instrument the key transitions and record live sessions [P2; G:1267e680e · 08-22; G:3c52c2b72 ·
+09-04], replay them offline [P2], and run gated experiments in worktrees, many overnight [P3; P4].
+When a gate cleared, the work merged and the next experiment unlocked [P4]. The cost, along the
+bottom: about half an hour a day of my time setting it up, which is my estimate, not a measurement,
+and it doesn't count mornings reading results [D16]. A flat Claude Max subscription; the only
+metered spend was about $9 of labeling calls on another provider [D13]. About a hundred experiments
+in two weeks [D13]. The jitter, fixed in three days [D14].
 
 ## Slide 7 · Jitter, resolved
 
@@ -101,18 +109,25 @@ experiment for the jitter at all [D14].
 
 ## Slide 8 · Demo: the card scout, live
 
-Enough history. Here it is, live, on a real stream. The extension proposes several crops of the
-card, the server turns each into an embedding, and the crops vote on the answer [D18;
-G:3079bbc68 · 09-02]. That vote is a fork the experiments settled, and not the way I first read it.
-E79 compared padding on one chosen crop: pad it about 17 pixels and it helps. It never replaced the
-vote, and a replay today of running without it locked wrong cards [D18; D12]. So the rule is: pad
-the crop about 17 pixels, and keep the vote [D18]. Watch the card. It identifies, and it holds. If
-it misses, that's the one-in-three I'll show you in a few minutes [lot-top3].
+Enough history. Here it is, live, on a real stream. The extension cuts a few candidate boxes around
+the card, each one is matched against the catalogue, and the boxes vote on the answer [D18;
+G:3079bbc68 · 09-02]. Even that was a fork the experiments settled, and not the way I first read
+it. One experiment showed that a little extra margin around a single box helps. It never showed
+that one box beats the vote, and when we replayed recorded sessions without the vote, it locked
+wrong cards [D18; D12]. So we kept both: a little margin, and the vote [D18]. Watch the card. It
+identifies, and it holds. If it misses, that's the one in three I'll show you in a few minutes
+[lot-top3].
 
 **Stage (5.0 min, the live demo).**
 1. Before the talk: load the dev-box build in the presenting browser with the vote ON
    (`cropMode: "proposals"`) and point it at the dev stack; confirm the stack answers from the
-   venue network; open a stream tab with cards on screen [D18]. The build: Grailith branch `demo/scout-single-crop` at `7e38ca42`, v0.4.37, loaded unpacked (disable the regular scout build first, or every card fires twice). Options → the dev-box preset. Sign in to the dev web app in the same browser profile. The vote is the default; nothing to set [D18]. Health: the dev stack's `/api/health` answers 200 from the venue network. Stream: any live show with cards on screen. Afterwards, park the tab on about:blank, because an idle live tab keeps spending pricing calls [gates-and-flags].
+   venue network; open a stream tab with cards on screen [D18]. The build: Grailith branch
+   `demo/scout-single-crop` at `7e38ca42`, v0.4.37, loaded unpacked (disable the regular scout
+   build first, or every card fires twice). Options → the dev-box preset. Sign in to the dev web
+   app in the same browser profile. The vote is the default; nothing to set [D18]. Health: the dev
+   stack's `/api/health` answers 200 from the venue network. Stream: any live show with cards on
+   screen. Afterwards, park the tab on about:blank, because an idle live tab keeps spending
+   pricing calls [gates-and-flags].
 2. On this slide, switch to the stream tab. Wait for a card. Point at the overlay as it identifies,
    then leave it alone for a few seconds so the room sees it hold. Let two or three cards go by.
 3. If a card is wrong, say: "That's one of the misses." Don't retry on stage.
@@ -124,70 +139,83 @@ it misses, that's the one-in-three I'll show you in a few minutes [lot-top3].
 ## Slide 9 · Which method fits which problem
 
 Now the methods, because the jitter was one fork of many, and they didn't all want the same tool.
-Here's the map. A fork with many plausible fixes wants orchestration: parallel lanes [arc E]. To
-let those lanes run while you sleep, you need gates and flags [gates-and-flags]. An idea you want to be true
-wants a kill line, written before the run [arc A]. "Is it good enough?" wants the bar measured in
-the product's own units [lot-top3]. A long list of possible work wants gates that let you stop
-[G:ledger]. One hard piece that several things depend on: solve it first [D11]. "Is the UI done?"
-wants a persona review gate, and your own hands last [arc C]. Repetitive judgment work: agents
-first, a human verdict [arc F]. One slide each.
+This map is the rest of the talk, in order. Too many forks and one of you: lanes, with a reviewer
+one tier up, slide 10 [arc E]. Runs you can't watch: gates and flags, 11 [gates-and-flags]. A
+favourite idea: a kill line written before the run, 12 [arc A]. "Is it better?": measure the bar
+that matters, 13 and 14 [E67-top3; lot-top3]. Too much to try: let the gates tell you what to
+stop, 15 [G:ledger]. One hard core under many products: solve it once, first, 16 [D11]. "Is the
+UI done?": a persona review gate, 17 [arc C]. Repetitive judgment work: agents first, a human
+verdict, 18 [arc F].
 
 ## Slide 10 · Method: orchestration
 
-Orchestration first, because everything else ran on it. One senior session, the coordinator,
-writes the brief: files, acceptance tests, what's off limits. Cheaper models build to it, each in a
-lane: one task, its own branch and worktree, so lanes never collide [arc E]. A gate is a pass/fail
-check written before the work. The reviewer always sits one tier above whoever built it, never a
-peer [arc E]. Lanes commit early, because a usage limit killed three build lanes mid-work on
-September 7th [arc E]. This chart is this talk repo's own lanes. It isn't free: an early rule
-letting the swarm steer itself broke the next day, and I had to keep correcting it [arc E].
+Orchestration first, because everything else ran on it. The coordinator is one session on my
+strongest model, Fable. It writes the briefs and judges the results; it doesn't build [D2; arc E].
+A lane starts as a new git worktree and branch, with one Claude Code session in it, handed a brief:
+the files, the acceptance test, what's off limits [arc E]. Cheaper models build in the lanes, so
+lanes never collide. The gate is written before the work, and the reviewer always sits one tier
+above whoever built it, never a peer [arc E]. Lanes commit early, because a usage limit killed
+three build lanes mid-work on September 7th [arc E]. This chart is this talk repo's own lanes. It
+isn't free: an early rule letting the swarm steer itself broke the next day, and I had to keep
+correcting it [arc E].
 
 ## Slide 11 · Method: gates and flags
 
-Here's what let experiments run while I slept. Five steps. I hand over a window with an end time. The queue goes in with each gate and the
-night's hard rules stated up front. Each result re-grooms the queue. Gates are judged on frozen,
-offline data, so no verdict needs a live stream. And in the morning I get one file, and only the
-calls only I can make, like flipping production [gates-and-flags]. Four mechanisms hold it up. A
-kill bar written first: E67's fired. Flags on in dev, off in prod: the language head went live on
-September 9th on my word. Caps per run: 8 calls, 60 seconds, $6, raised to 14 when agents hit
-the wall. And production refuses unsafe config at boot [gates-and-flags]. It isn't airtight. An
-idle Chrome tab burned a full day's API allowance overnight before anyone noticed. The watchdog came
-after [gates-and-flags].
+Here's what let experiments run while I slept. I hand over a window with an end time, then six
+things, in the order of the numbers [gates-and-flags]. One: before the run, a pass-or-kill bar is
+written down; E67's fired. Two: the change sits behind a flag, on in dev, off in prod. Three: every
+run is capped on tool calls, time and money. The example here is my labeling agents: 8 calls, 60
+seconds, $6 a run, raised to 14 calls when they hit the wall. Four: guard rails. Production refuses
+unsafe config at boot, and a watchdog parks idle tabs. Five: gates are judged offline, on frozen,
+recorded data. Six: the gate passes, the change merges, and the next experiment unlocks. In the
+morning I get one file with the calls only I can make, like flipping production; the language head
+went live that way on September 9th [gates-and-flags]. It isn't airtight. Before that watchdog, an
+idle tab burned a full day's API allowance overnight [gates-and-flags].
 
-**Stage (4.0 min).** This is the focus slide. Slow down. Walk the diagram left to right as you name
-each step, then point at each mechanism once. Don't quote any credit or dollar amount for the idle
-tab; "a full day's allowance" is the line.
+**Stage (4.0 min).** This is the focus slide. Slow down. The six boxes snake, so follow the
+numbers, not left to right, and point at each box as you say its number. Don't quote any credit or
+dollar amount for the idle tab; "a full day's allowance" is the line.
 
 ## Slide 12 · Method: kill lines in action
 
 Kill lines are for the idea you want to be true. Japanese cards were scoring higher similarity than
 English ones, and a census found 96 % of 19,258 Japanese renders had an English twin with
 identical art [arc A]. My instinct was to de-duplicate the index. The kill line was written down
-before the run. De-duplication lost 14.43 points of top-1, and the kill fired [arc A]. Scoring past
-it, keeping the flat index and adding a small language head lifted top-1 from 67.66 % to 77.61 % on
-201 test crops: 20 fixed, none broken [arc A; E67-top3]. It shipped on September 9th [arc A]. The
-idea I expected to win lost, and that loss found the change we shipped.
+before the run. De-duplication lost 14.43 points of top-1, and the kill fired [arc A]. Then,
+after the kill, we tried one arm that wasn't in the plan: keep the flat index and add a small
+language head. On the same 201 test crops it lifted top-1 from 67.66 % to 77.61 %: 20 fixed, none
+broken [arc A; E67-top3]. Found after the kill, on the same split, it's a lead, not proof. It went
+out behind a flag, and prod flipped only after a replay: 12 fixed, none broken
+[gates-and-flags]. The idea I expected to win lost, and that loss found the change we shipped.
 
-## Slide 13 · Method: measure the bar
+## Slide 13 · Method: measure the bar: top-3 halves the gain
 
-But top-1 isn't my bar. My bar is top-3: the right card somewhere in the picker's three
-candidates [top3-traj]. Replayed at top-3, after checking the replay reproduced the top-1 numbers
-exactly, the same win goes from 83.58 % to 89.05 %. Real, but plus 5.47 points, not 9.95
-[E67-top3]. Then the bar that matters, live lots. Of all 87 truth lots in the record, the scout
-didn't auto-lock 69, and on those the right card was in the top 3 in 45. That's 65.2 %, with an
-interval of 53 to 75 % [lot-top3]. The truth is my own taps, one tapper, five days of streams
+But top-1 isn't my bar. My bar is top-3: the right card somewhere in the three candidates the
+scout offers [top3-traj]. We replayed the same test at top-3, after checking the replay
+reproduced the top-1 numbers exactly. The same win goes from 83.58 % to 89.05 %. Real, but plus
+5.47 points, not 9.95 [E67-top3]. Half the gain disappears once you score what the user actually
+sees.
+
+## Slide 14 · Method: measure the bar: the bar, live
+
+So, the bar that matters: live lots. Two words. Auto-lock means the scout commits to one card on
+its own. When it doesn't, it shows three candidates, and I want the right card among them. Of all
+87 lots where I tapped the truth, the scout auto-locked 18, and it was right on 16 of those. It
+didn't lock 69, and on those the right card was in the top 3 in 45. That's 65.2 %, somewhere
+between about 53 and 75 % given how few lots there are [lot-top3]. The truth is my own taps: one
+tapper, five days of streams, and almost all English cards, so the Japanese side is barely tested
 [lot-top3]. About two in three. Not done, but measurable, and I know which number to move.
 
-## Slide 14 · Method: stop things
+## Slide 15 · Method: stop things
 
-Gates pay off as much in what they let you stop. We stopped a SigLIP2 encoder swap that came in
-9.55 points down [G:ledger · E57]. The fine-tune and the distilled student both failed their bars
-[G:ledger · E58, E53d]. We never re-embedded the reference art [G:ledger · E12, E39]. And paying for
-more Japanese art showed zero lift, so we didn't scale it [G:ledger · E119]. A lot of the hundred
-experiments were like these: they saved time by returning a clean no, and nobody had to argue
-about it afterwards.
+Gates pay off as much in what they let you stop. We stopped a newer image encoder that came in
+9.55 points down on the test set [G:ledger · E57]. A fine-tune and a smaller distilled model both
+failed their bars [G:ledger · E58, E53d]. We never re-embedded the reference art [G:ledger · E12,
+E39]. And paying for more Japanese art showed zero lift, so we didn't scale it [G:ledger · E119].
+A lot of the hundred experiments were like these: they saved time by returning a clean no, and
+nobody had to argue about it afterwards.
 
-## Slide 15 · Method: hardest shared core first
+## Slide 16 · Method: hardest shared core first
 
 Some problems aren't forks; they're foundations. Identify was the hardest part of the whole system,
 and two apps needed it: bulk scan and the scout. Every app like them I'd tested was slow and
@@ -197,19 +225,20 @@ was retired from both on September 3rd [D11; G:5f76f4810 · 08-20; G:06119bc92 �
 G:0d12da755 · 09-03]. The embedding became a ranker, never the authority on its own [arc B]. Solve
 the hardest shared piece first, and you're free to focus elsewhere [D11].
 
-## Slide 16 · Method: persona review gates
+## Slide 17 · Method: persona review gates
 
 For UI and design work, "done" needs a gate too, and code-done isn't it. On September 13th I made a
 design panel the done gate: four fictional personas, each a short brief with a device and a job,
-plus three critics [arc C]. Dez is 22, phone-only, one thumb. The panel re-walks the built screens
-and returns DONE or NOT, with blockers. Dez went from 30 seconds a task to 9, simulated, not human
-[arc C; arc F]. Then the gate failed. The panel said DONE on the phone at 21:50. At 09:40 the next
-morning I opened the deployed app on my own iPhone, and it was pretty much unusable: three
-scrolling sections, a help modal on every task, rotating the phone to reach options [arc C]. The
-panel walked a fixed viewport [arc C]. It's necessary. Your own hands on the real device are the
-last gate.
+plus three critics [arc C]. Here's Dez: 22, phone-only, one thumb, and the job is "swipe-fast, not
+homework". The panel walks the built screens and returns DONE or NOT. For Dez, a task went from 30
+seconds to 9, simulated, not a human [arc C]. Then the gate failed. The panel said DONE on the
+phone at 21:50. At 09:40 the next morning I opened the deployed app on my own iPhone, and it was
+pretty much unusable: three scrolling sections, a help modal on every task, rotating the phone to
+reach options. The panel had walked a fixed viewport [arc C]. The record's fix was another panel
+pass [arc C]. The rule I take from it, and the one in the starter kit: a real-device check before
+DONE [starter].
 
-## Slide 17 · Method: agents first, human verdict
+## Slide 18 · Method: agents first, human verdict
 
 Labeling is repetitive judgment work. By hand it took me about three minutes a label. That's my own
 stopwatch on the first labeler build; the message isn't in the record we mined [D7]. With agents
@@ -219,22 +248,27 @@ redesign of the review screen, took about 20 to 30 seconds [D7; arc F]. The fair
 to 46 seconds end to end, agent plus review [D7]. Two levers: agents took the first pass, and a
 redesign made my verdict fast. Crediting agents alone would overclaim [D7].
 
-## Slide 18 · Two things for next week
+## Slide 19 · Two things for next week
 
-Here's what I'd tell a colleague. When you come to the next fork in the road, ask how you could get
-an answer while you focus on something else [abstract]. So, two things for next week. One: run your
-next fork as gated experiments that can run unattended. Write the gate first, give each option its
-own worktree, and put anything risky behind a flag [gates-and-flags; arc E]. Two: put a persona review gate in
-front of "done" for UI and design work, and then check it with your own hands [arc C]. Give agents
-the right context, autonomy and guardrails, and they work like extra copies of you [abstract]. It's
-all in the repo, with a starter kit in `starter/`. Thanks.
+Here's what I'd tell a colleague. At the next fork, ask how you could get an answer while you focus
+on something else [abstract]. So, two things. One: run your next fork as gated experiments that can
+run unattended. First step: before you pick a fix, write the kill bar, give each option its own
+worktree, and put it behind a flag. `starter/two-lanes/` has the lane brief, and `unattended.md`
+has the flags, caps and the morning report [starter; gates-and-flags; arc E]. Two: put a persona
+review gate in front of "done". First step: write three persona briefs, each a device and a job,
+have an agent walk the build, then pick it up on your own phone. That's `starter/persona-gate/`
+[starter; arc C]. And if you need one sentence for your boss, this is how I'd put it; it's my
+framing, not a finding. It's all in the repo. Thanks.
+
+**Stage.** Read the boss sentence on the slide aloud as written; don't paraphrase it into a claim.
 
 ## Backup 1 · Cost, hours, hold-out
 
 Q&A only. All of the Claude work ran within my Claude Max subscription. The only metered model spend
-in the record is the labeling pilots: about $9 for 760 tasks [D13]. My own time was about thirty
-minutes a day, spread across the day, setting agents up for overnight runs. That's my estimate;
-nothing in the record measures it [D16]. And the question I get about slide 12, held out? Yes. The
+in the record is the labeling pilots: about $9 for 760 tasks, on another provider [D13]. My own
+time was about thirty minutes a day, spread across the day, setting agents up for overnight runs.
+That's my estimate; nothing in the record measures it, and it doesn't count mornings reading
+results or checking on my phone [D16]. And the question I get about slide 12, held out? Yes. The
 language head never saw a real photo while it trained: catalogue images only, its one knob set on a
 separate dev split, and none of the 201 test photos in any of that [D14]. If pressed: it has seen
 the catalogue image of the true card, which is the gallery, known at inference, not leakage [D14].
@@ -245,7 +279,7 @@ Q&A only, if someone asks "so what is the accuracy?". We measured top-3 four dif
 they don't agree. Crops as served: 78.2 %. The same crops scored offline: 74.3 %. A six-crop
 consensus proxy: 70.3 % up to 82.9 %. And live lots, pooled: 71.3 %, with 65.2 % on the lots that
 never auto-locked [top3-traj; lot-top3]. Four yardsticks. You can't draw one trend line through
-them, which is why slide 13 picks one bar and says which [lot-top3].
+them, which is why slide 14 picks one bar and says which [lot-top3].
 
 ---
 
