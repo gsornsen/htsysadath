@@ -103,3 +103,33 @@ tidy memory (D5–D7, `mining/findings/cross-arc.md` instances 4–5). A caught 
 4. Whose laptop? What display, adapter, venue wifi?
 5. Stage billing: capped API key or subscription?
 6. Audience vote on the hybrid?
+
+## Convergence (round 2)
+
+2026-09-24 09:3x PDT, after plans 01, 03, 04 and D9.
+
+**Agree.** 01: server mode on 8080, link-out not iframe, URL hash to return to the slide, and a
+fallback MP4/GIF per demo in `talk/slides/assets/demos/`. 03: Storybook fixtures only, no live
+scout. 04: the git graph must be curated.
+
+**Conflicts, with proposed resolutions.**
+- *Port.* 01's example uses `4321`. Keep the viewer on `localhost:8090`, served from the demo
+  clone and opened in its own tab beforehand. 01 owns the port list.
+- *Viewer owner.* 04 is static SVG with no client JS, so **the demos lane builds the viewer**.
+  04 supplies palette and type, and 01 the link-out slide.
+- *Unlisted assets.* The scout clip clashes with 03's no-scout rule, so I drop it (arc B is
+  re-cut per D9 anyway). The fallback MP4s and the rehearsal-drafts slide come from my
+  rehearsals. The arc C stills are already on 03's list.
+- *Git graph three ways.* 04 #6 is the slide and Demo 2's fallback. The live terminal runs
+  `git log --graph --oneline main`, never `--all`, which keeps `worktree-agent-*` branches off
+  screen. 03 drops `e-branch-graph.svg`.
+
+**Accepted dependencies.** From 01: the link-out pattern, the hash jump, and the PDF deck. From
+04: palette, type and #6. From 03: the arc C stills.
+
+**Changes.**
+- Demo 2's second stop now shows corrections in both directions: D6 → D7 (`767b0c4` 08:22 →
+  `7fefd2f` 08:29) and D5 → D9 (`b1d7e8f` 08:19 → `7607585` 09:27). Both times the record was
+  over-read, and both times the person who was there corrected it. With 04 #5, the spine
+  becomes "keep both, check both ways."
+- The count is 59 commits now. Quote the count on the day.
