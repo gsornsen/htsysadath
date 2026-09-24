@@ -261,3 +261,15 @@ record. Chart, slide 20 notes, arc B and cross-arc corrected.
 **Still open with Gerald.** (1) The winning crop was tight + ~17 px, not WIDE; wide variants lost.
 Is "wide" meant relative to the old tight detect crop? (2) "5 crop proposer gone" (09-11) isn't in
 any ref. Was it retired in an uncommitted build, or planned?
+
+**D12 follow-up (2026-09-24 10:3x PDT, Gerald).** (1) Confirmed: the winning crop was tight + padding
+(~17 px), not wide. (2) Gerald believed the proposer was "turned off by default". The coordinator
+checked `main` (`f75d531d`): `content.ts` calls `captureProposals` unconditionally and encodes
+and uploads every proposal; no options/storage key or flag gates it; `rectK`/`diversityK` are
+hard-coded. **On main the proposer is ON for every fire, with no off switch.** If it was turned
+off, that change never reached git. Talk wording: "the verdict was to drop the vote; the
+extension code still sends five crops". Don't claim it's off.
+**Devbox (10:30 PDT):** Gerald ran `sudo systemctl restart tailscaled`. The coordinator verified box
+DNS resolves and the :8443 tailnet health endpoint returns 200 from the laptop. `mcpo-github` was
+still restart-looping 49 s after (exit 2); recheck later. The :8989 keyless pregrade (down since
+09-21) and the mirror unit's 178.7 MB file are unchanged and are Gerald's call.

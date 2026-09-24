@@ -21,7 +21,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Build L1 scaffold | build/scaffold | merged | Sonnet → coordinator check | c3182ea | + deps triage and --no-stdin (da1f055); chart filenames to reconcile in L6 |
 | Build L2 charts | build/charts | merged | Sonnet → coordinator check | 3142b3e | 7 SVGs; 4 review fixes (2 content) confirmed by render |
 | Build L6 integrate | build/integrate | merged | Sonnet → coordinator | 112694c | deck assembled; 22 slides render; D12 applied to slide 20 on merge |
-| Devbox health | — | reported, needs Gerald (sudo) | Opus 5.5 | — | tailscaled wedged since ~04:44 → box DNS + tailnet front doors down; local services up; :8989 down since 09-21; mirror unit failing (178.7 MB file) |
+| Devbox health | — | tailscaled restarted by Gerald 10:30; DNS + :8443 verified | Opus 5.5 | — | open: mcpo-github still looping; :8989 down since 09-21; mirror unit (178.7 MB file) |
+| L7 persona critique | critique/{senior-swe,pm,designer,mid-swe} | running | Opus 5.5 ×4 → Fable converges | — | DONE/NOT per slide → talk/plan/critique.md |
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
@@ -30,6 +31,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:3x PDT — Proposer confirmed ON on main (no toggle); winning crop = tight + padding. Devbox tailnet/DNS restored by Gerald and verified. Deck served for Gerald at localhost:8080 (author mode). L7 critique: 4 Opus 5.5 persona lanes running.
 
 - 2026-09-24 10:5x PDT — D12: the single-crop win STANDS (E79b 31 vs 26 of 41). The '09-13 replay' compared two single crops, never the vote; now a third counter-example on slide 20. L6 deck merged (112694c). Devbox: tailscaled wedged → DNS and tailnet down; the fix needs sudo, so it's Gerald's call. Next: L7 persona critique + rehearsal.
 
