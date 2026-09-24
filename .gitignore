@@ -16,3 +16,6 @@ scratch/
 
 # demo/fanout run output — regenerated each run, not versioned
 demo/out/
+
+# skills pulled from other projects: review before publishing
+.claude/skills/
