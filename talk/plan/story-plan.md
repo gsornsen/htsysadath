@@ -41,9 +41,9 @@ grid, the felt jitter, the ~500 ms cadence. Visual grammar: evidence = chart + s
 story = words, quotation treatment, no numbers as data. Show the failures and counter-examples.
 
 ## e) Open questions for Gerald
-1. Protagonist: Gerald, or the fork (with Gerald narrating)?
-2. Resolve the jitter early (recommended) or hold it as the payoff?
-3. Which timeline is the story set in (the ~500 ms cadence exists only after the 09-05 speedup)?
-4. What to cut for time (candidates: fold F into the decider beat; compress yardsticks)?
-5. How much stage time for the remembered-vs-recorded table?
-6. Hours: a rough estimate as testimony?
+1. Protagonist: Gerald, or the fork (with Gerald narrating)? - Gerald is protagonist with gerald narrating
+2. Resolve the jitter early (recommended) or hold it as the payoff? resolve it early, demo the current state early as an attention getter
+3. Which timeline is the story set in (the ~500 ms cadence exists only after the 09-05 speedup)? we just need an overview of the timeline from identify taking 11-15 seconds and call out each key area that could have taken a lot of time
+4. What to cut for time (candidates: fold F into the decider beat; compress yardsticks)? cut the remembered versus recorded. the presentation should be about how to apply orchestration, gates, experiments, and different methods that can be used to tackle the different types of problems
+5. How much stage time for the remembered-vs-recorded table? none
+6. Hours: a rough estimate as testimony? typically about 30 minutes spread out across the day to get agents set up to run experiments overnight
