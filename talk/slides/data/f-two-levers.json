@@ -1,0 +1,26 @@
+{
+  "source": "mining/arcs/F-agent-labeling.md — Metrics: “two levers, not one” table",
+  "title": "3 minutes fell through two levers",
+  "bars": [
+    {
+      "label": "By hand (fresh label, no agent)",
+      "low": 180, "high": 180, "unit": "s",
+      "tier": "testimony",
+      "tierLabel": "founder testimony (D7) — original message not in the mined corpus"
+    },
+    {
+      "label": "Agent first pass (wall time only, no human)",
+      "low": 11, "high": 16, "unit": "s",
+      "tier": "instrumented",
+      "tierLabel": "instrumented — E84, Gemini 2.5 Flash / Haiku 4.5"
+    },
+    {
+      "label": "Human review, after P0/P1 redesign",
+      "low": 20, "high": 30, "unit": "s",
+      "tier": "estimate",
+      "tierLabel": "founder estimate, not instrumented — 09-13/09-14"
+    }
+  ],
+  "caveat": "Task-shape caveat: the 3-min figure is a FRESH label by hand; 11–16s and 20–30s are per REVIEW task, made with agent pre-labels already on screen — different task shapes.",
+  "caption": "3 min → ~20 s fell through two levers, not one: an agent first pass (11–16s) and a redesigned review UI (~20–30s). Crediting agents alone would overclaim."
+}

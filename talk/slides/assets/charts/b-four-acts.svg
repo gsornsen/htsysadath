@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
+<text x="56" y="56" fill="#ffffff" font-size="30" font-weight="700">Arc B — four sequential acts, each with its reason (D9, D11)</text>
+<line x1="150" y1="150" x2="1130" y2="150" stroke="#383835" stroke-width="3"/>
+<path d="M 1130 142 L 1144 150 L 1130 158 Z" fill="#383835"/>
+<circle cx="150" cy="150" r="22" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<text x="150" y="157" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">1</text>
+<text x="150" y="104" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">Pregrade</text>
+<text x="150" y="126" text-anchor="middle" fill="#898781" font-size="14">2026-07-04</text>
+<text x="150" y="196" text-anchor="middle" fill="#c3c2b7" font-size="14.5"><tspan x="150" y="196">LLM-vision identify as a</tspan><tspan x="150" y="216">proof of concept —</tspan><tspan x="150" y="236">feasibility and a baseline</tspan><tspan x="150" y="256">before image-to-image</tspan></text>
+<circle cx="476.6666666666667" cy="150" r="22" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<text x="476.6666666666667" y="157" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">2</text>
+<text x="476.6666666666667" y="104" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">Live-stream scout</text>
+<text x="476.6666666666667" y="126" text-anchor="middle" fill="#898781" font-size="14">2026-08-18</text>
+<text x="476.6666666666667" y="196" text-anchor="middle" fill="#c3c2b7" font-size="14.5"><tspan x="476.6666666666667" y="196">image-to-image identify — a card is</tspan><tspan x="476.6666666666667" y="216">on screen for seconds; 6–15s breaks</tspan><tspan x="476.6666666666667" y="236">“feels live”</tspan></text>
+<circle cx="803.3333333333334" cy="150" r="22" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<text x="803.3333333333334" y="157" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">3</text>
+<text x="803.3333333333334" y="104" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">Bulk scan / lots</text>
+<text x="803.3333333333334" y="126" text-anchor="middle" fill="#898781" font-size="14">2026-08-19 → 09-20</text>
+<text x="803.3333333333334" y="196" text-anchor="middle" fill="#c3c2b7" font-size="14.5"><tspan x="803.3333333333334" y="196">one shared identify core, fast and</tspan><tspan x="803.3333333333334" y="216">accurate for BOTH bulk scan and</tspan><tspan x="803.3333333333334" y="236">scout — every app tested was slow</tspan><tspan x="803.3333333333334" y="256">and inaccurate, and identify was the</tspan><tspan x="803.3333333333334" y="276">hardest part; solve it once, build</tspan><tspan x="803.3333333333334" y="296">both apps around it</tspan></text>
+<text x="803.3333333333334" y="334" text-anchor="middle" fill="#898781" font-size="12.5" font-style="italic"><tspan x="803.3333333333334" y="334">image-to-image lane 08-20 · scout switched</tspan><tspan x="803.3333333333334" y="351">to it 09-02 · LLM identify retired 09-03</tspan></text>
+<circle cx="1130" cy="150" r="22" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<text x="1130" y="157" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">4</text>
+<text x="1130" y="104" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">Comps / pricing</text>
+<text x="1130" y="126" text-anchor="middle" fill="#898781" font-size="14">2026-09-06</text>
+<text x="1130" y="196" text-anchor="middle" fill="#c3c2b7" font-size="14.5"><tspan x="1130" y="196">raw comps across NM / LP /</tspan><tspan x="1130" y="216">MP / HP / DMG became its</tspan><tspan x="1130" y="236">own problem, outgrowing</tspan><tspan x="1130" y="256">“use an API”</tspan></text>
+<text x="1130" y="294" text-anchor="middle" fill="#898781" font-size="12.5" font-style="italic"><tspan x="1130" y="294">precursor: per-condition tiers</tspan><tspan x="1130" y="311">shipped 08-23, inside lots</tspan></text>
+<text x="56" y="560" fill="#c3c2b7" font-size="18"><tspan x="56" y="560">Four sequential acts, each begun for a stated reason (D9). Act 3 and act 4 framings settled by the founder (D11),</tspan><tspan x="56" y="584">superseding the earlier open questions.</tspan></text>
+<text x="56" y="700" fill="#898781" font-size="14">source: mining/arcs/B-pivots.md §2 (dates from cited Grailith commits); act 3 framing and act 4 start per D11 (founder, coordinator update superseding B-pivots.md §5 Q1/Q2)</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "source": "docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4",
+  "title": "Remembered vs recorded",
+  "rows": [
+    {
+      "type": "record-corrects-memory",
+      "instance": "D4 — the simplifying win",
+      "remembered": "Index composition / dedup was the simplifying win.",
+      "recorded": "Dedup (G3) LOST 14.43 pts print@1 (p = 0.00034) and was killed. The flat gallery + language head shipped instead (print@1 67.66 → 77.61%).",
+      "source": "decisions.md D4"
+    },
+    {
+      "type": "record-corrects-memory",
+      "instance": "the top-3 bar’s date",
+      "remembered": "Founder set the top-3 bar 09-13 22:44.",
+      "recorded": "The bar first appears 09-11 19:37 PDT (evening plan); 09-13 is a restatement.",
+      "source": "top3-trajectory.md §0"
+    },
+    {
+      "type": "record-corrects-memory",
+      "instance": "E79 crop-vote win",
+      "remembered": "The 5-crop vote / proposer improved accuracy.",
+      "recorded": "On replay (41 scenes) the vote scored 26/41 vs 31/41 for one padded crop — the win didn’t hold.",
+      "source": "cross-arc.md; B-pivots.md §2"
+    },
+    {
+      "type": "record-corrects-memory",
+      "instance": "76.9% top-3 at n = 52",
+      "remembered": "Lot-level top-3 held around 77%.",
+      "recorded": "Small-sample high. The pooled 87-lot run gives 71.3% overall, 65.2% on non-locked lots.",
+      "source": "lot-top3-unlocked.md §4"
+    },
+    {
+      "type": "counter-example",
+      "instance": "D5 → D9 (arc B ordering)",
+      "remembered": "Overlapping commit dates read as concurrent work — arc B rebuilt as parallel spines.",
+      "recorded": "Founder corrected it: not concurrent. Four sequential acts, each begun for a stated reason.",
+      "source": "decisions.md D5, D9",
+      "label": "the record can be over-read too"
+    },
+    {
+      "type": "counter-example",
+      "instance": "D6 → D7 (the 3-min baseline)",
+      "remembered": "Absent from the mined transcript corpus → treated as unsourced, dropped.",
+      "recorded": "Founder testimony stands; the message simply lived outside the mined corpus (a second account).",
+      "source": "decisions.md D6, D7",
+      "label": "absence from the corpus ≠ unsourced"
+    }
+  ],
+  "caption": "Four rows where the record corrects memory. Two counter-example rows, marked apart: the record can be over-read too. Keep both records, and check in both directions."
+}
