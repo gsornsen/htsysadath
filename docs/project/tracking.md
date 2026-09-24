@@ -37,7 +37,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Critique round 2 | critique2/* → talk/plan/critique2.md | converged | Opus 5.5 ×4 → Fable | 5fb7adb | 12/14/11/12 of 20; fix contract F1/F2/F3 |
 | Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | all merged | Opus 5.5 ×2 + Sonnet | 1de0c23 | polish after Gerald's v4 review |
 | Deck v4 (audience-first) | story/deck-v4 | MERGED on Gerald's call (fix forward) | Opus 5.5 | 2538683 | Gerald reviewing at localhost:8080 |
-| V4 visuals: four-problems + plain labels | fix/v4-visuals | running | Opus 5.5 → coordinator | — | assets only; deck text untouched while Gerald reviews |
+| V4 visuals: four-problems + plain labels | fix/v4-visuals | merged | Opus 5.5 → coordinator | f91502e | all references resolve; no codes/kill/founder on screen |
+| Workplace wording (D22), text | fix/workplace-wording | running | Sonnet → coordinator | — | deck/notes/outline/starter/Q&A prompts; then a Q&A live re-run |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | merged; public replay verified | Opus 5.5 → coordinator | see log | site sha 8ed55e42…; check.sh OK with GRAILITH unset; 1 answer flagged stale (by design); re-run --live once the deck settles |
@@ -49,6 +50,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 13:2x PDT — V4 visuals merged: four-problems.svg drawn; every chart in plain words; workplace wording on all assets. Every deck reference resolves. The text wording lane is running.
 
 - 2026-09-24 13:1x PDT — Gerald: merge v4 and fix forward. F1 visuals + deck v4 merged (2538683), pushed, opened at localhost:8080. The V4 visuals lane is drawing four-problems.svg and stripping internal labels from the charts.
 
