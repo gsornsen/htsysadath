@@ -16,12 +16,15 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Mine: agent labeling (arc F) | mine/labeling → review/labeling | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | optional: Gerald re-times one label with no agent pre-labels |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
 | E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | running | Opus 5.5 | — | positive control @1 must reproduce first |
-| Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | running | Opus 5.5 | — | Grailith branch NOT merged by us; actual n reported |
+| Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | merged (talk side) | Opus 5.5 | b4dd0b8 | non-locked top-3 65.2% (45/69); n=87 (no taps after 09-16); Grailith branch awaits Gerald's merge gate |
+| Presentation plan swarm (Marp) | plan/{marp-runtime,live-demos,visual-assets,data-viz} | round 1 running | Sonnet ×3 + Opus 5.5 | — | converge → Opus 5.5 synthesis → talk/plan/presentation-plan.md |
 | Outline v1 | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 09:2x PDT — Lot run merged: the founder's bar measured for the first time (non-locked top-3 65.2%, lock 20.7% at 88.9% precision, n=87). The earlier 76.9% was a small-sample high (pooled ~70%). Presentation-plan swarm round 1 running (4 lanes).
 
 - 2026-09-24 09:0x PDT — D8: Gerald approved the E67 top-3 replay, the harness lock-state flag, and the offline lot run; "michi" stays. Two Opus 5.5 lanes running.
 
