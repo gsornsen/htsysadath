@@ -100,3 +100,18 @@ entry; link the finding or commit that proves it.
   step once the build was killed. Found by `ps` and stopped by pid. Fix: `--no-stdin` on every
   non-interactive marp call (da1f055). Meta-lesson, second time today: when a coordinator command
   times out into the background, the NEXT command must be a `ps` for its children, not a retry.
+
+- `[method]` 2026-09-24: **a lane printed the shell environment.** L3 ran a bare `env` while
+  exploring, which dumped personal API tokens into its own tool output: the session transcript,
+  and the model's context. Nothing reached a file or the repo (coordinator token-shape scan of
+  every added line plus `strings` over every PNG: clean). New brief rule: never print the
+  environment or any credential file; read single variables by name (`printenv PORT`) and never
+  echo a secret. The repo hygiene grep can't catch this, because it never touches a commit.
+- `[method]` 2026-09-24: a `git push` that times out into the background sits on stdin like marp
+  did. Run pushes as `GIT_TERMINAL_PROMPT=0 git push … < /dev/null`; the stalled push finished in
+  3 s that way.
+- `[method]` 2026-09-24: **the chart review caught content errors that no numeric check would.**
+  All the numbers in `remembered-vs-recorded` were real, but two rows told the wrong story: E79's
+  original result shown as the thing that failed, and D4 framed as a wrong memory when D4 found a
+  framing difference. A chart about "the record corrects memory" can misquote the record too. The
+  reviewer has to read the sentence, not just re-derive the digits.
