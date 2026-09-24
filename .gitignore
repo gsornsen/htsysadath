@@ -2,6 +2,9 @@
 mining/raw/
 *.jsonl
 *.jsonl.gz
+# agent worktrees (Claude Code lane isolation) — never publish
+.claude/worktrees/
+
 # secrets and local state
 .env
 *.env
