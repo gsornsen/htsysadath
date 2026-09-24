@@ -2,16 +2,16 @@
   "source": "docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)",
   "title": "Coordinator: the reviewer sits one tier above",
   "tierOrder": ["haiku", "sonnet", "opus", "fable"],
-  "tierLabels": { "haiku": "Haiku", "sonnet": "Sonnet", "opus": "Opus 5.5", "fable": "Fable" },
+  "tierLabels": { "haiku": "Haiku", "sonnet": "Sonnet", "opus": "Opus 5.5", "fable": "Fable — coordinator" },
   "nodes": [
-    { "id": "main",               "label": "main",                    "tier": "root" },
-    { "id": "inventory",          "label": "mine/inventory",          "tier": "haiku",  "sha": "105d837" },
-    { "id": "experiments",        "label": "mine/experiments",        "tier": "sonnet", "sha": "e37492e" },
-    { "id": "review-experiments", "label": "review/experiments-top3", "tier": "opus",   "sha": "6b0d9b9" },
-    { "id": "pivots",             "label": "mine/pivots",             "tier": "sonnet", "sha": "6544205" },
-    { "id": "review-pivots",      "label": "review/pivots",           "tier": "opus",   "sha": "1f3a3f7" },
-    { "id": "synthesis",          "label": "plan/synthesis",          "tier": "opus",   "sha": "4c5c773" },
-    { "id": "fable-review",       "label": "coordinator review",      "tier": "fable",  "sha": "8e3553c" }
+    { "id": "main",               "label": "main",                "tier": "root" },
+    { "id": "inventory",          "label": "mine: inventory",     "tier": "haiku" },
+    { "id": "experiments",        "label": "mine: experiments",   "tier": "sonnet" },
+    { "id": "review-experiments", "label": "review: top-3",       "tier": "opus" },
+    { "id": "pivots",             "label": "mine: pivots",        "tier": "sonnet" },
+    { "id": "review-pivots",      "label": "review: pivots",      "tier": "opus" },
+    { "id": "synthesis",          "label": "plan: synthesis",     "tier": "opus" },
+    { "id": "fable-review",       "label": "coordinator review",  "tier": "fable" }
   ],
   "edges": [
     { "from": "inventory",          "to": "main" },
@@ -21,6 +21,5 @@
     { "from": "review-pivots",      "to": "main" },
     { "from": "synthesis",          "to": "fable-review" },
     { "from": "fable-review",       "to": "main" }
-  ],
-  "caption": "Reviewer one tier above implementer: Sonnet lanes reviewed by Opus 5.5 before merge; the Opus 5.5 synthesis reviewed by Fable. Curated from tracking.md and this repo's merge log."
+  ]
 }

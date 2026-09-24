@@ -1,0 +1,24 @@
+{
+  "source": "decisions.md D4 · top3-trajectory.md §0 · lot-top3-unlocked.md §4",
+  "title": "Remembered vs recorded — the record corrects memory",
+  "rows": [
+    {
+      "instance": "D4 — the simplifying win",
+      "remembered": "Dedup and cross-language experiments were the simplifying win.",
+      "recorded": "Dedup lost 14.4 pts and was killed; a tiny language head won.",
+      "source": "decisions.md D4"
+    },
+    {
+      "instance": "The top-3 bar's date",
+      "remembered": "Founder set the top-3 bar on 09-13 at 22:44.",
+      "recorded": "The bar first appears 09-11 19:37 PDT; 09-13 just restates it.",
+      "source": "top3-trajectory.md §0"
+    },
+    {
+      "instance": "76.9% top-3 at n = 52",
+      "remembered": "Lot-level top-3 held around 77 percent.",
+      "recorded": "Small-sample high; the pooled 87-lot run gives 71.3 percent overall.",
+      "source": "lot-top3-unlocked.md §4"
+    }
+  ]
+}
