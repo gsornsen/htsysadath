@@ -220,3 +220,17 @@ concurrency swimlane and Art Binder.
   build swarm L1–L5 launched. The abstract's checkable claims (~500 ms cadence, "nearly 100
   experiments", PostHog replay, overnight gates) are sourced by L5 as provenance. Contradictions
   go to Gerald as questions; they don't overrule him.
+
+## D11 · 2026-09-24 · Arc B's two open framings, answered by the founder
+
+1. **Act 3 is a shared core, not a port.** Gerald wanted fast identify for BOTH bulk scan and the
+   scout, because every app he'd tested was slow and inaccurate. Identify was the most complex part
+   of the system, and getting it fast and accurate in either app would give a shared core to
+   build around, freeing focus for other areas. The record fits: the embed-first lane wired into
+   bulk scan 08-20, the scout switched 09-02, LLM identify retired from both doors 09-03. The
+   lane's two proposed framings ("ported from the scout" / "designed for the scout, proven in bulk
+   scan") are both dropped. The talk beat: **solve the hardest shared core once, then fan out.**
+2. **Act 4 starts 2026-09-06.** The 08-23 per-condition tiers inside lots are a precursor.
+
+Applied: `mining/arcs/B-pivots.md` (act 3/4 text, §5 resolved), brief.md arc B row; L2 (chart #3
+JSON) and L5 (notes, slides 7–8) told while running.

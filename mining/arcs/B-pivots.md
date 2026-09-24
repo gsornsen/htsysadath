@@ -40,10 +40,12 @@ top-1 1/5 on same-art prints [src: `3f5eabd7e` · 2026-08-18 23:47]. A second ov
 *Not done:* the embedding became a ranker, not an authority. It never auto-locks on image score
 alone, and a number-confirm gate pins the printing.
 
-**Act 3: bulk scan/lots, the port that removed the LLM (08-19 → 09-20).**
-*Why:* once identify worked well enough, it was ported to bulk scan to remove the LLM, and bulk
-scan served as the place to strip out the bigger system's failure modes
-[src: founder testimony · 2026-09-24 · D9]. The phone `#capture` route opened on 08-19
+**Act 3: bulk scan/lots, one shared identify core with the LLM removed (08-19 → 09-20).**
+*Why:* every app Gerald tested was slow and inaccurate. Identify was the most complex part of the
+system, and a fast, accurate identify in EITHER bulk scan or the scout would give both apps a
+shared core to build around, so he solved it once and turned to other areas [src: founder
+testimony · 2026-09-24 · D11]. Bulk scan was also where to strip out the bigger system's
+failure modes, the odd ways detection and live streams fail [src: D9]. The phone `#capture` route opened on 08-19
 [src: `1bcfb8f94` · 2026-08-19]. The port came on 08-20 at 08:52. The capture path moved to
 embed-first identify (~100 ms), with "the ~10s vision LLM demoted to fallback"
 [src: `5f76f4810`, `bf0a52e4f` · 2026-08-20]. The LLM was removed completely on 09-03 ("identify
@@ -55,13 +57,13 @@ and on in production 09-20
 [src: `0f6b04285`, `3359aabd8`, `9131c674b`].
 *Not done:* the LLM stayed as a fallback for two weeks.
 
-**Act 4: comps/pricing, raw comps across conditions (08-23 →).**
+**Act 4: comps/pricing, raw comps across conditions (09-06 →) [src: founder · D11].**
 *Why:* the need grew from graded + NM raw, where an API was enough, to raw comps at every
 condition [src: founder testimony · 2026-09-24 · D9]. Service evidence: a 07-30 plan notes that
 condition-segmented data "ALREADY EXISTS" through the API and that "pregrade already reads
 raw_nm" [src: `35d383b35` · 2026-07-30]. The first shipped tiers were "per-condition raw comps
 (NM/LP/MP/HP/DMG)", with each lot member resolving its own condition, "never silently NM"
-[src: `cbb944ee5` · 2026-08-23]. Scout condition tiles followed on 09-06, and so did the 09-07
+[src: `cbb944ee5` · 2026-08-23], a precursor inside lots. The act itself begins 09-06 with the scout's condition tiles, and the 09-07
 TTL-by-class redesign, with founder quotes at 13:38, 14:47 ("Founder go") and 17:11 PDT and zero
 spend before any build [src: `a8b11dc96` · 2026-09-06;
 docs/plan/2026-09-07-comps-ttl-by-class-design.md §0].
@@ -100,11 +102,6 @@ write down why the next act starts and which number from the last act justifies 
 
 ## 5. Open questions for Gerald
 
-1. **Where image-to-image first ran.** The embedding lane came from the scout's 08-18/19
-   bakeoff, but it was first wired into bulk-scan capture (08-20). The scout itself adopted
-   the no-LLM lane on 09-02 (`06119bc92`). Is "ported from the scout" best said as "designed
-   for the scout, proven in bulk scan"?
-2. **Where act 4 starts.** The first NM/LP/MP/HP/DMG work is an 08-12 scoping doc for a
-   personal master-set tracker, and the first shipped tiers (08-23) landed inside lots. Is act
-   4's start 08-23, or 09-06/07?
+1. ~~Where image-to-image first ran~~. **Resolved (D11):** a shared identify core for both apps, not a port.
+2. ~~Where act 4 starts~~. **Resolved (D11):** 2026-09-06; 08-23 is a precursor.
 3. **"5 crop proposer gone" (09-11).** No commit retires it. Shipped outside this repo?
