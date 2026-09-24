@@ -17,12 +17,14 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
 | E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | merged | Opus 5.5 | 300488d | print@3 83.58→89.05% (p=0.0034); control reproduced E67 exactly |
 | Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | merged (talk side) | Opus 5.5 | b4dd0b8 | non-locked top-3 65.2% (45/69); n=87 (no taps after 09-16); Grailith branch awaits Gerald's merge gate |
-| Presentation plan swarm (Marp) | plan/{marp-runtime,live-demos,visual-assets,data-viz} | round 1 running | Sonnet ×3 + Opus 5.5 | — | converge → Opus 5.5 synthesis → talk/plan/presentation-plan.md |
+| Presentation plan swarm (Marp) | plan/* → plan/synthesis | merged, AWAITING GERALD'S APPROVAL | Sonnet ×3 + Opus 5.5 ×2, Fable review | see log | talk/plan/presentation-plan.md §6 has 8 questions; build swarm L1–L5 ready to launch on approval |
 | Outline v1 | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:0x PDT — Presentation plan: 4 lanes divided, converged, and were synthesized by Opus 5.5 into `talk/plan/presentation-plan.md` (22 slides / 34 min, 7 dissents). Coordinator review added §8 (no anachronistic shots; build-time ports above 9000). Arc B D9 rewrite merged (`a8bd4b3`); the record backs "not concurrent" (0 scout commits 08-19→09-01).
 
 - 2026-09-24 09:2x PDT — **D9 supersedes D5**: arc B is four sequential acts (pregrade LLM-vision PoC → scout image-to-image → bulk scan/lots as port + failure-mode isolation → comps when condition-tiered raw comps outgrew an API). Art Binder out. Arc B revision lane (Opus 5.5) spawned; data-viz lane told to drop the concurrency swimlane.
 

@@ -122,3 +122,19 @@ Each reviewer is one tier up: Sonnet → Opus 5.5, Opus 5.5 → Fable.
 5. 02/03 wanted P0/P1 re-rendered at historical commits. No: the existing audit pair carries slide 13 unless Q6 says otherwise.
 6. 04 placed `build-charts.mjs` at `talk/slides/`. It moves to `talk/slides/scripts/`, per 01.
 7. 03 Q3 offered to write a bulk-approve story. The beat is dropped instead; no claim needs it.
+
+## 8. Coordinator review (Fable tier, 2026-09-24)
+
+Verified: 22 slides sum to 34.0 min; each dissent-log item holds; the #5 table's 4 + 2 split is
+right. Two changes, binding on the build swarm:
+
+1. **No anachronistic screenshots.** Slide 5 (pregrade, 07-04) proposes `b-verdict-banner-*.png`
+   and slide 7 (bulk scan, 08-20) proposes `b-finish-selector-*.png`, both UI from later
+   September builds. Showing later UI as an earlier act is the exact error this talk's spine
+   warns against. Rule for L3 and L6: every shot's manifest row carries the Grailith commit and
+   date it was rendered from. A slide may only show a shot from on or before the act it
+   illustrates, or it must say "today's build" on the slide. If no period-correct shot exists,
+   use the #3 timeline beat alone.
+2. **Ports for build-time servers.** L3 runs Storybook on a port **above 9000** (not 6009/6007,
+   which Gerald's own Storybooks have used), records the pid, stops it by that pid, and shows
+   an `lsof` check in its report. No `pkill -f`. (lessons-learned, 2026-09-24.)
