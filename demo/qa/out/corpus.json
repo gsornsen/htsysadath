@@ -1,0 +1,1138 @@
+{
+  "files": [
+    {
+      "path": "docs/project/decisions.md",
+      "sha256": "cbc1e0231ff246ca41cb19d8f7e6afdbf2617f42ed93c91a0c0d5004437f9080",
+      "bytes": 29130,
+      "source": "repo"
+    },
+    {
+      "path": "grailith:docs/experiments/2026-09-13-tcgplayer-set-id-alias.md",
+      "sha256": "bb8bfc22135f48ee1e3094ad3770146e7146693ddddc03286a4f47d96f477025",
+      "bytes": 4088,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/ART-CENSUS-2026-09-20.md",
+      "sha256": "834d11b8549eff64e54d661e2a94c0d1a9812c8d9ef19e3d91d3e3fdf57be0fe",
+      "bytes": 7363,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/E53-PROTOCOL.md",
+      "sha256": "035dcebd3c68ec5fedf291afaa82ce35ed5ae6495401177d5036ca3794c94d9e",
+      "bytes": 4657,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-RESULTS-2026-09-06.md",
+      "sha256": "65b69deec64ad830448d457bcb3a997a96a2758e4ab324b4084b209f6f3bbd00",
+      "bytes": 22571,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-session-markers.md",
+      "sha256": "b77de138a23356319db0c821878f33bf7fb9d7799beb45221ff597d56127391e",
+      "bytes": 33019,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "sha256": "40a568bfd9dd66df488ab1686804db1a2576f47b0f99bba6c7c8bc61eccc7dc8",
+      "bytes": 32826,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-AUTOSCALE-2026-09-08.md",
+      "sha256": "402482f38cf144e1644cfb468f2f0e7326983b8b008fb5f2f2f2759300a86211",
+      "bytes": 21670,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BETA-CAP-2026-09-07.md",
+      "sha256": "f78627de46f234d7f91afa836085305a5b0cc277a005587637b5a3cad93ac9aa",
+      "bytes": 26885,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-CAPTURE-2026-09-07.md",
+      "sha256": "0917b7c8c3bc95a96d9883f47f5e9055c082ec27c2c2b05c7bd08e0e433ff442",
+      "bytes": 50519,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-LEDGER-2026-09-07.md",
+      "sha256": "f7996acae201e57f193c58b913edcc404e2962a3b1563e6576a602e2059efc73",
+      "bytes": 37832,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-READER-2026-09-07.md",
+      "sha256": "f07454c7488c2c1900af03fc7dccbdf80bc3f74e07ffbaf0e93851938d99c7d8",
+      "bytes": 19549,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-COMPS-TTL-2026-09-07.md",
+      "sha256": "7520690e6e6f60e468019537538df2d8880543be59cf0c7cab42e741b23cda28",
+      "bytes": 16475,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E100-per-lot-consensus-2026-09-11.md",
+      "sha256": "9ef2f73d821a439e71b9c4fa7ae8c3a7d92736c54e028846366b0b99457833cc",
+      "bytes": 1881,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E100b-consensus-live-2026-09-12.md",
+      "sha256": "41fbd8a8d882214fbe8d702404fc77b6c8daea39842571c8281a12c6036a9fb4",
+      "bytes": 2917,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E101-art-coverage-gap-2026-09-11.md",
+      "sha256": "620e698f9e6bdd815937b432df081042c5b0bd3963111b7e647afde3644145f4",
+      "bytes": 2371,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E102-non-card-reference-2026-09-11.md",
+      "sha256": "059bb910f0da325e2004907a510a0e3bcdea3863e8026d71ac5225d09edde8dd",
+      "bytes": 29273,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E103-ja-art-fill-2026-09-12.md",
+      "sha256": "421fa06478beb2d1d25fb693ec593f88966114c7083e63a152f9d65ceb44946b",
+      "bytes": 2616,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E108-top3-baseline-2026-09-11.md",
+      "sha256": "a2319c94e9e5dbcbe1e8306df59a348ba8e72a96014c9b0e252f1c2f3cf7dc8a",
+      "bytes": 1887,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E109-consensus-proxy-2026-09-11.md",
+      "sha256": "40fc894e62d017de28e24fc65ee43473b50f52b61d2ab0b5272ebf61778812af",
+      "bytes": 5939,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E11-language-head-2026-09-05.md",
+      "sha256": "1bb673b42c5fbfbc8adcda252725de71efc33523faa6a854bce8e3263fccd9e6",
+      "bytes": 25928,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E112-lot-candidate-pool-2026-09-12.md",
+      "sha256": "661bc5bedb0e51aa59c9430e08734822b348225aa4506813d07c4487bbd51317",
+      "bytes": 3803,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E115-overnight-stream-stats-2026-09-12.md",
+      "sha256": "811c7bfcecad23e3dc6f49b9d1801a686b9a8b9e581fe23db97504406c2645d6",
+      "bytes": 2462,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E116-boundary-enter-2026-09-12.md",
+      "sha256": "754bce36f8ff2e70734a2234147c26079674e4f7c5ff0cefc85106b6001527ac",
+      "bytes": 2960,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+      "sha256": "6f5134f5346ab5321f75b964f9d2327451eff8dc185c675c6db969353e9cc872",
+      "bytes": 21787,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "sha256": "03e3cabcc80c163a58fd4c14b35a41ce73297e64341e71a88fac2f509a32ed9d",
+      "bytes": 18368,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E119-ja-keyspace-art-2026-09-12.md",
+      "sha256": "0917d59110cd4b397673af976816bc5f603acb0115194dde4fdddfb15cc075e5",
+      "bytes": 13874,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E12-reference-domain-2026-09-05.md",
+      "sha256": "31f56488dd60e599a26c4757d9aeda7bb17654d1886f632e3edfff66f0de645d",
+      "bytes": 25472,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E13-embedding-pooling-2026-09-05.md",
+      "sha256": "1f1eaff9186d343db73d300a32ba08aa3c1e792da20397fd1fc662db611b46ba",
+      "bytes": 21523,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E14-tightening-gate-2026-09-05.md",
+      "sha256": "19ccd6438618b94de95b9b1107dba6ccc62da840f9cfc2028a84b5eabe0134d6",
+      "bytes": 17931,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E15a-detector-candidates-2026-09-05.md",
+      "sha256": "1c8c4cae7655bc68ea5ec8e2e55799661941649d13969fe28532d8bedfe21e01",
+      "bytes": 20607,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E15b-proposer-geometry-2026-09-05.md",
+      "sha256": "ea671d0f58bb63d9f60cd66d2de3c603f9bf9e399a28d21d75b98cb8d24361e4",
+      "bytes": 19504,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E16-front-selector-2026-09-05.md",
+      "sha256": "1404e2b1f61a63d4fbba88c06ea12032db1628ce35b75cbd14fdd5cfff5030bd",
+      "bytes": 17465,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E17a-cjk-art-equivalence-2026-09-05.md",
+      "sha256": "48210777ecc73ebf5ea8aaebcbddbc8e6c730dd19af46e81e6d95fc922b43702",
+      "bytes": 20464,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E17b-zhcn-reference-set-2026-09-05.md",
+      "sha256": "cb6e04603cd6d3d1a0918adf8fd4ec9b524eea65fb9237e7bec799537af0767c",
+      "bytes": 35314,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E17c-zhcn-shadow-2026-09-05.md",
+      "sha256": "eaad560c28cca28c104e0755b573b29354b100db59bd584d2844dee8387aa225",
+      "bytes": 80764,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E18-ood-gate-2026-09-05.md",
+      "sha256": "487659a0c4a439bf7ce6a964bd7ff752de9a37092d6e088e5dcc9139e000a2df",
+      "bytes": 42926,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md",
+      "sha256": "22274021564f7dedf3fa2717da7ebc390c4af14a86e28048dce5674690f58533",
+      "bytes": 29406,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E1E7-drops-and-thrash-2026-09-05.md",
+      "sha256": "2663a40b224ced7307fd6ea2cc0351482a596b804720ca0472e8e733608f5f7a",
+      "bytes": 32555,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E20-credit-economics-2026-09-05.md",
+      "sha256": "943595821da05a3b5b4206ec1e7cb55c425c09e9c192b37ef0853323431c9dd5",
+      "bytes": 15189,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E20b-429-cost-evidence-2026-09-07.md",
+      "sha256": "05cac3c92377dd4a56fe11fc7f8602b2cccd4abb053423af0ffdfbb4efc45f83",
+      "bytes": 8186,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E21-scope-served-correctness-2026-09-05.md",
+      "sha256": "c45ea8951dd41b1712bb0ae698c8ae2bfd173732b3a98efa121e7c7633889b7c",
+      "bytes": 13617,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E22-ppt-credit-costs-2026-09-05.md",
+      "sha256": "b0cd1f5b3d94a983b9c4fddff757ca2c14afa8c23d9e73f0ac23176ff6f6e215",
+      "bytes": 6311,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E23-credits-per-identify-2026-09-06.md",
+      "sha256": "73f88aeb9fbb23c5bf7763e7d1ee2dd38a5155006ac1bf066e49605ef564f847",
+      "bytes": 34118,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E23b-per-rung-limits-live-2026-09-06.md",
+      "sha256": "87da256f29963d57549e1d99b81bf2cf0898f771a17f9773d996f807de9bdff2",
+      "bytes": 31147,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E25-smarter-cron-2026-09-06.md",
+      "sha256": "c12eec498baa477258d227a1845fa432b04f37722b9579998b951cf23ffc3f64",
+      "bytes": 39799,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E27-floor-margin-operating-point-2026-09-05.md",
+      "sha256": "86ab71b6893261415058412b674d1e54c3ced23b79054146e2143a0806f1a54a",
+      "bytes": 26423,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E28a-adversarial-agent-labeling-2026-09-06.md",
+      "sha256": "f090471abf929a3cd7816a1dc186c5eff3f351a8c66ab78ee7efc68a8c2cbee3",
+      "bytes": 39675,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E29-cron-worst-case-2026-09-05.md",
+      "sha256": "8a56d6e92548fa3dad9753e5d6ba14a5bd8ae52b6a9c0f5eba1280f48e47ce7b",
+      "bytes": 14620,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E2p-probe-scoped-search-2026-09-05.md",
+      "sha256": "f8ae59bc62de3c0b0ce66016c89dd502b7b9fe0d8fa3ed183f7b29d3b0b92b53",
+      "bytes": 29859,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E31-printing-fanout-2026-09-05.md",
+      "sha256": "d3bdbc0489f90f209a4d60c758b0071e59d566ae34f0c96df48658a0f9d77dfb",
+      "bytes": 21118,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33-search-limit-sizing-2026-09-05.md",
+      "sha256": "874b8739d232605a4331f233d16feaa9e70a300b4ba7a6ce051c0435e7e81206",
+      "bytes": 18320,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33c-promo-rung-2026-09-06.md",
+      "sha256": "7c690f3416eaee652067c5949e974d4e5a7caccaeed0d556c01fb481fd22153b",
+      "bytes": 21769,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33d-sibling-tids-from-rows-2026-09-06.md",
+      "sha256": "983202fa45d616cf55ed360750baf7c6f34130156e6895caf0e2320d1135939b",
+      "bytes": 70389,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E35-number-confirm-precision-2026-09-05.md",
+      "sha256": "cf6a760458ca5e3e9113f046a86bf0d31650d2eb1889b976d7a802965292d2f1",
+      "bytes": 23697,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+      "sha256": "64f9d14d7460b53180e5c6c6b398fe615078ab406cebd8fc7250eb9e9dea07d0",
+      "bytes": 120603,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E36-sales-velocity-buckets-2026-09-05.md",
+      "sha256": "d384b8e43de202a4b5b7cd4879b92618509d0a0f5eb286ae422082008ef2a402",
+      "bytes": 17414,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E38-en-coverage-gap-2026-09-05.md",
+      "sha256": "2c4843cd3525c4da9d3ba21b6d49b5ea6178f9a51a929823a1cc17c33e774942",
+      "bytes": 12814,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E39-offdomain-refs-2026-09-05.md",
+      "sha256": "a1bcea72869d16d1c7ab70b0d5df62ee482b59ebc79139a33bb08f3b12e7cce2",
+      "bytes": 11687,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E40-en-served-as-ja-2026-09-05.md",
+      "sha256": "c73649e3cbae4e0fc5a885c9d8a4b9bf3853b1cf31beca3961a51627712a0aa5",
+      "bytes": 12549,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E40b-language-prior-2026-09-07.md",
+      "sha256": "ee9e9719f0c0f8ec3a970f992a5f4bd966f24ee3117928bf400b6d86a253b0d8",
+      "bytes": 23415,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E40c-retrieval-reach-2026-09-07.md",
+      "sha256": "e28de7319641355c75efc8e77d4b1a175ab9683d30ee00bb655db257a5601a2b",
+      "bytes": 46397,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E41-index-repro-2026-09-07.md",
+      "sha256": "2b7da255e27b84e6cf44b2e82dc34a804330d1f7a5c9cffb89466abaf9bb0c07",
+      "bytes": 24402,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E42-client-number-ocr-2026-09-05.md",
+      "sha256": "cebc4b8d5c2dbee44cc49aa3ef6a2e999105f183d561d02c34b55b54a5a3e4b8",
+      "bytes": 25193,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E42b-llm-number-read-2026-09-05.md",
+      "sha256": "c0c3f5de5bddac5948341483575b8bc463049799a8bdcaf65e958ef132bf6ee7",
+      "bytes": 40012,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E42c-openrouter-number-read-survey-2026-09-05.md",
+      "sha256": "043623de43343a4e001abe1ed87cff4324da4f36e782ca38880248031b644177",
+      "bytes": 61922,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E43-proposer-bottom-cut-2026-09-05.md",
+      "sha256": "551e20b80bef0759f518a0e153a849cec5a08dc783509db18c81f76c6c2d01c7",
+      "bytes": 29698,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E44-gold41-truth-audit-2026-09-06.md",
+      "sha256": "c6b4b027858d955f72782fe955dc5a6bd5bac7497a5438ac4124dc668b2ae169",
+      "bytes": 15301,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46b-onnx-vs-torch-cpu-2026-09-06.md",
+      "sha256": "04ac63f9aea725bab4b9502e8d162b99dcf6f56c25015e5e89dc78be438aa7f0",
+      "bytes": 20189,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46d-replay-harness-2026-09-07.md",
+      "sha256": "494dc88b3c8654e21a874aede6088e2563381d62c803efbc03409678922ddbb7",
+      "bytes": 42762,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46e-colddist-2026-09-07.md",
+      "sha256": "aa6306cad6260bb6d19c862d4742ca72a2e35bb8a5c3972f4a3756829ae582da",
+      "bytes": 53260,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46f-production-traces-2026-09-06.md",
+      "sha256": "c8b8f5f9790d90322a610771b67e36db2cf0803d575b0619ab22467a5c5385e7",
+      "bytes": 30114,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46g-coldvar-2026-09-07.md",
+      "sha256": "5d17267d70dca67d188cc47825077351b03011ffd522c12e64150de7df7ff038",
+      "bytes": 76682,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46h-student-coldstart-2026-09-08.md",
+      "sha256": "8f8b248e550fdab6c1181e33dfec54cd94a1c48e92e08e52ee903c0cb129e3b2",
+      "bytes": 72969,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46i-fp16-teacher-coldstart-2026-09-08.md",
+      "sha256": "09956f2fddee0db6186b779569ff08f2129992a570119e9ffbe69f9ab564085f",
+      "bytes": 87080,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E51-vintage-holo-nonholo-candidates-2026-09-06.md",
+      "sha256": "355ba1772c7f79abdd5c0e1969b8e568e862d3812e763e95bd87c6f8a21ca1cf",
+      "bytes": 59217,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+      "sha256": "614be7ea2cc3b074a93976a07610a57ab89097a0abcd51c83e05710592a49652",
+      "bytes": 31976,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53-harness-2026-09-07.md",
+      "sha256": "1dbdb628b0ca1fd53194747b000bb9530d4b75f03729979aaec7fc97e0f632f2",
+      "bytes": 14048,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53a-runtime-levers-2026-09-07.md",
+      "sha256": "1f6870f1dd9800ab58d42fc65c58fb48da9c5e88d167a78b75f49aa1db642001",
+      "bytes": 61557,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53b-model-reductions-2026-09-07.md",
+      "sha256": "64f78ccfdefb590cffada750969d9ed20055419e7da2a2ed37d8dca722f8e83a",
+      "bytes": 50385,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53c-cold-start-2026-09-07.md",
+      "sha256": "3842dbb12ceb619fd617b4f7493c1196bd66b521d713ab1dda9f8469965fc8bf",
+      "bytes": 52469,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-2-dose-2026-09-07.md",
+      "sha256": "e4f0e7c87c058aea04a647c05827053f398b9255d2840953fc8d7f2d4bf78eda",
+      "bytes": 26019,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-2-s16XL-decision-2026-09-08.md",
+      "sha256": "4dd25747f252499e35bef8df13a6d5c8499f7b8c56b3fb01731313173f68b762",
+      "bytes": 42897,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-3-margin-calibration-2026-09-08.md",
+      "sha256": "1875e2ed65c9f98661bd3d9f9b4494981cfc85a4780f9c5d6404be5092bd0cbd",
+      "bytes": 35094,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-4-wide-crops-2026-09-08.md",
+      "sha256": "f1abc7fe438cc291d4c1774725ea46394c14f6b286855b9464b8b293a8dd31ab",
+      "bytes": 41666,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-CLASS-MAP-2026-09-07.md",
+      "sha256": "6543696cf40a23141fdf8cc515ed7edfd2f2e792aa686992713c897b2d37ae39",
+      "bytes": 31574,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+      "sha256": "fab3154682fb92d55a9be9aaee1ce01ed87e4762b9d365fd4e6ee9a1ad6415f6",
+      "bytes": 80439,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53e-request-dedup-2026-09-07.md",
+      "sha256": "e2219040ed9d757290f5d46e633ddada77eec2581b3039cbc9e90eefcb9be71d",
+      "bytes": 51191,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+      "sha256": "2f07605413007cf00d34a3291310d4e5a3a689edfcaabc49230ded4c953a4796",
+      "bytes": 66982,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E55-comps-coalescing-2026-09-07.md",
+      "sha256": "0bf60f1d2d86f7a263452b84672c088964daead591759bd5bcdbe4429af4aa73",
+      "bytes": 27187,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E56-ondevice-retrieval-2026-09-07.md",
+      "sha256": "f2350373b07c16ae060680f705f37468e192036ba9734e989517f67117d7226d",
+      "bytes": 20641,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E57-siglip2-zeroshot-2026-09-08.md",
+      "sha256": "7da93149c6cad7e56d4a4a03df210718afae56113b6f431af83d7da89fd4a8df",
+      "bytes": 41330,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E58-incumbent-finetune-2026-09-08.md",
+      "sha256": "25b75f0b9a5df96e7558170aa326a9988054f901785ffbdc58b9e01ca6888cca",
+      "bytes": 89325,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E5E6-search-path-2026-09-05.md",
+      "sha256": "259bc6eba9da9d3ad822125fb981b09c95610520104829d7bb931f245781430a",
+      "bytes": 40812,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E60-variant-language-detector-2026-09-08.md",
+      "sha256": "9050d29b8a150d6e0655b4c41895ea3e5b72ca5678081522a33f1b07f280a958",
+      "bytes": 28276,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E61-cross-language-art-dedup-2026-09-08.md",
+      "sha256": "656bac48cdaaf74336576516e14823b3288470ea20bd1c5c561849464d429d91",
+      "bytes": 39586,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E62-artwork-vs-print-2026-09-08.md",
+      "sha256": "9a17c6c4707b03daf52766480869dc7bde1cb16ba1d4608ba229e122eeed4fcb",
+      "bytes": 31666,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E63-coverage-vs-model-2026-09-08.md",
+      "sha256": "9cae30499a70624715b2e9749f76c8bc1e49fc3dc3f49467be0b64584fc5b409",
+      "bytes": 23411,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E64-eval-weighting-2026-09-08.md",
+      "sha256": "7b91fc6d93ea61ebdf5befafaf3425792783eb524581fb9980e4bf7c5bc50e77",
+      "bytes": 45508,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E64b-market-volume-prior-2026-09-08.md",
+      "sha256": "e8f0c2210821b07253816aee63b7f5ed70dffffb6400909f27a3d2bc37a2d531",
+      "bytes": 53948,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E64c-ppt-top2000-2026-09-08.md",
+      "sha256": "70472b7317014eb414cbc434a15a8f67d472d3a4bb2f63868c686e7a154a59e6",
+      "bytes": 26473,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E65-improved-gallery-2026-09-08.md",
+      "sha256": "4883ca9deec94f326fca8a95becf2a53abb1e876d2f609d37c95a7280338db43",
+      "bytes": 21284,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E65a-language-head-2026-09-08.md",
+      "sha256": "55362687314115555c2737b70881e11bd86940c17f8481cd8be57e587f040dd0",
+      "bytes": 39599,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E65b-render-chain-artifact-2026-09-09.md",
+      "sha256": "75fdf83d70de0611ef469e98a2b66066ffdc7a690c2f45f7af73e513feb4e202",
+      "bytes": 28544,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E66-capture-resolution-2026-09-08.md",
+      "sha256": "8d9acd5c7f185da8147971a20d28007efa10bed6092565375da52060cb5fa686",
+      "bytes": 29005,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md",
+      "sha256": "89d8981f2402b3816e1c926e7b9a232a44716044a4fcb67752a05819c9928cb5",
+      "bytes": 63776,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E69a-real-crop-pseudolabels-2026-09-08.md",
+      "sha256": "c116cef29de0719c80381008b3fb871c28c8832c9b16c64ce7e6d48d863d9b9d",
+      "bytes": 36019,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E69b-print-class-objective-2026-09-08.md",
+      "sha256": "68e92aa73f42e1a1f8f35d54748f0e57c05cd5b1402d81ddf7c504bed228ac09",
+      "bytes": 17668,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E69c-real-crop-quota-on-labels-2026-09-11.md",
+      "sha256": "c4f92201a2e9afbf588488125bda76091eda7a62c1b1159a220d4cf92c4b04f2",
+      "bytes": 6954,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E74-confirmed-scans-census-2026-09-08.md",
+      "sha256": "0ffd54ad5a40a12474cef75ea91b8042b9f08b55d2d51e964125cc9b6f2e46fe",
+      "bytes": 25939,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E75-local-vector-store-2026-09-09.md",
+      "sha256": "b72e3b5046ee52d6101ec183b9127d72b16cb3b5a936dbb1146c58c6c2faac1a",
+      "bytes": 16209,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E77-local-gallery-container-2026-09-09.md",
+      "sha256": "deef967ef576d84411af9b7b836b34af42ef9b860b1133fc619b00bede02df47",
+      "bytes": 11250,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E78-box-fleet-2026-09-09.md",
+      "sha256": "5651ad8fbeaa3e63741f86e474d4614bfbba77980df5a84c9a5392c420687a7e",
+      "bytes": 5133,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E79-single-crop-vs-proposal-vote-2026-09-09.md",
+      "sha256": "3871f10ef1303bfb999f1a3982b8cdcae531ae52c240d796eefde3c2279dc3d7",
+      "bytes": 4315,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E80-student-on-the-new-stack-2026-09-09.md",
+      "sha256": "7cd6a13d4b9d1c080f176e58394608382d2666350b525155f0ed8f8e7f567da9",
+      "bytes": 8732,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E81-mobileclip-family-2026-09-09.md",
+      "sha256": "a0716f802c8c05012f89e37a7ad36fa7421f47ba13485b3d5f6bb477c8097d30",
+      "bytes": 10627,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E82-labels-today-2026-09-09.md",
+      "sha256": "6949f27e60bd4d28322966742f782a342a3b62f9847ee9d757a2c3fb90ffe7fa",
+      "bytes": 12513,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E83-recandidate-2026-09-09.md",
+      "sha256": "f6393e972011ea791168acc1becbc1d787b9c33f79febae00ea36c421ff11837",
+      "bytes": 3098,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E84-agent-tools-pilot-2026-09-09.md",
+      "sha256": "dc85d1204265f29a38bd7027ad2d638c1c83b7b8951c689b8e67b907f306c902",
+      "bytes": 35987,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E85-served-vs-provisional-truth-2026-09-09.md",
+      "sha256": "d9e24ac8248a067979218f8a105c4733198c210c8c9e81734e427a70b1bb8016",
+      "bytes": 1827,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E86-devbox-build-s1-gallery-2026-09-11.md",
+      "sha256": "ab5eb9201e95b48315cd8d7d03710930e07ad7ea2acd527ae9b1128dd4830a75",
+      "bytes": 3870,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E86b-crop-exemplar-gallery-2026-09-11.md",
+      "sha256": "e48b3e5b896b72077ee8b7a5c515fe62d3abd3f40cfeaf5574001ff2a66cf25d",
+      "bytes": 6123,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E87-number-confirm-served-2026-09-11.md",
+      "sha256": "cfe48595454b6557c9463e991f705337c7b8f64a36f07f792ee9233e52e4a1d6",
+      "bytes": 8470,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md",
+      "sha256": "080936f8b16197b576aca1b6a2693de6873d823950a9d5f80cba255c55ba6d43",
+      "bytes": 10183,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E89-back-gate-under-s1-2026-09-11.md",
+      "sha256": "7da97635072ff39225e49e7befdf6addf6cc5fb716071440e55939ddf83fe0c6",
+      "bytes": 10076,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E90-card-on-stream-gates-2026-09-11.md",
+      "sha256": "ef18797fbd1e0979237853b3d0c4effffa1d71512f497f801627765493fee39d",
+      "bytes": 7678,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E91-appearance-hash-stability-2026-09-11.md",
+      "sha256": "d0c73e3a1a5d1a53506605bcbb8cfec38ae61181034d915b01f1a4a315994ffd",
+      "bytes": 14192,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E92-back-prototype-s1-2026-09-11.md",
+      "sha256": "62b090a97953018368e7e48e512637a3e3bee0ca075e2eba55f9778b7998259d",
+      "bytes": 6156,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E93-hub-rows-2026-09-11.md",
+      "sha256": "8418e855e7a407bb5a90ad65bd62552bf3a127c3fb01d9ca9072cc875050489c",
+      "bytes": 4013,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E97-ring-budget-and-tap-health-2026-09-11.md",
+      "sha256": "ca533abbdce66f8a3fa1bff725fd94c4a4b16e616dc27369d21f33ff2d89ff43",
+      "bytes": 28752,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E99-no-answer-segments-2026-09-11.md",
+      "sha256": "eff30222b78f721a86aa4e37bc5803a1a009babbb376d1aa5070f686ed5c7f8f",
+      "bytes": 3514,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-FLAGS-POSTHOG-2026-09-07.md",
+      "sha256": "76b50a8c17cb70b0197b4d1fe911df6c50511be2f0748e146e8feb0ffd61035e",
+      "bytes": 18433,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+      "sha256": "82d4732dd66d9a5f367a527dcbedbd165f365b259ecbd82404e490c19b61f258",
+      "bytes": 16843,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-30TH-2026-09-19.md",
+      "sha256": "2b9107eed293c13d6232a27f34784140c4b9f4f232ac23093c1c2a02ec08d1b7",
+      "bytes": 15286,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-BACKUP-2026-09-19.md",
+      "sha256": "410441356de6a469324b7b97767a60e18ff1b2e4ebea6d1accddb48e4e24c36a",
+      "bytes": 2940,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-COVERAGE-605-2026-09-07.md",
+      "sha256": "80bc172d24a0fe30173517b10d8f4f2eaa3dfce4752da4d48f3c1f9771205c50",
+      "bytes": 38307,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-FULLDIFF-2026-09-07.md",
+      "sha256": "d2defdc11052dba58b57ab4a35baa755d28ed505952d13ea5b18f818b3e9a289",
+      "bytes": 23940,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-JA-PC-2026-09-09.md",
+      "sha256": "8d1852a2f2c9257a38566cf444c2fd2d1b57772fb0f9ba69e8f23172969c80b2",
+      "bytes": 33038,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-JA-INDEX-INTEGRITY-2026-09-07.md",
+      "sha256": "5f57a61555718c5b881692b80ce93dcaff3cdf35fd2a1ac23bbf92436d1e6d44",
+      "bytes": 39471,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-JA-VINTAGE-RANK-2026-09-21.md",
+      "sha256": "dc3d4e22a4f2d103f14856379774e383b6b4d6067469da8372830ee87ff99ffd",
+      "bytes": 8627,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-KEEP-WARM-2026-09-07.md",
+      "sha256": "4e2136d65eb1483ad21414a83b640f85239131c707ddddfe848f7a72da4b818d",
+      "bytes": 21829,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "sha256": "31371d4c80098a3dc9670bb7b10634ce58c8deade45919a2fb3ea482b8ca8bf2",
+      "bytes": 57023,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ONNX-C1-container-sigterm-fused-2026-09-07.md",
+      "sha256": "93a6b6863b1fc331a75ba96b8f98c49b18e7526fbc886f20e6b3c929034b46b9",
+      "bytes": 41374,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-POCKET-EXCLUSION-2026-09-08.md",
+      "sha256": "c1725608c41530104b7e704c02a3dd751570d848e7ada7671815e1d4352abb12",
+      "bytes": 22752,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PPT-DOORS-2026-09-07.md",
+      "sha256": "ca6c7b66300d9d03adc13313c09501ad17b1b2f641393c20f3be36cbdc0c23c7",
+      "bytes": 15879,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PPT-REPORT-V2-2026-09-07.md",
+      "sha256": "4b8a8905cf1f57aead55b30b28299df5795f6b225a703b6e3274b418c9eac003",
+      "bytes": 40001,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PRICE-HISTORY-PRINTING-2026-09-08.md",
+      "sha256": "55a14624746dc348a85152764407d894aa31617091224bf33877bea738ebf2f7",
+      "bytes": 11438,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PROD-EMBED-2026-09-08.md",
+      "sha256": "3b9617c66a301e830948af23966c0c4a5211be766578e6260f647fcd9e942b22",
+      "bytes": 38834,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-SCOUT-LOCK-SET-2026-09-07.md",
+      "sha256": "b67003ea31df764cd3f74792030c315057a7c2d23577e76126f33de3ba57b6a7",
+      "bytes": 22889,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-SEED-1I-2026-09-20.md",
+      "sha256": "bf37f7bde118e5a6367963554135e95b5f35756eef3f0533074d47bd82e4ba7f",
+      "bytes": 10351,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-SETTLE-1-2026-09-08.md",
+      "sha256": "2460dfaaa2988eaa3465217dda9b53f0f73dc483dac66e61658a1d0c903d3799",
+      "bytes": 33163,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-TID-WARM-2026-09-07.md",
+      "sha256": "7db6e3589c34c7115b031c8582b4264a8503d02408ec66913420f5ecea9c7a97",
+      "bytes": 16882,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-TID-WARM-P1-2026-09-07.md",
+      "sha256": "c234c9cc4f91d63e720afdf0670ce024b02bbf8f5b818fba59a6ab43317dd936",
+      "bytes": 40069,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-TID-WARM-SWEEP-2026-09-07.md",
+      "sha256": "361fe5fb96678636da7f5279dfa55119ef7bf3e3753776fbbaf72032ddfc56dc",
+      "bytes": 14444,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "sha256": "efeebdea69a78f23021f026591f952bb3f728870d3df45eb04542a917447cc50",
+      "bytes": 553273,
+      "source": "grailith"
+    },
+    {
+      "path": "grailith:docs/plan/2026-09-18-trunk-consolidation/experiment-ledger.md",
+      "sha256": "d59bb6e7423e3819650c6cf7a8391f975d9d4c57f21f64a57e488dae001a9b60",
+      "bytes": 35136,
+      "source": "grailith"
+    },
+    {
+      "path": "mining/arcs/A-experiments.md",
+      "sha256": "8e22c6c83ded4a222fcdc32e7cee7910d724f99685da810e520899644014eb78",
+      "bytes": 7850,
+      "source": "repo"
+    },
+    {
+      "path": "mining/arcs/B-pivots.md",
+      "sha256": "4a4c4bb96f424e0819358a9b86251a8d8807dcb25d191013ba1378491be2c850",
+      "bytes": 7871,
+      "source": "repo"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "sha256": "ee8b7db1d4b77a9666da612066f4d115ee6c56789146fb216dddef354e91a610",
+      "bytes": 8348,
+      "source": "repo"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "sha256": "e738bb75acbabea3ee88d7bd2cb89f9d3f9a810df907083a5fea08201a44d027",
+      "bytes": 8021,
+      "source": "repo"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "sha256": "1bb44a7d3c0dff592bf603b6b1b5b4e32324647840560bf2d131ad4c62f0f799",
+      "bytes": 8006,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/E67-top3-replay.md",
+      "sha256": "89451873dc18f81ec58f64bc6e537f346f51b4cdd40e9fbbce30cefcd34a54d3",
+      "bytes": 7259,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/cross-arc.md",
+      "sha256": "657199be54307c6a21b99fde35532b569f00e8751c46fd3713586afe23343a46",
+      "bytes": 5735,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/experiments-index.md",
+      "sha256": "267d789cfa660fe1aafacc7ce4df824f50c42b91384c23fa95f5338200723a6c",
+      "bytes": 23934,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "sha256": "31c85a42c56415943e1e8ce7516a0d59873cc4ec2f1bd093017bc4289ff2484d",
+      "bytes": 6457,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "sha256": "9078fee8f3e502b388d2d7e63fb0cc982034b8dda69681f4d828ecdd9294c8ef",
+      "bytes": 8502,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/pivots-timeline.md",
+      "sha256": "0dd994149d9781ade3571027130fbe5cb6a9cd7007e0802aedff0d5ed95a8e89",
+      "bytes": 9384,
+      "source": "repo"
+    },
+    {
+      "path": "mining/findings/top3-trajectory.md",
+      "sha256": "69b4d6d35b89fe690f7e207ef560a9f698e64f67b7d55cf3829477e149faa96a",
+      "bytes": 14194,
+      "source": "repo"
+    },
+    {
+      "path": "starter/README.md",
+      "sha256": "d8332820e4529d699fd2144810bb8178ce3b366659f98bb060dfa424df018838",
+      "bytes": 4887,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/README.md",
+      "sha256": "2543874ce15dfcf3fe418d07dbd5c992aa71542518033822a8aebfb019254877",
+      "bytes": 1016,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/hybrid.md",
+      "sha256": "988d991914acd6ea4f461b6a1da312c8fce49d388c9415eaad687d86e29786cc",
+      "bytes": 1621,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/personas/designer.md",
+      "sha256": "57eabae8b749f0cef4c8fb29ce95a4652e88c9af68daf3d2bc51d6ecc685eddb",
+      "bytes": 957,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/personas/engineer.md",
+      "sha256": "d42f10b7d32ad1223d2564a850afaac9c148791f9181a89fb7f377ba3ba0a58c",
+      "bytes": 988,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/personas/exec.md",
+      "sha256": "2f6eb28aa00800541c08f38806dc095aa8e3116b35835618af60ab279a7ae7a2",
+      "bytes": 894,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/personas/pm.md",
+      "sha256": "e40c2bfeead3ba1e8891e0abc14f040cfb0af6ff51439809d8cb6395b73d66a3",
+      "bytes": 959,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-drafts/sample-draft.md",
+      "sha256": "6610ae7f1920ff9399cb7e846120efb2eb5d08fb511d035045194d8ca999a694",
+      "bytes": 672,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "sha256": "fd39adf6e523e5026cbc89f84fcfadd5da855d406404a6d79764a4982d5fa797",
+      "bytes": 3444,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "sha256": "fc9fd54be9e5dd7808b44f2aaff2cd2eba3f8ee3e6b7ced69d02c6cf24454ec4",
+      "bytes": 2838,
+      "source": "repo"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "sha256": "1cc7b9a8b175301577a45d39c304da309bfd2088fedbb2f0c4ac2e30162ce734",
+      "bytes": 2574,
+      "source": "repo"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "sha256": "27f9b30b3f7e4e28a423ddd6362bd4f9cfcbb02c70a3fd9d52753949b34da28b",
+      "bytes": 3800,
+      "source": "repo"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "sha256": "645836f740a84a1e799f8508b2c1a2f2a46b74aa0a0b8ad45a9c63bdb3d10f61",
+      "bytes": 3639,
+      "source": "repo"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "sha256": "b6ac24110bbfacf66e90934db5c064da233a3b70d5f24854317454feae6dc8a4",
+      "bytes": 4671,
+      "source": "repo"
+    },
+    {
+      "path": "talk/notes.md",
+      "sha256": "0e99b02d2d45240f9d49c9f6fd3c661d39ec7fe39324aedf8220c334c2b9d031",
+      "bytes": 19635,
+      "source": "repo"
+    },
+    {
+      "path": "talk/outline.md",
+      "sha256": "75963bc2d6b3fee00ee8e4827a1d980fae5de71dfbf48f20d2a617b275e38d6f",
+      "bytes": 9135,
+      "source": "repo"
+    },
+    {
+      "path": "talk/plan/critique2/designer.md",
+      "sha256": "b6d8b7356640d81fd8afb828e009c544a33db05f1975c7b32761a296d16bd02d",
+      "bytes": 5748,
+      "source": "repo"
+    },
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "sha256": "a4e44311f4168b68cb3db55da55d966a853a8d1ee5ee7c47adefb8afcaf8a19a",
+      "bytes": 4908,
+      "source": "repo"
+    },
+    {
+      "path": "talk/plan/critique2/pm.md",
+      "sha256": "b068b9fe056ca26f1a2b4c7f8d26d82140894ab2993814e2e3f09f32913926c3",
+      "bytes": 5789,
+      "source": "repo"
+    },
+    {
+      "path": "talk/plan/critique2/senior-swe.md",
+      "sha256": "19d947da8d40063efc811133c8aa50ec42cbc4df607175e722fb67570485efa2",
+      "bytes": 5500,
+      "source": "repo"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "sha256": "b8054cb077a3cd939dd1ecfe863dc13cc2812c52db83007892061c3cadd55865",
+      "bytes": 19853,
+      "source": "repo"
+    }
+  ]
+}

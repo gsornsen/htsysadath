@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "4dd63d7d1af11b437774e5555f9a39870d63ad70aa7fda56e4f3a595b3b63a87",
+  "id": "q-376adb2a4a",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 1,
+      "sha256": "cba889de4b877ba3055cd2a0eb988136214053f97dd0bfe2ef4d5f361dc7594a"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 9,
+      "sha256": "d08d5ac2c2e000407f3e6e6eef69b9700bcd80c515ba3ed2c26e2fdffb072981"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 2,
+      "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 4,
+      "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 0,
+      "sha256": "bd944720afd69c75ebb046d293a7a1fe2712948e8f63335d460cde83ca08816a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+      "chunk": 14,
+      "sha256": "96a45cc052f90b641e032a17102294a67cdaf055bfbabd05cc71799b37b71da8"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E64b-market-volume-prior-2026-09-08.md",
+      "chunk": 21,
+      "sha256": "d485a418caa36404d1b3acb3855bee7d6eae5e044d44222c58c7bdd0d082b567"
+    }
+  ],
+  "output": {
+    "answer": "That's not fully in the record. What I know is I flagged a one-in-three miss rate during the live demo of the scout, but I never stated a target number for the identification vote overall, or said whether two-in-three is good enough to ship. Other parts of the project do have explicit bars — one signal shape needs recall of at least 0.90, another needs a 90% precision floor — but those are pre-registered bars for specific pricing signals, not for the card-identification vote itself. So I can't tell you what number I'm targeting for the scout's overall accuracy, or whether two-in-three clears it.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Demo · the card scout, live"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+        "locator": "3.2 The three shapes a signal may ship in, and the bar for each"
+      }
+    ]
+  }
+}

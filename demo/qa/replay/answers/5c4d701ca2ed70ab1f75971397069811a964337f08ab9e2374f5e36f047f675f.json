@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "5c4d701ca2ed70ab1f75971397069811a964337f08ab9e2374f5e36f047f675f",
+  "id": "q-d7da7b6587",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 15,
+      "sha256": "aae218cea2cef9db2ab5b5c83fbac7d0651e59f896ed69219de6376d1431da07"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 15,
+      "sha256": "ed6e0bbeeeda62971b82813b69cac9709fed0679f831f15393c979e79d88a451"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 7,
+      "sha256": "b58622d4e5851c0b33dade18bf463e6b6f5ea1e8f300970a1c19e54f3cf393f9"
+    },
+    {
+      "path": "mining/findings/E67-top3-replay.md",
+      "chunk": 1,
+      "sha256": "1a6b11723691929dc61903ae70fb90840e56fb1347d238176bc67af6a5e58918"
+    },
+    {
+      "path": "mining/arcs/A-experiments.md",
+      "chunk": 7,
+      "sha256": "ef32a83944bdb190c97c2a0192773af2186a2b4852658cb0f470a84315002e57"
+    },
+    {
+      "path": "mining/findings/top3-trajectory.md",
+      "chunk": 14,
+      "sha256": "b61ed4d1fc1c32428b9e3755113b1ae7f80139421755dba1a9cfff72e9b7f177"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+      "chunk": 1,
+      "sha256": "c85f4d99ea35d14a46a4bb031a3832501b3a78f54e5040ec93cfa5dfa32cbbe1"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-JA-PC-2026-09-09.md",
+      "chunk": 23,
+      "sha256": "ecbb8adb0f51f5f1705a96defa1cd45c8ef165926831bde082333d3dc2e656fa"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-COVERAGE-605-2026-09-07.md",
+      "chunk": 22,
+      "sha256": "1f5e481f49c129fe8761f0a95257934a99c99e975262636cf032406e1e31edc4"
+    }
+  ],
+  "output": {
+    "answer": "That's not clearly in the record. The docs date the top-3 bar to the 2026-09-11 evening plan, but a later brief dates it to 09-13, and it's an open question whether that was a restatement of the same bar or something new — the record doesn't say. I don't have a documented moment tying the choice of top-3 to seeing top-1 numbers come in low. Separately, on a different experiment the record states a general principle: a bar chosen after seeing a score isn't a bar. But nothing connects that principle to this specific decision, so I can't say which way it went.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "mining/arcs/A-experiments.md",
+        "locator": "Was 09-13 a restatement?"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+        "locator": "A bar chosen after seeing a detector's score is not a bar."
+      }
+    ]
+  }
+}

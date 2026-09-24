@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "a818c52d32f7d3812dfa9253faf1b67666d4ff3db41638fbf97e7c51a90b5fce",
+  "id": "q-a103d55233",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 2,
+      "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "chunk": 11,
+      "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 31,
+      "sha256": "b5165d9c92249679628894b79be0cca2aae471ee4bcb7f6a5ff00065f7dba436"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+      "chunk": 3,
+      "sha256": "8d4759502c52b28894b5f84be2bc6f18c9b4c1a8a4c8269a7e5ac6892672f29e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+      "chunk": 62,
+      "sha256": "97073872ed5a7fd387cedf341853781288a1008329782e8ba6428b72755caee5"
+    }
+  ],
+  "output": {
+    "answer": "After that failure I added a real-device check as a standing step, not a one-off reaction: before calling any UI work DONE, someone re-walks the built screens on one real device, in the real flow, checking for what a simulated viewport hides — browser chrome eating space, a modal reopening every task, options only reachable after rotating the phone. That's now the last gate before done, every time, not just after a failure. What the record doesn't say is whether it's always a human doing that walk versus an agent standing in — the excerpts only establish that the real-device pass itself is mandatory before DONE.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "locator": "The real-device check (do this before calling it DONE)"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "The lesson: add a real-device check before DONE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "e8177f4d846fe91bfe6d374398f231b84b81eb6361be22c4e51a8c6434095779",
+  "id": "q-4ae90ed9df",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "chunk": 0,
+      "sha256": "e43e60a015791dc6e93c8a6106c6e7a8825b2e49eeb92c3c2a52a3195efd634f"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 1,
+      "sha256": "3f22daeb5b5d08be294be053fc2f8ed513170d6d148be4a3b1c1cb834941bc58"
+    },
+    {
+      "path": "starter/persona-drafts/hybrid.md",
+      "chunk": 2,
+      "sha256": "436fbd7a2a6800931cb4d64af134711ba7b22493d6bb76b30e89c3eeeef5e021"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 8,
+      "sha256": "ab9990ef4a794f2069ea0d568163c136d9a20951203f421659e7d2ce88ff917e"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 8,
+      "sha256": "d9c4eac7ef8882aa9616862da325964a6bf947b8b8a57306b5888233b2b9d2f8"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 21,
+      "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PPT-REPORT-V2-2026-09-07.md",
+      "chunk": 4,
+      "sha256": "4090104d7e429405f21e1f1b24de0666283287c11a855d0dca750295c49b156b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E22-ppt-credit-costs-2026-09-05.md",
+      "chunk": 2,
+      "sha256": "459c5bb420ec64d6f96d1d960921a100babf17f7e5f861b0d25f618c8a413e32"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 29,
+      "sha256": "a244b4cd99d9b0bb10f3cb420bb3e4514055c05abbfab87e900d45deb61333cc"
+    }
+  ],
+  "output": {
+    "answer": "No, it's not logged with timestamps — that's my own estimate, not something the record measured. I've said on stage it's about thirty minutes a day, spread across the day, spent setting agents up for overnight runs. The record doesn't break out whether that figure separately counts writing gates and briefs versus watching runs — it's just described as time spent setting the runs up, and nothing in the corpus itemizes it further than that.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "spread across the day, setting agents up"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "Gates and flags that let experiments run unattended"
+      }
+    ]
+  }
+}

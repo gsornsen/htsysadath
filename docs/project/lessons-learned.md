@@ -150,3 +150,13 @@ entry; link the finding or commit that proves it.
   reset. A critic that hadn't would have judged blank slides. The fix went into every later brief as a
   first step: assert the expected sha is an ancestor of HEAD (`git merge-base --is-ancestor <sha> HEAD`)
   and reset to main if not.
+
+- `[method]` 2026-09-24: **a grounded-answer pipeline overclaims quietly until you read the
+  answers against their files.** First live Q&A run (demo/qa, lane qa/pipeline): 17/20 "sourced",
+  0 "not in the record", all citations verified, and still one answer invented a counterfactual
+  opinion ("I'd have led with 78.2 %") and another generalized one pilot's cap to every run.
+  Citation checks prove the quote exists, not that the claim follows. Fixes: prompt rules
+  (numbers keep their scope; no invented opinions; adjacent facts = "not in the record"), BM25
+  instead of raw idf, and number words kept as tokens ("two in three" had been a stopword
+  phrase, so it retrieved persona DONE docs, not slide 13). Rerun: 14 sourced, 2 testimony,
+  4 not in the record.

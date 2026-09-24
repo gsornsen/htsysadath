@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "66ac7d96c8df666689d637bf76ac94f2bb876689339bfcfbbce125da37fffc6a",
+  "id": "q-86eb799664",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 1,
+      "sha256": "455fc42cf9fa5579de5a98b2c08296e4bbb02f2ebb51935937cf5e1fbf1ca10d"
+    },
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 3,
+      "sha256": "11c62ae9c7645afe99e868f399a0e526c1566a6f56a872e506313629130c7023"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 5,
+      "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 12,
+      "sha256": "1c98ac384ff0b2aa781e86e937044173e7f18f4241406283cf74e8d534aa2f0a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 12,
+      "sha256": "f589ea6ea078eaa142a438dde1510c7b14ec5fd53c38cd49ba1896b3889f0eb0"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 6,
+      "sha256": "38fdd143062d88a4c2785f20c9b06e72b7f5b5967ffdbaa4f801986c7378a7be"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53e-request-dedup-2026-09-07.md",
+      "chunk": 29,
+      "sha256": "dfac84d8a86bb9984fb3b89c78f2d717967f478bbdb042b9a974b2ff869b2efd"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46g-coldvar-2026-09-07.md",
+      "chunk": 19,
+      "sha256": "27b8a6e6623cdd370a543285fd8ceacf412ed390f53961d5ec2b62f4fc2f3a1a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53a-runtime-levers-2026-09-07.md",
+      "chunk": 23,
+      "sha256": "26754ce9a27caf18e0a66a086cfe3a37aec5034e040aa508d8d17bf22b2a7f0d"
+    }
+  ],
+  "output": {
+    "answer": "I write the gate first — the pass/fail result — before either lane runs. Then I spin up two isolated worktrees off the same base: `git worktree add ../lane-a -b lane-a/<slug>` (and the same for lane-b), so concurrent lanes never collide in one shared directory. Each lane gets its own brief and runs independently. A stronger model reviews the output one tier up, stating exactly what it checked. To merge back once the gate passes, I run `git merge --no-ff lane-a/<slug> -m \"merge lane-a: <what was learned>\"`, with the commit body recording what the losing lane got right or wrong.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/checklist.md",
+        "locator": "The 5 steps"
+      },
+      {
+        "path": "starter/README.md",
+        "locator": "Terms, defined once"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "8fe897f3c2bd35325875a8d802e9e8e23b0d3ae42fb7a8c65d0643c512056655",
+  "id": "q-48598d1c92",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 8,
+      "sha256": "ab9990ef4a794f2069ea0d568163c136d9a20951203f421659e7d2ce88ff917e"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 4,
+      "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 2,
+      "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "chunk": 11,
+      "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 4,
+      "sha256": "6b11b3283a7a96b2caa87f762f17c8b06601faeb072507acb53e03530a36abb8"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 34,
+      "sha256": "0f60c3314fad93decfd223a15a1ac8716580513058778e5b4759d4d31f000757"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46i-fp16-teacher-coldstart-2026-09-08.md",
+      "chunk": 20,
+      "sha256": "87175411b0099e9f2cf44eb2d78c9cfb3e20d5f8ef1bce4036491494860cd700"
+    }
+  ],
+  "output": {
+    "answer": "The record shows they're checked against my own hands, not a live usability session. The method ends with a real-device check — I re-walk the built thing on one real device myself, and if it disagrees with the panel, the device wins. One open question I flagged is whether panel seconds-per-task is ever checked against a live stopwatch on my own sessions or only compared to itself before and after — that comparison to a real usability study isn't shown as having been done. The transferable move also says a synthetic panel walk should never stand in for the real device in the user's actual hands.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "locator": "The real-device check (do this before calling it DONE)"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "\"only itself before/after\""
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "never let a synthetic walk stand in for the real device"
+      }
+    ]
+  }
+}
