@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Methods map: problem, method, where</title>
+<desc id="d">Matrix of seven rows mapping a problem type to the method that fits it and where it appears in the talk: UI flaps -&gt; instrument and replay against a control -&gt; jitter (E19); tempting favourite -&gt; pre-register a kill line -&gt; dedup (E67); is it better -&gt; measure the bar that matters -&gt; top-3 on lots; too many forks, one of you -&gt; gated experiments that run unattended -&gt; overnight queue; one hard core -&gt; solve it once, first -&gt; shared identify core (D11); is the UI done -&gt; persona review gate -&gt; the labeler panel; repetitive judgement -&gt; agents first, human verdict -&gt; labeling. Sources: talk/plan/structure-v2.md; docs/project/decisions.md D17.</desc>
+<defs></defs>
+<rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
+<g data-align-inventory="row:r0=3 row:r1=3 row:r2=3 row:r3=3 row:r4=3 row:r5=3 row:r6=3 col:c0=7 col:c1=7 col:c2=7">
+<text x="30" y="22" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" letter-spacing="1.5">PROBLEM</text>
+<text x="428" y="22" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" letter-spacing="1.5">METHOD</text>
+<text x="888" y="22" font-size="20" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="muted" fill="#898781" letter-spacing="1.5">WHERE IN THE TALK</text>
+<rect x="16" y="48" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r0" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="72" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >UI flaps or thrashes</text>
+<path d="M396 65 L404 72 L396 79" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="48" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r0" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="72" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >instrument + replay against a control</text>
+<path d="M856 65 L864 72 L856 79" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="48" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r0" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="72" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >jitter (E19)</text>
+<rect x="16" y="102" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r1" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="126" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >A tempting favourite design</text>
+<path d="M396 119 L404 126 L396 133" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="102" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r1" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="126" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >pre-register a kill line</text>
+<path d="M856 119 L864 126 L856 133" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="102" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r1" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="126" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >dedup (E67)</text>
+<rect x="16" y="156" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r2" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="180" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >“Is it better?”</text>
+<path d="M396 173 L404 180 L396 187" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="156" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r2" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="180" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >measure the bar that matters</text>
+<path d="M856 173 L864 180 L856 187" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="156" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r2" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="180" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >top-3 on lots</text>
+<rect x="16" y="210" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r3" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="234" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Too many forks, one of you</text>
+<path d="M396 227 L404 234 L396 241" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="210" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r3" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="234" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >gated experiments that run unattended</text>
+<path d="M856 227 L864 234 L856 241" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="210" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r3" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="234" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >overnight queue</text>
+<rect x="16" y="264" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r4" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="288" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >One hard core, many products</text>
+<path d="M396 281 L404 288 L396 295" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="264" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r4" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="288" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >solve it once, first</text>
+<path d="M856 281 L864 288 L856 295" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="264" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r4" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="288" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >shared identify core</text>
+<rect x="16" y="318" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r5" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="342" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >“Is the UI done?”</text>
+<path d="M396 335 L404 342 L396 349" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="318" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r5" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="342" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >persona review gate</text>
+<path d="M856 335 L864 342 L856 349" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="318" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r5" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="342" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >the labeler panel</text>
+<rect x="16" y="372" width="370" height="48" rx="8" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1" data-align-row="r6" data-align-row-count="3" data-align-col="c0" data-align-col-count="7"/>
+<text x="30" y="396" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Repetitive judgement work</text>
+<path d="M396 389 L404 396 L396 403" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="414" y="372" width="432" height="48" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1" data-align-row="r6" data-align-row-count="3" data-align-col="c1" data-align-col-count="7"/>
+<text x="428" y="396" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >agents first, human verdict</text>
+<path d="M856 389 L864 396 L856 403" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="372" width="246" height="48" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1" data-align-row="r6" data-align-row-count="3" data-align-col="c2" data-align-col-count="7"/>
+<text x="888" y="396" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >labeling</text>
+</g>
+</svg>
