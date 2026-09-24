@@ -93,3 +93,10 @@ entry; link the finding or commit that proves it.
   different list from the coordinator. The merge was clean; the integration broke. A parallel
   contract needs the shared identifiers (filenames, ids, ports) written into every brief from
   one list, not just the directory split.
+
+- `[method]` 2026-09-24: **marp-cli reads stdin whenever stdin isn't a TTY**, so any build that
+  runs from a script, CI or a backgrounded shell hangs forever on an open pipe. The coordinator
+  lost ~3 minutes to it and left two hung marp processes behind: the chain's build, then its pdf
+  step once the build was killed. Found by `ps` and stopped by pid. Fix: `--no-stdin` on every
+  non-interactive marp call (da1f055). Meta-lesson, second time today: when a coordinator command
+  times out into the background, the NEXT command must be a `ps` for its children, not a retry.

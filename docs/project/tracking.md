@@ -18,16 +18,18 @@ blocked · dropped. Newest changes at the top of the changelog.
 | E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | merged | Opus 5.5 | 300488d | print@3 83.58→89.05% (p=0.0034); control reproduced E67 exactly |
 | Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | merged (talk side) | Opus 5.5 | b4dd0b8 | non-locked top-3 65.2% (45/69); n=87 (no taps after 09-16); Grailith branch awaits Gerald's merge gate |
 | Presentation plan swarm (Marp) | plan/* → plan/synthesis | merged; proceeding (D10) | Sonnet ×3 + Opus 5.5 ×2, Fable review | see log | talk/plan/presentation-plan.md §6 has 8 questions; build swarm L1–L5 ready to launch on approval |
-| Build L1 scaffold | build/scaffold | running | Sonnet → Opus 5.5 | — | talk/slides/ skeleton, 22 stubs, theme, npm scripts |
+| Build L1 scaffold | build/scaffold | merged | Sonnet → coordinator check | c3182ea | + deps triage and --no-stdin (da1f055); chart filenames to reconcile in L6 |
 | Build L2 charts | build/charts | running | Sonnet → Opus 5.5 | — | 7 SVGs from data/*.json |
 | Build L3 shots | build/shots | running | Sonnet → Opus 5.5 | — | Storybook >9000, §8 anachronism rule |
-| Build L4 demo tooling | build/demo | running | Sonnet → Opus 5.5 | — | fanout + viewer :8090 + Demo 2 aliases; one dry run |
-| Build L5 outline v1 + notes | build/outline | running | Opus 5.5 → Fable | — | sources the abstract's claims |
+| Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
+| Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:0x PDT — D11 (act 3 = shared identify core; act 4 from 09-06). Build L1, L4 and L5 merged; L2 charts and L3 shots running. Dependabot triage: xmldom overridden; the extract-zip chain accepted, no fix exists. marp --no-stdin.
 
 - 2026-09-24 10:1x PDT — D10: abstract written; Demo 1 fallback = Gerald's own ~2 min video; opening fork = the scout's jittery detect→identify boundary. Build swarm L1–L5 launched in parallel with an ownership contract (disjoint paths; L1 owns package.json and deck.md).
 
