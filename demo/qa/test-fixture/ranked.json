@@ -1,0 +1,50 @@
+[
+  {
+    "rank": 1,
+    "id": "cluster-delegation",
+    "question": "How do you decide what to delegate to an agent versus do yourself?",
+    "personas": ["senior-swe", "pm", "designer", "mid-swe"],
+    "score": 18,
+    "members": ["senior-swe-q1", "pm-q1", "designer-q1", "mid-swe-q1"]
+  },
+  {
+    "rank": 2,
+    "id": "cluster-reproducibility",
+    "question": "How do you make sure results are reproducible when the model's own output is not deterministic?",
+    "personas": ["senior-swe", "mid-swe"],
+    "score": 9,
+    "members": ["senior-swe-q2", "mid-swe-q2"]
+  },
+  {
+    "rank": 3,
+    "id": "cluster-hygiene",
+    "question": "What is your process for keeping private data out of a public repo?",
+    "personas": ["pm", "designer"],
+    "score": 7.5,
+    "members": ["pm-q2", "designer-q2"]
+  },
+  {
+    "rank": 4,
+    "id": "cluster-limits",
+    "question": "Where does this approach break down, or start costing more than it saves?",
+    "personas": ["senior-swe"],
+    "score": 5,
+    "members": ["senior-swe-q3"]
+  },
+  {
+    "rank": 5,
+    "id": "cluster-onboarding",
+    "question": "What would a new team member need to learn before using this workflow?",
+    "personas": ["designer", "mid-swe"],
+    "score": 4.5,
+    "members": ["designer-q3", "mid-swe-q3"]
+  },
+  {
+    "rank": 6,
+    "id": "cluster-cost",
+    "question": "How much does the private ledger source cost to maintain versus how much time it saves?",
+    "personas": ["pm"],
+    "score": 3,
+    "members": ["pm-q3"]
+  }
+]
