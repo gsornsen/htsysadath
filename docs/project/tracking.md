@@ -13,13 +13,22 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Mine: pivots (arc B) | mine/pivots | merged, Opus review PENDING | Sonnet | 6544205 | four-act ordering broken → D5; Art Binder unresolved |
 | Mine: personas (arc C) | mine/personas | merged | Sonnet | a504755 | panel mechanism reconstructed; B19 failure case |
 | Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
-| Mine: agent labeling (arc F) | mine/labeling | running | Sonnet → Opus review | — | 3min→10s verdict outstanding |
+| Mine: agent labeling (arc F) | mine/labeling | merged, Opus review PENDING | Sonnet | 9a3f1c2 | 3min→10s REFUTED → D6; 4/4 spot-checks held |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
 | Outline v1 | talk/outline | planned | Opus | — | after any two arcs land |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 08:3x PDT — **Phase 1 COMPLETE: all six lanes merged to main.** 17/17 coordinator
+  spot-checks confirmed by re-opening cited sources. Three decisions logged, all the same shape:
+  D4 (memory vs record is a FRAMING difference, not a factual one), D5 (arc B's four-act ordering
+  is contradicted by the git log — comps shipped day two), D6 (the 3-min/label baseline is NOT
+  SOURCED and is dropped; arc F quotes 11-16 s agent wall time and leads on agreement + cost).
+  brief.md arc F corrected. Phase 2 is unblocked: inventory + arc drafts exist, so transcript
+  slices can be targeted. STILL PENDING: the Opus review pass on arcs A/B/F, held for Gerald's
+  client update — and gated on his call about Opus 5.x for agent lanes (see the caution below).
 
 - 2026-09-24 08:2x PDT — Phase 1: five of six lanes merged to main (inventory, arcs A, B, C, E);
   arc F still running. Coordinator spot-checked 3+ findings per arc by RE-OPENING the cited
