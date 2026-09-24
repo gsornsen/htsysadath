@@ -288,3 +288,35 @@ still restart-looping 49 s after (exit 2); recheck later. The :8989 keyless preg
 - **Revision swarm** (R1 charts, R2 deck + notes, R3 starter kit) proceeds on the converged
   critique (`talk/plan/critique.md`). Slides that depend on the two verify lanes are patched
   after they report.
+
+## D14 · 2026-09-24 · Two verified answers: the jitter story's ending, and the hold-out
+
+**The jitter ending (from the experiment docs + ledger, per Gerald; coordinator re-checked E19).**
+- 08-18: the anti-jitter liveness state machine shipped (`45b8bddb7`), built against 6–15 s identify.
+- 09-02: Gerald's first instrumented live session was still "super jittery". The data showed the flap
+  was per-frame overlay state; a results queue with a sticky view shipped (`70b2f1b9e`).
+- 09-05: E1/E7 sized it (steals 13–19 % of committed locks). **E19, against a control**, measured
+  answers thrown away per 100: **35.8** (old client, slow server) → **15.4** (old client, 3× faster
+  server, p50 1,157 → 433 ms) → **0.14** (after F5: cancel the request, keep the answer).
+- 09-11: E88 timer retune ("nothing thrashed"); Gerald: "worked really well, super fast on identify".
+- Killed or never needed: E91 hashVeto (a trade, not a win), E116 boundary-enter (lift vanished net
+  of control), E100b consensus (inert on the bar); no embedding-MODEL experiment was needed for jitter.
+- **Stage ending:** "The data showed us where it was flapping. A 3× faster server cut thrown-away
+  answers from 36 to 15 in every 100; then one behaviour change, cancel the request but keep the
+  answer, took it to about 1 in 700. Three days from the first instrumented complaint." Both levers
+  get credit. Crediting only the behaviour change would overclaim.
+- **Questions for Gerald (not blocking):** the ~500 ms cadence only exists after the 09-05 speedup
+  (09-11 p50 375 ms), so is the story set in September? PostHog went in 08-10 for analytics; the drop
+  event exists from 09-04, and the 09-02 fix used a replay test. Is "instrument, then replay" the
+  right order? The 3×5 fork grid is testimony (not in the record).
+
+**The hold-out (verify lane, coordinator re-checked the fit code).** HELD OUT: 0 of the 201 E67 test
+crops trained or tuned the head. `e65a_head.py` fits `fit_linear(Xtr, …)` with `Xtr = R[tr]`, catalogue
+RENDER rows in the train sets only; the real-crop sets are loaded only to be scored. λ was chosen on
+dev (disjoint from test in split `fd4f57d5…`). Crop-filename join and a cosine check (max 0.997, none
+≥ 0.999) found no test photo in any E11 crop. Caveat for Q&A: the head has seen the catalogue render
+of the true card for most test crops, which is the gallery, known at inference, not leakage.
+**Talk line:** "The language head never saw a real photo while it trained: catalogue images only, its
+one knob set on a separate dev split, and none of the 201 test photos in any of that."
+**For Gerald:** EXP-E67 §4.1 (Grailith, line 643) says "The E65a head was fitted on 432 E11 crops". That's
+wrong: it was E11's older probe. Worth correcting before anyone quotes it.
