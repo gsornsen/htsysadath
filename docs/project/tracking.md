@@ -35,7 +35,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Visuals V1: diagrams (svg-infographic) | visuals/diagrams | merged | Opus 5.5 → coordinator | 53d87b9 | 7 diagrams incl. gates-flags; 2 honesty fixes |
 | Visuals V2: charts (svg-linyaosky) | visuals/charts2 | merged | Sonnet → coordinator | see log | jitter-drops, d4-slope (556), lot-bar tiles, lot-days |
 | Critique round 2 | critique2/* → talk/plan/critique2.md | converged | Opus 5.5 ×4 → Fable | 5fb7adb | 12/14/11/12 of 20; fix contract F1/F2/F3 |
-| Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | running | Opus 5.5 ×2 + Sonnet | — | then polish LAST (impeccable/hallmark) |
+| Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | F2+F3 merged; F1 running | Opus 5.5 ×2 + Sonnet | 1ef7ab4 | polish ON HOLD until v4 is settled |
+| Deck v4 (audience-first), PROPOSAL | story/deck-v4 | running | Opus 5.5 → coordinator → Gerald | — | structure-v4.md; merge only on Gerald's approval |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | running | Opus 5.5 → coordinator | — | personas → questions → rank → sourced answers → verify; live once, then replay fixtures |
@@ -45,6 +46,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 12:2x PDT — D19: Gerald finds v3 confusing from the audience's seat. Structure v4 (audience-first) proposed; built on a branch; merges on his approval. Polish on hold.
 
 - 2026-09-24 12:1x PDT — F3 starter merged. Q&A demo spec (talk/plan/qa-demo.md): replay fixtures make the model passes idempotent; Grailith is an optional live-only source. Two lanes running.
 

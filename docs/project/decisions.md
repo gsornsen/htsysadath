@@ -385,3 +385,15 @@ on the dev box). The Grailith branch `demo/scout-single-crop` (7afd3587, be24b57
 **D18 decision (Gerald, 11:3x):** flip the demo build's default to `cropMode: "proposals"` and rebuild
 (done by the coordinator on Grailith `demo/scout-single-crop`; single mode stays available by storage
 key for experiments). Gerald records the fallback clip himself before the talk.
+
+## D19 · 2026-09-24 · Audience-first (v4), proposed; merges only on Gerald's approval
+
+Gerald (12:2x): from the audience's seat, the v3 slides are confusing. The talk's goal restated: the
+methods used to tackle these problems, how they show up in the audience's own projects, and methods
+they can use to scale themselves, grounded in card-scout evidence. Proposal `talk/plan/structure-v4.md`:
+each method slide leads with the audience's question, then the method, then card scout as plain-words
+evidence (codes only in footers and notes); nine methods grouped into four problem families; the
+opening starts on the AUDIENCE's moment; a "see this → try this" cheat-sheet close; the timeline moves
+to backup. Built on branch `story/deck-v4`; NOT merged until Gerald approves. Polish is on hold until
+the structure is settled. The Q&A demo's question pass re-runs live after the deck settles, since its
+questions are generated from the deck text.
