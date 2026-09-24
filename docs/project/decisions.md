@@ -145,3 +145,8 @@ The honest slide shows both. Crediting agents alone would overclaim.
 
 **Lesson (method).** D6's mistake: "not found in what we mined" became "not sourced" without
 first asking the one person who was there. The corpus-coverage gap is logged in tracking.md.
+
+**D6/D7 erratum (2026-09-24, arc F Opus review).** D6's "800 tasks for $9" should read **760 tasks
+for ~$9** ($2.99 + $6.09; 40 human-labelled tasks were skipped) [src: EXP-E84 lines 103–104]. Its
+"zero wrong agreements" holds for E28a and the E84 pilot only; the 760-task run had no ground
+truth, so wrong-agreement can't be measured there.

@@ -27,3 +27,7 @@ outside its own arc files it here instead of editing another arc's doc.
 - Arc F: human admin review rate after the P0/P1 redesign: "~30+ label tasks as admin in like 10
   minutes", about 20 s/task. A second lever behind the 3-min drop besides agents. [src: session
   403300ff · 2026-09-14 05:02]
+- Arc B/F: the labeling bottleneck moved from the model to the UX. On 09-09 the founder quit
+  hand-labeling after 23 labels because of the interface, not the cards, and the fix that
+  followed was design work (P0/P1), not model work. [src: memory labeler-ux-blockers-2026-09-09 ·
+  2026-09-09 ~11:45 PDT; arc F review lane]
