@@ -39,7 +39,7 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Deck v4 (audience-first), PROPOSAL | story/deck-v4 | running | Opus 5.5 → coordinator → Gerald | — | structure-v4.md; merge only on Gerald's approval |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
-| Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | running | Opus 5.5 → coordinator | — | personas → questions → rank → sourced answers → verify; live once, then replay fixtures |
+| Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | merged; public replay verified | Opus 5.5 → coordinator | see log | site sha 8ed55e42…; check.sh OK with GRAILITH unset; 1 answer flagged stale (by design); re-run --live once the deck settles |
 | Q&A demo: page renderer | qa/render | merged | Sonnet → coordinator | see log | deterministic (fixture sha 7a953cc3…) |
 | JA on dev: config + data (J1) | dev box | DONE by the coordinator on Gerald's approval (D21) | coordinator | 4bf993d | migrations 58, 1i seed 45,155, 1,902 JA tids, switch on, 741 nulled to match prod; :8988 health 200 |
 | JA code fix (J2) | grAIde fix/ja-identify-cohort (worktree grAIde-jafix) | done; NOT merged | Opus 5.5 → coordinator | dcd5b15c | 2600 → 2607 tests green; the new files re-run by the coordinator 60/60; needs Gerald's merge/deploy decision |
@@ -48,6 +48,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 13:0x PDT — Q&A demo complete: public replay reproduces the committed page byte for byte (check.sh OK with GRAILITH_DIR unset). Fixture keys no longer hash drifting excerpts (the lane corrected the coordinator's diagnosis). Awaiting Gerald: deck v4 merge; the JA code fix merge/deploy; the JA branch on dev.
 
 - 2026-09-24 12:5x PDT — D21 applied on dev (the coordinator, on Gerald's approval). J2 code fix done on a Grailith branch (not merged). Q&A pipeline merged; live re-run against the current deck in progress. Deck v4 awaits Gerald's review.
 
