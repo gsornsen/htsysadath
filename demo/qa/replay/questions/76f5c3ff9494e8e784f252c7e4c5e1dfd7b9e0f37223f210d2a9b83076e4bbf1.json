@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "76f5c3ff9494e8e784f252c7e4c5e1dfd7b9e0f37223f210d2a9b83076e4bbf1",
+  "persona": "pm",
+  "model": "sonnet",
+  "output": {
+    "questions": [
+      {
+        "question": "You flip production yourself in this setup — on a real team, who gets that authority, and how many people would need it?",
+        "likelihood": 5,
+        "why": "The morning-report slide says only the speaker can flip production, which is a single point of control a team would need to redesign.",
+        "slide_ref": 11
+      },
+      {
+        "question": "With forty-five possible forks for one bug, who decides which ones actually get run first?",
+        "likelihood": 5,
+        "why": "The fork-tree slide shows the branching but never says who prioritizes among that many options.",
+        "slide_ref": 6
+      },
+      {
+        "question": "Is 65% on live lots good enough to ship to real users, and what's the target number before you'd call this done?",
+        "likelihood": 5,
+        "why": "The speaker calls two-in-three 'not done, but measurable' without naming the bar for actually shipping.",
+        "slide_ref": 15
+      },
+      {
+        "question": "The coordinator is your strongest model judging your own lanes — on a team, who plays that role, and can a junior PM own it?",
+        "likelihood": 4,
+        "why": "Orchestration is described as one person's coordinator session, which doesn't obviously map to a multi-person team.",
+        "slide_ref": 10
+      },
+      {
+        "question": "Thirty minutes a day is your estimate and doesn't count morning review time — what's the real daily time cost end to end?",
+        "likelihood": 4,
+        "why": "The cost line explicitly excludes review time from the headline number, which looks like it undercounts total effort.",
+        "slide_ref": 6
+      },
+      {
+        "question": "A hundred experiments in two weeks — was that one person working full time, or could a team hit that pace part-time?",
+        "likelihood": 4,
+        "why": "The experiment count is given without any sense of how many people or how much focus it required.",
+        "slide_ref": 6
+      },
+      {
+        "question": "Who writes the kill bar before a run — you alone, or could someone else on a team set that gate?",
+        "likelihood": 3,
+        "why": "Kill lines are shown as the speaker's own judgment call with no mention of shared ownership.",
+        "slide_ref": 12
+      },
+      {
+        "question": "The persona panel said DONE but your own phone said no — what changed in your process so that gap doesn't happen again?",
+        "likelihood": 4,
+        "why": "The persona-gate story ends in a false pass caught by luck the next morning, which raises doubt about the gate's reliability.",
+        "slide_ref": 17
+      },
+      {
+        "question": "What's the actual first thing a product manager who doesn't run worktrees should do Monday morning?",
+        "likelihood": 4,
+        "why": "The starter kit is aimed at engineering-style workflows and doesn't spell out a PM's entry point.",
+        "slide_ref": 19
+      },
+      {
+        "question": "Beyond the $9 in labeling calls, what does the Claude Max subscription itself cost, and does that scale if a whole team runs this?",
+        "likelihood": 3,
+        "why": "The cost slide highlights the small metered spend but treats the subscription cost as a given, not a line item to budget.",
+        "slide_ref": 21
+      }
+    ]
+  },
+  "inputs": {
+    "talk_sha256": "6110ec3148dbdd769cb8f4ecce059ee83187b789a761f14f64693576a165af1c"
+  }
+}

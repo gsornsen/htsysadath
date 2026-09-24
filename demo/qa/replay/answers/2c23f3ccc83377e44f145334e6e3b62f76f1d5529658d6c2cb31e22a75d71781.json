@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "2c23f3ccc83377e44f145334e6e3b62f76f1d5529658d6c2cb31e22a75d71781",
+  "id": "q-08bed40cd0",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 4,
+      "sha256": "afd6b99b1786b9ce58c024682c0c4015ad200a8353ace0d1b5a62e34131038ce"
+    },
+    {
+      "path": "starter/persona-drafts/personas/pm.md",
+      "chunk": 0,
+      "sha256": "1a1431cdc70a48fca8bc2832928de4b848d691cb46fca890917afbe5ed6bb991"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 15,
+      "sha256": "09a2018a6feebdb5412c83f97f22b1225c496d5072f6294cdb040a088720d79d"
+    },
+    {
+      "path": "talk/plan/critique2/pm.md",
+      "chunk": 0,
+      "sha256": "66df8d111824c9f47f392d77771ebce26d22b2efffdc1710b4442b22e803588c"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 0,
+      "sha256": "4c3243446d75ae45c54ae82c4d065c3ad31a195f9126c57d180e9d89de0dee5e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-RESULTS-2026-09-06.md",
+      "chunk": 3,
+      "sha256": "2b73b4552f8851c90c7460e3bd68bc4f1db861483f4656ac72ee31934fff2b64"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E41-index-repro-2026-09-07.md",
+      "chunk": 13,
+      "sha256": "dbb6ecac0a030b17ec3c0462792d3259deb20d8b48fb6e161286909bd8a8516c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 169,
+      "sha256": "c6127ac8713413b779d9b2d648122313e2a9a0e9760974835f790c713da78633"
+    }
+  ],
+  "output": {
+    "answer": "That's not in the record. The excerpts cover a software engineer's 'can I start Monday' checklist for running gated worktree lanes, and a persona brief describing how drafts should be written for a product manager audience — but nothing describes a Monday-morning action for a PM who isn't using worktrees at all. I don't have a documented first step for that case.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "talk/plan/critique2/mid-swe.md",
+        "locator": "Can I start Monday?"
+      },
+      {
+        "path": "starter/persona-drafts/personas/pm.md",
+        "locator": "Persona: Product Manager — draft-lane brief"
+      }
+    ]
+  }
+}

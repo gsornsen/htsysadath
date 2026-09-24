@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "3cfe6c7b91973b0f26cf3075e96f46608ab0f5fafc9ac9ee9e5718367a15d02c",
+  "id": "q-3d168aa278",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 23,
+      "sha256": "bb6fa36f59fea9f21c5ac79901965d2ba2e890192fe2eec76bbd7b2ff052661a"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 24,
+      "sha256": "6a8341f5c6b4d64d787340782cec2b14a93c2d677beb71b80df2eea61aaeec08"
+    },
+    {
+      "path": "mining/findings/top3-trajectory.md",
+      "chunk": 13,
+      "sha256": "282512dae70b991d30f31498a7fd950d0182fdc4b86f37c9aa858681e3b50604"
+    },
+    {
+      "path": "talk/plan/critique2/designer.md",
+      "chunk": 3,
+      "sha256": "c154a24a000b936181f4d15b3114b2dc370719b4f1938230b2afd8024820102f"
+    },
+    {
+      "path": "talk/plan/critique2/pm.md",
+      "chunk": 3,
+      "sha256": "3c60ad2816453f5e88a5fd1c44234f49bbcf35c796b08f7269288b89f94b34c2"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 3,
+      "sha256": "de729d0abe95afda020aa7b63ea161acbbbe119efae84492c5abf5ba3200509b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-4-wide-crops-2026-09-08.md",
+      "chunk": 16,
+      "sha256": "afa45a9140886be29a176281db39b3cb73571c75baec90f6198e1dee0b714afd"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-4-wide-crops-2026-09-08.md",
+      "chunk": 19,
+      "sha256": "9a0220e39c78e89c05ffcb139be4237554979833d0518706c45ad7da566e55c5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E62-artwork-vs-print-2026-09-08.md",
+      "chunk": 18,
+      "sha256": "87b47e066c253a481abbe077f77dbee27edb074f3423310db746fdc4f9204924"
+    }
+  ],
+  "output": {
+    "answer": "I don't average the four. In the deck itself, that's a backup slide only pulled out in Q&A — crops as served, crops scored offline, a six-crop consensus proxy, and live lots pooled all measure top-3 differently and don't agree. So on the main line I pick one bar and say plainly which yardstick it is rather than quoting a blended number. The record shows the live-lot number gets its own callout — 65.2% on lots that never auto-locked, stated as 'about 2 in 3' — rather than folding it into lock rate and precision, which get pushed to backup.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Backup 2 · Four yardsticks"
+      },
+      {
+        "path": "talk/plan/critique2/designer.md",
+        "locator": "\"65.2 %, about 2 in 3\""
+      }
+    ]
+  }
+}

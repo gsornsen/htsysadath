@@ -10,6 +10,8 @@
 //   --only <id,id,…>        live mode: re-call the model only for these answer ids; everything
 //                           else (questions included) is replayed from fixtures
 //   --reuse                 live mode: call the model only where a fixture is missing
+//   --rekey                 replay mode, one-off: move fixtures written under an older key scheme to
+//                           the current key (matched by persona / answer id), delete orphans
 //   --concurrency <n>       live answer calls in flight at once (default 4)
 //   --out <dir>             where pass outputs go (default demo/qa/out)
 //   --site <file>           rendered page (default demo/qa/site/index.html)
@@ -56,6 +58,7 @@ function parseArgs(argv) {
     if (k === '--live') a.live = true;
     else if (k === '--replay') a.live = false;
     else if (k === '--reuse') a.reuse = true;
+    else if (k === '--rekey') a.rekey = true;
     else if (k === '--model') a.model = argv[++i];
     else if (k === '--only') a.only = new Set(argv[++i].split(',').map((s) => s.trim()).filter(Boolean));
     else if (k === '--concurrency') a.concurrency = Math.max(1, parseInt(argv[++i], 10) || 4);
@@ -66,6 +69,7 @@ function parseArgs(argv) {
   return a;
 }
 const args = parseArgs(process.argv.slice(2));
+if (args.rekey && args.live) { console.error('run.mjs: --rekey is a replay-only step'); process.exit(2); }
 const GRAILITH_DIR = args.live && process.env.GRAILITH_DIR ? path.resolve(process.env.GRAILITH_DIR) : null;
 
 // ---- helpers ----
@@ -159,6 +163,22 @@ function loadFixture(pass, key) {
   const p = fixturePath(pass, key);
   return fs.existsSync(p) ? JSON.parse(readText(p)) : null;
 }
+// --rekey: find an old-keyed fixture by identity (persona, or answer id), and move it to the new key.
+// Several candidates for one answer id → the one whose answer is in the committed out/answers.json.
+function rekeyFixture(pass, key, match, preferAnswer) {
+  const dir = path.join(REPLAY, pass);
+  if (!fs.existsSync(dir)) return null;
+  const cands = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort(cmp)
+    .map((f) => ({ f, fx: JSON.parse(readText(path.join(dir, f))) })).filter(({ fx }) => match(fx));
+  let pick = cands.length === 1 ? cands[0] : cands.find(({ fx }) => preferAnswer && fx.output?.answer === preferAnswer);
+  if (!pick) return null;
+  const fx = { ...pick.fx, key };
+  fs.unlinkSync(path.join(dir, pick.f));
+  writeJson(fixturePath(pass, key), fx);
+  console.error(`  rekey ${pass}: ${pick.f.slice(0, 12)}… → ${key.slice(0, 12)}…`);
+  return fx;
+}
+const staleNotes = [];
 function callClaude(prompt, model) {
   return new Promise((resolve, reject) => {
     // cwd is a neutral temp dir so the call doesn't pick up this repo's CLAUDE.md as context.
@@ -225,17 +245,26 @@ async function pass1(used) {
   const liveQ = args.live && !args.only;
   const perPersona = await Promise.all(PERSONAS.map(async (persona) => {
     const personaText = readText(path.join(HERE, 'personas', `${persona}.md`));
-    const key = sha256(JSON.stringify(['questions', sha256(tmpl), persona, sha256(personaText), sha256(talk)]));
+    // Key = what a public checkout can always compute: pass, prompt, persona. The deck the questions
+    // were asked about is recorded in the fixture (inputs.talk_sha256); a later deck edit makes the
+    // fixture stale (reported), not missing.
+    const key = sha256(JSON.stringify(['questions', sha256(tmpl), persona, sha256(personaText)]));
     used.questions.add(key);
     let fx = loadFixture('questions', key);
+    if (!fx && args.rekey) {
+      fx = rekeyFixture('questions', key, (f) => f.persona === persona);
+      // The old key contained the deck's hash and replayed, so it was asked about this deck.
+      if (fx && !fx.inputs) { fx.inputs = { talk_sha256: sha256(talk) }; writeJson(fixturePath('questions', key), fx); }
+    }
     if (liveQ && !(args.reuse && fx)) {
       const prompt = tmpl.replace('{{PERSONA}}', personaText).replace('{{TALK}}', talk);
       console.error(`  questions: calling ${args.model} for ${persona}`);
       const output = await modelJson(prompt, validateQuestions);
-      fx = { pass: 'questions', key, persona, model: args.model, output };
+      fx = { pass: 'questions', key, persona, model: args.model, inputs: { talk_sha256: sha256(talk) }, output };
       writeJson(fixturePath('questions', key), fx);
     }
     if (!fx) die(`missing replay fixture replay/questions/${key}.json (persona ${persona}); run --live`);
+    if (fx.inputs?.talk_sha256 !== sha256(talk)) staleNotes.push(`questions/${persona}: asked about an older deck`);
     return { persona, questions: fx.output.questions };
   }));
   const seen = new Set();
@@ -309,7 +338,6 @@ function chunkFile(p, text) {
 // BM25 (k1 1.2, b 0.75) over heading-cut chunks; idf computed within each pool (repo, grailith).
 const BM25_K1 = 1.2;
 const BM25_B = 0.75;
-const RETRIEVAL_VERSION = 'bm25-v3';
 function buildIndex(files) {
   const chunks = files.flatMap((f) => chunkFile(f.path, f.text));
   const df = new Map();
@@ -359,6 +387,9 @@ function validateAnswer(obj) {
       .map((c) => ({ path: c.path.trim(), locator: String(c.locator ?? '').trim() })) };
 }
 async function pass3(ranked, questionsById, snap, used) {
+  const committedPath = path.join(HERE, 'out', 'answers.json');
+  const committedAnswers = new Map(args.rekey && fs.existsSync(committedPath)
+    ? JSON.parse(readText(committedPath)).map((a) => [a.id, a.answer]) : []);
   const tmpl = readText(path.join(HERE, 'prompts/answer.md'));
   const repoIndex = buildIndex(snap.repo);
   const gIndex = GRAILITH_DIR ? buildIndex(snap.grailith) : null;
@@ -368,13 +399,16 @@ async function pass3(ranked, questionsById, snap, used) {
     const qText = r.members.map((id) => questionsById.get(id).question).join(' ');
     const qToks = [...tokenSet(qText)].sort(cmp);
     const repoEx = retrieve(repoIndex, qToks, K_REPO);
-    const key = sha256(JSON.stringify(['answer', RETRIEVAL_VERSION, K_GRAILITH, sha256(tmpl), r.id, r.question,
-      repoEx.map((c) => [c.path, c.heading, c.part, sha256(c.text)]), snap.grailithHash]));
+    // Key = [pass, prompt, question id + text, Grailith manifest hash]: all computable from a public
+    // checkout (the manifest is committed). Neither excerpt text enters the key; the repo excerpts
+    // the model saw are recorded in the fixture, and a drift from today's retrieval is reported as stale.
+    const key = sha256(JSON.stringify(['answer', sha256(tmpl), r.id, r.question, snap.grailithHash]));
     used.answers.add(key);
     return { r, qToks, repoEx, key };
   });
   const results = await pool(jobs, args.live ? args.concurrency : 1, async ({ r, qToks, repoEx, key }) => {
     let fx = loadFixture('answers', key);
+    if (!fx && args.rekey) fx = rekeyFixture('answers', key, (f) => f.id === r.id, committedAnswers.get(r.id));
     const want = args.live && (!args.only || args.only.has(r.id)) && !(args.reuse && fx);
     if (want) {
       const gEx = retrieve(gIndex, qToks, K_GRAILITH);
@@ -388,6 +422,9 @@ async function pass3(ranked, questionsById, snap, used) {
       writeJson(fixturePath('answers', key), fx);
     }
     if (!fx) die(`missing replay fixture replay/answers/${key}.json (question ${r.id}); run --live`);
+    const now = JSON.stringify(repoEx.map((c) => [c.path, c.seq, sha256(c.text)]));
+    const then = JSON.stringify(fx.excerpts.filter((e) => !e.path.startsWith('grailith:')).map((e) => [e.path, e.chunk, e.sha256]));
+    if (now !== then) staleNotes.push(`answers/${r.id}: retrieval over today's repo differs from what the model saw`);
     retrievalOut.push({ id: r.id, rank: r.rank, excerpts: fx.excerpts });
     return { id: r.id, answer: fx.output.answer, grounding: fx.output.grounding, citations: fx.output.citations };
   });
@@ -469,7 +506,11 @@ async function main() {
     `${Object.entries(cs).sort(([x], [y]) => cmp(x, y)).map(([k, v]) => `${k} ${v}`).join(', ')}`);
 
   // Live runs prune fixtures no longer referenced, so replay/ holds exactly one run's calls.
-  if (args.live) {
+  if (staleNotes.length) {
+    console.error(`  stale: ${staleNotes.length} fixture(s) predate today's inputs (outputs still replay exactly; --live refreshes):`);
+    for (const n of staleNotes.sort(cmp)) console.error(`    ${n}`);
+  }
+  if (args.live || args.rekey) {
     for (const pass of ['questions', 'answers']) {
       const dir = path.join(REPLAY, pass);
       if (!fs.existsSync(dir)) continue;

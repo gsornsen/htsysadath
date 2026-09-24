@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "b88321f788c001b0097dba6e493021f41b2a0446548102efbf355987dcf50827",
+  "id": "q-bf7d3647b1",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 2,
+      "sha256": "ca5ddb3de0b9c324aee779b29c362d8990c02eefba8335074ecfc633f11ec5d8"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 5,
+      "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 1,
+      "sha256": "455fc42cf9fa5579de5a98b2c08296e4bbb02f2ebb51935937cf5e1fbf1ca10d"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 21,
+      "sha256": "db847237fb3a45169191e5268ce17fff7ca7096e2f845f32ce5cc62b91ed9f79"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 6,
+      "sha256": "5a6e4c7a5cbb21a99c65b74d22c1e6a70fa2b7bceea5e4a5ba52574d8f2b499d"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 0,
+      "sha256": "e2076f082a648a6af0b5512be4c70fbe0291da1ead130190788ff5fb0e197096"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E63-coverage-vs-model-2026-09-08.md",
+      "chunk": 15,
+      "sha256": "66a782ca870923d2cadfbf79b89c5125e8b3cb249e87e869650833b6b7593aea"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46e-colddist-2026-09-07.md",
+      "chunk": 30,
+      "sha256": "47af35c621006ed4eb96022bb156e5dcb7a16e1b00f8700d544ae750933fe1e9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53-harness-2026-09-07.md",
+      "chunk": 8,
+      "sha256": "f0a3f726be4d40616f452180afc42676c9babe34a3083fa919242bea3407c20d"
+    }
+  ],
+  "output": {
+    "answer": "It's a command, not a script that auto-generates it. I run `git worktree add ../lane-a -b lane-a/<slug>` for each lane, so it gets its own working directory and branch off the same base. Then I launch one Claude Code session in that worktree and hand it a filled-out lane brief. That's step two of the five-step checklist, right after writing the gate.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/checklist.md",
+        "locator": "The 5 steps"
+      },
+      {
+        "path": "talk/plan/critique2/mid-swe.md",
+        "locator": "a new worktree and branch per lane"
+      }
+    ]
+  }
+}

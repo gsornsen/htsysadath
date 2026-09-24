@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "30a00aa5b6713a77dc931ce76316ce9019448cefa646d8def3da9d5229703ceb",
+  "id": "q-36bab273b3",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 9,
+      "sha256": "116a3bbc322b04d88add0ea7e4d9ef11c7f5e2ab9e8e7c815dd866cc936e797a"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 2,
+      "sha256": "21cce0b35a865c68d44a179fc83d06d88d1c1e1f27cf073f9574498d5d517286"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 4,
+      "sha256": "16e02bd82f444a855f0a114397c0d14adcea30a5fff9a3cabc8f2e3b9210fa7a"
+    },
+    {
+      "path": "starter/persona-drafts/sample-draft.md",
+      "chunk": 0,
+      "sha256": "b7e35130da8c3229db5dd959f7c1cc59ad487bded7902857549b79ac0d6ba08f"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46b-onnx-vs-torch-cpu-2026-09-06.md",
+      "chunk": 20,
+      "sha256": "d2e5bf856dff446702ac8f14bb4cddb4db3e0d64a1d4e2efb93a3c6cf1bb967a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ONNX-C1-container-sigterm-fused-2026-09-07.md",
+      "chunk": 23,
+      "sha256": "f147453b2907c98ab3b44fb028688a69aa67227fa943a7771fc2401fb2ac5c96"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46d-replay-harness-2026-09-07.md",
+      "chunk": 36,
+      "sha256": "d6b8863d3f347b286e41690f67528b7885b85dfe6b72e830fe28a315963db5c7"
+    }
+  ],
+  "output": {
+    "answer": "In my setup the rule was simple: a lane can flip its own dev flag, but only a human flips the production flag, and only explicitly the next morning — never as a side effect of a lane finishing. Anything touching a production flip needed my word specifically, named explicitly rather than buried in a report. That's as far as the record goes — it doesn't say how that maps onto a real team, what role would hold that authority, or how many people would need it. I only ran this solo, so team structure isn't something I can speak to from the record.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "only a human flips the production flag"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "What needs your word"
+      }
+    ]
+  }
+}

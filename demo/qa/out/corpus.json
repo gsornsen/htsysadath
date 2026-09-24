@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "docs/project/decisions.md",
-      "sha256": "cbc1e0231ff246ca41cb19d8f7e6afdbf2617f42ed93c91a0c0d5004437f9080",
-      "bytes": 29130,
+      "sha256": "7f6afe6d595f8df8b8b3baa618abd8f038a209362b45c6351dd1cb2c1a36c4ef",
+      "bytes": 32097,
       "source": "repo"
     },
     {
@@ -1094,14 +1094,14 @@
     },
     {
       "path": "talk/notes.md",
-      "sha256": "0e99b02d2d45240f9d49c9f6fd3c661d39ec7fe39324aedf8220c334c2b9d031",
-      "bytes": 19635,
+      "sha256": "6bc40a5208db65da7d67956093abfc6978ac84d440293df5534445f938c281f2",
+      "bytes": 21603,
       "source": "repo"
     },
     {
       "path": "talk/outline.md",
-      "sha256": "75963bc2d6b3fee00ee8e4827a1d980fae5de71dfbf48f20d2a617b275e38d6f",
-      "bytes": 9135,
+      "sha256": "2ce854f01da016012389b7d4a983ace573f61684edddedd3052eace08a335ffc",
+      "bytes": 9892,
       "source": "repo"
     },
     {
@@ -1130,8 +1130,8 @@
     },
     {
       "path": "talk/slides/deck.md",
-      "sha256": "b8054cb077a3cd939dd1ecfe863dc13cc2812c52db83007892061c3cadd55865",
-      "bytes": 19853,
+      "sha256": "6110ec3148dbdd769cb8f4ecce059ee83187b789a761f14f64693576a165af1c",
+      "bytes": 23066,
       "source": "repo"
     }
   ]

@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "2b790e46d69968979148e6bbe8ac45314f0abbac20ecb5b78ce6a74b84792079",
+  "id": "q-0dae00d91c",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-drafts/sample-draft.md",
+      "chunk": 0,
+      "sha256": "b7e35130da8c3229db5dd959f7c1cc59ad487bded7902857549b79ac0d6ba08f"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 7,
+      "sha256": "74e2918fb2194cc647a1ed6b2ced30084e10c639dbbb8b99388c05eff0db21fd"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 7,
+      "sha256": "9e57f0800883cb134b7fd69524827ab42a0a6bdb85f2aa31e326f47ada4c92b6"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 8,
+      "sha256": "22cb98cab87389c9c82637129c1c8eefee44663c5abf1aafe5f90fff5aeb511a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "25c47d1bc35ccc1ba2f213bc3b809ed4146c4c7b01188f74d5ae0e932680496a"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 13,
+      "sha256": "47ae296cc2faad3e1e3f4fd7cae8aeb30ed3cf26380e08ed5f4019d2d80b1f54"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E82-labels-today-2026-09-09.md",
+      "chunk": 4,
+      "sha256": "5030af128943c1ac74a469c5dd1bb555cd0051be43b03ecdcd0f3d00fae1aaed"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E40c-retrieval-reach-2026-09-07.md",
+      "chunk": 41,
+      "sha256": "e46ff288f0d0c43ae562400495e9ef208deae7e17ebc389290d057ebe64390fd"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BETA-CAP-2026-09-07.md",
+      "chunk": 26,
+      "sha256": "8424aa37c2f9345b68d593b5f667f5c200f6731c8ef400815692006848a69241"
+    }
+  ],
+  "output": {
+    "answer": "That was me, not a team — the record only describes my own setup time, about half an hour a day, which is my estimate rather than a measurement, and it doesn't count the mornings I spent reading results. The hundred experiments in two weeks ran unattended in worktrees, many overnight, gated so they didn't need me watching. Whether a part-time team could hit the same pace isn't something the record addresses at all — it only speaks to my own time on this project.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§ Slide 6 · What changed"
+      }
+    ]
+  }
+}

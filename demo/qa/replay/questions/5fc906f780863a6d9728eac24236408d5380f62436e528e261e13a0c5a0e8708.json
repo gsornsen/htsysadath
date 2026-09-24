@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "5fc906f780863a6d9728eac24236408d5380f62436e528e261e13a0c5a0e8708",
+  "persona": "senior-swe",
+  "model": "sonnet",
+  "output": {
+    "questions": [
+      {
+        "question": "The language-head arm was added after the kill line fired on the same 201 crops — how do you rule out that split being cherry-picked once you saw the data?",
+        "likelihood": 5,
+        "why": "The speaker admits the winning arm was found post-hoc on the same test split used for the kill decision, which is a classic forking-paths risk.",
+        "slide_ref": 12
+      },
+      {
+        "question": "Your live-lot accuracy is based on one tapper's own judgment across 87 lots with a confidence interval spanning roughly 53 to 75 percent — what stops that from being both measurer and grader of your own tool?",
+        "likelihood": 5,
+        "why": "The speaker flags 'one tapper' and a wide interval himself, which is exactly the ground-truth conflict-of-interest this persona distrusts.",
+        "slide_ref": 14
+      },
+      {
+        "question": "What actually stops an unattended overnight agent from merging a change that passes its gate but is wrong in a way the gate didn't anticipate?",
+        "likelihood": 4,
+        "why": "The talk shows gates and flags controlling merges automatically overnight, but not who or what catches a gate that itself is wrong.",
+        "slide_ref": 11
+      },
+      {
+        "question": "The August bakeoff median of 10.4 seconds came from only six captures — how confident are you that number would hold up with a larger sample?",
+        "likelihood": 4,
+        "why": "The footer explicitly states n equals 6 for that headline latency figure.",
+        "slide_ref": 3
+      },
+      {
+        "question": "You call the 30-minutes-a-day figure your own estimate rather than a measurement — did you ever actually log your hours, and if not why present it alongside otherwise-instrumented numbers?",
+        "likelihood": 4,
+        "why": "The speaker repeatedly labels the time cost as testimony/estimate, not data, right next to hard measured figures.",
+        "slide_ref": 5
+      },
+      {
+        "question": "You showed four different top-3 numbers that don't agree, from 65 to 83 percent — how do you decide which one to report when someone asks 'is it better' outside a talk?",
+        "likelihood": 4,
+        "why": "The backup slide admits the four yardsticks can't be reconciled into one line, which undercuts any single headline accuracy claim.",
+        "slide_ref": 19
+      },
+      {
+        "question": "Letting the swarm self-steer broke the next day and you had to keep correcting it — what exactly went wrong, and is that failure mode still possible today?",
+        "likelihood": 3,
+        "why": "The orchestration slide mentions this failure in passing without explaining the mechanism or whether it's actually fixed.",
+        "slide_ref": 10
+      },
+      {
+        "question": "The persona panel said DONE on a fixed viewport but your own phone showed it was unusable — how many other DONE verdicts from that panel have you since re-checked on a real device?",
+        "likelihood": 3,
+        "why": "The one caught failure raises the question of how many similar false positives went unchecked.",
+        "slide_ref": 17
+      },
+      {
+        "question": "Is the full experiment ledger and the replay data behind these charts public in the repo, or are some of these numbers from private logs I can't verify myself?",
+        "likelihood": 3,
+        "why": "The persona cares whether claims are independently checkable versus just cited by source tag.",
+        "slide_ref": 0
+      },
+      {
+        "question": "For the jitter fix, how do you attribute the drop between the 3x faster server and the cancel-but-keep-answer change beyond just not crediting one alone?",
+        "likelihood": 2,
+        "why": "The speaker says crediting only the behaviour change would overclaim but doesn't show how the two levers were isolated.",
+        "slide_ref": 7
+      }
+    ]
+  },
+  "inputs": {
+    "talk_sha256": "6110ec3148dbdd769cb8f4ecce059ee83187b789a761f14f64693576a165af1c"
+  }
+}
