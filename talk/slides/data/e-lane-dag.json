@@ -1,30 +1,100 @@
 {
   "source": "docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)",
-  "title": "Coordinator: the reviewer sits one tier above",
-  "desc": "Lanes from this repo, one column each, merging into main. Rows are model tiers, bottom to top: Haiku, Sonnet, Opus 5.5, and the coordinator (Fable). Grey boxes do the work; green boxes review it one tier up; the coordinator's review is a white outline. Haiku mined the inventory and merged. Sonnet mined experiments and pivots; Opus reviewed each (top-3, pivots) before merge. Opus wrote the synthesis plan; the coordinator reviewed it before merge.",
-  "tierOrder": ["haiku", "sonnet", "opus", "fable"],
-  "tierLabels": { "haiku": "Haiku", "sonnet": "Sonnet", "opus": "Opus 5.5", "fable": "coordinator\n(Fable)" },
+  "title": "A lane per fix: a smaller model builds, a stronger model reviews, I decide",
+  "desc": "Lanes from this repo, one column each, merging into the shared code (main). Rows are model tiers, bottom to top: smallest model (Haiku), smaller model (Sonnet), stronger model (Opus 5.5), and the coordinator (Fable), where I make the calls. Grey boxes build; green boxes review the work one tier up; the coordinator's review is a white outline. Haiku mined the source inventory and merged. Sonnet mined the experiments and the pivots; Opus reviewed each (top-3, pivots) before merge. Opus wrote the synthesis plan; the coordinator reviewed it before merge.",
+  "tierOrder": [
+    "haiku",
+    "sonnet",
+    "opus",
+    "fable"
+  ],
+  "tierLabels": {
+    "haiku": "smallest\nmodel",
+    "sonnet": "smaller\nmodel",
+    "opus": "stronger\nmodel",
+    "fable": "coordinator;\nI decide"
+  },
   "roleKey": [
-    { "role": "implementer", "label": "does the work" },
-    { "role": "reviewer",    "label": "reviews it,\none tier up" }
+    {
+      "role": "implementer",
+      "label": "builds"
+    },
+    {
+      "role": "reviewer",
+      "label": "reviews it,\none tier up"
+    }
   ],
   "nodes": [
-    { "id": "main",               "label": "main",                "tier": "root" },
-    { "id": "inventory",          "label": "mine: inventory",     "tier": "haiku" },
-    { "id": "experiments",        "label": "mine: experiments",   "tier": "sonnet" },
-    { "id": "review-experiments", "label": "review: top-3",       "tier": "opus" },
-    { "id": "pivots",             "label": "mine: pivots",        "tier": "sonnet" },
-    { "id": "review-pivots",      "label": "review: pivots",      "tier": "opus" },
-    { "id": "synthesis",          "label": "plan: synthesis",     "tier": "opus" },
-    { "id": "fable-review",       "label": "final review",        "tier": "fable" }
+    {
+      "id": "main",
+      "label": "merged",
+      "tier": "root"
+    },
+    {
+      "id": "inventory",
+      "label": "inventory",
+      "tier": "haiku"
+    },
+    {
+      "id": "experiments",
+      "label": "experiments",
+      "tier": "sonnet"
+    },
+    {
+      "id": "review-experiments",
+      "label": "review",
+      "tier": "opus"
+    },
+    {
+      "id": "pivots",
+      "label": "pivots",
+      "tier": "sonnet"
+    },
+    {
+      "id": "review-pivots",
+      "label": "review",
+      "tier": "opus"
+    },
+    {
+      "id": "synthesis",
+      "label": "the plan",
+      "tier": "opus"
+    },
+    {
+      "id": "fable-review",
+      "label": "final review",
+      "tier": "fable"
+    }
   ],
   "edges": [
-    { "from": "inventory",          "to": "main" },
-    { "from": "experiments",        "to": "review-experiments" },
-    { "from": "review-experiments", "to": "main" },
-    { "from": "pivots",             "to": "review-pivots" },
-    { "from": "review-pivots",      "to": "main" },
-    { "from": "synthesis",          "to": "fable-review" },
-    { "from": "fable-review",       "to": "main" }
-  ]
+    {
+      "from": "inventory",
+      "to": "main"
+    },
+    {
+      "from": "experiments",
+      "to": "review-experiments"
+    },
+    {
+      "from": "review-experiments",
+      "to": "main"
+    },
+    {
+      "from": "pivots",
+      "to": "review-pivots"
+    },
+    {
+      "from": "review-pivots",
+      "to": "main"
+    },
+    {
+      "from": "synthesis",
+      "to": "fable-review"
+    },
+    {
+      "from": "fable-review",
+      "to": "main"
+    }
+  ],
+  "trunkLabel": "merged"
 }

@@ -1,5 +1,5 @@
 {
-  "source": "mining/findings/lot-top3-unlocked.md §3 (line ~75, `auto` headline row: lock rate, lock precision, non-locked top-3 last fire, with Wilson 95% intervals as stated)",
+  "source": "mining/findings/lot-top3-unlocked.md §3 (line ~75, `auto` headline row: lock rate, lock precision, non-locked top-3 last scan, with Wilson 95% intervals as stated)",
   "title": "Lot-level top-3, on lots the scout did not auto-lock",
   "desc": "Three stat tiles from one offline run over 87 truth lots. How often it auto-locks: 20.7% (18 of 87 lots, 95% interval 13.5–30.4%). Right when it locks: 88.9% (16 of 18 locks, 67.2–96.9%). Top-3 when it doesn't lock: 65.2% (45 of 69 lots, 53.4–75.4%), the headline, in the accent colour.",
   "tiles": [

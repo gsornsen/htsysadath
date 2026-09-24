@@ -21,7 +21,7 @@
 //   orange = after / intervention (and the one accent on a stat row)
 //   green  = method / gate (a reviewer, a gate, a pre-registered rule)
 //   grey   = context / rails (a measurement that is neither, an implementer)
-// Stat tiles are never blue. Status red is a text tag only (KILLED, kill line).
+// Stat tiles are never blue. Status red is a text tag only ("dropped", the pass/fail bar).
 //
 // Palette: dataviz skill `references/palette.md` dark column, categorical
 // slots 1-3 (blue/orange/aqua-as-green), plus the fixed chart-chrome greys
@@ -55,7 +55,7 @@ const C = {
   orange: '#d95926', // categorical slot 2 — after / intervention
   green: '#199e70', // categorical slot 3 — counter-example
   grey: '#726f68', // context (achromatic, not part of the categorical run)
-  critical: '#e66767', // status red — text/icon tag only (e.g. "KILLED"), never a fill
+  critical: '#e66767', // status red — text/icon tag only (e.g. "dropped"), never a fill
 };
 
 function readJSON(name) {
@@ -184,14 +184,14 @@ function buildFourActs(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 2. d4-arms.svg — three bars @1: G0, G3 (killed), G0h, plus the kill line
+// 2. d4-arms.svg — three bars @1: G0, G3 (dropped), G0h, plus the pass/fail bar
 // ---------------------------------------------------------------------------
 function buildD4Arms(d) {
   let svg = svgOpen(d);
 
   const roleColor = { baseline: C.blue, context: C.grey, after: C.orange };
 
-  // Plot on the left, a 250px gutter on the right for the kill-line label:
+  // Plot on the left, a 250px gutter on the right for the pass/fail-bar label:
   // at the line's own height, clear of every bar and every bar's labels
   // (critique2 F1: the label used to run across the G0 bar).
   const plotX = 90;
@@ -212,7 +212,7 @@ function buildD4Arms(d) {
   const groupW = plotW / n;
   const barW = 150;
 
-  // kill line, drawn under the bars so bar fills sit on top of it
+  // pass/fail bar, drawn under the bars so bar fills sit on top of it
   const killY = yOf(d.killLine.pct);
   svg += `<line x1="${plotX}" y1="${killY}" x2="${plotX + plotW + 10}" y2="${killY}" stroke="${C.critical}" stroke-width="2" stroke-dasharray="8,6"/>\n`;
 
@@ -224,19 +224,21 @@ function buildD4Arms(d) {
     svg += `<rect x="${x}" y="${y}" width="${barW}" height="${plotY + plotH - y}" rx="4" fill="${roleColor[b.role]}"/>\n`;
 
     // Value + count sit INSIDE the bar top, so nothing floats between a
-    // short bar and the kill line above it.
+    // short bar and the pass/fail bar above it.
     svg += `<text x="${cx}" y="${y + 36}" text-anchor="middle" fill="${C.textPrimary}" font-size="28" font-weight="700">${fmt1(pct)}%</text>\n`;
     svg += `<text x="${cx}" y="${y + 66}" text-anchor="middle" fill="${C.textPrimary}" font-size="22">${b.numerator} of ${b.denominator}</text>\n`;
 
-    const labLines = wrap(b.label, groupW - 16, 24);
+    // explicit line breaks from the JSON when given, so a long plain-words
+    // label breaks where it reads well rather than where the wrap lands
+    const labLines = b.lines || wrap(b.label, groupW - 16, 24);
     const labY = plotY + plotH + 34;
     svg += `<text x="${cx}" y="${labY}" text-anchor="middle" fill="${C.textPrimary}" font-size="24" font-weight="700">${tspans(labLines, cx, labY, 28)}</text>\n`;
 
-    // Small tags under the arm's name: KILLED (status red, text only) and
-    // the post-hoc honesty tag on G0h (arc A: found after the kill).
+    // Small tags under the arm's name: the dropped status (status red, text
+    // only) and the post-hoc honesty tag on G0h (arc A: found afterwards).
     let tagY = labY + 28 * (labLines.length - 1) + 32;
-    if (b.killed) {
-      svg += `<text x="${cx}" y="${tagY}" text-anchor="middle" fill="${C.critical}" font-size="22" font-weight="700">KILLED</text>\n`;
+    if (b.dropped) {
+      svg += `<text x="${cx}" y="${tagY}" text-anchor="middle" fill="${C.critical}" font-size="22" font-weight="700">${esc(b.status || 'dropped')}</text>\n`;
       tagY += 26;
     }
     (b.tag || []).forEach((t) => {
@@ -245,7 +247,7 @@ function buildD4Arms(d) {
     });
   });
 
-  // kill-line label in the right gutter, centred on the line's height
+  // pass/fail-bar label in the right gutter, centred on the line's height
   const kl = d.killLine.lines.map((l) => l.replace('{pct}', `${fmt1(d.killLine.pct)}%`));
   const klX = plotX + plotW + 24;
   const klY0 = killY - ((kl.length - 1) * 28) / 2 + 8;
@@ -339,7 +341,7 @@ function buildD4Top3(d) {
 function buildJitterDrops(d) {
   let svg = svgOpen(d);
   svg += `<defs>
-    <marker id="jitter-arrow" viewBox="0 0 12 12" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+    <marker id="jitter-arrow" viewBox="0 0 12 12" markerWidth="9" markerHeight="9" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M2,2 L10,6 L2,10" fill="none" stroke="${C.textMuted}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
     <marker id="jitter-pointer" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
@@ -745,11 +747,13 @@ function buildTwoLevers(d) {
   // pinned to each segment's own (often-overlapping) x position. Full
   // evidence-class attribution (tierLabel) stays in the JSON for the deck's
   // notes; the chart itself carries a short, ≥22px tag.
-  const segTag = (tl) => (/^instrumented/.test(tl) ? 'instrumented, E84' : 'my estimate — not instrumented');
+  // On-screen tag in plain words (seg.shortTag); the experiment code stays in
+  // the JSON's tierLabel/source, never on the slide.
+  const segTag = (seg) => seg.shortTag || (/^instrumented/.test(seg.tierLabel) ? 'measured' : 'my estimate — not instrumented');
   const segLabelY1 = yB + barThick / 2 + 26;
   const segLabelY2 = segLabelY1 + 28;
-  svg += `<text x="${xOf(0)}" y="${segLabelY1}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg1.label)}: ${seg1.low}–${seg1.high}${seg1.unit} (${segTag(seg1.tierLabel)})</text>\n`;
-  svg += `<text x="${xOf(0)}" y="${segLabelY2}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg2.label)}: ${seg2.low}–${seg2.high}${seg2.unit} (${segTag(seg2.tierLabel)})</text>\n`;
+  svg += `<text x="${xOf(0)}" y="${segLabelY1}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg1.label)}: ${seg1.low}–${seg1.high}${seg1.unit} (${segTag(seg1)})</text>\n`;
+  svg += `<text x="${xOf(0)}" y="${segLabelY2}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg2.label)}: ${seg2.low}–${seg2.high}${seg2.unit} (${segTag(seg2)})</text>\n`;
 
   svg += svgClose;
   return svg;
@@ -774,8 +778,8 @@ function buildLaneDag(d) {
     </marker></defs>\n`;
 
   const tierY = { fable: 52, opus: 146, sonnet: 240, haiku: 334 };
-  const gutterX = 150; // right edge of the tier labels
-  const boxW = 214;
+  const gutterX = 206; // right edge of the tier labels (plain-words roles, two lines)
+  const boxW = 190;
   const boxH = 54;
   const mainY = 396; // top of the main trunk
   const mainH = 38;
@@ -802,7 +806,7 @@ function buildLaneDag(d) {
     while (cur) { laneOfId[cur] = i; cur = nextOf[cur]; }
   });
   const laneX0 = gutterX + 24 + boxW / 2;
-  const pitch = 236;
+  const pitch = 214;
   const laneX = laneRoots.map((_, i) => laneX0 + i * pitch);
 
   const pos = {};
@@ -816,7 +820,7 @@ function buildLaneDag(d) {
   const trunkX0 = gutterX + 20;
   const trunkX1 = W - 16;
   svg += `<rect x="${trunkX0}" y="${mainY}" width="${trunkX1 - trunkX0}" height="${mainH}" rx="8" fill="${C.surface}" stroke="${C.textPrimary}" stroke-width="2"/>\n`;
-  svg += `<text x="${trunkX0 + 16}" y="${mainY + mainH / 2 + 8}" fill="${C.textPrimary}" font-size="24" font-weight="700">main</text>\n`;
+  svg += `<text x="${trunkX0 + 16}" y="${mainY + mainH / 2 + 8}" fill="${C.textPrimary}" font-size="24" font-weight="700">${esc(d.trunkLabel || 'merged')}</text>\n`;
 
   // edges: review hand-offs go straight up; merges go right, then down.
   const gapTip = 8;
