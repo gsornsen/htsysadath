@@ -8,18 +8,31 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Lane | Branch | Status | Owner (model) | Last sha | Next |
 |---|---|---|---|---|---|
 | Scaffold | main | merged | Fable | beb5177 | pushed to github.com/gsornsen/htsysadath |
-| Transcript inventory | mine/inventory | running | Haiku | — | run `scripts/inventory-transcripts.py`, commit `mining/timeline/sessions.md` |
-| Mine: experiments (arc A) | mine/experiments | running | Sonnet → Opus review | — | prompts/02 |
-| Mine: pivots (arc B) | mine/pivots | running | Sonnet (extract+narrate) → Opus review | — | prompts/02 + prompts/03 |
-| Mine: personas (arc C) | mine/personas | running | Sonnet | — | prompts/02 |
-| Mine: coordinator pattern (arc E) | mine/coordinator | running | Sonnet | — | prompts/01 + this repo's log |
-| Mine: agent labeling (arc F) | mine/labeling | running | Sonnet → Opus review | — | prompts/02 §arc F |
+| Transcript inventory | mine/inventory | merged | Haiku | 105d837 | 28 sessions indexed; Phase 2 slices against it |
+| Mine: experiments (arc A) | mine/experiments | merged, Opus review PENDING | Sonnet | 0c9e2d0 | D4 reconciled; 47-row index; 4/4 spot-checks held |
+| Mine: pivots (arc B) | mine/pivots | merged, Opus review PENDING | Sonnet | 6544205 | four-act ordering broken → D5; Art Binder unresolved |
+| Mine: personas (arc C) | mine/personas | merged | Sonnet | a504755 | panel mechanism reconstructed; B19 failure case |
+| Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
+| Mine: agent labeling (arc F) | mine/labeling | running | Sonnet → Opus review | — | 3min→10s verdict outstanding |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
 | Outline v1 | talk/outline | planned | Opus | — | after any two arcs land |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 08:2x PDT — Phase 1: five of six lanes merged to main (inventory, arcs A, B, C, E);
+  arc F still running. Coordinator spot-checked 3+ findings per arc by RE-OPENING the cited
+  source, not by reading the lane reports: 13/13 confirmed. **D4 reconciled** — memory and
+  Gerald's recollection differ in FRAME, not fact; dedup was killed (E67 G3, -14.43 pts print@1,
+  p=0.00034), the flat gallery + language head shipped (67.66→77.61%, wrong-language 34→1),
+  flipped to prod 2026-09-09 00:03:18 -0700. "Simplified" = language handling and maintenance
+  burden, NOT the index, which never shrank. **D5 logged** — arc B's four-act ordering is
+  contradicted by the git log (comps shipped 2026-07-04, day two); arc B becomes concurrent
+  spines. Opus review pass on arcs A/B/F deliberately HELD for Gerald's 5.5 client update.
+  Caution surfaced from the project's own record: `opus-46-not-opus-5-for-agents` (2026-09-13)
+  pinned agents OFF the Opus 5 alias after brief-drift, incl. a live-DB migration against
+  instructions — Gerald to decide whether 5.5 clears that bar.
 
 - 2026-09-24 08:0x PDT — **Opus tier probed: this client serves `claude-opus-5[1m]` (Opus 5, 1M
   context). Opus 5.5 is NOT available here, so the documented fallback applies and every
