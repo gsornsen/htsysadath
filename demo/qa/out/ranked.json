@@ -1,472 +1,482 @@
 [
   {
     "rank": 1,
-    "id": "q-23489b986e",
-    "question": "An idle tab burned a full day's API allowance before anyone noticed — what actually caught that, and how fast would a real cost overrun get flagged now?",
+    "id": "q-01fd23ac86",
+    "question": "Concretely, what is a gate checking — a script's exit code, a numeric threshold, or a human reading a report?",
     "personas": [
-      "mid-swe",
-      "pm"
+      "mid-swe"
     ],
-    "score": 12,
+    "score": 5,
     "members": [
-      "q-23489b986e",
-      "q-335da6f85c"
+      "q-01fd23ac86"
     ]
   },
   {
     "rank": 2,
-    "id": "q-2bd03aa3b7",
-    "question": "This all seems to run through one person as coordinator, reviewer, and the one who flips production — how does a team of several people actually adopt this without becoming a bottleneck?",
+    "id": "q-0d3aa1f759",
+    "question": "The language-head arm was added after the kill line fired on the same 201 crops — how do you rule out that split being cherry-picked once you saw the data?",
+    "personas": [
+      "senior-swe"
+    ],
+    "score": 5,
+    "members": [
+      "q-0d3aa1f759"
+    ]
+  },
+  {
+    "rank": 3,
+    "id": "q-36bab273b3",
+    "question": "You flip production yourself in this setup — on a real team, who gets that authority, and how many people would need it?",
     "personas": [
       "pm"
     ],
     "score": 5,
     "members": [
-      "q-2bd03aa3b7"
+      "q-36bab273b3"
     ]
   },
   {
-    "rank": 3,
-    "id": "q-3bb4d6fe85",
-    "question": "How were the four persona briefs actually written — real user research distilled into jobs, or just demographics like age and device made up?",
+    "rank": 4,
+    "id": "q-3e67f3797f",
+    "question": "Who actually turns a persona's NOT verdict into a design change, and can that person decline what the persona is asking for?",
     "personas": [
       "designer"
     ],
     "score": 5,
     "members": [
-      "q-3bb4d6fe85"
+      "q-3e67f3797f"
     ]
   },
   {
-    "rank": 4,
+    "rank": 5,
+    "id": "q-55a06a9a84",
+    "question": "Is '9 seconds, simulated' a usability number at all, or is it just an agent describing its own read of the screen?",
+    "personas": [
+      "designer"
+    ],
+    "score": 5,
+    "members": [
+      "q-55a06a9a84"
+    ]
+  },
+  {
+    "rank": 6,
+    "id": "q-6344986c68",
+    "question": "Your live-lot accuracy is based on one tapper's own judgment across 87 lots with a confidence interval spanning roughly 53 to 75 percent — what stops that from being both measurer and grader of your own tool?",
+    "personas": [
+      "senior-swe"
+    ],
+    "score": 5,
+    "members": [
+      "q-6344986c68"
+    ]
+  },
+  {
+    "rank": 7,
+    "id": "q-7bfd511a55",
+    "question": "When you say the panel 'walked' the screens, does that mean it actually rendered and interacted with the live UI, or just reasoned over code and a static viewport?",
+    "personas": [
+      "designer"
+    ],
+    "score": 5,
+    "members": [
+      "q-7bfd511a55"
+    ]
+  },
+  {
+    "rank": 8,
+    "id": "q-b06db9f644",
+    "question": "Is 65% on live lots good enough to ship to real users, and what's the target number before you'd call this done?",
+    "personas": [
+      "pm"
+    ],
+    "score": 5,
+    "members": [
+      "q-b06db9f644"
+    ]
+  },
+  {
+    "rank": 9,
+    "id": "q-bf7d3647b1",
+    "question": "How does a lane actually start — do you type a command that creates the worktree and branch, or is that scripted somewhere in the starter kit?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 5,
+    "members": [
+      "q-bf7d3647b1"
+    ]
+  },
+  {
+    "rank": 10,
+    "id": "q-c4aa68cb06",
+    "question": "With forty-five possible forks for one bug, who decides which ones actually get run first?",
+    "personas": [
+      "pm"
+    ],
+    "score": 5,
+    "members": [
+      "q-c4aa68cb06"
+    ]
+  },
+  {
+    "rank": 11,
+    "id": "q-eb71b91ad7",
+    "question": "What's actually in the unattended.md file — how do you set the end time, the caps, and get a morning report without building your own platform?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 5,
+    "members": [
+      "q-eb71b91ad7"
+    ]
+  },
+  {
+    "rank": 12,
+    "id": "q-08bed40cd0",
+    "question": "What's the actual first thing a product manager who doesn't run worktrees should do Monday morning?",
+    "personas": [
+      "pm"
+    ],
+    "score": 4,
+    "members": [
+      "q-08bed40cd0"
+    ]
+  },
+  {
+    "rank": 13,
+    "id": "q-0d29b274c7",
+    "question": "How do you pick the kill-line number before the run — is that just your gut, or is there a rule for how strict to set it?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 4,
+    "members": [
+      "q-0d29b274c7"
+    ]
+  },
+  {
+    "rank": 14,
+    "id": "q-0dae00d91c",
+    "question": "A hundred experiments in two weeks — was that one person working full time, or could a team hit that pace part-time?",
+    "personas": [
+      "pm"
+    ],
+    "score": 4,
+    "members": [
+      "q-0dae00d91c"
+    ]
+  },
+  {
+    "rank": 15,
+    "id": "q-11e8ef611b",
+    "question": "What does 'reviewer one tier up' mean in practice — do you hardcode which model reviews which, or does the coordinator pick per task?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 4,
+    "members": [
+      "q-11e8ef611b"
+    ]
+  },
+  {
+    "rank": 16,
+    "id": "q-22af88e47d",
+    "question": "The persona panel said DONE but your own phone said no — what changed in your process so that gap doesn't happen again?",
+    "personas": [
+      "pm"
+    ],
+    "score": 4,
+    "members": [
+      "q-22af88e47d"
+    ]
+  },
+  {
+    "rank": 17,
+    "id": "q-3d168aa278",
+    "question": "You showed four different top-3 numbers that don't agree, from 65 to 83 percent — how do you decide which one to report when someone asks 'is it better' outside a talk?",
+    "personas": [
+      "senior-swe"
+    ],
+    "score": 4,
+    "members": [
+      "q-3d168aa278"
+    ]
+  },
+  {
+    "rank": 18,
     "id": "q-42b9213867",
     "question": "What actually stops an unattended overnight agent from merging a change that passes its gate but is wrong in a way the gate didn't anticipate?",
     "personas": [
       "senior-swe"
     ],
-    "score": 5,
+    "score": 4,
     "members": [
       "q-42b9213867"
     ]
   },
   {
-    "rank": 5,
-    "id": "q-4ae90ed9df",
-    "question": "Is the 'about 30 minutes a day' anywhere logged with timestamps, or is it entirely recall — and does it include the time spent writing gates and briefs, not just babysitting runs?",
-    "personas": [
-      "senior-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-4ae90ed9df"
-    ]
-  },
-  {
-    "rank": 6,
-    "id": "q-52a770675b",
-    "question": "Concretely, what does a gate look like when you write it—is it a test script, a threshold number in a config file, or something a human still has to read?",
-    "personas": [
-      "mid-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-52a770675b"
-    ]
-  },
-  {
-    "rank": 7,
-    "id": "q-653cc209ee",
-    "question": "The persona panel said DONE at 21:50 and you found it unusable on your own phone the next morning — how many other DONE verdicts have you not personally re-checked?",
-    "personas": [
-      "senior-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-653cc209ee"
-    ]
-  },
-  {
-    "rank": 8,
-    "id": "q-81a6de606e",
-    "question": "The 87-lot ground truth is your own taps from one tapper over five days — what's your inter-rater reliability, and why not a held-out labeler?",
-    "personas": [
-      "senior-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-81a6de606e"
-    ]
-  },
-  {
-    "rank": 9,
-    "id": "q-86eb799664",
-    "question": "If I've never used a worktree before, what's the actual command sequence to spin up a lane, and how does it merge back when the gate passes?",
-    "personas": [
-      "mid-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-86eb799664"
-    ]
-  },
-  {
-    "rank": 10,
-    "id": "q-a103d55233",
-    "question": "Now that you've seen the panel pass something broken, what's the actual workflow — does a human walk every UI change on a real device before merge, or only after a failure like this one?",
-    "personas": [
-      "designer"
-    ],
-    "score": 5,
-    "members": [
-      "q-a103d55233"
-    ]
-  },
-  {
-    "rank": 11,
-    "id": "q-bcd3c66893",
-    "question": "What did this actually cost end to end, in dollars and in your own hours, once you count everything beyond the $9 labeling spend buried in the backup slide?",
-    "personas": [
-      "pm"
-    ],
-    "score": 5,
-    "members": [
-      "q-bcd3c66893"
-    ]
-  },
-  {
-    "rank": 12,
-    "id": "q-c49923ca32",
-    "question": "With forty-five or more forks possible for one bug, who or what decides which experiments actually get run first?",
-    "personas": [
-      "pm"
-    ],
-    "score": 5,
-    "members": [
-      "q-c49923ca32"
-    ]
-  },
-  {
-    "rank": 13,
-    "id": "q-c9b31dd472",
-    "question": "The panel said DONE on a fixed viewport and missed rotation and scrolling entirely — what exactly does the panel check, and who wrote those acceptance criteria?",
-    "personas": [
-      "designer"
-    ],
-    "score": 5,
-    "members": [
-      "q-c9b31dd472"
-    ]
-  },
-  {
-    "rank": 14,
-    "id": "q-d7da7b6587",
-    "question": "Was top-3 chosen as the bar before you saw the top-1 numbers, or after top-1 came in lower than you wanted?",
-    "personas": [
-      "senior-swe"
-    ],
-    "score": 5,
-    "members": [
-      "q-d7da7b6587"
-    ]
-  },
-  {
-    "rank": 15,
-    "id": "q-023fd96bd9",
-    "question": "You call the jitter fixed once thrown-away answers hit near zero — was 'it holds' ever judged by a person watching the screen, or only by the event logs?",
-    "personas": [
-      "designer"
-    ],
-    "score": 4,
-    "members": [
-      "q-023fd96bd9"
-    ]
-  },
-  {
-    "rank": 16,
-    "id": "q-231e25b8b7",
-    "question": "The persona panel said DONE but the real app was unusable the next morning — what changed in the gate after that, or could it fail silently again?",
-    "personas": [
-      "pm"
-    ],
-    "score": 4,
-    "members": [
-      "q-231e25b8b7"
-    ]
-  },
-  {
-    "rank": 17,
-    "id": "q-2854005b40",
-    "question": "Dez going from 30 seconds to 9 seconds a task is simulated, not human — what makes that a usability number at all rather than a model narrating improvement?",
-    "personas": [
-      "designer"
-    ],
-    "score": 4,
-    "members": [
-      "q-2854005b40"
-    ]
-  },
-  {
-    "rank": 18,
-    "id": "q-376adb2a4a",
-    "question": "Is two in three good enough to ship to real users, and what's the number you're targeting before you'd call this done?",
-    "personas": [
-      "pm"
-    ],
-    "score": 4,
-    "members": [
-      "q-376adb2a4a"
-    ]
-  },
-  {
     "rank": 19,
-    "id": "q-3be8a23693",
-    "question": "For the persona review gate, who or what actually plays the four personas and returns DONE or NOT—is that a scripted prompt, and how do I stop it from rubber-stamping?",
+    "id": "q-5f46cc334d",
+    "question": "What did the flapping actually look like to someone trying to use the scout, and did you watch a real person react to it before calling it fixed?",
     "personas": [
-      "mid-swe"
+      "designer"
     ],
     "score": 4,
     "members": [
-      "q-3be8a23693"
+      "q-5f46cc334d"
     ]
   },
   {
     "rank": 20,
-    "id": "q-48598d1c92",
-    "question": "Do these persona panels ever get compared side by side against real usability sessions, or are they only ever checked against your own hands after the fact?",
+    "id": "q-6044324aa6",
+    "question": "Are the four persona briefs built from real usability research, or are they demographics like '22, phone-only' dressed up as jobs?",
     "personas": [
       "designer"
     ],
     "score": 4,
     "members": [
-      "q-48598d1c92"
+      "q-6044324aa6"
     ]
   },
   {
     "rank": 21,
-    "id": "q-55650fb70c",
-    "question": "What did the review-screen redesign for labeling actually change on screen, and was that tested against alternatives or just shipped from the persona feedback directly?",
+    "id": "q-6aea00d5ca",
+    "question": "The August bakeoff median of 10.4 seconds came from only six captures — how confident are you that number would hold up with a larger sample?",
     "personas": [
-      "designer"
+      "senior-swe"
     ],
     "score": 4,
     "members": [
-      "q-55650fb70c"
+      "q-6aea00d5ca"
     ]
   },
   {
     "rank": 22,
-    "id": "q-74498fc43f",
-    "question": "For the overnight caps—8 calls, 60 seconds, $6—where do you actually set those, and what stops an agent from just retrying past them?",
+    "id": "q-760566dd9c",
+    "question": "You call the 30-minutes-a-day figure your own estimate rather than a measurement — did you ever actually log your hours, and if not why present it alongside otherwise-instrumented numbers?",
     "personas": [
-      "mid-swe"
+      "senior-swe"
     ],
     "score": 4,
     "members": [
-      "q-74498fc43f"
+      "q-760566dd9c"
     ]
   },
   {
     "rank": 23,
-    "id": "q-920495a5dc",
-    "question": "If a PM on my team doesn't run git worktrees or write gate code themselves, what's the actual first thing they'd do on Monday?",
+    "id": "q-a6ab5def27",
+    "question": "For the persona review gate, who writes the persona briefs and how does the agent 'walk' the build — screenshots, Playwright, something else?",
     "personas": [
-      "pm"
+      "mid-swe"
     ],
     "score": 4,
     "members": [
-      "q-920495a5dc"
+      "q-a6ab5def27"
     ]
   },
   {
     "rank": 24,
-    "id": "q-a63bb5c22a",
-    "question": "You show four different top-3 numbers from 70 to 82 percent — which one did you actually gate decisions on while running the experiments, in real time?",
+    "id": "q-bc9499b56f",
+    "question": "Thirty minutes a day is your estimate and doesn't count morning review time — what's the real daily time cost end to end?",
     "personas": [
-      "senior-swe"
+      "pm"
     ],
     "score": 4,
     "members": [
-      "q-a63bb5c22a"
+      "q-bc9499b56f"
     ]
   },
   {
     "rank": 25,
-    "id": "q-bf8b1faa53",
-    "question": "Letting the swarm self-steer broke the next day — what specifically did it do, and how do you know your fix wasn't just papering over the same failure mode recurring later?",
+    "id": "q-c944ed9417",
+    "question": "After the panel missed the fixed-viewport failure, did you change how the panel walks screens, or just add the human phone check on top?",
     "personas": [
-      "senior-swe"
+      "designer"
     ],
     "score": 4,
     "members": [
-      "q-bf8b1faa53"
+      "q-c944ed9417"
     ]
   },
   {
     "rank": 26,
-    "id": "q-e5f5c48897",
-    "question": "When a usage limit killed three build lanes mid-work, how did you recover those lanes the next morning—rerun from scratch or resume from the last commit?",
+    "id": "q-d1041d3f1d",
+    "question": "The coordinator is your strongest model judging your own lanes — on a team, who plays that role, and can a junior PM own it?",
     "personas": [
-      "mid-swe"
+      "pm"
     ],
     "score": 4,
     "members": [
-      "q-e5f5c48897"
+      "q-d1041d3f1d"
     ]
   },
   {
     "rank": 27,
-    "id": "q-f5fa70313b",
-    "question": "The language head's dev split for tuning its one knob — was that split drawn from the same distribution as the 201 test photos, or could it share sellers, listings, or lighting conditions with them?",
+    "id": "q-f912329ff1",
+    "question": "What specifically changed on the review screen that cut your labeling verdict from three minutes to twenty seconds, and did anyone other than you time it?",
     "personas": [
-      "senior-swe"
+      "designer"
     ],
     "score": 4,
     "members": [
-      "q-f5fa70313b"
+      "q-f912329ff1"
     ]
   },
   {
     "rank": 28,
-    "id": "q-f823fc6928",
-    "question": "What does 'reviewer one tier up' mean in practice—are you literally pointing a bigger model at a smaller model's diff, and how is that wired up?",
+    "id": "q-fdad42f8dc",
+    "question": "When a usage limit killed three build lanes mid-work, what happened next — did you manually restart them, or is there a retry mechanism?",
     "personas": [
       "mid-swe"
     ],
     "score": 4,
     "members": [
-      "q-f823fc6928"
+      "q-fdad42f8dc"
     ]
   },
   {
     "rank": 29,
-    "id": "q-1d578dcb21",
-    "question": "Who on your team can decline or override what a persona panel asks for, and does that feedback ever get treated as a hard requirement instead of a signal?",
+    "id": "q-003507fffe",
+    "question": "Who writes the kill bar before a run — you alone, or could someone else on a team set that gate?",
     "personas": [
-      "designer"
+      "pm"
     ],
     "score": 3,
     "members": [
-      "q-1d578dcb21"
+      "q-003507fffe"
     ]
   },
   {
     "rank": 30,
-    "id": "q-1d5d6b1cd1",
-    "question": "When an unattended overnight run picks the wrong fork, what's the blast radius before a human notices and how do you roll it back?",
+    "id": "q-11a68ab46d",
+    "question": "Is the full experiment ledger and the replay data behind these charts public in the repo, or are some of these numbers from private logs I can't verify myself?",
     "personas": [
-      "pm"
+      "senior-swe"
     ],
     "score": 3,
     "members": [
-      "q-1d5d6b1cd1"
+      "q-11a68ab46d"
     ]
   },
   {
     "rank": 31,
-    "id": "q-492a4ca8e7",
-    "question": "You raised the per-run caps from 8 calls and $6 to 14 calls after agents hit the wall — who signed off on that, and is there a hard ceiling above which an agent still can't spend more no matter what?",
+    "id": "q-20a25977b6",
+    "question": "What is the language head, mechanically — a small classifier bolted onto the embedding output?",
     "personas": [
-      "senior-swe"
+      "mid-swe"
     ],
     "score": 3,
     "members": [
-      "q-492a4ca8e7"
+      "q-20a25977b6"
     ]
   },
   {
     "rank": 32,
-    "id": "q-67fe2eb128",
-    "question": "The 45-forks estimate on the fork-tree slide is explicitly your own count and not in the record — how would that number change the ROI story if it were, say, half that?",
+    "id": "q-3042fe310c",
+    "question": "The persona panel said DONE on a fixed viewport but your own phone showed it was unusable — how many other DONE verdicts from that panel have you since re-checked on a real device?",
     "personas": [
       "senior-swe"
     ],
     "score": 3,
     "members": [
-      "q-67fe2eb128"
+      "q-3042fe310c"
     ]
   },
   {
     "rank": 33,
-    "id": "q-71df4e03a6",
-    "question": "Who has the authority to make the calls you kept for yourself, like flipping something to production, once this isn't a one-person project anymore?",
+    "id": "q-68c06793f2",
+    "question": "For the live demo, was the card that held actually held long enough for a hand to tap it, or just long enough to look stable on stage?",
     "personas": [
-      "pm"
+      "designer"
     ],
     "score": 3,
     "members": [
-      "q-71df4e03a6"
+      "q-68c06793f2"
     ]
   },
   {
     "rank": 34,
-    "id": "q-9a62328298",
-    "question": "How many lanes can realistically run in parallel before the coordinator session itself becomes the bottleneck?",
-    "personas": [
-      "mid-swe"
-    ],
-    "score": 3,
-    "members": [
-      "q-9a62328298"
-    ]
-  },
-  {
-    "rank": 35,
-    "id": "q-9ef1ebf29f",
-    "question": "When the identify vote misses and gets a card wrong, what does the person actually see — a confident wrong answer, or something that signals uncertainty?",
+    "id": "q-69abcc944a",
+    "question": "Do the persona briefs ever get revised based on what real users actually do, or do they stay fixed once written?",
     "personas": [
       "designer"
     ],
     "score": 3,
     "members": [
-      "q-9ef1ebf29f"
+      "q-69abcc944a"
     ]
   },
   {
-    "rank": 36,
-    "id": "q-a92efe3598",
-    "question": "In the starter kit, which file would I open first if I just want to copy the gate-and-flag pattern for my own overnight runs?",
-    "personas": [
-      "mid-swe"
-    ],
-    "score": 3,
-    "members": [
-      "q-a92efe3598"
-    ]
-  },
-  {
-    "rank": 37,
-    "id": "q-f3898a1fda",
-    "question": "You used 'top-3' and 'embedding' without defining them on screen—can you walk through what a top-3 check is actually computing?",
-    "personas": [
-      "mid-swe"
-    ],
-    "score": 3,
-    "members": [
-      "q-f3898a1fda"
-    ]
-  },
-  {
-    "rank": 38,
-    "id": "q-f627fffa57",
-    "question": "What's actually in the starter kit — does it assume the same subscription and tooling you had, or does it work with a normal team stack?",
+    "rank": 35,
+    "id": "q-8bd67ccb85",
+    "question": "Beyond the $9 in labeling calls, what does the Claude Max subscription itself cost, and does that scale if a whole team runs this?",
     "personas": [
       "pm"
     ],
     "score": 3,
     "members": [
-      "q-f627fffa57"
+      "q-8bd67ccb85"
+    ]
+  },
+  {
+    "rank": 36,
+    "id": "q-9265949895",
+    "question": "Letting the swarm self-steer broke the next day and you had to keep correcting it — what exactly went wrong, and is that failure mode still possible today?",
+    "personas": [
+      "senior-swe"
+    ],
+    "score": 3,
+    "members": [
+      "q-9265949895"
+    ]
+  },
+  {
+    "rank": 37,
+    "id": "q-a6af02b0ec",
+    "question": "How do the lane branches actually merge back once a gate passes — do you squash-merge automatically, or is that a manual review step too?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 3,
+    "members": [
+      "q-a6af02b0ec"
+    ]
+  },
+  {
+    "rank": 38,
+    "id": "q-ec3985f322",
+    "question": "What does replaying a recorded session offline actually involve — is that a custom tool, or something off the shelf?",
+    "personas": [
+      "mid-swe"
+    ],
+    "score": 3,
+    "members": [
+      "q-ec3985f322"
     ]
   },
   {
     "rank": 39,
-    "id": "q-c4a9f0162f",
-    "question": "For the 65% top-3 figure on live lots, who decided what counted as 'the right card' — the same one tapper who's judging usability elsewhere in this project?",
+    "id": "q-ed93fdad32",
+    "question": "Since one panel already returned a false DONE on a real device, how many other screens have you not yet re-checked by hand?",
     "personas": [
       "designer"
     ],
+    "score": 3,
+    "members": [
+      "q-ed93fdad32"
+    ]
+  },
+  {
+    "rank": 40,
+    "id": "q-ac6380920e",
+    "question": "For the jitter fix, how do you attribute the drop between the 3x faster server and the cancel-but-keep-answer change beyond just not crediting one alone?",
+    "personas": [
+      "senior-swe"
+    ],
     "score": 2,
     "members": [
-      "q-c4a9f0162f"
+      "q-ac6380920e"
     ]
   }
 ]

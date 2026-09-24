@@ -13,7 +13,8 @@ open demo/qa/site/index.html          # macOS; or xdg-open on Linux, or open it 
 #    GRAILITH_DIR is optional and adds the private experiment write-ups to retrieval.
 GRAILITH_DIR=<path to a Grailith checkout> node demo/qa/run.mjs --live --model sonnet
 
-# 3. Idempotence check: replay twice into temp dirs, compare sha256 of every output
+# 3. Idempotence check (always the public path, GRAILITH_DIR unset): replay twice into temp dirs,
+#    compare sha256 of every output, and compare with the committed out/ and site/
 demo/qa/check.sh
 ```
 
@@ -39,7 +40,7 @@ node demo/qa/run.mjs --live --model sonnet                  # repo sources only
 node demo/qa/run.mjs --live --only q-abc123,q-def456        # re-ask only these answers
 ```
 
-`--reuse` calls the model only where a fixture is missing; `--concurrency N` bounds the answer
+`--reuse` calls the model only where a fixture is missing; `--rekey` re-files old-scheme fixtures; `--concurrency N` bounds the answer
 calls in flight (default 4); `--out`/`--site` redirect the outputs (check.sh uses them).
 
 **Model:** every committed fixture was produced by **Claude Sonnet** (`claude -p --model sonnet`),
@@ -77,10 +78,18 @@ in the context. The model name is recorded in each fixture.
   found in the repo file; answers ≤ 120 words; sourced/testimony answers cite something.
   Grailith citations are `unverifiable` in public replay unless `GRAILITH_DIR` is set.
   Flagged answers are shown flagged, never hidden.
-- **Fixtures**: `replay/<pass>/<sha256>.json`, keyed by the pass, the prompt file, the persona or
-  question, and the inputs (the deck; the retrieval rule and the retrieved repo excerpts; the
-  Grailith manifest hash).
-  A live run deletes fixtures it no longer references.
+- **Fixtures**: `replay/<pass>/<sha256>.json`. The key covers only what a public checkout can
+  always compute:
+  - questions: the pass, the prompt file, the persona and its brief;
+  - answers: the pass, the prompt file, the question id and text, and the hash of the committed
+    Grailith manifest (path + sha256 of each file, never content).
+
+  Neither the repo nor the Grailith excerpt text is in the key. Each fixture records what the model
+  actually saw instead (the deck's sha256; the excerpts' path, chunk and sha256). If a later commit
+  changes the deck or today's retrieval, replay still reproduces the committed output byte for
+  byte and prints a `stale:` note; `--live` refreshes. A live run deletes fixtures it no longer
+  references. `--rekey` (replay only, one-off) moved fixtures written under the earlier key, which
+  included the retrieved repo excerpts and so broke as soon as a corpus file changed.
 
 ## Public vs private
 

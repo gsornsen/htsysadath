@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "74bec3f99b1b4edebac2a9fa56b88343c90cba9e5210de1937b17cf7a7290144",
+  "id": "q-22af88e47d",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 19,
+      "sha256": "c7eadbbe4f72bdd474ce3886fc2629f82d279ec6359a85a4cf646b4cf8df4e31"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 19,
+      "sha256": "2fda6e38afd94ba2b916a5c4d9ede95d90762e5ba5990caed877f29590afd7ac"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 4,
+      "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 2,
+      "sha256": "8ba21eb28ca03a8cf17f4ff695ac1e8e935cdbf9acbcf81ea056eaa4b851dfb2"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46e-colddist-2026-09-07.md",
+      "chunk": 21,
+      "sha256": "7ed5cd7555e8e2e9191b17fb96452dd17fecd757f4bdcf8acfa47c7cecb69409"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53b-model-reductions-2026-09-07.md",
+      "chunk": 25,
+      "sha256": "dac366b53a348de7cdcb89aebb48c9d1a00173245d755a784b88c02c1bd03135"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E23-credits-per-identify-2026-09-06.md",
+      "chunk": 14,
+      "sha256": "9a5ffb742c3b4096e972b5557b3b7ee8c6cfb1d91d076b4e8acd9974e715b971"
+    }
+  ],
+  "output": {
+    "answer": "The panel's headless walk ran against a fixed viewport, so it certified DONE on the phone experience twice, but the next morning I opened the deployed app on my own iPhone and it was pretty much unusable, three scrolling sections, a help modal on every task, and having to rotate the phone to reach options. The fix I took from that failure was to add a real-device check as the actual last step before calling anything done, not a formality, an actual re-walk on real hardware, on top of the panel pass rather than instead of it.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "add a real-device check before DONE"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "pretty much unusable"
+      }
+    ]
+  }
+}

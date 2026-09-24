@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "ccf0fd95cd274c9725cdfadf365f3a50ad22a6c3495aeaafe058e031e29e50e1",
+  "id": "q-c4aa68cb06",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 6,
+      "sha256": "ae0505c74065e2a585fc4a624ea5fb39b3703455304052897c600a70157df573"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 6,
+      "sha256": "d29d846c4b03e43a11b416edd67a9c9522abd3aa0e8f6eedd014f73039f8b864"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 20,
+      "sha256": "2c4d09e91562263d3cda869d5390898c0437014cfd2685009345beee557de53c"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 3,
+      "sha256": "f6150b32f4e65ffe8f4e63a607149b4f9171399661d9c3ad3352c63d8ff4af97"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 2,
+      "sha256": "eac1664fcbb62d28bcc052aac141e50f0b10c7e31db401d843eff13dbd280c59"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "ad55437af2791a6c8418405d3dff9c14c0f6ce0aa259b8423485f10821616c9d"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E18-ood-gate-2026-09-05.md",
+      "chunk": 2,
+      "sha256": "b4b90c585b216ee108e2b4439530c4c69ad3ac3e09ad2e04178d1aca81feedf8"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PRICE-HISTORY-PRINTING-2026-09-08.md",
+      "chunk": 1,
+      "sha256": "c969f81587716497d9686c44f31e54607427d2ae2a47432cd0741791e807e925"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md",
+      "chunk": 43,
+      "sha256": "ae72a556d32bf641ea2661b034d8069e488ef3abcc2d018ffc4b25dd968ab26f"
+    }
+  ],
+  "output": {
+    "answer": "For that particular jitter bug, the record only shows my own old default: I'd pick the fix I know best and push through, hoping it worked, rather than running a formal triage across all forty-five forks. It doesn't describe a separate decision-maker or prioritization process choosing which of the forty-five get run first — that mechanism isn't in the record for this bug.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "pick the fix I know best, push"
+      }
+    ]
+  }
+}

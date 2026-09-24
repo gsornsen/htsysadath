@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "f9e640426c41ea3088f2788c1df3d2f630b5399c996cf513c9fc38cb45703582",
+  "id": "q-01fd23ac86",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 1,
+      "sha256": "f57528a0bf9b331c2575c27029500e2b0c3e8fdae3ba0b6ae8d1577392223c0b"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 2,
+      "sha256": "21cce0b35a865c68d44a179fc83d06d88d1c1e1f27cf073f9574498d5d517286"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 3,
+      "sha256": "9fb817d15fdae294a661a828c993e6e7a06c6b1781ed7e8b2ecd63bc512862f8"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 15,
+      "sha256": "26d0b5454b4d257094f66468ab509e9c65f319498469f706696d5848ce53a9a4"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 3,
+      "sha256": "460f2fc01f538d0606fcebbb706a3a42d05697d0737fdeec505d10ec4e621e5b"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 19,
+      "sha256": "2fda6e38afd94ba2b916a5c4d9ede95d90762e5ba5990caed877f29590afd7ac"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 16,
+      "sha256": "193b68c9cbc8f86fb59504bfb39aff7996ab1f0a553c0075ea2212571918bc3f"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PPT-DOORS-2026-09-07.md",
+      "chunk": 12,
+      "sha256": "729d2e4f9a4b62edc1c062272e0613b1353acd1cd1283082ad27116c2033ac2e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PPT-DOORS-2026-09-07.md",
+      "chunk": 18,
+      "sha256": "076b0bf5e245782b4fdc10f3aa5b3bc271415cbb0500dfde331578325c29bb11"
+    }
+  ],
+  "output": {
+    "answer": "It depends which gate. For the test suites (pregrade, scout, card-refresh, sources), a gate is a script's exit code plus a positive count — the write-ups insist a fail line without an exit code isn't a gate, and totals have to be an actual summed count, not an eyeballed pass. For UI/labeling work, the gate is different: a panel of personas and critics walks the built screens and returns a verdict of DONE or NOT DONE, with blocking items. And mechanically, a gate has to be chained with `&&`, not `;`, or a failing check won't stop the next step.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "locator": "a fail line without an exit code is not a gate"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "1 · The arc"
+      },
+      {
+        "path": "starter/two-lanes/checklist.md",
+        "locator": "A gate chained with `;` is not a gate."
+      }
+    ]
+  }
+}

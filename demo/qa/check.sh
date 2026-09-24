@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # demo/qa/check.sh — idempotence check: replay the pipeline twice into temp dirs and compare
 # the sha256 of every out/*.json (and site/index.html when render.mjs exists). Also compares
-# the first run against the committed demo/qa/out/. Exits non-zero on any difference.
+# the first run against the committed demo/qa/out/ and site/. Always the PUBLIC path: GRAILITH_DIR
+# is unset for every run. Exits non-zero on any difference.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -33,10 +34,14 @@ fi
 
 committed="$(digest "$HERE/out" | sed 's#  \./#  ./out/#')"
 fresh="$(digest "$TMP/run1/out" | sed 's#  \./#  ./out/#')"
+if [[ -f "$HERE/site/index.html" && -f "$TMP/run1/site/index.html" ]]; then
+  committed+=$'\n'"$(shasum -a 256 "$HERE/site/index.html" | cut -d' ' -f1)  ./site/index.html"
+  fresh+=$'\n'"$(shasum -a 256 "$TMP/run1/site/index.html" | cut -d' ' -f1)  ./site/index.html"
+fi
 if [[ "$committed" != "$fresh" ]]; then
-  echo "check: FAIL, replay differs from committed demo/qa/out/" >&2
+  echo "check: FAIL, replay differs from committed demo/qa/out/ or site/" >&2
   diff <(echo "$committed") <(echo "$fresh") >&2 || true
   exit 1
 fi
 
-echo "check: OK, two replays byte-identical and equal to committed out/ ($(echo "$d1" | wc -l | tr -d ' ') files)"
+echo "check: OK, two replays byte-identical and equal to committed out/ and site/ ($(echo "$d1" | wc -l | tr -d ' ') files)"

@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "63cbad17ca732fcc01d29e46ad6cbabb85542d2034f24beb82988dea27aa5ff7",
+  "id": "q-3e67f3797f",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 0,
+      "sha256": "f212b3f212c400c85adf1d72ca4c5483e132eae04bef36620c8e18f062c45a18"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "chunk": 0,
+      "sha256": "902414c2f2668a082255b1da252ce676a8c22a94f7aa885c9bc3e3b2961f731c"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 7,
+      "sha256": "c2b1db9e13a2f73bf45a138fc50b596ff588002104747be97ce90cb2b3223dea"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 1,
+      "sha256": "f57528a0bf9b331c2575c27029500e2b0c3e8fdae3ba0b6ae8d1577392223c0b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E42c-openrouter-number-read-survey-2026-09-05.md",
+      "chunk": 16,
+      "sha256": "252bc40740320ab2d1cead893a8e0cc167fbd555407da2c228be5f14f21dfd52"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 58,
+      "sha256": "c3963bb13fda007733383f78eaa6bbc75575a08cf67b037c42c15cbca9c9ac11"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-FLAGS-POSTHOG-2026-09-07.md",
+      "chunk": 19,
+      "sha256": "1cc6709cea7af20f4b7f31ca5acd210ace5649f1bc9364990663afa90da0bb7c"
+    }
+  ],
+  "output": {
+    "answer": "The record says designers — whether human, agent, or persona — are the ones who turn a NOT verdict into the change, and I ruled they must never just implement the literal ask; they translate it into the underlying job first. For a simple, measurable fix, whoever owns the product decides it's small enough to fix inline without re-running the panel. And yes, they can decline: the plan tracked each ask as accepted, reshaped, or declined with a reason, and refusals were logged explicitly rather than silently complied with, since a documented refusal outlives silent compliance.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "1 · The arc"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "log refusals explicitly"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "ask → accepted/reshaped/declined + reason"
+      }
+    ]
+  }
+}

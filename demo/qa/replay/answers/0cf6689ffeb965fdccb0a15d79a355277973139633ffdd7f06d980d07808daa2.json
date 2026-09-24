@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "0cf6689ffeb965fdccb0a15d79a355277973139633ffdd7f06d980d07808daa2",
+  "id": "q-eb71b91ad7",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 2,
+      "sha256": "ca5ddb3de0b9c324aee779b29c362d8990c02eefba8335074ecfc633f11ec5d8"
+    },
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 4,
+      "sha256": "afd6b99b1786b9ce58c024682c0c4015ad200a8353ace0d1b5a62e34131038ce"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 1,
+      "sha256": "3ee58f89e7e43b7555fe14bcb723553c3726959e279a634f04c5a4ad7893db41"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 4,
+      "sha256": "e4984383dc2b48658a77dd12f0e85f8dc75abf8baa652000b333725da1a0981b"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 3,
+      "sha256": "0ef0f95090752a10d22702ee6824610aed74dbe5c0fe830028d2eff220072d48"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+      "chunk": 13,
+      "sha256": "a20f1dac2c8f5893b647af6d7f82b91eaacb06c7cd5fb0c9460a3ea5e3320c8c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+      "chunk": 17,
+      "sha256": "a296b9d2331d159c26d845afb6e3d5a39197f25cb7ec9ee890ebe8b5b91cc0d9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46g-coldvar-2026-09-07.md",
+      "chunk": 63,
+      "sha256": "bd7bf1aae8225c78219c7c151698aadeb09a4a9b83709e768e434075420a1949"
+    }
+  ],
+  "output": {
+    "answer": "There's no platform behind it — it's just conventions written into a file. The end time is one line in the lane brief: run continuously until a named hour, then stop or pause, not \"run overnight.\" Caps are three numbers set before the run starts, also written into the brief so they're visible: a cap on tool calls, one on wall-clock time, one on spend. The morning report is a single file, not a pile of logs — each lane writes its own short report into it, or a coordinator assembles them, so I read one file in the morning instead of chasing logs.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Before the run"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Morning-report template"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "4bd4f98002ee808fbca4073b844d71d8862b0f06166052d9babd64df83959896",
+  "id": "q-0d29b274c7",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 3,
+      "sha256": "11c62ae9c7645afe99e868f399a0e526c1566a6f56a872e506313629130c7023"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 21,
+      "sha256": "db847237fb3a45169191e5268ce17fff7ca7096e2f845f32ce5cc62b91ed9f79"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 3,
+      "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+    },
+    {
+      "path": "mining/arcs/A-experiments.md",
+      "chunk": 2,
+      "sha256": "45229cedc8ceaa532842fcc2dca2cb1c4e8cb62b6ff121c15723559ca187d584"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 7,
+      "sha256": "b211a80913843b5554f3d009756bf335d6dec3a6796ec7d8df7643c70711ee2a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33d-sibling-tids-from-rows-2026-09-06.md",
+      "chunk": 29,
+      "sha256": "632d7fada38c352dcc25fae0f3a0a162fd70816e0fc3c27b2cce6ece3601d8e7"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46i-fp16-teacher-coldstart-2026-09-08.md",
+      "chunk": 10,
+      "sha256": "13fab93f7b086ea1707fef64fe85563a811ddd50e760f9b34971db52c21a1019"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "chunk": 6,
+      "sha256": "e0d5e0851294faacacb6a5e3f1fd130e112719197b12f9b820f2d65bf098d578"
+    }
+  ],
+  "output": {
+    "answer": "What's in the record is a rule about timing, not strictness: the kill number gets written before I see any output, worded as a single number or condition I can check by reading it — the example given is killing an approach if it loses more than 2.0 points against baseline. E67 shows this in practice: a pre-registered KILL line that fired when the dedup arm lost 14.43 points. But how strict to set that number for a given run — the actual sizing logic — isn't spelled out in what I have here, so I can't say more than that.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Before the run"
+      },
+      {
+        "path": "mining/arcs/A-experiments.md",
+        "locator": "pre-registered KILL line"
+      }
+    ]
+  }
+}

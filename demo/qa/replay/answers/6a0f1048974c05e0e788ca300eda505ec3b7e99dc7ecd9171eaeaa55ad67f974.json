@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "6a0f1048974c05e0e788ca300eda505ec3b7e99dc7ecd9171eaeaa55ad67f974",
+  "id": "q-b06db9f644",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 1,
+      "sha256": "cba889de4b877ba3055cd2a0eb988136214053f97dd0bfe2ef4d5f361dc7594a"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 9,
+      "sha256": "07732e660f15bdce6550d4b93c145a417b66a6bffa0c995b168cb7917085ac7b"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 15,
+      "sha256": "fff50c2362955c792690592d684fb9304d23f11d4b5e2777d85765773b98fd34"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 16,
+      "sha256": "4d8a747acf4c800f3e2eafd01655bd2c1bc8ae71672e5d1723f97f85f419c6e6"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 8,
+      "sha256": "ab9990ef4a794f2069ea0d568163c136d9a20951203f421659e7d2ce88ff917e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 78,
+      "sha256": "44ec87dd5e79427254fc81ded445acd39d17c994c62212b591ad555057685dd5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 0,
+      "sha256": "bd944720afd69c75ebb046d293a7a1fe2712948e8f63335d460cde83ca08816a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E55-comps-coalescing-2026-09-07.md",
+      "chunk": 27,
+      "sha256": "a4322138acf010b617cd51828a774408b35060c72c1945c4a60bf114aee9aee1"
+    }
+  ],
+  "output": {
+    "answer": "No — I called that number not done. The 65.2% is specifically the top-3 hit rate on the 69 lots the scout didn't auto-lock (right card in the top 3 for 45 of those), with a wide interval, roughly 53 to 75%, given how few lots I had. On top of that, the truth set was my own taps, one tapper, five days, mostly English cards, so Japanese is barely tested. I said it's measurable and I know which number to move, but the excerpts don't give a target percentage I'd call done — no ship threshold for that metric is stated in the record.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§Slide 14 · Method: measure the bar: the bar, live"
+      }
+    ]
+  }
+}

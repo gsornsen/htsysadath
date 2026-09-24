@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "24de3218ae6c0c932dbae00a7fb05318593cddda42eaaa73c6542b05cb8ee5bd",
+  "id": "q-42b9213867",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 13,
+      "sha256": "47ae296cc2faad3e1e3f4fd7cae8aeb30ed3cf26380e08ed5f4019d2d80b1f54"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "25c47d1bc35ccc1ba2f213bc3b809ed4146c4c7b01188f74d5ae0e932680496a"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 3,
+      "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 7,
+      "sha256": "74e2918fb2194cc647a1ed6b2ced30084e10c639dbbb8b99388c05eff0db21fd"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 7,
+      "sha256": "9e57f0800883cb134b7fd69524827ab42a0a6bdb85f2aa31e326f47ada4c92b6"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+      "chunk": 17,
+      "sha256": "a296b9d2331d159c26d845afb6e3d5a39197f25cb7ec9ee890ebe8b5b91cc0d9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+      "chunk": 53,
+      "sha256": "a333a4b30c2356045a923ad575a0f0635277c89e0f144071602487e8dfe74b20"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 140,
+      "sha256": "96da2223628dc538dc7c77f952055a8d1263edcef1c888c6a522041ecc9d8b9b"
+    }
+  ],
+  "output": {
+    "answer": "The record's answer is the flag, not the gate. A gate only checks the result against a bar decided in advance, so it can pass something wrong in a way that bar didn't cover. What stops that from reaching users is that new behavior ships behind a flag that defaults off in production even after merging — a lane can flip its own dev flag, but only I flip the production flag, explicitly, the next morning, never automatically when a lane finishes. So a bad merge sits inert until I look at it. Beyond that, the record doesn't show additional unanticipated-error catches.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "only a human flips the production flag"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "gates decide the merge; flags keep it reversible"
+      }
+    ]
+  }
+}

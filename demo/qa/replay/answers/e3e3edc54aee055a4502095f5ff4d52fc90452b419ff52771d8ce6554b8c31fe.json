@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "e3e3edc54aee055a4502095f5ff4d52fc90452b419ff52771d8ce6554b8c31fe",
+  "id": "q-6044324aa6",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 19,
+      "sha256": "c7eadbbe4f72bdd474ce3886fc2629f82d279ec6359a85a4cf646b4cf8df4e31"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 19,
+      "sha256": "2fda6e38afd94ba2b916a5c4d9ede95d90762e5ba5990caed877f29590afd7ac"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "chunk": 11,
+      "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 4,
+      "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E56-ondevice-retrieval-2026-09-07.md",
+      "chunk": 15,
+      "sha256": "9e8237a3bf48aaba274fb30adfb4f56d2b84c17a96ca2bd4e905cd46fe6573db"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E62-artwork-vs-print-2026-09-08.md",
+      "chunk": 0,
+      "sha256": "ec09a6a8cbe340d1f916dfc0e2dd2876e59f1e6f560924388ee3d9fd269df968"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E17b-zhcn-reference-set-2026-09-05.md",
+      "chunk": 3,
+      "sha256": "1436bd089f2abc221c20d2f362b6e9809857c3964f5b798083f707d3e16b2690"
+    }
+  ],
+  "output": {
+    "answer": "No usability research behind them, and I don't claim there is. The panel is four fictional personas, each just a short brief: a device and a job in their own words, not a feature list — for example Dez, 22, phone-only, job 'swipe-fast, not homework.' The point was to avoid pure demographics by anchoring on the job, but the walk itself was simulated, not a real human, and the record doesn't show any interviews or data behind the briefs. Real users only enter through the real-device check after the panel passes.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§ Slide 17 · Method: persona review gates"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "§ 3 · The transferable move"
+      }
+    ]
+  }
+}

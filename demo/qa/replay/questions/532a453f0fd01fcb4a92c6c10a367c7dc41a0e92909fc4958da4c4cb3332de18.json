@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "532a453f0fd01fcb4a92c6c10a367c7dc41a0e92909fc4958da4c4cb3332de18",
+  "persona": "mid-swe",
+  "model": "sonnet",
+  "output": {
+    "questions": [
+      {
+        "question": "How does a lane actually start — do you type a command that creates the worktree and branch, or is that scripted somewhere in the starter kit?",
+        "likelihood": 5,
+        "why": "Slide 10 shows lanes and worktrees but never shows the literal command or file that kicks one off.",
+        "slide_ref": 10
+      },
+      {
+        "question": "When a usage limit killed three build lanes mid-work, what happened next — did you manually restart them, or is there a retry mechanism?",
+        "likelihood": 4,
+        "why": "The speaker mentions the usage-limit kill on slide 10 but doesn't say how recovery worked.",
+        "slide_ref": 10
+      },
+      {
+        "question": "Concretely, what is a gate checking — a script's exit code, a numeric threshold, or a human reading a report?",
+        "likelihood": 5,
+        "why": "Gate is defined as 'pass/fail bar' but every example shown is a different kind of check.",
+        "slide_ref": 11
+      },
+      {
+        "question": "What's actually in the unattended.md file — how do you set the end time, the caps, and get a morning report without building your own platform?",
+        "likelihood": 5,
+        "why": "The speaker promises this exists in the starter kit but only shows the six-step diagram, not the file contents.",
+        "slide_ref": 11
+      },
+      {
+        "question": "How do you pick the kill-line number before the run — is that just your gut, or is there a rule for how strict to set it?",
+        "likelihood": 4,
+        "why": "The kill line for de-duplication is presented as decisive but the method for choosing the threshold isn't explained.",
+        "slide_ref": 12
+      },
+      {
+        "question": "What does 'reviewer one tier up' mean in practice — do you hardcode which model reviews which, or does the coordinator pick per task?",
+        "likelihood": 4,
+        "why": "The coordinator/lane/reviewer diagram names model tiers but not how the tier mapping is decided or configured.",
+        "slide_ref": 10
+      },
+      {
+        "question": "What does replaying a recorded session offline actually involve — is that a custom tool, or something off the shelf?",
+        "likelihood": 3,
+        "why": "Replay harness is used repeatedly for gating but never shown as a concrete tool or format.",
+        "slide_ref": 6
+      },
+      {
+        "question": "What is the language head, mechanically — a small classifier bolted onto the embedding output?",
+        "likelihood": 3,
+        "why": "The term appears on slide 12 and in backup without ever being defined for someone unfamiliar with it.",
+        "slide_ref": 12
+      },
+      {
+        "question": "How do the lane branches actually merge back once a gate passes — do you squash-merge automatically, or is that a manual review step too?",
+        "likelihood": 3,
+        "why": "The loop diagram says 'gate clears, work merges' but skips the actual git mechanics a newcomer would need to copy.",
+        "slide_ref": 6
+      },
+      {
+        "question": "For the persona review gate, who writes the persona briefs and how does the agent 'walk' the build — screenshots, Playwright, something else?",
+        "likelihood": 4,
+        "why": "The persona gate caught a real bug but the mechanism for the agent's walkthrough is never shown on screen.",
+        "slide_ref": 18
+      }
+    ]
+  },
+  "inputs": {
+    "talk_sha256": "6110ec3148dbdd769cb8f4ecce059ee83187b789a761f14f64693576a165af1c"
+  }
+}
