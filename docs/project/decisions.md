@@ -432,3 +432,13 @@ hack → workaround; died/dead → stopped; screenshots "shot" → captured. Als
 gendered defaults, violent/military metaphors, master/slave, blacklist/whitelist. "Beat" (scored
 higher than) stays. The Q&A demo's prompts carry the rule; its questions and answers get a fresh live
 run after the text settles. The internal record (decisions, mining) keeps its wording as provenance.
+
+## D23 · 2026-09-24 · Final-copy pass from Gerald's review of v4
+
+The slides are written as final, presentation-ready copy: no dangling meta labels ("my framing:",
+estimate/testimony tags); Gerald's own accounts are phrased in the sentence, with caveats in the notes.
+"Stop working on" drops the model items for now and centres on labeling first, a distilled student model
+later; the Japanese-art item becomes "no extra art needed: the catalogue plus the JP mapping cover it"
+(EXP-E119: 0 measured lift). The persona gates add what came next: personas on a live browser instead of
+screenshots, giving less rework before merge. Slide 8 becomes a real pivot slide. Then the Q&A demo is
+re-run on the final slides. Spec: `talk/plan/final-pass.md`.
