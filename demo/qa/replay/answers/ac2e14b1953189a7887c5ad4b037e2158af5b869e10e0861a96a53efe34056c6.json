@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "ac2e14b1953189a7887c5ad4b037e2158af5b869e10e0861a96a53efe34056c6",
+  "id": "q-eecdcba323",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 15,
+      "sha256": "ac89c5adadbf0892afd068d6d54cf7894ea740abc301e9bc29d0e1c758dd4b15"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 16,
+      "sha256": "46f126309c7609adf8bccb6dde893ca73179fe994dcf2bb5145bdcb38fdf3abf"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 8,
+      "sha256": "bd29c57446abe015487ec16d808df003c5fbc7cac6c94a5fc2edcacc2bbe38ab"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 1,
+      "sha256": "ad292f8a38e3ba44c7eaa2656b535497be6df420cb863438cf87f2aa1e5bbca0"
+    },
+    {
+      "path": "mining/arcs/B-pivots.md",
+      "chunk": 2,
+      "sha256": "93454eb2628a69727a3b33cc7974751bd3d4b6370429c1aebdf3c568906d5fa3"
+    },
+    {
+      "path": "mining/arcs/A-experiments.md",
+      "chunk": 5,
+      "sha256": "bf81d7ffe8a9b6b4a38b01c593e5e971b40f4965397f0ef786327696111c97d6"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E109-consensus-proxy-2026-09-11.md",
+      "chunk": 2,
+      "sha256": "de1049d7f99d4d59baed873c26bfc191c5a96c7b771083a7bb3879f6c14eba0c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E97-ring-budget-and-tap-health-2026-09-11.md",
+      "chunk": 3,
+      "sha256": "3fbfa0998d1f8b1f5264f5ee0fb0ea7ff832d8e521c116bd361de989fef6b2e5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E23-credits-per-identify-2026-09-06.md",
+      "chunk": 24,
+      "sha256": "3dbbefa58ae84e5e84a493f59c0dbf20e9615990512a07d62fb1617c7a82452b"
+    }
+  ],
+  "output": {
+    "answer": "That read is 45 of 69 non-locked lots, 65.2%, with a 95% Wilson interval of 53.4 to 75.4%. Those 69 sit inside a larger set of 87 truth lots I tapped myself over five UTC days, mostly English. No one else verified the calls — it's a single tapper, me, and the record flags that as a caveat: sellers and card mix vary a lot day to day, and there's a selection bias risk since I may have tapped more when a pick was clearly right or clearly wrong than when it was ambiguous.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "Headline"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "5 · Caveats"
+      }
+    ]
+  }
+}

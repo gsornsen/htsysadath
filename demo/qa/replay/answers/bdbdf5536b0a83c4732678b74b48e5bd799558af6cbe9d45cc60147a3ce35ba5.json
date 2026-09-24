@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "bdbdf5536b0a83c4732678b74b48e5bd799558af6cbe9d45cc60147a3ce35ba5",
+  "id": "q-5cd4bdb891",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 1,
+      "sha256": "e592bbd3703896e36afda22eb621d2b36bfc6815a8d82e00d2cf0fd5923d9cb4"
+    },
+    {
+      "path": "mining/findings/experiments-index.md",
+      "chunk": 0,
+      "sha256": "bbfdf8910c5994129f86ba1213cc2ac8a3534b15d19554d3660cd3aad34ec08e"
+    },
+    {
+      "path": "talk/plan/critique2/senior-swe.md",
+      "chunk": 1,
+      "sha256": "708ba8fbee5f0ae5669ea7ee262229cab505d78042088eef0389c6e05339de6d"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 6,
+      "sha256": "38fdd143062d88a4c2785f20c9b06e72b7f5b5967ffdbaa4f801986c7378a7be"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 17,
+      "sha256": "c24f505d47ad018e92aba8cb395f5b9af0eb3003fce0caa4ac023a4aea3e7a69"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 27,
+      "sha256": "adcf2cd8b006f5cbf4e2224f34ffe0c965cf92a12c654c2275eceb14c6022129"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E20-credit-economics-2026-09-05.md",
+      "chunk": 3,
+      "sha256": "7d2cfb42e85ba8d5ecc152774a8f69716fbcd398bcaa549c6c8932b43a615dc4"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E1E7-drops-and-thrash-2026-09-05.md",
+      "chunk": 5,
+      "sha256": "7fecf9f2cad91ed0359f3748a2794069176864d521c4debf311ee1f24ce4f7d3"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-CAPTURE-2026-09-07.md",
+      "chunk": 11,
+      "sha256": "1c1b530fd0ede4bd9057a676fea03d0738e8a81cbc449415dc370bb8cae8f858"
+    }
+  ],
+  "output": {
+    "answer": "Only part of it is public. My talk repo has the decisions log itself (D1: raw material never committed, only findings with provenance) and a paraphrased experiments index built by sweeping the source docs. But the underlying experiment write-ups and the full ledger live in the separate Grailith project repo, cited as `[src: docs/experiments/...]` or `G:` references rather than copied in. A reviewer flagged the same gap: the EXP sources are in private Grailith, not this public repo. So the record here is a curated summary, not the complete ledger.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "raw material never committed"
+      },
+      {
+        "path": "mining/findings/experiments-index.md",
+        "locator": "Provenance: `[src: docs/experiments/<file>.md]` means the grAIde-main repo path"
+      },
+      {
+        "path": "talk/plan/critique2/senior-swe.md",
+        "locator": "the `G:`/EXP sources are in private Grailith"
+      }
+    ]
+  }
+}

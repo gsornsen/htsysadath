@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "ed96354f4f1f672b217ac83bba2b6d2fb8710cadceec737214b876ca12947b25",
+  "id": "q-7330d1f727",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 6,
+      "sha256": "c41bf6512a87d24fd68e29cbabf4aa81a096281e7c25eaf7a607c7b143e411ff"
+    },
+    {
+      "path": "starter/persona-drafts/sample-draft.md",
+      "chunk": 0,
+      "sha256": "b7e35130da8c3229db5dd959f7c1cc59ad487bded7902857549b79ac0d6ba08f"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 21,
+      "sha256": "20b2b874553747d788ecd22e3fe223cceb0a7d872f23850a6e1d6306083ad58f"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 2,
+      "sha256": "2b2f32da4d0ac76d5bf8ba05d96ea7356369a09cc67a25d4a083853d86b6c134"
+    },
+    {
+      "path": "starter/persona-drafts/README.md",
+      "chunk": 1,
+      "sha256": "d57289f46d5c6acffe64c010a01fe74436b9971ab760b9317c4777fc766b01a4"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 14,
+      "sha256": "bd659e2ddc5c9ce9a105d14c16f0772033db5bc932daad26335f1379c3747a2c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 168,
+      "sha256": "98c73ab203eed8419e000e96538c46bb6cdfa25afbb61745b4a63e1434b6c3bc"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-FLAGS-POSTHOG-2026-09-07.md",
+      "chunk": 2,
+      "sha256": "a7b6ab84414b266140a7cfe531951525f3a52148f2aaa5d049d944c4b2e218de"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+      "chunk": 29,
+      "sha256": "f704aefc3ba6368f26a7169a843f6b9e6906d7e0c4cf04316fe90ffe6a5708d8"
+    }
+  ],
+  "output": {
+    "answer": "That's not something the record actually tests — everything documented is about scaling from one person to multiple model-tier lanes, not to multiple human engineers. The closest documented change: once the work outgrew one context window, the fix was a coordinating layer that writes briefs and judges, while other lanes do bounded work, and every lane needed a self-contained brief plus a provenance contract, with whoever reviews a lane's output required to be a tier stronger than whoever ran it. Whether that same structure holds up for a team of engineers sharing the same lanes and gates isn't shown in what I have here.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D2 · 2026-09-24 · Fable coordinates; smaller models do bounded work"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up"
+      }
+    ]
+  }
+}

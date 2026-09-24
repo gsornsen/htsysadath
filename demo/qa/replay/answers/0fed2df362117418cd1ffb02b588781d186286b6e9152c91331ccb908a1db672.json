@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "0fed2df362117418cd1ffb02b588781d186286b6e9152c91331ccb908a1db672",
+  "id": "q-753101677d",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 8,
+      "sha256": "3f6b1261d236b8d2f3c0590ee58f7e0c4abd456f7f751fc1bf638b835154555d"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 10,
+      "sha256": "5a955c3c373a9f3b6e56c636fe9332e5d51b03652180c807e88f6d5431f9859a"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 4,
+      "sha256": "2312cfb930f28c6b0fbaf67227afdf1a0d75193b6787ecf428273ec1d18285f9"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 7,
+      "sha256": "7f84ab9c4c98fab80fc779f3cdad080267ab1d166e91dc3f42f6a8ebf1447b3d"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 6,
+      "sha256": "d878e5e71a3c63013dcffbc47d58eb3b1622dccfc012c9d998e8079b2f2d2f1d"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 5,
+      "sha256": "7327c9f042555c0495a15c24dbb675a0431f49aa17e57e9e8e56411f04e4923d"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53e-request-dedup-2026-09-07.md",
+      "chunk": 6,
+      "sha256": "ea15ff40d60b68d0b646e1caae97d1e74bcd46b613acc75b16800d217910b8aa"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md",
+      "chunk": 32,
+      "sha256": "3dbb400149a94653529cabbac9c416a870972376753abbcc51bce0c46d48bd8b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-READER-2026-09-07.md",
+      "chunk": 10,
+      "sha256": "340eb39c25628f06b6739e13d989320e9358e6e9fe9cce600d19271b463fbfdc"
+    }
+  ],
+  "output": {
+    "answer": "That flapping was from my own instrumented session, not a real viewer's reaction. On September 2nd I ran my first instrumented live session, and on screen the scout was locking onto a card and letting go at least once a second — jittery, not close to usable, even though the identification underneath was working. That's the only account in the record: me watching my own build on a live stream, not a separate user's response. I don't have anything documenting how an actual outside viewer perceived it during that run.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§ Slide 4 · It almost worked, and I could see 45+ ways to fix it"
+      }
+    ]
+  }
+}

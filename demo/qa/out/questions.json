@@ -1,322 +1,322 @@
 [
   {
-    "id": "q-3e67f3797f",
+    "id": "q-3302ffab7b",
     "persona": "designer",
-    "question": "Who actually turns a persona's NOT verdict into a design change, and can that person decline what the persona is asking for?",
-    "likelihood": 5,
-    "why": "The talk never says whether a human designer sits between the panel's verdict and what ships.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-55a06a9a84",
-    "persona": "designer",
-    "question": "Is '9 seconds, simulated' a usability number at all, or is it just an agent describing its own read of the screen?",
-    "likelihood": 5,
-    "why": "The speaker flags it himself as simulated, not human, which is exactly the kind of AI-user-research number the persona distrusts.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-5f46cc334d",
-    "persona": "designer",
-    "question": "What did the flapping actually look like to someone trying to use the scout, and did you watch a real person react to it before calling it fixed?",
-    "likelihood": 4,
-    "why": "Jitter is framed entirely through drop-rate metrics, never through what a confused user on a real stream experienced.",
-    "slide_ref": 6
-  },
-  {
-    "id": "q-6044324aa6",
-    "persona": "designer",
-    "question": "Are the four persona briefs built from real usability research, or are they demographics like '22, phone-only' dressed up as jobs?",
-    "likelihood": 4,
-    "why": "Dez's brief is described in one line on the slide, with no mention of where it came from.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-68c06793f2",
-    "persona": "designer",
-    "question": "For the live demo, was the card that held actually held long enough for a hand to tap it, or just long enough to look stable on stage?",
+    "question": "The 65 percent top-3 figure on live auctions is your own taps over five days — do you have a plan to validate that with other users before calling it a usable rate?",
     "likelihood": 3,
-    "why": "The demo script explicitly stages the hold and tells him to leave it alone for a few seconds, which reads as a performance choice, not evidence of usability.",
-    "slide_ref": 9
-  },
-  {
-    "id": "q-69abcc944a",
-    "persona": "designer",
-    "question": "Do the persona briefs ever get revised based on what real users actually do, or do they stay fixed once written?",
-    "likelihood": 3,
-    "why": "A static persona brief that never absorbs real research is exactly what breeds false confidence at the done gate.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-7bfd511a55",
-    "persona": "designer",
-    "question": "When you say the panel 'walked' the screens, does that mean it actually rendered and interacted with the live UI, or just reasoned over code and a static viewport?",
-    "likelihood": 5,
-    "why": "The panel said DONE on a phone that was unusable, so the mechanics of how it 'walks' a screen are the whole crux of the failure.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-c944ed9417",
-    "persona": "designer",
-    "question": "After the panel missed the fixed-viewport failure, did you change how the panel walks screens, or just add the human phone check on top?",
-    "likelihood": 4,
-    "why": "The stated fix was 'another panel pass,' which sounds like re-running the same flawed method rather than fixing the gate itself.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-ed93fdad32",
-    "persona": "designer",
-    "question": "Since one panel already returned a false DONE on a real device, how many other screens have you not yet re-checked by hand?",
-    "likelihood": 3,
-    "why": "If the fixed-viewport bug slipped through once, other undetected false-DONE verdicts seem likely across the rest of the product.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-f912329ff1",
-    "persona": "designer",
-    "question": "What specifically changed on the review screen that cut your labeling verdict from three minutes to twenty seconds, and did anyone other than you time it?",
-    "likelihood": 4,
-    "why": "The 20-30 second number is the speaker's own stopwatch on himself, with no second labeler cited.",
-    "slide_ref": 18
-  },
-  {
-    "id": "q-01fd23ac86",
-    "persona": "mid-swe",
-    "question": "Concretely, what is a gate checking — a script's exit code, a numeric threshold, or a human reading a report?",
-    "likelihood": 5,
-    "why": "Gate is defined as 'pass/fail bar' but every example shown is a different kind of check.",
-    "slide_ref": 11
-  },
-  {
-    "id": "q-0d29b274c7",
-    "persona": "mid-swe",
-    "question": "How do you pick the kill-line number before the run — is that just your gut, or is there a rule for how strict to set it?",
-    "likelihood": 4,
-    "why": "The kill line for de-duplication is presented as decisive but the method for choosing the threshold isn't explained.",
+    "why": "The speaker flags this as his own single-person sample, which is thin evidence for a headline usability claim.",
     "slide_ref": 12
   },
   {
-    "id": "q-11e8ef611b",
-    "persona": "mid-swe",
-    "question": "What does 'reviewer one tier up' mean in practice — do you hardcode which model reviews which, or does the coordinator pick per task?",
+    "id": "q-753101677d",
+    "persona": "designer",
+    "question": "When the scout was flapping, what did that actually look like to someone watching the stream — did you observe a real user's reaction, or only your own instrumented session?",
     "likelihood": 4,
-    "why": "The coordinator/lane/reviewer diagram names model tiers but not how the tier mapping is decided or configured.",
-    "slide_ref": 10
-  },
-  {
-    "id": "q-20a25977b6",
-    "persona": "mid-swe",
-    "question": "What is the language head, mechanically — a small classifier bolted onto the embedding output?",
-    "likelihood": 3,
-    "why": "The term appears on slide 12 and in backup without ever being defined for someone unfamiliar with it.",
-    "slide_ref": 12
-  },
-  {
-    "id": "q-a6ab5def27",
-    "persona": "mid-swe",
-    "question": "For the persona review gate, who writes the persona briefs and how does the agent 'walk' the build — screenshots, Playwright, something else?",
-    "likelihood": 4,
-    "why": "The persona gate caught a real bug but the mechanism for the agent's walkthrough is never shown on screen.",
-    "slide_ref": 18
-  },
-  {
-    "id": "q-a6af02b0ec",
-    "persona": "mid-swe",
-    "question": "How do the lane branches actually merge back once a gate passes — do you squash-merge automatically, or is that a manual review step too?",
-    "likelihood": 3,
-    "why": "The loop diagram says 'gate clears, work merges' but skips the actual git mechanics a newcomer would need to copy.",
+    "why": "Flapping is framed as a technical defect via a chart, but the human experience of it on a real screen is never described.",
     "slide_ref": 6
   },
   {
-    "id": "q-bf7d3647b1",
-    "persona": "mid-swe",
-    "question": "How does a lane actually start — do you type a command that creates the worktree and branch, or is that scripted somewhere in the starter kit?",
-    "likelihood": 5,
-    "why": "Slide 10 shows lanes and worktrees but never shows the literal command or file that kicks one off.",
-    "slide_ref": 10
-  },
-  {
-    "id": "q-eb71b91ad7",
-    "persona": "mid-swe",
-    "question": "What's actually in the unattended.md file — how do you set the end time, the caps, and get a morning report without building your own platform?",
-    "likelihood": 5,
-    "why": "The speaker promises this exists in the starter kit but only shows the six-step diagram, not the file contents.",
-    "slide_ref": 11
-  },
-  {
-    "id": "q-ec3985f322",
-    "persona": "mid-swe",
-    "question": "What does replaying a recorded session offline actually involve — is that a custom tool, or something off the shelf?",
+    "id": "q-7af78e20fb",
+    "persona": "designer",
+    "question": "Before the phone test caught it, did anyone actually hold a device while building the UI, or was 'done' judged entirely on the fixed-size panel screens?",
     "likelihood": 3,
-    "why": "Replay harness is used repeatedly for gating but never shown as a concrete tool or format.",
-    "slide_ref": 6
-  },
-  {
-    "id": "q-fdad42f8dc",
-    "persona": "mid-swe",
-    "question": "When a usage limit killed three build lanes mid-work, what happened next — did you manually restart them, or is there a retry mechanism?",
-    "likelihood": 4,
-    "why": "The speaker mentions the usage-limit kill on slide 10 but doesn't say how recovery worked.",
-    "slide_ref": 10
-  },
-  {
-    "id": "q-003507fffe",
-    "persona": "pm",
-    "question": "Who writes the kill bar before a run — you alone, or could someone else on a team set that gate?",
-    "likelihood": 3,
-    "why": "Kill lines are shown as the speaker's own judgment call with no mention of shared ownership.",
-    "slide_ref": 12
-  },
-  {
-    "id": "q-08bed40cd0",
-    "persona": "pm",
-    "question": "What's the actual first thing a product manager who doesn't run worktrees should do Monday morning?",
-    "likelihood": 4,
-    "why": "The starter kit is aimed at engineering-style workflows and doesn't spell out a PM's entry point.",
-    "slide_ref": 19
-  },
-  {
-    "id": "q-0dae00d91c",
-    "persona": "pm",
-    "question": "A hundred experiments in two weeks — was that one person working full time, or could a team hit that pace part-time?",
-    "likelihood": 4,
-    "why": "The experiment count is given without any sense of how many people or how much focus it required.",
-    "slide_ref": 6
-  },
-  {
-    "id": "q-22af88e47d",
-    "persona": "pm",
-    "question": "The persona panel said DONE but your own phone said no — what changed in your process so that gap doesn't happen again?",
-    "likelihood": 4,
-    "why": "The persona-gate story ends in a false pass caught by luck the next morning, which raises doubt about the gate's reliability.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-36bab273b3",
-    "persona": "pm",
-    "question": "You flip production yourself in this setup — on a real team, who gets that authority, and how many people would need it?",
-    "likelihood": 5,
-    "why": "The morning-report slide says only the speaker can flip production, which is a single point of control a team would need to redesign.",
-    "slide_ref": 11
-  },
-  {
-    "id": "q-8bd67ccb85",
-    "persona": "pm",
-    "question": "Beyond the $9 in labeling calls, what does the Claude Max subscription itself cost, and does that scale if a whole team runs this?",
-    "likelihood": 3,
-    "why": "The cost slide highlights the small metered spend but treats the subscription cost as a given, not a line item to budget.",
-    "slide_ref": 21
-  },
-  {
-    "id": "q-b06db9f644",
-    "persona": "pm",
-    "question": "Is 65% on live lots good enough to ship to real users, and what's the target number before you'd call this done?",
-    "likelihood": 5,
-    "why": "The speaker calls two-in-three 'not done, but measurable' without naming the bar for actually shipping.",
-    "slide_ref": 15
-  },
-  {
-    "id": "q-bc9499b56f",
-    "persona": "pm",
-    "question": "Thirty minutes a day is your estimate and doesn't count morning review time — what's the real daily time cost end to end?",
-    "likelihood": 4,
-    "why": "The cost line explicitly excludes review time from the headline number, which looks like it undercounts total effort.",
-    "slide_ref": 6
-  },
-  {
-    "id": "q-c4aa68cb06",
-    "persona": "pm",
-    "question": "With forty-five possible forks for one bug, who decides which ones actually get run first?",
-    "likelihood": 5,
-    "why": "The fork-tree slide shows the branching but never says who prioritizes among that many options.",
-    "slide_ref": 6
-  },
-  {
-    "id": "q-d1041d3f1d",
-    "persona": "pm",
-    "question": "The coordinator is your strongest model judging your own lanes — on a team, who plays that role, and can a junior PM own it?",
-    "likelihood": 4,
-    "why": "Orchestration is described as one person's coordinator session, which doesn't obviously map to a multi-person team.",
-    "slide_ref": 10
-  },
-  {
-    "id": "q-0d3aa1f759",
-    "persona": "senior-swe",
-    "question": "The language-head arm was added after the kill line fired on the same 201 crops — how do you rule out that split being cherry-picked once you saw the data?",
-    "likelihood": 5,
-    "why": "The speaker admits the winning arm was found post-hoc on the same test split used for the kill decision, which is a classic forking-paths risk.",
-    "slide_ref": 12
-  },
-  {
-    "id": "q-11a68ab46d",
-    "persona": "senior-swe",
-    "question": "Is the full experiment ledger and the replay data behind these charts public in the repo, or are some of these numbers from private logs I can't verify myself?",
-    "likelihood": 3,
-    "why": "The persona cares whether claims are independently checkable versus just cited by source tag.",
-    "slide_ref": 0
-  },
-  {
-    "id": "q-3042fe310c",
-    "persona": "senior-swe",
-    "question": "The persona panel said DONE on a fixed viewport but your own phone showed it was unusable — how many other DONE verdicts from that panel have you since re-checked on a real device?",
-    "likelihood": 3,
-    "why": "The one caught failure raises the question of how many similar false positives went unchecked.",
-    "slide_ref": 17
-  },
-  {
-    "id": "q-3d168aa278",
-    "persona": "senior-swe",
-    "question": "You showed four different top-3 numbers that don't agree, from 65 to 83 percent — how do you decide which one to report when someone asks 'is it better' outside a talk?",
-    "likelihood": 4,
-    "why": "The backup slide admits the four yardsticks can't be reconciled into one line, which undercuts any single headline accuracy claim.",
-    "slide_ref": 19
-  },
-  {
-    "id": "q-42b9213867",
-    "persona": "senior-swe",
-    "question": "What actually stops an unattended overnight agent from merging a change that passes its gate but is wrong in a way the gate didn't anticipate?",
-    "likelihood": 4,
-    "why": "The talk shows gates and flags controlling merges automatically overnight, but not who or what catches a gate that itself is wrong.",
-    "slide_ref": 11
-  },
-  {
-    "id": "q-6344986c68",
-    "persona": "senior-swe",
-    "question": "Your live-lot accuracy is based on one tapper's own judgment across 87 lots with a confidence interval spanning roughly 53 to 75 percent — what stops that from being both measurer and grader of your own tool?",
-    "likelihood": 5,
-    "why": "The speaker flags 'one tapper' and a wide interval himself, which is exactly the ground-truth conflict-of-interest this persona distrusts.",
+    "why": "The gap between panel-DONE and phone-unusable suggests no one held a real device until the morning after.",
     "slide_ref": 14
   },
   {
-    "id": "q-6aea00d5ca",
-    "persona": "senior-swe",
-    "question": "The August bakeoff median of 10.4 seconds came from only six captures — how confident are you that number would hold up with a larger sample?",
-    "likelihood": 4,
-    "why": "The footer explicitly states n equals 6 for that headline latency figure.",
-    "slide_ref": 3
+    "id": "q-83c3befec6",
+    "persona": "designer",
+    "question": "Once the personas walk a live browser and say DONE or NOT, who on the team actually turns that verdict into a design decision, and can anyone decline what the panel asks for?",
+    "likelihood": 5,
+    "why": "The talk never names a person who owns design judgment between the panel's verdict and the merge.",
+    "slide_ref": 14
   },
   {
-    "id": "q-760566dd9c",
-    "persona": "senior-swe",
-    "question": "You call the 30-minutes-a-day figure your own estimate rather than a measurement — did you ever actually log your hours, and if not why present it alongside otherwise-instrumented numbers?",
+    "id": "q-86c2317fc4",
+    "persona": "designer",
+    "question": "What changed on the labeler review screen itself that cut your review time from three minutes to 20 to 30 seconds, and was that redesign tested on anyone besides you?",
     "likelihood": 4,
-    "why": "The speaker repeatedly labels the time cost as testimony/estimate, not data, right next to hard measured figures.",
-    "slide_ref": 5
+    "why": "The speaker credits a 'persona-driven redesign' of the review screen but shows no before/after of the screen or evidence beyond his own stopwatch.",
+    "slide_ref": 15
   },
   {
-    "id": "q-9265949895",
-    "persona": "senior-swe",
-    "question": "Letting the swarm self-steer broke the next day and you had to keep correcting it — what exactly went wrong, and is that failure mode still possible today?",
+    "id": "q-9654e5a068",
+    "persona": "designer",
+    "question": "How were the four persona briefs actually written — real device and job constraints, or just demographic labels with a task attached?",
+    "likelihood": 5,
+    "why": "The speaker credits the panel with catching a usability failure but only describes Dez in one line, so the method behind the briefs is unclear.",
+    "slide_ref": 14
+  },
+  {
+    "id": "q-9f90953dca",
+    "persona": "designer",
+    "question": "After moving to a live browser and three widths, what specifically did the next panel catch before merge, beyond your own sense that things got better?",
+    "likelihood": 4,
+    "why": "The speaker admits the improvement is unmeasured, only 'in my experience,' which invites a follow-up on actual evidence.",
+    "slide_ref": 14
+  },
+  {
+    "id": "q-c8ea867b0b",
+    "persona": "designer",
+    "question": "For the crop-versus-vote decision that fixed misidentified cards, was that judged only by replaying recordings, or did a person watch it live on a real stream before it shipped?",
+    "likelihood": 2,
+    "why": "The demo frames this as an experiment result, but the actual on-device verification of that behavior change is left out.",
+    "slide_ref": 7
+  },
+  {
+    "id": "q-eb8a971917",
+    "persona": "designer",
+    "question": "Is the persona panel meant to replace hands-on usability testing with real people, or only to feed and prioritize it — where's that line for you?",
+    "likelihood": 4,
+    "why": "The talk positions the panel as the 'done' gate without saying whether real user research still happens afterward.",
+    "slide_ref": 8
+  },
+  {
+    "id": "q-f3c8d00e6a",
+    "persona": "designer",
+    "question": "Dez's task time went from 30 seconds to 9, simulated — do you treat that as a usability number at all, or only as a proxy until a human confirms it?",
+    "likelihood": 5,
+    "why": "The notes flag it as simulated, not human, which is exactly the kind of AI-user-research number this persona distrusts.",
+    "slide_ref": 14
+  },
+  {
+    "id": "q-45884e8dde",
+    "persona": "mid-swe",
+    "question": "When a usage limit cuts off a lane mid-work like you mentioned happened on September 7th, does that lane just stop, and how do you pick it back up?",
+    "likelihood": 5,
+    "why": "The speaker said a usage limit cut off three build lanes mid-work but didn't explain recovery.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-53d8bc728e",
+    "persona": "mid-swe",
+    "question": "Once a gate passes, does the lane merge on its own, or do you still review the diff before it lands?",
+    "likelihood": 4,
+    "why": "The loop description says when a gate clears the work merges, leaving unclear how much human review remains.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-5dead91e34",
+    "persona": "mid-swe",
+    "question": "What exactly goes in the brief for a lane, and who writes the acceptance test when the fix isn't something you can score with a simple pass or fail?",
+    "likelihood": 4,
+    "why": "Slide 9 mentions a brief with files, an acceptance test, and what's off limits but doesn't show one.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-7a32f6ac96",
+    "persona": "mid-swe",
+    "question": "Realistically how many lanes can you run at once before you're back to being the bottleneck reviewing all of them?",
     "likelihood": 3,
-    "why": "The orchestration slide mentions this failure in passing without explaining the mechanism or whether it's actually fixed.",
+    "why": "The talk shows a lane-per-fix approach but doesn't say how it scales past a couple of lanes.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-953842408f",
+    "persona": "mid-swe",
+    "question": "You used terms like top-3 and the box vote pretty quickly during the demo — can you spell out in plain terms what those mean?",
+    "likelihood": 2,
+    "why": "The demo notes use 'top-3' and 'vote' without defining them on screen for someone new to the setup.",
+    "slide_ref": 8
+  },
+  {
+    "id": "q-9d51cce471",
+    "persona": "mid-swe",
+    "question": "What does 'one tier up' actually mean in terms of which models you use for building versus reviewing?",
+    "likelihood": 4,
+    "why": "The lanes slide says a stronger model reviews, always one tier up, without naming what that means concretely.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-d1103c71a5",
+    "persona": "mid-swe",
+    "question": "How did you land on caps like 8 calls, 60 seconds and $6 per run — is that trial and error, or is there a way to estimate it up front?",
+    "likelihood": 4,
+    "why": "The gates-and-flags slide gives specific numbers but not how they were chosen for a new task.",
     "slide_ref": 10
   },
   {
-    "id": "q-ac6380920e",
+    "id": "q-d4f707d1e8",
+    "persona": "mid-swe",
+    "question": "For someone trying this next week, which single file in the starter kit should they open first?",
+    "likelihood": 3,
+    "why": "The cheat sheet lists several starter paths and the persona wants one concrete entry point.",
+    "slide_ref": 18
+  },
+  {
+    "id": "q-eaa6b3b56c",
+    "persona": "mid-swe",
+    "question": "When the persona panel walks a live browser instead of rendered screens, what's actually driving that browser?",
+    "likelihood": 4,
+    "why": "Slide 13 switches from rendered screens to a real Chrome the panel walks, but the mechanism isn't shown.",
+    "slide_ref": 13
+  },
+  {
+    "id": "q-ef12ffba07",
+    "persona": "mid-swe",
+    "question": "Is the morning report with the calls only you can make something the gate assembles automatically, or do you have to write it yourself each night?",
+    "likelihood": 3,
+    "why": "The notes mention getting one file in the morning but not how it's generated.",
+    "slide_ref": 10
+  },
+  {
+    "id": "q-02bbe21a0a",
+    "persona": "pm",
+    "question": "For a product manager who isn't writing code or running worktrees, what's the concrete first thing to do differently on Monday?",
+    "likelihood": 5,
+    "why": "The closing slide's next steps are written for someone who can set up worktrees and flags, not for a non-technical role.",
+    "slide_ref": 18
+  },
+  {
+    "id": "q-2f6569d714",
+    "persona": "pm",
+    "question": "The starter kit covers finding the fix, testing the idea, and checking it's done — why is there nothing repeatable for deciding what to build first?",
+    "likelihood": 3,
+    "why": "The cheat sheet leaves problem D as 'a conversation for your next planning meeting' instead of a process like the other three.",
+    "slide_ref": 17
+  },
+  {
+    "id": "q-3bab30433d",
+    "persona": "pm",
+    "question": "The persona panel said done and your own phone said otherwise the next morning — has that gap shown up again since you added the live-browser step?",
+    "likelihood": 3,
+    "why": "The fix for the panel's blind spot is recent, so it's worth asking whether it has actually held up since.",
+    "slide_ref": 14
+  },
+  {
+    "id": "q-699fd94af1",
+    "persona": "pm",
+    "question": "Who sets the pass/fail bar for each gate, and how do you stop that number from being picked to guarantee the result you want?",
+    "likelihood": 4,
+    "why": "The favorite-idea bar of losing two points was set by the speaker himself before testing it, which looks like it could be gamed.",
+    "slide_ref": 11
+  },
+  {
+    "id": "q-7330d1f727",
+    "persona": "pm",
+    "question": "You ran this mostly alone with full access to everything — what changes if a team of engineers, not one person, tries to run these lanes and gates?",
+    "likelihood": 5,
+    "why": "The whole method rests on one person setting gates, reviewing, and flipping production, which raises adoption doubts for a team.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-8c56458655",
+    "persona": "pm",
+    "question": "What was the total cost of this project, including the Claude Max subscription itself, not just the nine dollars of metered spend?",
+    "likelihood": 5,
+    "why": "The cost line only calls out the small metered spend and buries the subscription cost, which a budget owner would want in full.",
+    "slide_ref": 5
+  },
+  {
+    "id": "q-b502e76c35",
+    "persona": "pm",
+    "question": "About how many of the roughly hundred experiments ran fully unattended overnight versus needing you to check in or intervene?",
+    "likelihood": 3,
+    "why": "The talk claims cheap unattended experimentation but doesn't break down how much of it truly needed no babysitting.",
+    "slide_ref": 5
+  },
+  {
+    "id": "q-ba1d4db6cd",
+    "persona": "pm",
+    "question": "When a gate passes and code merges, who actually decides to flip it to production, and is there any check before that happens?",
+    "likelihood": 4,
+    "why": "The gates-and-flags method leaves production flips as a manual call by one person with no described review step.",
+    "slide_ref": 10
+  },
+  {
+    "id": "q-cdd3b7872c",
+    "persona": "pm",
+    "question": "Is about two in three on live auctions good enough to ship, and what's the next number you're actually trying to move?",
+    "likelihood": 5,
+    "why": "The speaker calls the result 'not done, but measurable' without saying what threshold would count as shippable.",
+    "slide_ref": 12
+  },
+  {
+    "id": "q-d6be4adb98",
+    "persona": "pm",
+    "question": "A usage limit cut off three build lanes mid-work at one point — how would you plan capacity or budget around that at team scale?",
+    "likelihood": 3,
+    "why": "The speaker mentions a usage cap breaking mid-run as an aside without addressing what it means for reliability at scale.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-036a9a3adf",
     "persona": "senior-swe",
-    "question": "For the jitter fix, how do you attribute the drop between the 3x faster server and the cancel-but-keep-answer change beyond just not crediting one alone?",
-    "likelihood": 2,
-    "why": "The speaker says crediting only the behaviour change would overclaim but doesn't show how the two levers were isolated.",
-    "slide_ref": 7
+    "question": "When the usage limit cut off three build lanes mid-work, was any partially finished code merged before you caught it, or could that have happened?",
+    "likelihood": 3,
+    "why": "The notes mention lanes committing early specifically because of that cutoff, hinting at a near-miss.",
+    "slide_ref": 10
+  },
+  {
+    "id": "q-1833d3c445",
+    "persona": "senior-swe",
+    "question": "You showed four different ways of scoring top-3 accuracy that don't agree — why pick the roughly two-in-three number as the one headline claim instead of reporting a range?",
+    "likelihood": 4,
+    "why": "The backup slide admits the four yardsticks diverge, undercutting the single number used earlier in the talk.",
+    "slide_ref": 19
+  },
+  {
+    "id": "q-5cd4bdb891",
+    "persona": "senior-swe",
+    "question": "Is the full experiment ledger and decisions log in the public repo, or are some of the sources you cited private?",
+    "likelihood": 4,
+    "why": "Nearly every claim cites internal files like decisions.md and arc notes whose public availability is unclear.",
+    "slide_ref": 0
+  },
+  {
+    "id": "q-684a371bb1",
+    "persona": "senior-swe",
+    "question": "Beyond the gate and flag, what stops an unattended agent run from merging broken code or overspending before you check on it?",
+    "likelihood": 4,
+    "why": "The idle-tab incident that burned a day's API allowance shows the guardrails were not airtight.",
+    "slide_ref": 9
+  },
+  {
+    "id": "q-a7a69c62d5",
+    "persona": "senior-swe",
+    "question": "Your strongest model both writes the briefs and judges the results of the lanes it set up — what checks catch that model grading its own work favorably?",
+    "likelihood": 3,
+    "why": "Having one model author acceptance criteria and then judge against them is a reviewer-reviews-itself setup with no stated check.",
+    "slide_ref": 10
+  },
+  {
+    "id": "q-aaf300c8d1",
+    "persona": "senior-swe",
+    "question": "Is the forty-five-fork count and the claim that only two forks mattered a pre-registered tally, or a retrospective count made after you already knew which fixes worked?",
+    "likelihood": 3,
+    "why": "The notes concede the grid is his own count, not something in the record.",
+    "slide_ref": 4
+  },
+  {
+    "id": "q-ab06028eb0",
+    "persona": "senior-swe",
+    "question": "The language re-rank was found after your favorite idea failed the bar, on the same 201 photos — why report it as a shipped win rather than a lead needing a fresh held-out test?",
+    "likelihood": 5,
+    "why": "The speaker admits it was a post-hoc arm on the same test set, a classic forking-paths problem.",
+    "slide_ref": 11
+  },
+  {
+    "id": "q-cf2c8b2307",
+    "persona": "senior-swe",
+    "question": "Is the 'about 30 minutes a day' a timed measurement or your own estimate, and does it include the mornings spent reading results?",
+    "likelihood": 5,
+    "why": "The notes say it's his own count and explicitly excludes review time, understating the real human cost.",
+    "slide_ref": 5
+  },
+  {
+    "id": "q-d2adc813cc",
+    "persona": "senior-swe",
+    "question": "The persona panel said the build was done and it was unusable on your phone the next morning — what makes you confident the redesigned panel process wouldn't fail the same way again?",
+    "likelihood": 4,
+    "why": "The gate itself was shown to produce a false pass, raising who reviews the reviewer.",
+    "slide_ref": 14
+  },
+  {
+    "id": "q-eecdcba323",
+    "persona": "senior-swe",
+    "question": "The 65 percent right-card-in-top-3 figure on live lots comes from your own taps over five days — what's the sample size and confidence interval, and who else verified those calls?",
+    "likelihood": 5,
+    "why": "A single self-reported tapper is presented as ground truth for the headline live-accuracy number.",
+    "slide_ref": 13
   }
 ]

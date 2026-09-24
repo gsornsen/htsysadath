@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "3566e9dab94057789429c5e173b842b2bfc7db4a16cce218b681153300c8c0c1",
+  "id": "q-5dead91e34",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 22,
+      "sha256": "99f450321b0d236df220f659887147b7121eadbec5889d095f6aeb7fafdec526"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 21,
+      "sha256": "83f9a0e2376fa26f4c639604b4f500957550ff69e2e3f6a3a4c168d502152c78"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "0cd6f67e78a7007f4c316b48015907b9804aff86cde182380b0830333b984633"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 6,
+      "sha256": "77c32f497230da196f023695d30d42f05071f95a3d6d1edd53a97c0a52a13898"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 11,
+      "sha256": "7a75c10440d1b47c5bdc9041e28f2d2f1a35f47b6adf6b77f924dcd3434d6f9e"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 14,
+      "sha256": "0aa6a4c299d2f29424d29f429e93a13188c32551b4cde03572341144f3a58113"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-JA-INDEX-INTEGRITY-2026-09-07.md",
+      "chunk": 19,
+      "sha256": "47ef9143bbfaf3c5e79ffe39a0f3e94199b362ee0423c330be51e2a8d55504f7"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E65a-language-head-2026-09-08.md",
+      "chunk": 20,
+      "sha256": "d06ba90f062322f918bfdb10469135cad886ba3a2cb80ed098692e795b2be1a9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 11,
+      "sha256": "de6f5b2588fd2de582c3a2c4228f801c1574d13b888382543c6b4e4bd6d4de81"
+    }
+  ],
+  "output": {
+    "answer": "A lane's brief lists the files involved, exact signatures and data shapes, the acceptance tests by name, the commands to run, and what's off limits. My strongest model writes those briefs and judges the results, while I make the final calls. The record doesn't spell out a separate process for a fix inside a lane that can't be scored as simple pass or fail. The closest case I have is comparing competing ideas, where I wrote the pass/fail bar myself before the run, spelling out the score that would drop the idea. That's a different situation though, not a lane brief, so I can't say the same rule applies there.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "locator": "3. The transferable move"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "How do I chase five fixes at once?"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Is my favourite idea actually better?"
+      }
+    ]
+  }
+}

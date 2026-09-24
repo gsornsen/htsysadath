@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "dc7fd3e32f44d6b8ce3f76a8da9f3fd7d4bbb9175ee9551e054a68d87c0e4c91",
+  "id": "q-83c3befec6",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "ead4771bc9c82ef598e82ecd61b6da452fdd7e6792aaf0cbcef09c421e23955a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "85c91ec2e3e1976e8bdb0b9aff29f700880b131517235287a0271e0893732cc6"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 5,
+      "sha256": "b67ec755e645a22e066bae802423e6f705f6cb63a20723c8cae58f77e4546096"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 2,
+      "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E18-ood-gate-2026-09-05.md",
+      "chunk": 32,
+      "sha256": "34b7c15751f1721e36e628b226a09b84b22f456e1f8dcbc55a1fe8213e719ff9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-RESULTS-2026-09-06.md",
+      "chunk": 20,
+      "sha256": "bbbf3572e0b65bd5cff50a8988920752d091b72c37020856bdacf6d2eccc5114"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 129,
+      "sha256": "b682426a703d4ce413a541fa835306be63e10af66cc17f74df3e936b29d3ef1e"
+    }
+  ],
+  "output": {
+    "answer": "In my process, whoever owns the product is the one who decides whether a NOT is a simple fix to make inline or something pervasive enough to re-run the panel. Disagreements get settled by naming the design principle behind each side, never by majority vote or by deferring to my own ask — and refusals are logged explicitly, with the reasoning attached, rather than complied with silently. So yes, the panel's verdict can be declined; the record just requires writing down why when that happens.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "3 · The transferable move"
+      }
+    ]
+  }
+}

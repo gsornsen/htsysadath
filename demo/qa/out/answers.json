@@ -1,139 +1,202 @@
 [
   {
-    "id": "q-01fd23ac86",
-    "answer": "It depends which gate. For the test suites (pregrade, scout, card-refresh, sources), a gate is a script's exit code plus a positive count — the write-ups insist a fail line without an exit code isn't a gate, and totals have to be an actual summed count, not an eyeballed pass. For UI/labeling work, the gate is different: a panel of personas and critics walks the built screens and returns a verdict of DONE or NOT DONE, with blocking items. And mechanically, a gate has to be chained with `&&`, not `;`, or a failing check won't stop the next step.",
+    "id": "q-83c3befec6",
+    "answer": "In my process, whoever owns the product is the one who decides whether a NOT is a simple fix to make inline or something pervasive enough to re-run the panel. Disagreements get settled by naming the design principle behind each side, never by majority vote or by deferring to my own ask — and refusals are logged explicitly, with the reasoning attached, rather than complied with silently. So yes, the panel's verdict can be declined; the record just requires writing down why when that happens.",
     "grounding": "sourced",
     "citations": [
       {
-        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
-        "locator": "a fail line without an exit code is not a gate"
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page"
       },
       {
         "path": "mining/arcs/C-personas-review.md",
-        "locator": "1 · The arc"
-      },
-      {
-        "path": "starter/two-lanes/checklist.md",
-        "locator": "A gate chained with `;` is not a gate."
+        "locator": "3 · The transferable move"
       }
     ]
   },
   {
-    "id": "q-0d3aa1f759",
-    "answer": "The split wasn't picked after I saw the win — it's the frozen eval split that landed at 19:24 PDT while the head was still fitting, held out by scene, artwork family, and crop file. A separate hold-out check confirmed none of the 201 test crops trained or tuned the head: it fits only on catalogue render rows, tunes its one parameter on a disjoint dev split, and a filename join plus cosine check found no test photo in any training crop. I still didn't treat that same-split lift as proof — it shipped behind a flag, and production only flipped after an independent replay: 12 fixed, none broken.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "docs/project/decisions.md",
-        "locator": "D14 · 2026-09-24 · Two verified answers: the jitter story's ending, and the hold-out"
-      },
-      {
-        "path": "grailith:docs/experiments/EXP-E65a-language-head-2026-09-08.md",
-        "locator": "4 · Results"
-      },
-      {
-        "path": "talk/slides/deck.md",
-        "locator": "Method: kill lines in action"
-      }
-    ]
-  },
-  {
-    "id": "q-36bab273b3",
-    "answer": "In my setup the rule was simple: a lane can flip its own dev flag, but only a human flips the production flag, and only explicitly the next morning — never as a side effect of a lane finishing. Anything touching a production flip needed my word specifically, named explicitly rather than buried in a report. That's as far as the record goes — it doesn't say how that maps onto a real team, what role would hold that authority, or how many people would need it. I only ran this solo, so team structure isn't something I can speak to from the record.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "only a human flips the production flag"
-      },
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "What needs your word"
-      }
-    ]
-  },
-  {
-    "id": "q-3e67f3797f",
-    "answer": "The record says designers — whether human, agent, or persona — are the ones who turn a NOT verdict into the change, and I ruled they must never just implement the literal ask; they translate it into the underlying job first. For a simple, measurable fix, whoever owns the product decides it's small enough to fix inline without re-running the panel. And yes, they can decline: the plan tracked each ask as accepted, reshaped, or declined with a reason, and refusals were logged explicitly rather than silently complied with, since a documented refusal outlives silent compliance.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "1 · The arc"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "log refusals explicitly"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "ask → accepted/reshaped/declined + reason"
-      }
-    ]
-  },
-  {
-    "id": "q-55a06a9a84",
-    "answer": "It's the panel talking, not a usability lab. The 9-seconds-per-task figure for Dez came from simulated personas walking fixtures, not a human being timed on a real device — the record is explicit that those numbers are simulated. So it's the agents' own read of the screen, dressed up as a task time. And the gate that produced it then failed the real test: my own phone the next morning showed the app was basically unusable, which the panel's fixed-viewport walk hadn't caught. I wouldn't call 9 seconds a usability number in the normal sense — it's an agent's self-report.",
+    "id": "q-45884e8dde",
+    "answer": "Yes — on September 7th the lane genuinely stopped: the usage limit cut off three build lanes mid-work, leaving whatever wasn't committed yet behind. The reason it wasn't a total loss is that lanes commit early, in small chunks, as a standing rule, so most of the work already existed as commits at the moment of the cutoff. Once the usage limit reset, those lanes resumed from their worktrees rather than restarting from scratch. The record also notes that even with that resume, each of those three lanes still needed a follow-up review pass from me afterward — resuming wasn't fully automatic end to end.",
     "grounding": "sourced",
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates"
+        "locator": "Slide 9 · How do I chase five fixes at once?"
       },
       {
-        "path": "mining/arcs/F-agent-labeling.md",
-        "locator": "§ Scope caveats (read before quoting)"
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(c) Honest failures"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "locator": "RESUMED from their worktrees at 16:33 PDT"
       }
     ]
   },
   {
-    "id": "q-6344986c68",
-    "answer": "Nothing does, and I said so myself in the write-up. Truth there is only my own taps — one tapper, five days of streams, mostly English cards, so Japanese is barely tested. I also flagged selection bias: I may tap more when a pick is clearly wrong or clearly right than when it's ambiguous, which skews the sample toward easy calls. And with only 87 lots (69 non-locked), every interval is wide, roughly plus or minus ten to twelve points. So the 65.2% is real but unverified by anyone outside me, and I know that's the next thing to fix, not something I've resolved.",
+    "id": "q-684a371bb1",
+    "answer": "Beyond the bar and the flag, each run got hard caps set before it started — a cap on tool calls, on wall-clock time, and on spend, written into the lane brief rather than buried in a config file. Production also had guard rails that refuse unsafe configuration at boot, and the gate itself was judged offline against frozen, recorded data rather than a live session, so nothing merges on a live judgment call. Each run also got a named end time instead of an open-ended 'overnight.' It wasn't airtight — before I added a watchdog, an idle tab used up a full day's API allowance overnight.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Before the run"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(a) Mechanism table"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "used up a full day's API allowance overnight"
+      }
+    ]
+  },
+  {
+    "id": "q-eecdcba323",
+    "answer": "That read is 45 of 69 non-locked lots, 65.2%, with a 95% Wilson interval of 53.4 to 75.4%. Those 69 sit inside a larger set of 87 truth lots I tapped myself over five UTC days, mostly English. No one else verified the calls — it's a single tapper, me, and the record flags that as a caveat: sellers and card mix vary a lot day to day, and there's a selection bias risk since I may have tapped more when a pick was clearly right or clearly wrong than when it was ambiguous.",
     "grounding": "sourced",
     "citations": [
       {
         "path": "mining/findings/lot-top3-unlocked.md",
-        "locator": "5 · Caveats"
+        "locator": "Headline"
       },
       {
-        "path": "talk/notes.md",
-        "locator": "Slide 14 · Method: measure the bar: the bar, live"
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "5 · Caveats"
       }
     ]
   },
   {
-    "id": "q-7bfd511a55",
-    "answer": "It rendered the actual built screens, not a description of them — every persona was pointed at the same real, working build on the device stated in their brief, not a mockup or a plan. But it was still synthetic in one key way: it ran against a fixed viewport, without real device chrome or the task-switching a real session has. That's what bit me — the panel called it DONE at 21:50, then my own iPhone the next morning showed a mostly unusable app. So it interacted with live UI, just not on live hardware.",
+    "id": "q-02bbe21a0a",
+    "answer": "The one piece of the record that doesn't require code or worktrees is the persona-gate method: write three to five personas, each with a job, not a feature list — who they are, the device they're on, and the one thing they hired that screen to do, in their own words. Keep those as standing files and reuse them every review round, re-briefing only when a feature is genuinely different territory. Then walk the actual built thing with those personas rather than a description of it. That's the concrete Monday change the record shows; it doesn't spell out anything more PM-specific than that.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page"
+      }
+    ]
+  },
+  {
+    "id": "q-7330d1f727",
+    "answer": "That's not something the record actually tests — everything documented is about scaling from one person to multiple model-tier lanes, not to multiple human engineers. The closest documented change: once the work outgrew one context window, the fix was a coordinating layer that writes briefs and judges, while other lanes do bounded work, and every lane needed a self-contained brief plus a provenance contract, with whoever reviews a lane's output required to be a tier stronger than whoever ran it. Whether that same structure holds up for a team of engineers sharing the same lanes and gates isn't shown in what I have here.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D2 · 2026-09-24 · Fable coordinates; smaller models do bounded work"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up"
+      }
+    ]
+  },
+  {
+    "id": "q-8c56458655",
+    "answer": "There's no total dollar figure for the project in the record. What I can say is the shape of it: all the Claude work ran inside my flat Claude Max subscription, so that's a fixed monthly cost, not a metered one, and the record doesn't give a dollar amount for that subscription. The only metered spend I can point to is the labeling pilots, about nine dollars for 760 tasks on another provider. Beyond those two pieces, I don't have a combined total in the record.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Backup · cost, hours, hold-out"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups"
+      }
+    ]
+  },
+  {
+    "id": "q-9654e5a068",
+    "answer": "Each brief was written as a short, standing file, not a demographic label — a name, one expertise gap, the device they're on, and the job in their own words rather than a feature list. Dez, for example, is phone-only, one thumb, with the job framed as swipe-fast, not homework. Those briefs got reused every review round, and the panel had to walk them against the actual built screens on the stated device, not a description or mockup of it. I don't have the other three briefs' exact wording in the record.",
     "grounding": "sourced",
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates"
+        "locator": "§ Slide 14 · The tests pass. Is it actually done?"
       },
       {
         "path": "starter/persona-gate/README.md",
-        "locator": "The panel walks the BUILT thing, not a description of it"
-      },
-      {
-        "path": "starter/persona-gate/verdict.md",
-        "locator": "§ The real-device check (do this before calling it DONE)"
+        "locator": "\"the device they're on, and the one thing\""
       }
     ]
   },
   {
-    "id": "q-b06db9f644",
-    "answer": "No — I called that number not done. The 65.2% is specifically the top-3 hit rate on the 69 lots the scout didn't auto-lock (right card in the top 3 for 45 of those), with a wide interval, roughly 53 to 75%, given how few lots I had. On top of that, the truth set was my own taps, one tapper, five days, mostly English cards, so Japanese is barely tested. I said it's measurable and I know which number to move, but the excerpts don't give a target percentage I'd call done — no ship threshold for that metric is stated in the record.",
+    "id": "q-ab06028eb0",
+    "answer": "It did ship, but not on the strength of that one 201-photo test. I flagged it precisely because it was found after my favorite idea failed the bar, on the same photos — that's a coincidence I wanted checked, not trusted outright. It went out behind a flag rather than as a plain announced win, and it was flipped into production only after a replay reproduced the first-guess numbers. The training itself was held out separately: the language head trained on catalogue images only with its one knob set on a separate dev split, and none of the 201 test photos touched that training.",
     "grounding": "sourced",
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§Slide 14 · Method: measure the bar: the bar, live"
+        "locator": "§ Slide 11 · Is my favourite idea actually better?"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "§ Backup · cost, hours, hold-out"
       }
     ]
   },
   {
-    "id": "q-bf7d3647b1",
-    "answer": "It's a command, not a script that auto-generates it. I run `git worktree add ../lane-a -b lane-a/<slug>` for each lane, so it gets its own working directory and branch off the same base. Then I launch one Claude Code session in that worktree and hand it a filled-out lane brief. That's step two of the five-step checklist, right after writing the gate.",
+    "id": "q-cdd3b7872c",
+    "answer": "Not done, but measurable. That 65% was on live auctions where the scout didn't commit on its own — the right card was in its top three on 45 of 69 lots, with a range of 53 to 75%, from my own taps over five days, nearly all English. I haven't called that a ship bar in the record. What I do know is which number to move: score what the user actually sees — whether the right card is among the three shown — not just the first guess, since that's the number that halved my win when I checked it honestly.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "the right card was in its three on 45 of 69 lots"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Not done, but measurable; I know which number to move"
+      }
+    ]
+  },
+  {
+    "id": "q-cf2c8b2307",
+    "answer": "That's my own estimate, not a timed measurement — nothing in the record clocked it. And no, it doesn't include mornings spent reading results, or checking things on my phone. It only covers the time I spent during the day setting agents up for overnight runs.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "That's my estimate; nothing in the record measures it"
+      }
+    ]
+  },
+  {
+    "id": "q-f3c8d00e6a",
+    "answer": "That's a simulated persona number, not a usability measurement — the panel walked a fixed-size browser, no human involved. And the record on this one cuts against trusting it: that same panel said DONE, and the next morning on my own phone it was pretty much unusable. So I treat panel numbers like Dez's as a proxy only, never a done signal by themselves. After that gate failed, I moved every labeler test to run at phone, tablet and desktop widths in a live browser, and a real-device walk became the last step before calling anything done.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "For Dez, a task went from 30 seconds to 9, simulated"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "pretty much unusable"
+      }
+    ]
+  },
+  {
+    "id": "q-1833d3c445",
+    "answer": "Fair point — those four numbers really don't line up: crops as served came in at 78.2%, the same crops scored offline at 74.3%, a six-crop consensus proxy ranged 70.3% to 82.9%, and live lots pooled at 71.3%, dropping to 65.2% on lots that never auto-locked. I picked one bar on slide 12 and said explicitly which measure it was, rather than reporting a range, because you can't draw one trend line through four yardsticks that disagree — a single labeled number lets the audience know exactly what was measured, while a range would blur which of those four definitions it came from. The full spread is in the backup slide for anyone who wants it.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Backup · four yardsticks"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "1 · What \"lock state\" means here, and where it came from"
+      }
+    ]
+  },
+  {
+    "id": "q-53d8bc728e",
+    "answer": "No, a passed gate doesn't merge itself. The checklist calls for a stronger model to review each lane first, naming what it actually checked — re-running the gate's command, spot-checking specific claims, diffing against the contract, not just \"looks good.\" Only after that review does the merge happen, with `merge --no-ff` and a commit body stating what was learned. The unattended-run diagram shows the same order: a cleared gate unlocks the next lane, but only a cleared and reviewed gate reaches me for the production flip or merge decision. So review comes before landing, not after.",
     "grounding": "sourced",
     "citations": [
       {
@@ -141,165 +204,106 @@
         "locator": "The 5 steps"
       },
       {
-        "path": "talk/plan/critique2/mid-swe.md",
-        "locator": "a new worktree and branch per lane"
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(d) Diagram content — `gates-flags.svg` (≤ 7 boxes, ≤ 6 words each)"
       }
     ]
   },
   {
-    "id": "q-c4aa68cb06",
-    "answer": "For that particular jitter bug, the record only shows my own old default: I'd pick the fix I know best and push through, hoping it worked, rather than running a formal triage across all forty-five forks. It doesn't describe a separate decision-maker or prioritization process choosing which of the forty-five get run first — that mechanism isn't in the record for this bug.",
-    "grounding": "testimony",
+    "id": "q-5cd4bdb891",
+    "answer": "Only part of it is public. My talk repo has the decisions log itself (D1: raw material never committed, only findings with provenance) and a paraphrased experiments index built by sweeping the source docs. But the underlying experiment write-ups and the full ledger live in the separate Grailith project repo, cited as `[src: docs/experiments/...]` or `G:` references rather than copied in. A reviewer flagged the same gap: the EXP sources are in private Grailith, not this public repo. So the record here is a curated summary, not the complete ledger.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "raw material never committed"
+      },
+      {
+        "path": "mining/findings/experiments-index.md",
+        "locator": "Provenance: `[src: docs/experiments/<file>.md]` means the grAIde-main repo path"
+      },
+      {
+        "path": "talk/plan/critique2/senior-swe.md",
+        "locator": "the `G:`/EXP sources are in private Grailith"
+      }
+    ]
+  },
+  {
+    "id": "q-5dead91e34",
+    "answer": "A lane's brief lists the files involved, exact signatures and data shapes, the acceptance tests by name, the commands to run, and what's off limits. My strongest model writes those briefs and judges the results, while I make the final calls. The record doesn't spell out a separate process for a fix inside a lane that can't be scored as simple pass or fail. The closest case I have is comparing competing ideas, where I wrote the pass/fail bar myself before the run, spelling out the score that would drop the idea. That's a different situation though, not a lane brief, so I can't say the same rule applies there.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "locator": "3. The transferable move"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "How do I chase five fixes at once?"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Is my favourite idea actually better?"
+      }
+    ]
+  },
+  {
+    "id": "q-699fd94af1",
+    "answer": "From the record, I write the pass/fail bar myself, before I see any output — the rule is to write the bar first, not just the gate. To keep that number honest, one experiment write-up splits the data in two: a calibration set any threshold is allowed to look at, and a separate gate set that stays untouched until the bar is frozen. It also states upfront that if a bar fails, nothing gets promoted, and that outcome can't be re-argued afterward. The excerpts don't show a second person or independent reviewer checking my bars — just this write-before-looking and split-data setup.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Write the gate's pass/fail bar first"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-SETTLE-1-2026-09-08.md",
+        "locator": "the split that keeps it honest"
+      }
+    ]
+  },
+  {
+    "id": "q-753101677d",
+    "answer": "That flapping was from my own instrumented session, not a real viewer's reaction. On September 2nd I ran my first instrumented live session, and on screen the scout was locking onto a card and letting go at least once a second — jittery, not close to usable, even though the identification underneath was working. That's the only account in the record: me watching my own build on a live stream, not a separate user's response. I don't have anything documenting how an actual outside viewer perceived it during that run.",
+    "grounding": "sourced",
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "pick the fix I know best, push"
+        "locator": "§ Slide 4 · It almost worked, and I could see 45+ ways to fix it"
       }
     ]
   },
   {
-    "id": "q-eb71b91ad7",
-    "answer": "There's no platform behind it — it's just conventions written into a file. The end time is one line in the lane brief: run continuously until a named hour, then stop or pause, not \"run overnight.\" Caps are three numbers set before the run starts, also written into the brief so they're visible: a cap on tool calls, one on wall-clock time, one on spend. The morning report is a single file, not a pile of logs — each lane writes its own short report into it, or a coordinator assembles them, so I read one file in the morning instead of chasing logs.",
+    "id": "q-86c2317fc4",
+    "answer": "The fix was placement: on September 13 my review sessions still ran over a minute because the one-tap answer rendered below the fold. The persona-driven P0/P1 redesign fixed that placement, and by the next morning I cleared roughly 30 label tasks in about ten minutes, close to 20 to 30 seconds each. As for whether it was tested on anyone besides me, the record only shows my own review sessions, in admin mode on the live stack, both for the 20-30 second figure and the next-morning estimate. There's no mention of anyone else using or testing that redesigned screen.",
     "grounding": "sourced",
     "citations": [
       {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Before the run"
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "1. The arc in one paragraph"
       },
       {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Morning-report template"
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "The number: two levers, not one"
       }
     ]
   },
   {
-    "id": "q-08bed40cd0",
-    "answer": "That's not in the record. The excerpts cover a software engineer's 'can I start Monday' checklist for running gated worktree lanes, and a persona brief describing how drafts should be written for a product manager audience — but nothing describes a Monday-morning action for a PM who isn't using worktrees at all. I don't have a documented first step for that case.",
-    "grounding": "not in the record",
-    "citations": [
-      {
-        "path": "talk/plan/critique2/mid-swe.md",
-        "locator": "Can I start Monday?"
-      },
-      {
-        "path": "starter/persona-drafts/personas/pm.md",
-        "locator": "Persona: Product Manager — draft-lane brief"
-      }
-    ]
-  },
-  {
-    "id": "q-0d29b274c7",
-    "answer": "What's in the record is a rule about timing, not strictness: the kill number gets written before I see any output, worded as a single number or condition I can check by reading it — the example given is killing an approach if it loses more than 2.0 points against baseline. E67 shows this in practice: a pre-registered KILL line that fired when the dedup arm lost 14.43 points. But how strict to set that number for a given run — the actual sizing logic — isn't spelled out in what I have here, so I can't say more than that.",
+    "id": "q-9d51cce471",
+    "answer": "It means the model reviewing a lane's output has to be a stronger tier than the model that built it, never a peer — the ordering runs haiku to sonnet to opus to my strongest model. A sonnet-tier build lane gets an opus-tier reviewer, for example. And the review can't just say 'looks good' — it has to state plainly what it checked, like a count, a spot-check with exact lines, or a re-run of the gate's command. My strongest model is the one writing the briefs and judging results, while I make the final calls.",
     "grounding": "sourced",
     "citations": [
       {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Before the run"
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up"
       },
-      {
-        "path": "mining/arcs/A-experiments.md",
-        "locator": "pre-registered KILL line"
-      }
-    ]
-  },
-  {
-    "id": "q-0dae00d91c",
-    "answer": "That was me, not a team — the record only describes my own setup time, about half an hour a day, which is my estimate rather than a measurement, and it doesn't count the mornings I spent reading results. The hundred experiments in two weeks ran unattended in worktrees, many overnight, gated so they didn't need me watching. Whether a part-time team could hit the same pace isn't something the record addresses at all — it only speaks to my own time on this project.",
-    "grounding": "testimony",
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "§ Slide 6 · What changed"
-      }
-    ]
-  },
-  {
-    "id": "q-11e8ef611b",
-    "answer": "It's a hardcoded tier ladder, not something the coordinator picks per task: haiku gets reviewed by sonnet, sonnet by opus 4.6, and opus by Fable. The rule is fixed policy, not a judgment call made per lane — review is mandatory before merge, and the reviewer is never a peer of whoever built it. The excerpts don't show the coordinator dynamically selecting a reviewer model on a case-by-case basis; it's the same tier-above rule applied every time.",
-    "grounding": "sourced",
-    "citations": [
       {
         "path": "mining/arcs/E-coordinator.md",
         "locator": "reviewer sits ONE TIER ABOVE the implementer"
       },
       {
-        "path": "mining/findings/cross-arc.md",
-        "locator": "haiku→sonnet, sonnet→opus 4.6, opus→fable"
-      }
-    ]
-  },
-  {
-    "id": "q-22af88e47d",
-    "answer": "The panel's headless walk ran against a fixed viewport, so it certified DONE on the phone experience twice, but the next morning I opened the deployed app on my own iPhone and it was pretty much unusable, three scrolling sections, a help modal on every task, and having to rotate the phone to reach options. The fix I took from that failure was to add a real-device check as the actual last step before calling anything done, not a formality, an actual re-walk on real hardware, on top of the panel pass rather than instead of it.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "starter/persona-gate/README.md",
-        "locator": "add a real-device check before DONE"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "pretty much unusable"
-      }
-    ]
-  },
-  {
-    "id": "q-3d168aa278",
-    "answer": "I don't average the four. In the deck itself, that's a backup slide only pulled out in Q&A — crops as served, crops scored offline, a six-crop consensus proxy, and live lots pooled all measure top-3 differently and don't agree. So on the main line I pick one bar and say plainly which yardstick it is rather than quoting a blended number. The record shows the live-lot number gets its own callout — 65.2% on lots that never auto-locked, stated as 'about 2 in 3' — rather than folding it into lock rate and precision, which get pushed to backup.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "Backup 2 · Four yardsticks"
-      },
-      {
-        "path": "talk/plan/critique2/designer.md",
-        "locator": "\"65.2 %, about 2 in 3\""
-      }
-    ]
-  },
-  {
-    "id": "q-42b9213867",
-    "answer": "The record's answer is the flag, not the gate. A gate only checks the result against a bar decided in advance, so it can pass something wrong in a way that bar didn't cover. What stops that from reaching users is that new behavior ships behind a flag that defaults off in production even after merging — a lane can flip its own dev flag, but only I flip the production flag, explicitly, the next morning, never automatically when a lane finishes. So a bad merge sits inert until I look at it. Beyond that, the record doesn't show additional unanticipated-error catches.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "only a human flips the production flag"
-      },
-      {
         "path": "talk/slides/deck.md",
-        "locator": "gates decide the merge; flags keep it reversible"
-      }
-    ]
-  },
-  {
-    "id": "q-5f46cc334d",
-    "answer": "That's not in the record. Nothing in what I have describes a 'flapping' symptom or names the scout specifically in that context. The closest documented case is a persona-gate review: a synthetic panel of personas called a UI DONE at a healthy pace, but the next morning a real phone, in the real flow, called the result 'pretty much unusable' — catching browser chrome eating space and a modal reopening on every task switch. So there is a real-device check before calling things done, but not the flapping behavior you're asking about.",
-    "grounding": "not in the record",
-    "citations": [
-      {
-        "path": "starter/persona-gate/README.md",
-        "locator": "pretty much unusable"
-      },
-      {
-        "path": "starter/persona-gate/verdict.md",
-        "locator": "The real-device check (do this before calling it DONE)"
-      }
-    ]
-  },
-  {
-    "id": "q-6044324aa6",
-    "answer": "No usability research behind them, and I don't claim there is. The panel is four fictional personas, each just a short brief: a device and a job in their own words, not a feature list — for example Dez, 22, phone-only, job 'swipe-fast, not homework.' The point was to avoid pure demographics by anchoring on the job, but the walk itself was simulated, not a real human, and the record doesn't show any interviews or data behind the briefs. Real users only enter through the real-device check after the panel passes.",
-    "grounding": "sourced",
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "§ 3 · The transferable move"
+        "locator": "stronger model reviews, always one tier up, never a peer"
       }
     ]
   }

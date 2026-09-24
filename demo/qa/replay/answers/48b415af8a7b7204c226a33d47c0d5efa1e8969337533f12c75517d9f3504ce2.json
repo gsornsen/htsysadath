@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "48b415af8a7b7204c226a33d47c0d5efa1e8969337533f12c75517d9f3504ce2",
+  "id": "q-cdd3b7872c",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 16,
+      "sha256": "46f126309c7609adf8bccb6dde893ca73179fe994dcf2bb5145bdcb38fdf3abf"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 15,
+      "sha256": "ac89c5adadbf0892afd068d6d54cf7894ea740abc301e9bc29d0e1c758dd4b15"
+    },
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 1,
+      "sha256": "cba889de4b877ba3055cd2a0eb988136214053f97dd0bfe2ef4d5f361dc7594a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 8,
+      "sha256": "21602a22765a97e9c1f5ebc48a7db2c9cee0b6e02a83942351085d403e5bf1e9"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 23,
+      "sha256": "be5f7341538fd7994218fac26b293dfeeb09927e0a96232e76e52a2f5cbee2e5"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 22,
+      "sha256": "99f450321b0d236df220f659887147b7121eadbec5889d095f6aeb7fafdec526"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-CAPTURE-2026-09-07.md",
+      "chunk": 7,
+      "sha256": "536a3895112bd4620ff58669181887b4f6bfd8874915f4f4e032b2531721199d"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46h-student-coldstart-2026-09-08.md",
+      "chunk": 3,
+      "sha256": "c13498a2cc0e02b913279f664498d0d67a586346a8d030008c4ed29f87956231"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-CAPTURE-2026-09-07.md",
+      "chunk": 12,
+      "sha256": "d8096b5789603ee7b8f7efe664f61b6fab0a7dab8cb00ceb648dd3cb9d7bb73f"
+    }
+  ],
+  "output": {
+    "answer": "Not done, but measurable. That 65% was on live auctions where the scout didn't commit on its own — the right card was in its top three on 45 of 69 lots, with a range of 53 to 75%, from my own taps over five days, nearly all English. I haven't called that a ship bar in the record. What I do know is which number to move: score what the user actually sees — whether the right card is among the three shown — not just the first guess, since that's the number that halved my win when I checked it honestly.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "the right card was in its three on 45 of 69 lots"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Not done, but measurable; I know which number to move"
+      }
+    ]
+  }
+}

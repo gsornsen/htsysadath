@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "37bf97cbbc99d63eaf2dcbfe858d89752bd49b5664e99bd60c1168a72ae68e82",
+  "id": "q-cf2c8b2307",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 23,
+      "sha256": "4e7317a1b8aad52ded3400f48acd37485f6cf722ab0cf650e32de37cdc2dbbbe"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 25,
+      "sha256": "c2f4d09b1d5f0f41d78328a745cfe7615f3ccd37bd5a2907987306af1dbbe818"
+    },
+    {
+      "path": "starter/persona-drafts/hybrid.md",
+      "chunk": 2,
+      "sha256": "436fbd7a2a6800931cb4d64af134711ba7b22493d6bb76b30e89c3eeeef5e021"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 10,
+      "sha256": "443081180e41623263b7d4fffe91f22f23835bd84cd0f77124221320647fda45"
+    },
+    {
+      "path": "talk/plan/critique2/senior-swe.md",
+      "chunk": 5,
+      "sha256": "04dd6fc72af5fb5deb78856b2803015c7c18d6922bc496fb826209865697d3f2"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 8,
+      "sha256": "21602a22765a97e9c1f5ebc48a7db2c9cee0b6e02a83942351085d403e5bf1e9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-RESULTS-2026-09-06.md",
+      "chunk": 15,
+      "sha256": "1d0a7535f3619281db7dc34cba76a75fe65c3ee1fd9edbc74fba943bd2e7e11b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 29,
+      "sha256": "a244b4cd99d9b0bb10f3cb420bb3e4514055c05abbfab87e900d45deb61333cc"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33d-sibling-tids-from-rows-2026-09-06.md",
+      "chunk": 21,
+      "sha256": "1f7eca85041fe9410ee01cf45fe92dace82d9a3a6921ba09277ad90540b8edf0"
+    }
+  ],
+  "output": {
+    "answer": "That's my own estimate, not a timed measurement — nothing in the record clocked it. And no, it doesn't include mornings spent reading results, or checking things on my phone. It only covers the time I spent during the day setting agents up for overnight runs.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "That's my estimate; nothing in the record measures it"
+      }
+    ]
+  }
+}

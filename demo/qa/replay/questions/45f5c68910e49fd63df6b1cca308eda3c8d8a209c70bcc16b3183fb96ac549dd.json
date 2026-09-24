@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "45f5c68910e49fd63df6b1cca308eda3c8d8a209c70bcc16b3183fb96ac549dd",
+  "persona": "mid-swe",
+  "model": "sonnet",
+  "inputs": {
+    "talk_sha256": "ebaf1fadf4406b873dc66f0d47b66deb8863845c67af9400ff40c33bd0d78421"
+  },
+  "output": {
+    "questions": [
+      {
+        "question": "What exactly goes in the brief for a lane, and who writes the acceptance test when the fix isn't something you can score with a simple pass or fail?",
+        "likelihood": 4,
+        "why": "Slide 9 mentions a brief with files, an acceptance test, and what's off limits but doesn't show one.",
+        "slide_ref": 9
+      },
+      {
+        "question": "When a usage limit cuts off a lane mid-work like you mentioned happened on September 7th, does that lane just stop, and how do you pick it back up?",
+        "likelihood": 5,
+        "why": "The speaker said a usage limit cut off three build lanes mid-work but didn't explain recovery.",
+        "slide_ref": 9
+      },
+      {
+        "question": "How did you land on caps like 8 calls, 60 seconds and $6 per run — is that trial and error, or is there a way to estimate it up front?",
+        "likelihood": 4,
+        "why": "The gates-and-flags slide gives specific numbers but not how they were chosen for a new task.",
+        "slide_ref": 10
+      },
+      {
+        "question": "What does 'one tier up' actually mean in terms of which models you use for building versus reviewing?",
+        "likelihood": 4,
+        "why": "The lanes slide says a stronger model reviews, always one tier up, without naming what that means concretely.",
+        "slide_ref": 9
+      },
+      {
+        "question": "When the persona panel walks a live browser instead of rendered screens, what's actually driving that browser?",
+        "likelihood": 4,
+        "why": "Slide 13 switches from rendered screens to a real Chrome the panel walks, but the mechanism isn't shown.",
+        "slide_ref": 13
+      },
+      {
+        "question": "Is the morning report with the calls only you can make something the gate assembles automatically, or do you have to write it yourself each night?",
+        "likelihood": 3,
+        "why": "The notes mention getting one file in the morning but not how it's generated.",
+        "slide_ref": 10
+      },
+      {
+        "question": "Realistically how many lanes can you run at once before you're back to being the bottleneck reviewing all of them?",
+        "likelihood": 3,
+        "why": "The talk shows a lane-per-fix approach but doesn't say how it scales past a couple of lanes.",
+        "slide_ref": 9
+      },
+      {
+        "question": "For someone trying this next week, which single file in the starter kit should they open first?",
+        "likelihood": 3,
+        "why": "The cheat sheet lists several starter paths and the persona wants one concrete entry point.",
+        "slide_ref": 18
+      },
+      {
+        "question": "Once a gate passes, does the lane merge on its own, or do you still review the diff before it lands?",
+        "likelihood": 4,
+        "why": "The loop description says when a gate clears the work merges, leaving unclear how much human review remains.",
+        "slide_ref": 9
+      },
+      {
+        "question": "You used terms like top-3 and the box vote pretty quickly during the demo — can you spell out in plain terms what those mean?",
+        "likelihood": 2,
+        "why": "The demo notes use 'top-3' and 'vote' without defining them on screen for someone new to the setup.",
+        "slide_ref": 8
+      }
+    ]
+  }
+}

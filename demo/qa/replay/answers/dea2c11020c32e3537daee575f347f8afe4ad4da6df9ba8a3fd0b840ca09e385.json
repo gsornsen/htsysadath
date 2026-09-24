@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "dea2c11020c32e3537daee575f347f8afe4ad4da6df9ba8a3fd0b840ca09e385",
+  "id": "q-45884e8dde",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "0cd6f67e78a7007f4c316b48015907b9804aff86cde182380b0830333b984633"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 11,
+      "sha256": "7a75c10440d1b47c5bdc9041e28f2d2f1a35f47b6adf6b77f924dcd3434d6f9e"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 3,
+      "sha256": "774d0b8a97ed929b00b11e8722f8de901855cb6be0d2f4e0212a42a76a3ea925"
+    },
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "chunk": 5,
+      "sha256": "3961f1fa0436bfb11caaf1c41cc919325dd5aa635e5b9debdf88ea7f6dc74fee"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 6,
+      "sha256": "77c32f497230da196f023695d30d42f05071f95a3d6d1edd53a97c0a52a13898"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 1,
+      "sha256": "4665e50e09f493bfdae762b0019ab4450983fb160705da2564f2263a825cc078"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 47,
+      "sha256": "e419f2cd9520a0b745f50e210ceefc1a6c77f80b4cf3553ebaeb76a540bc1d03"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 23,
+      "sha256": "f26e505057a18188168cdcc7933d6d53874e208979692ced9bdc7de16dff5ee5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46i-fp16-teacher-coldstart-2026-09-08.md",
+      "chunk": 10,
+      "sha256": "13fab93f7b086ea1707fef64fe85563a811ddd50e760f9b34971db52c21a1019"
+    }
+  ],
+  "output": {
+    "answer": "Yes — on September 7th the lane genuinely stopped: the usage limit cut off three build lanes mid-work, leaving whatever wasn't committed yet behind. The reason it wasn't a total loss is that lanes commit early, in small chunks, as a standing rule, so most of the work already existed as commits at the moment of the cutoff. Once the usage limit reset, those lanes resumed from their worktrees rather than restarting from scratch. The record also notes that even with that resume, each of those three lanes still needed a follow-up review pass from me afterward — resuming wasn't fully automatic end to end.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Slide 9 · How do I chase five fixes at once?"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(c) Honest failures"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "locator": "RESUMED from their worktrees at 16:33 PDT"
+      }
+    ]
+  }
+}

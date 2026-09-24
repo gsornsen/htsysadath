@@ -1,0 +1,63 @@
+{
+  "pass": "answers",
+  "key": "6b019545361f6b902fd1c4cb5cadd6ecaecb2f974fe151707316b34538967a5d",
+  "id": "q-02bbe21a0a",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/plan/critique2/pm.md",
+      "chunk": 0,
+      "sha256": "66df8d111824c9f47f392d77771ebce26d22b2efffdc1710b4442b22e803588c"
+    },
+    {
+      "path": "starter/persona-drafts/personas/pm.md",
+      "chunk": 0,
+      "sha256": "1a1431cdc70a48fca8bc2832928de4b848d691cb46fca890917afbe5ed6bb991"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 6,
+      "sha256": "77c32f497230da196f023695d30d42f05071f95a3d6d1edd53a97c0a52a13898"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 15,
+      "sha256": "09a2018a6feebdb5412c83f97f22b1225c496d5072f6294cdb040a088720d79d"
+    },
+    {
+      "path": "talk/plan/critique2/mid-swe.md",
+      "chunk": 4,
+      "sha256": "afd6b99b1786b9ce58c024682c0c4015ad200a8353ace0d1b5a62e34131038ce"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-INDEX-COVERAGE-605-2026-09-07.md",
+      "chunk": 0,
+      "sha256": "02a61c3b54016088e95f7654804ac6b12fa2ad7c4c0acb86bd7fb73ff8bf0a6d"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+      "chunk": 56,
+      "sha256": "78c3c386f84478866ff173d63bad34eb11fc016b8928185e0b30503f7b3a950c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46f-production-traces-2026-09-06.md",
+      "chunk": 0,
+      "sha256": "b15801ffae36888e5be648c92f9d919ca0cda15b39629de5b05b75ff10df7d6b"
+    }
+  ],
+  "output": {
+    "answer": "The one piece of the record that doesn't require code or worktrees is the persona-gate method: write three to five personas, each with a job, not a feature list — who they are, the device they're on, and the one thing they hired that screen to do, in their own words. Keep those as standing files and reuse them every review round, re-briefing only when a feature is genuinely different territory. Then walk the actual built thing with those personas rather than a description of it. That's the concrete Monday change the record shows; it doesn't spell out anything more PM-specific than that.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page"
+      }
+    ]
+  }
+}

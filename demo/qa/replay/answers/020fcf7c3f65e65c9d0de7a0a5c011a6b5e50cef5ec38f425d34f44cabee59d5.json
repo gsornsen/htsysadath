@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "020fcf7c3f65e65c9d0de7a0a5c011a6b5e50cef5ec38f425d34f44cabee59d5",
+  "id": "q-53d8bc728e",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 1,
+      "sha256": "455fc42cf9fa5579de5a98b2c08296e4bbb02f2ebb51935937cf5e1fbf1ca10d"
+    },
+    {
+      "path": "starter/two-lanes/checklist.md",
+      "chunk": 3,
+      "sha256": "9fb817d15fdae294a661a828c993e6e7a06c6b1781ed7e8b2ecd63bc512862f8"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 3,
+      "sha256": "774d0b8a97ed929b00b11e8722f8de901855cb6be0d2f4e0212a42a76a3ea925"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 15,
+      "sha256": "26d0b5454b4d257094f66468ab509e9c65f319498469f706696d5848ce53a9a4"
+    },
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "chunk": 6,
+      "sha256": "f88563128d50d63c221c269cec3d18fad898e61b1799b914c6d303d1544ec107"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 4,
+      "sha256": "1b9459cf710046b7515c4a13d44c21254a23a5640048910c1449b624ca786933"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "chunk": 17,
+      "sha256": "39e5e9459d4a739a33c3bb45e0f9003dc31969e2fc0bd659d0da1d128ddc2f0f"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E101-art-coverage-gap-2026-09-11.md",
+      "chunk": 1,
+      "sha256": "69ccafafd3b1f5cb3e51eab7ee91f57292dc6548d38c4f78b7f2f5df9fbae72d"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 23,
+      "sha256": "f26e505057a18188168cdcc7933d6d53874e208979692ced9bdc7de16dff5ee5"
+    }
+  ],
+  "output": {
+    "answer": "No, a passed gate doesn't merge itself. The checklist calls for a stronger model to review each lane first, naming what it actually checked — re-running the gate's command, spot-checking specific claims, diffing against the contract, not just \"looks good.\" Only after that review does the merge happen, with `merge --no-ff` and a commit body stating what was learned. The unattended-run diagram shows the same order: a cleared gate unlocks the next lane, but only a cleared and reviewed gate reaches me for the production flip or merge decision. So review comes before landing, not after.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/checklist.md",
+        "locator": "The 5 steps"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(d) Diagram content — `gates-flags.svg` (≤ 7 boxes, ≤ 6 words each)"
+      }
+    ]
+  }
+}

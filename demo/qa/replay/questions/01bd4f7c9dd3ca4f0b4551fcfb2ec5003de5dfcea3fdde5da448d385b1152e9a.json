@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "01bd4f7c9dd3ca4f0b4551fcfb2ec5003de5dfcea3fdde5da448d385b1152e9a",
+  "persona": "pm",
+  "model": "sonnet",
+  "inputs": {
+    "talk_sha256": "ebaf1fadf4406b873dc66f0d47b66deb8863845c67af9400ff40c33bd0d78421"
+  },
+  "output": {
+    "questions": [
+      {
+        "question": "You ran this mostly alone with full access to everything — what changes if a team of engineers, not one person, tries to run these lanes and gates?",
+        "likelihood": 5,
+        "why": "The whole method rests on one person setting gates, reviewing, and flipping production, which raises adoption doubts for a team.",
+        "slide_ref": 9
+      },
+      {
+        "question": "What was the total cost of this project, including the Claude Max subscription itself, not just the nine dollars of metered spend?",
+        "likelihood": 5,
+        "why": "The cost line only calls out the small metered spend and buries the subscription cost, which a budget owner would want in full.",
+        "slide_ref": 5
+      },
+      {
+        "question": "Who sets the pass/fail bar for each gate, and how do you stop that number from being picked to guarantee the result you want?",
+        "likelihood": 4,
+        "why": "The favorite-idea bar of losing two points was set by the speaker himself before testing it, which looks like it could be gamed.",
+        "slide_ref": 11
+      },
+      {
+        "question": "Is about two in three on live auctions good enough to ship, and what's the next number you're actually trying to move?",
+        "likelihood": 5,
+        "why": "The speaker calls the result 'not done, but measurable' without saying what threshold would count as shippable.",
+        "slide_ref": 12
+      },
+      {
+        "question": "When a gate passes and code merges, who actually decides to flip it to production, and is there any check before that happens?",
+        "likelihood": 4,
+        "why": "The gates-and-flags method leaves production flips as a manual call by one person with no described review step.",
+        "slide_ref": 10
+      },
+      {
+        "question": "For a product manager who isn't writing code or running worktrees, what's the concrete first thing to do differently on Monday?",
+        "likelihood": 5,
+        "why": "The closing slide's next steps are written for someone who can set up worktrees and flags, not for a non-technical role.",
+        "slide_ref": 18
+      },
+      {
+        "question": "The starter kit covers finding the fix, testing the idea, and checking it's done — why is there nothing repeatable for deciding what to build first?",
+        "likelihood": 3,
+        "why": "The cheat sheet leaves problem D as 'a conversation for your next planning meeting' instead of a process like the other three.",
+        "slide_ref": 17
+      },
+      {
+        "question": "A usage limit cut off three build lanes mid-work at one point — how would you plan capacity or budget around that at team scale?",
+        "likelihood": 3,
+        "why": "The speaker mentions a usage cap breaking mid-run as an aside without addressing what it means for reliability at scale.",
+        "slide_ref": 9
+      },
+      {
+        "question": "The persona panel said done and your own phone said otherwise the next morning — has that gap shown up again since you added the live-browser step?",
+        "likelihood": 3,
+        "why": "The fix for the panel's blind spot is recent, so it's worth asking whether it has actually held up since.",
+        "slide_ref": 14
+      },
+      {
+        "question": "About how many of the roughly hundred experiments ran fully unattended overnight versus needing you to check in or intervene?",
+        "likelihood": 3,
+        "why": "The talk claims cheap unattended experimentation but doesn't break down how much of it truly needed no babysitting.",
+        "slide_ref": 5
+      }
+    ]
+  }
+}

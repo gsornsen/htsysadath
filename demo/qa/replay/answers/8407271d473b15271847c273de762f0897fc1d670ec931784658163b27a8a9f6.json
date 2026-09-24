@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "8407271d473b15271847c273de762f0897fc1d670ec931784658163b27a8a9f6",
+  "id": "q-9654e5a068",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 6,
+      "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "ead4771bc9c82ef598e82ecd61b6da452fdd7e6792aaf0cbcef09c421e23955a"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "85c91ec2e3e1976e8bdb0b9aff29f700880b131517235287a0271e0893732cc6"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 1,
+      "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+    },
+    {
+      "path": "starter/persona-gate/panel-brief.md",
+      "chunk": 11,
+      "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 4,
+      "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-JA-INDEX-INTEGRITY-2026-09-07.md",
+      "chunk": 19,
+      "sha256": "47ef9143bbfaf3c5e79ffe39a0f3e94199b362ee0423c330be51e2a8d55504f7"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-READER-2026-09-07.md",
+      "chunk": 17,
+      "sha256": "843a6e7766ca061bd99e0c27f2f6448bd0db5cebeed358c65eae729d59702591"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E69a-real-crop-pseudolabels-2026-09-08.md",
+      "chunk": 11,
+      "sha256": "6303fcab58b7c24e675f7a8cb069a9783e7a405594b0aab63a5ba044cfb3d826"
+    }
+  ],
+  "output": {
+    "answer": "Each brief was written as a short, standing file, not a demographic label — a name, one expertise gap, the device they're on, and the job in their own words rather than a feature list. Dez, for example, is phone-only, one thumb, with the job framed as swipe-fast, not homework. Those briefs got reused every review round, and the panel had to walk them against the actual built screens on the stated device, not a description or mockup of it. I don't have the other three briefs' exact wording in the record.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§ Slide 14 · The tests pass. Is it actually done?"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "\"the device they're on, and the one thing\""
+      }
+    ]
+  }
+}

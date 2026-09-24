@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "7f2e0116f3fe9bdbccc4184e6f4efb4f3ea51a001b6429b3ef657cddee2c94b9",
+  "id": "q-86c2317fc4",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 19,
+      "sha256": "71773cd9ce1fc8386c6b82f841846f6c87d97925fe67815a36390f9aac9b27e1"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 20,
+      "sha256": "ddea3fc661784c1ef4a6e83537686086cde1d303fbd8b55f4a7a45f68088945b"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 2,
+      "sha256": "448731cbd750d205aaad4dd1e9c9db91c38c6f5fb0f47d07e61205987b35589a"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 10,
+      "sha256": "443081180e41623263b7d4fffe91f22f23835bd84cd0f77124221320647fda45"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 5,
+      "sha256": "9da3361d5491d77d46793b01fa9a52f40f565c79cf335cf01fdc1e444ab02887"
+    },
+    {
+      "path": "mining/findings/cross-arc.md",
+      "chunk": 1,
+      "sha256": "4a0cc8317804689df722ea731af5d046711c263ed5c0579c5db41280aecd90f9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-BID-LEDGER-2026-09-07.md",
+      "chunk": 16,
+      "sha256": "ad38bc5ce265650035723b05cfafb4efb9a20031487d8473ee33b1c0699d925b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E97-ring-budget-and-tap-health-2026-09-11.md",
+      "chunk": 3,
+      "sha256": "3fbfa0998d1f8b1f5264f5ee0fb0ea7ff832d8e521c116bd361de989fef6b2e5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-AUTOSCALE-2026-09-08.md",
+      "chunk": 10,
+      "sha256": "183f7a9b61149b658f9b9d801e58c635c38a4eba9a250c61ea459eaa2ed1d42b"
+    }
+  ],
+  "output": {
+    "answer": "The fix was placement: on September 13 my review sessions still ran over a minute because the one-tap answer rendered below the fold. The persona-driven P0/P1 redesign fixed that placement, and by the next morning I cleared roughly 30 label tasks in about ten minutes, close to 20 to 30 seconds each. As for whether it was tested on anyone besides me, the record only shows my own review sessions, in admin mode on the live stack, both for the 20-30 second figure and the next-morning estimate. There's no mention of anyone else using or testing that redesigned screen.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "1. The arc in one paragraph"
+      },
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "The number: two levers, not one"
+      }
+    ]
+  }
+}

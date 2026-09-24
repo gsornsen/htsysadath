@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "840a2bff4511d3c1ed53c430e3ffe869ed7ceda2154172fc28b3fe3491649dad",
+  "persona": "designer",
+  "model": "sonnet",
+  "inputs": {
+    "talk_sha256": "ebaf1fadf4406b873dc66f0d47b66deb8863845c67af9400ff40c33bd0d78421"
+  },
+  "output": {
+    "questions": [
+      {
+        "question": "How were the four persona briefs actually written — real device and job constraints, or just demographic labels with a task attached?",
+        "likelihood": 5,
+        "why": "The speaker credits the panel with catching a usability failure but only describes Dez in one line, so the method behind the briefs is unclear.",
+        "slide_ref": 14
+      },
+      {
+        "question": "Dez's task time went from 30 seconds to 9, simulated — do you treat that as a usability number at all, or only as a proxy until a human confirms it?",
+        "likelihood": 5,
+        "why": "The notes flag it as simulated, not human, which is exactly the kind of AI-user-research number this persona distrusts.",
+        "slide_ref": 14
+      },
+      {
+        "question": "Once the personas walk a live browser and say DONE or NOT, who on the team actually turns that verdict into a design decision, and can anyone decline what the panel asks for?",
+        "likelihood": 5,
+        "why": "The talk never names a person who owns design judgment between the panel's verdict and the merge.",
+        "slide_ref": 14
+      },
+      {
+        "question": "After moving to a live browser and three widths, what specifically did the next panel catch before merge, beyond your own sense that things got better?",
+        "likelihood": 4,
+        "why": "The speaker admits the improvement is unmeasured, only 'in my experience,' which invites a follow-up on actual evidence.",
+        "slide_ref": 14
+      },
+      {
+        "question": "What changed on the labeler review screen itself that cut your review time from three minutes to 20 to 30 seconds, and was that redesign tested on anyone besides you?",
+        "likelihood": 4,
+        "why": "The speaker credits a 'persona-driven redesign' of the review screen but shows no before/after of the screen or evidence beyond his own stopwatch.",
+        "slide_ref": 15
+      },
+      {
+        "question": "When the scout was flapping, what did that actually look like to someone watching the stream — did you observe a real user's reaction, or only your own instrumented session?",
+        "likelihood": 4,
+        "why": "Flapping is framed as a technical defect via a chart, but the human experience of it on a real screen is never described.",
+        "slide_ref": 6
+      },
+      {
+        "question": "Is the persona panel meant to replace hands-on usability testing with real people, or only to feed and prioritize it — where's that line for you?",
+        "likelihood": 4,
+        "why": "The talk positions the panel as the 'done' gate without saying whether real user research still happens afterward.",
+        "slide_ref": 8
+      },
+      {
+        "question": "The 65 percent top-3 figure on live auctions is your own taps over five days — do you have a plan to validate that with other users before calling it a usable rate?",
+        "likelihood": 3,
+        "why": "The speaker flags this as his own single-person sample, which is thin evidence for a headline usability claim.",
+        "slide_ref": 12
+      },
+      {
+        "question": "Before the phone test caught it, did anyone actually hold a device while building the UI, or was 'done' judged entirely on the fixed-size panel screens?",
+        "likelihood": 3,
+        "why": "The gap between panel-DONE and phone-unusable suggests no one held a real device until the morning after.",
+        "slide_ref": 14
+      },
+      {
+        "question": "For the crop-versus-vote decision that fixed misidentified cards, was that judged only by replaying recordings, or did a person watch it live on a real stream before it shipped?",
+        "likelihood": 2,
+        "why": "The demo frames this as an experiment result, but the actual on-device verification of that behavior change is left out.",
+        "slide_ref": 7
+      }
+    ]
+  }
+}

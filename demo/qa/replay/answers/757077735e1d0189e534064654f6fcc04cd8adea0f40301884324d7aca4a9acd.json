@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "757077735e1d0189e534064654f6fcc04cd8adea0f40301884324d7aca4a9acd",
+  "id": "q-699fd94af1",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 7,
+      "sha256": "c434f866f38b51a78227fb516358ed528c429eaa4c306336992acfe0b611c5eb"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "fef4af703b2f80b456504489e414e6601aef31a268834178ab6ed2afd050a3ba"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 22,
+      "sha256": "99f450321b0d236df220f659887147b7121eadbec5889d095f6aeb7fafdec526"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 21,
+      "sha256": "83f9a0e2376fa26f4c639604b4f500957550ff69e2e3f6a3a4c168d502152c78"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 6,
+      "sha256": "f884ffe6af50a1f2ba6338a1a99fef1b52445d5fa405fefea0e51f02a9b1f679"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 23,
+      "sha256": "be5f7341538fd7994218fac26b293dfeeb09927e0a96232e76e52a2f5cbee2e5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-SETTLE-1-2026-09-08.md",
+      "chunk": 11,
+      "sha256": "c255af0ea77f16997833c696c33da50258b280ef6ab519152ffb7015de1ebdb1"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46h-student-coldstart-2026-09-08.md",
+      "chunk": 12,
+      "sha256": "b8149e6b2e2fd72ec2e6281195145fb0101d4fa899246d098b911ab791567761"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E74-confirmed-scans-census-2026-09-08.md",
+      "chunk": 27,
+      "sha256": "aaf6c11d8c4514ee08b17cc2acc106487779947aeefbb35c2c9343cccd287fa6"
+    }
+  ],
+  "output": {
+    "answer": "From the record, I write the pass/fail bar myself, before I see any output — the rule is to write the bar first, not just the gate. To keep that number honest, one experiment write-up splits the data in two: a calibration set any threshold is allowed to look at, and a separate gate set that stays untouched until the bar is frozen. It also states upfront that if a bar fails, nothing gets promoted, and that outcome can't be re-argued afterward. The excerpts don't show a second person or independent reviewer checking my bars — just this write-before-looking and split-data setup.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Write the gate's pass/fail bar first"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-SETTLE-1-2026-09-08.md",
+        "locator": "the split that keeps it honest"
+      }
+    ]
+  }
+}

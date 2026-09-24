@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "40b68601b4a0bbeaf019ae1c9069e6878fcc2531839eccdfc39e9c95a777ecce",
+  "id": "q-8c56458655",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 25,
+      "sha256": "c2f4d09b1d5f0f41d78328a745cfe7615f3ccd37bd5a2907987306af1dbbe818"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 19,
+      "sha256": "a97588969bc3fedcd9e7bdbe8469428d6c4e716848ef7915cd94bded1753b23c"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 23,
+      "sha256": "4e7317a1b8aad52ded3400f48acd37485f6cf722ab0cf650e32de37cdc2dbbbe"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 6,
+      "sha256": "f884ffe6af50a1f2ba6338a1a99fef1b52445d5fa405fefea0e51f02a9b1f679"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 8,
+      "sha256": "21602a22765a97e9c1f5ebc48a7db2c9cee0b6e02a83942351085d403e5bf1e9"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 7,
+      "sha256": "8a7f7791fec992b43fde06e8dcd3f806f98e24980d611dab1c6da37b002460a6"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33c-promo-rung-2026-09-06.md",
+      "chunk": 16,
+      "sha256": "9470467717fec969101b5c6163a5b40cc37bb0fe26c1c2b1f5f00cdbd847199a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E25-smarter-cron-2026-09-06.md",
+      "chunk": 1,
+      "sha256": "193e7789abc7754f33131e4ba31bcc41e5206d16b5a4c971c933935bc77b1d28"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46f-production-traces-2026-09-06.md",
+      "chunk": 30,
+      "sha256": "f7b4d2d6da2617b4489bf4ba3255f85840939e1ea601e6edbb183ef1dd347440"
+    }
+  ],
+  "output": {
+    "answer": "There's no total dollar figure for the project in the record. What I can say is the shape of it: all the Claude work ran inside my flat Claude Max subscription, so that's a fixed monthly cost, not a metered one, and the record doesn't give a dollar amount for that subscription. The only metered spend I can point to is the labeling pilots, about nine dollars for 760 tasks on another provider. Beyond those two pieces, I don't have a combined total in the record.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Backup · cost, hours, hold-out"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups"
+      }
+    ]
+  }
+}

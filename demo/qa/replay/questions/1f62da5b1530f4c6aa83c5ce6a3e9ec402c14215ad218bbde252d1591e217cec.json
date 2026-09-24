@@ -1,0 +1,73 @@
+{
+  "pass": "questions",
+  "key": "1f62da5b1530f4c6aa83c5ce6a3e9ec402c14215ad218bbde252d1591e217cec",
+  "persona": "senior-swe",
+  "model": "sonnet",
+  "inputs": {
+    "talk_sha256": "ebaf1fadf4406b873dc66f0d47b66deb8863845c67af9400ff40c33bd0d78421"
+  },
+  "output": {
+    "questions": [
+      {
+        "question": "The language re-rank was found after your favorite idea failed the bar, on the same 201 photos — why report it as a shipped win rather than a lead needing a fresh held-out test?",
+        "likelihood": 5,
+        "why": "The speaker admits it was a post-hoc arm on the same test set, a classic forking-paths problem.",
+        "slide_ref": 11
+      },
+      {
+        "question": "Is the 'about 30 minutes a day' a timed measurement or your own estimate, and does it include the mornings spent reading results?",
+        "likelihood": 5,
+        "why": "The notes say it's his own count and explicitly excludes review time, understating the real human cost.",
+        "slide_ref": 5
+      },
+      {
+        "question": "Beyond the gate and flag, what stops an unattended agent run from merging broken code or overspending before you check on it?",
+        "likelihood": 4,
+        "why": "The idle-tab incident that burned a day's API allowance shows the guardrails were not airtight.",
+        "slide_ref": 9
+      },
+      {
+        "question": "The 65 percent right-card-in-top-3 figure on live lots comes from your own taps over five days — what's the sample size and confidence interval, and who else verified those calls?",
+        "likelihood": 5,
+        "why": "A single self-reported tapper is presented as ground truth for the headline live-accuracy number.",
+        "slide_ref": 13
+      },
+      {
+        "question": "The persona panel said the build was done and it was unusable on your phone the next morning — what makes you confident the redesigned panel process wouldn't fail the same way again?",
+        "likelihood": 4,
+        "why": "The gate itself was shown to produce a false pass, raising who reviews the reviewer.",
+        "slide_ref": 14
+      },
+      {
+        "question": "You showed four different ways of scoring top-3 accuracy that don't agree — why pick the roughly two-in-three number as the one headline claim instead of reporting a range?",
+        "likelihood": 4,
+        "why": "The backup slide admits the four yardsticks diverge, undercutting the single number used earlier in the talk.",
+        "slide_ref": 19
+      },
+      {
+        "question": "Is the forty-five-fork count and the claim that only two forks mattered a pre-registered tally, or a retrospective count made after you already knew which fixes worked?",
+        "likelihood": 3,
+        "why": "The notes concede the grid is his own count, not something in the record.",
+        "slide_ref": 4
+      },
+      {
+        "question": "Is the full experiment ledger and decisions log in the public repo, or are some of the sources you cited private?",
+        "likelihood": 4,
+        "why": "Nearly every claim cites internal files like decisions.md and arc notes whose public availability is unclear.",
+        "slide_ref": 0
+      },
+      {
+        "question": "When the usage limit cut off three build lanes mid-work, was any partially finished code merged before you caught it, or could that have happened?",
+        "likelihood": 3,
+        "why": "The notes mention lanes committing early specifically because of that cutoff, hinting at a near-miss.",
+        "slide_ref": 10
+      },
+      {
+        "question": "Your strongest model both writes the briefs and judges the results of the lanes it set up — what checks catch that model grading its own work favorably?",
+        "likelihood": 3,
+        "why": "Having one model author acceptance criteria and then judge against them is a reviewer-reviews-itself setup with no stated check.",
+        "slide_ref": 10
+      }
+    ]
+  }
+}

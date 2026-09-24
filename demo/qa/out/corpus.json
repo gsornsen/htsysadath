@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "docs/project/decisions.md",
-      "sha256": "7f6afe6d595f8df8b8b3baa618abd8f038a209362b45c6351dd1cb2c1a36c4ef",
-      "bytes": 32097,
+      "sha256": "dcc09b83ad6a1d5b7cb8b5e5e376aa888067c06727692fc3cd20717380727d5d",
+      "bytes": 33614,
       "source": "repo"
     },
     {
@@ -1010,7 +1010,7 @@
     },
     {
       "path": "starter/README.md",
-      "sha256": "d8332820e4529d699fd2144810bb8178ce3b366659f98bb060dfa424df018838",
+      "sha256": "8f7603adaf629a8762cf042e030c9110799f75f3e11e8650a6a175367ca86271",
       "bytes": 4887,
       "source": "repo"
     },
@@ -1076,7 +1076,7 @@
     },
     {
       "path": "starter/two-lanes/checklist.md",
-      "sha256": "27f9b30b3f7e4e28a423ddd6362bd4f9cfcbb02c70a3fd9d52753949b34da28b",
+      "sha256": "1f8b763f3c0c9730a76daebfbd74910e7c1fe29a78b01aa36374c8624b9f8335",
       "bytes": 3800,
       "source": "repo"
     },
@@ -1088,20 +1088,20 @@
     },
     {
       "path": "starter/two-lanes/unattended.md",
-      "sha256": "b6ac24110bbfacf66e90934db5c064da233a3b70d5f24854317454feae6dc8a4",
-      "bytes": 4671,
+      "sha256": "2363dcdb2732dcd4b3e43882b4d32b6787c1bd0afe7905950ce38b6a771b31dc",
+      "bytes": 4679,
       "source": "repo"
     },
     {
       "path": "talk/notes.md",
-      "sha256": "6bc40a5208db65da7d67956093abfc6978ac84d440293df5534445f938c281f2",
-      "bytes": 21603,
+      "sha256": "8ae497cdf5e0048029098aca351a1f18aa548215bba865e3aecbb40a7907b8d8",
+      "bytes": 26065,
       "source": "repo"
     },
     {
       "path": "talk/outline.md",
-      "sha256": "2ce854f01da016012389b7d4a983ace573f61684edddedd3052eace08a335ffc",
-      "bytes": 9892,
+      "sha256": "d4b66c3ab0a10bd03067730a68668d2837e906e8f0b9ec1d44396b116c33d6ff",
+      "bytes": 9432,
       "source": "repo"
     },
     {
@@ -1130,8 +1130,8 @@
     },
     {
       "path": "talk/slides/deck.md",
-      "sha256": "6110ec3148dbdd769cb8f4ecce059ee83187b789a761f14f64693576a165af1c",
-      "bytes": 23066,
+      "sha256": "ebaf1fadf4406b873dc66f0d47b66deb8863845c67af9400ff40c33bd0d78421",
+      "bytes": 27531,
       "source": "repo"
     }
   ]

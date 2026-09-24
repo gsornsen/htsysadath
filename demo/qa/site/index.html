@@ -407,419 +407,419 @@ details[open] > .card-summary::before {
 
   <main class="list" id="list" aria-label="Ranked questions">
 
-      <details class="card" data-personas="mid-swe" data-id="q-01fd23ac86">
-        <summary class="card-summary" aria-controls="panel-q-01fd23ac86">
+      <details class="card" data-personas="designer mid-swe" data-id="q-83c3befec6">
+        <summary class="card-summary" aria-controls="panel-q-83c3befec6">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·01</span>
-            <span class="score-wrap" title="likelihood score 5">
+            <span class="score-wrap" title="likelihood score 13.5">
               <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
-              <span class="score-num">5</span>
+              <span class="score-num">13.5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Concretely, what is a gate checking — a script&#39;s exit code, a numeric threshold, or a human reading a report?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">Once the personas walk a live browser and say DONE or NOT, who on the team actually turns that verdict into a design decision, and can anyone decline what the panel asks for?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-01fd23ac86">
-          <p class="answer-text">It depends which gate. For the test suites (pregrade, scout, card-refresh, sources), a gate is a script&#39;s exit code plus a positive count — the write-ups insist a fail line without an exit code isn&#39;t a gate, and totals have to be an actual summed count, not an eyeballed pass. For UI/labeling work, the gate is different: a panel of personas and critics walks the built screens and returns a verdict of DONE or NOT DONE, with blocking items. And mechanically, a gate has to be chained with `&amp;&amp;`, not `;`, or a failing check won&#39;t stop the next step.</p>
+        <div class="answer" id="panel-q-83c3befec6">
+          <p class="answer-text">In my process, whoever owns the product is the one who decides whether a NOT is a simple fix to make inline or something pervasive enough to re-run the panel. Disagreements get settled by naming the design principle behind each side, never by majority vote or by deferring to my own ask — and refusals are logged explicitly, with the reasoning attached, rather than complied with silently. So yes, the panel&#39;s verdict can be declined; the record just requires writing down why when that happens.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation citation-private"><span class="citation-line"><code class="citation-path">docs/experiments/EXP-ALT-PICK-2026-09-07.md</code><span class="citation-sep"> · </span><span class="citation-locator">a fail line without an exit code is not a gate</span></span><span class="citation-note">private source, not in this repo</span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">1 · The arc</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/checklist.md</code><span class="citation-sep"> · </span><span class="citation-locator">A gate chained with `;` is not a gate.</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">The method, in one page</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">3 · The transferable move</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-0d3aa1f759">
-        <summary class="card-summary" aria-controls="panel-q-0d3aa1f759">
+      <details class="card" data-personas="senior-swe mid-swe" data-id="q-45884e8dde">
+        <summary class="card-summary" aria-controls="panel-q-45884e8dde">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·02</span>
-            <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
-              <span class="score-num">5</span>
+            <span class="score-wrap" title="likelihood score 12">
+              <span class="meter"><span class="meter-fill" style="width:88.9%"></span></span>
+              <span class="score-num">12</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">The language-head arm was added after the kill line fired on the same 201 crops — how do you rule out that split being cherry-picked once you saw the data?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">When a usage limit cuts off a lane mid-work like you mentioned happened on September 7th, does that lane just stop, and how do you pick it back up?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-0d3aa1f759">
-          <p class="answer-text">The split wasn&#39;t picked after I saw the win — it&#39;s the frozen eval split that landed at 19:24 PDT while the head was still fitting, held out by scene, artwork family, and crop file. A separate hold-out check confirmed none of the 201 test crops trained or tuned the head: it fits only on catalogue render rows, tunes its one parameter on a disjoint dev split, and a filename join plus cosine check found no test photo in any training crop. I still didn&#39;t treat that same-split lift as proof — it shipped behind a flag, and production only flipped after an independent replay: 12 fixed, none broken.</p>
+        <div class="answer" id="panel-q-45884e8dde">
+          <p class="answer-text">Yes — on September 7th the lane genuinely stopped: the usage limit cut off three build lanes mid-work, leaving whatever wasn&#39;t committed yet behind. The reason it wasn&#39;t a total loss is that lanes commit early, in small chunks, as a standing rule, so most of the work already existed as commits at the moment of the cutoff. Once the usage limit reset, those lanes resumed from their worktrees rather than restarting from scratch. The record also notes that even with that resume, each of those three lanes still needed a follow-up review pass from me afterward — resuming wasn&#39;t fully automatic end to end.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/decisions.md</code><span class="citation-sep"> · </span><span class="citation-locator">D14 · 2026-09-24 · Two verified answers: the jitter story&#39;s ending, and the hold-out</span></span></li><li class="citation citation-private"><span class="citation-line"><code class="citation-path">docs/experiments/EXP-E65a-language-head-2026-09-08.md</code><span class="citation-sep"> · </span><span class="citation-locator">4 · Results</span></span><span class="citation-note">private source, not in this repo</span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">Method: kill lines in action</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">Slide 9 · How do I chase five fixes at once?</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/gates-and-flags.md</code><span class="citation-sep"> · </span><span class="citation-locator">(c) Honest failures</span></span></li><li class="citation citation-private"><span class="citation-line"><code class="citation-path">docs/experiments/EXPERIMENT-BACKLOG.md</code><span class="citation-sep"> · </span><span class="citation-locator">RESUMED from their worktrees at 16:33 PDT</span></span><span class="citation-note">private source, not in this repo</span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-36bab273b3">
-        <summary class="card-summary" aria-controls="panel-q-36bab273b3">
+      <details class="card" data-personas="senior-swe pm" data-id="q-684a371bb1">
+        <summary class="card-summary" aria-controls="panel-q-684a371bb1">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·03</span>
-            <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
-              <span class="score-num">5</span>
+            <span class="score-wrap" title="likelihood score 12">
+              <span class="meter"><span class="meter-fill" style="width:88.9%"></span></span>
+              <span class="score-num">12</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">You flip production yourself in this setup — on a real team, who gets that authority, and how many people would need it?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">Beyond the gate and flag, what stops an unattended agent run from merging broken code or overspending before you check on it?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-36bab273b3">
-          <p class="answer-text">In my setup the rule was simple: a lane can flip its own dev flag, but only a human flips the production flag, and only explicitly the next morning — never as a side effect of a lane finishing. Anything touching a production flip needed my word specifically, named explicitly rather than buried in a report. That&#39;s as far as the record goes — it doesn&#39;t say how that maps onto a real team, what role would hold that authority, or how many people would need it. I only ran this solo, so team structure isn&#39;t something I can speak to from the record.</p>
+        <div class="answer" id="panel-q-684a371bb1">
+          <p class="answer-text">Beyond the bar and the flag, each run got hard caps set before it started — a cap on tool calls, on wall-clock time, and on spend, written into the lane brief rather than buried in a config file. Production also had guard rails that refuse unsafe configuration at boot, and the gate itself was judged offline against frozen, recorded data rather than a live session, so nothing merges on a live judgment call. Each run also got a named end time instead of an open-ended &#39;overnight.&#39; It wasn&#39;t airtight — before I added a watchdog, an idle tab used up a full day&#39;s API allowance overnight.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">only a human flips the production flag</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">What needs your word</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">Before the run</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/gates-and-flags.md</code><span class="citation-sep"> · </span><span class="citation-locator">(a) Mechanism table</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">used up a full day&#39;s API allowance overnight</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-3e67f3797f">
-        <summary class="card-summary" aria-controls="panel-q-3e67f3797f">
+      <details class="card" data-personas="senior-swe designer" data-id="q-eecdcba323">
+        <summary class="card-summary" aria-controls="panel-q-eecdcba323">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·04</span>
-            <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
-              <span class="score-num">5</span>
+            <span class="score-wrap" title="likelihood score 12">
+              <span class="meter"><span class="meter-fill" style="width:88.9%"></span></span>
+              <span class="score-num">12</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Who actually turns a persona&#39;s NOT verdict into a design change, and can that person decline what the persona is asking for?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">The 65 percent right-card-in-top-3 figure on live lots comes from your own taps over five days — what&#39;s the sample size and confidence interval, and who else verified those calls?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-3e67f3797f">
-          <p class="answer-text">The record says designers — whether human, agent, or persona — are the ones who turn a NOT verdict into the change, and I ruled they must never just implement the literal ask; they translate it into the underlying job first. For a simple, measurable fix, whoever owns the product decides it&#39;s small enough to fix inline without re-running the panel. And yes, they can decline: the plan tracked each ask as accepted, reshaped, or declined with a reason, and refusals were logged explicitly rather than silently complied with, since a documented refusal outlives silent compliance.</p>
+        <div class="answer" id="panel-q-eecdcba323">
+          <p class="answer-text">That read is 45 of 69 non-locked lots, 65.2%, with a 95% Wilson interval of 53.4 to 75.4%. Those 69 sit inside a larger set of 87 truth lots I tapped myself over five UTC days, mostly English. No one else verified the calls — it&#39;s a single tapper, me, and the record flags that as a caveat: sellers and card mix vary a lot day to day, and there&#39;s a selection bias risk since I may have tapped more when a pick was clearly right or clearly wrong than when it was ambiguous.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">1 · The arc</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">log refusals explicitly</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">ask → accepted/reshaped/declined + reason</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/lot-top3-unlocked.md</code><span class="citation-sep"> · </span><span class="citation-locator">Headline</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/lot-top3-unlocked.md</code><span class="citation-sep"> · </span><span class="citation-locator">5 · Caveats</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-55a06a9a84">
-        <summary class="card-summary" aria-controls="panel-q-55a06a9a84">
+      <details class="card" data-personas="pm" data-id="q-02bbe21a0a">
+        <summary class="card-summary" aria-controls="panel-q-02bbe21a0a">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·05</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Is &#39;9 seconds, simulated&#39; a usability number at all, or is it just an agent describing its own read of the screen?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">For a product manager who isn&#39;t writing code or running worktrees, what&#39;s the concrete first thing to do differently on Monday?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-55a06a9a84">
-          <p class="answer-text">It&#39;s the panel talking, not a usability lab. The 9-seconds-per-task figure for Dez came from simulated personas walking fixtures, not a human being timed on a real device — the record is explicit that those numbers are simulated. So it&#39;s the agents&#39; own read of the screen, dressed up as a task time. And the gate that produced it then failed the real test: my own phone the next morning showed the app was basically unusable, which the panel&#39;s fixed-viewport walk hadn&#39;t caught. I wouldn&#39;t call 9 seconds a usability number in the normal sense — it&#39;s an agent&#39;s self-report.</p>
+        <div class="answer" id="panel-q-02bbe21a0a">
+          <p class="answer-text">The one piece of the record that doesn&#39;t require code or worktrees is the persona-gate method: write three to five personas, each with a job, not a feature list — who they are, the device they&#39;re on, and the one thing they hired that screen to do, in their own words. Keep those as standing files and reuse them every review round, re-briefing only when a feature is genuinely different territory. Then walk the actual built thing with those personas rather than a description of it. That&#39;s the concrete Monday change the record shows; it doesn&#39;t spell out anything more PM-specific than that.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 17 · Method: persona review gates</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/F-agent-labeling.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Scope caveats (read before quoting)</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">The method, in one page</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-6344986c68">
-        <summary class="card-summary" aria-controls="panel-q-6344986c68">
+      <details class="card" data-personas="pm" data-id="q-7330d1f727">
+        <summary class="card-summary" aria-controls="panel-q-7330d1f727">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·06</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Your live-lot accuracy is based on one tapper&#39;s own judgment across 87 lots with a confidence interval spanning roughly 53 to 75 percent — what stops that from being both measurer and grader of your own tool?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">You ran this mostly alone with full access to everything — what changes if a team of engineers, not one person, tries to run these lanes and gates?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-6344986c68">
-          <p class="answer-text">Nothing does, and I said so myself in the write-up. Truth there is only my own taps — one tapper, five days of streams, mostly English cards, so Japanese is barely tested. I also flagged selection bias: I may tap more when a pick is clearly wrong or clearly right than when it&#39;s ambiguous, which skews the sample toward easy calls. And with only 87 lots (69 non-locked), every interval is wide, roughly plus or minus ten to twelve points. So the 65.2% is real but unverified by anyone outside me, and I know that&#39;s the next thing to fix, not something I&#39;ve resolved.</p>
-          <span class="badge badge-sourced">Sourced</span>
+        <div class="answer" id="panel-q-7330d1f727">
+          <p class="answer-text">That&#39;s not something the record actually tests — everything documented is about scaling from one person to multiple model-tier lanes, not to multiple human engineers. The closest documented change: once the work outgrew one context window, the fix was a coordinating layer that writes briefs and judges, while other lanes do bounded work, and every lane needed a self-contained brief plus a provenance contract, with whoever reviews a lane&#39;s output required to be a tier stronger than whoever ran it. Whether that same structure holds up for a team of engineers sharing the same lanes and gates isn&#39;t shown in what I have here.</p>
+          <span class="badge badge-not-in-record">Not in the record</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/lot-top3-unlocked.md</code><span class="citation-sep"> · </span><span class="citation-locator">5 · Caveats</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">Slide 14 · Method: measure the bar: the bar, live</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/decisions.md</code><span class="citation-sep"> · </span><span class="citation-locator">D2 · 2026-09-24 · Fable coordinates; smaller models do bounded work</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/lane-brief.md</code><span class="citation-sep"> · </span><span class="citation-locator">Reviewer one tier up</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-7bfd511a55">
-        <summary class="card-summary" aria-controls="panel-q-7bfd511a55">
+      <details class="card" data-personas="pm" data-id="q-8c56458655">
+        <summary class="card-summary" aria-controls="panel-q-8c56458655">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·07</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">When you say the panel &#39;walked&#39; the screens, does that mean it actually rendered and interacted with the live UI, or just reasoned over code and a static viewport?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">What was the total cost of this project, including the Claude Max subscription itself, not just the nine dollars of metered spend?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-7bfd511a55">
-          <p class="answer-text">It rendered the actual built screens, not a description of them — every persona was pointed at the same real, working build on the device stated in their brief, not a mockup or a plan. But it was still synthetic in one key way: it ran against a fixed viewport, without real device chrome or the task-switching a real session has. That&#39;s what bit me — the panel called it DONE at 21:50, then my own iPhone the next morning showed a mostly unusable app. So it interacted with live UI, just not on live hardware.</p>
+        <div class="answer" id="panel-q-8c56458655">
+          <p class="answer-text">There&#39;s no total dollar figure for the project in the record. What I can say is the shape of it: all the Claude work ran inside my flat Claude Max subscription, so that&#39;s a fixed monthly cost, not a metered one, and the record doesn&#39;t give a dollar amount for that subscription. The only metered spend I can point to is the labeling pilots, about nine dollars for 760 tasks on another provider. Beyond those two pieces, I don&#39;t have a combined total in the record.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 17 · Method: persona review gates</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">The panel walks the BUILT thing, not a description of it</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/verdict.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ The real-device check (do this before calling it DONE)</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">Backup · cost, hours, hold-out</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/decisions.md</code><span class="citation-sep"> · </span><span class="citation-locator">D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-b06db9f644">
-        <summary class="card-summary" aria-controls="panel-q-b06db9f644">
+      <details class="card" data-personas="designer" data-id="q-9654e5a068">
+        <summary class="card-summary" aria-controls="panel-q-9654e5a068">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·08</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Is 65% on live lots good enough to ship to real users, and what&#39;s the target number before you&#39;d call this done?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">How were the four persona briefs actually written — real device and job constraints, or just demographic labels with a task attached?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-b06db9f644">
-          <p class="answer-text">No — I called that number not done. The 65.2% is specifically the top-3 hit rate on the 69 lots the scout didn&#39;t auto-lock (right card in the top 3 for 45 of those), with a wide interval, roughly 53 to 75%, given how few lots I had. On top of that, the truth set was my own taps, one tapper, five days, mostly English cards, so Japanese is barely tested. I said it&#39;s measurable and I know which number to move, but the excerpts don&#39;t give a target percentage I&#39;d call done — no ship threshold for that metric is stated in the record.</p>
+        <div class="answer" id="panel-q-9654e5a068">
+          <p class="answer-text">Each brief was written as a short, standing file, not a demographic label — a name, one expertise gap, the device they&#39;re on, and the job in their own words rather than a feature list. Dez, for example, is phone-only, one thumb, with the job framed as swipe-fast, not homework. Those briefs got reused every review round, and the panel had to walk them against the actual built screens on the stated device, not a description or mockup of it. I don&#39;t have the other three briefs&#39; exact wording in the record.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§Slide 14 · Method: measure the bar: the bar, live</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 14 · The tests pass. Is it actually done?</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">&quot;the device they&#39;re on, and the one thing&quot;</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-bf7d3647b1">
-        <summary class="card-summary" aria-controls="panel-q-bf7d3647b1">
+      <details class="card" data-personas="senior-swe" data-id="q-ab06028eb0">
+        <summary class="card-summary" aria-controls="panel-q-ab06028eb0">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·09</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">How does a lane actually start — do you type a command that creates the worktree and branch, or is that scripted somewhere in the starter kit?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">The language re-rank was found after your favorite idea failed the bar, on the same 201 photos — why report it as a shipped win rather than a lead needing a fresh held-out test?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-bf7d3647b1">
-          <p class="answer-text">It&#39;s a command, not a script that auto-generates it. I run `git worktree add ../lane-a -b lane-a/&lt;slug&gt;` for each lane, so it gets its own working directory and branch off the same base. Then I launch one Claude Code session in that worktree and hand it a filled-out lane brief. That&#39;s step two of the five-step checklist, right after writing the gate.</p>
+        <div class="answer" id="panel-q-ab06028eb0">
+          <p class="answer-text">It did ship, but not on the strength of that one 201-photo test. I flagged it precisely because it was found after my favorite idea failed the bar, on the same photos — that&#39;s a coincidence I wanted checked, not trusted outright. It went out behind a flag rather than as a plain announced win, and it was flipped into production only after a replay reproduced the first-guess numbers. The training itself was held out separately: the language head trained on catalogue images only with its one knob set on a separate dev split, and none of the 201 test photos touched that training.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/checklist.md</code><span class="citation-sep"> · </span><span class="citation-locator">The 5 steps</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/plan/critique2/mid-swe.md</code><span class="citation-sep"> · </span><span class="citation-locator">a new worktree and branch per lane</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 11 · Is my favourite idea actually better?</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Backup · cost, hours, hold-out</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-c4aa68cb06">
-        <summary class="card-summary" aria-controls="panel-q-c4aa68cb06">
+      <details class="card" data-personas="pm" data-id="q-cdd3b7872c">
+        <summary class="card-summary" aria-controls="panel-q-cdd3b7872c">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·10</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">With forty-five possible forks for one bug, who decides which ones actually get run first?</span>
+          <span class="question" role="heading" aria-level="2">Is about two in three on live auctions good enough to ship, and what&#39;s the next number you&#39;re actually trying to move?</span>
           <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-c4aa68cb06">
-          <p class="answer-text">For that particular jitter bug, the record only shows my own old default: I&#39;d pick the fix I know best and push through, hoping it worked, rather than running a formal triage across all forty-five forks. It doesn&#39;t describe a separate decision-maker or prioritization process choosing which of the forty-five get run first — that mechanism isn&#39;t in the record for this bug.</p>
+        <div class="answer" id="panel-q-cdd3b7872c">
+          <p class="answer-text">Not done, but measurable. That 65% was on live auctions where the scout didn&#39;t commit on its own — the right card was in its top three on 45 of 69 lots, with a range of 53 to 75%, from my own taps over five days, nearly all English. I haven&#39;t called that a ship bar in the record. What I do know is which number to move: score what the user actually sees — whether the right card is among the three shown — not just the first guess, since that&#39;s the number that halved my win when I checked it honestly.</p>
           <span class="badge badge-testimony">Testimony</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">pick the fix I know best, push</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">the right card was in its three on 45 of 69 lots</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">Not done, but measurable; I know which number to move</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-eb71b91ad7">
-        <summary class="card-summary" aria-controls="panel-q-eb71b91ad7">
+      <details class="card" data-personas="senior-swe" data-id="q-cf2c8b2307">
+        <summary class="card-summary" aria-controls="panel-q-cf2c8b2307">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·11</span>
             <span class="score-wrap" title="likelihood score 5">
-              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
               <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What&#39;s actually in the unattended.md file — how do you set the end time, the caps, and get a morning report without building your own platform?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">Is the &#39;about 30 minutes a day&#39; a timed measurement or your own estimate, and does it include the mornings spent reading results?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-eb71b91ad7">
-          <p class="answer-text">There&#39;s no platform behind it — it&#39;s just conventions written into a file. The end time is one line in the lane brief: run continuously until a named hour, then stop or pause, not &quot;run overnight.&quot; Caps are three numbers set before the run starts, also written into the brief so they&#39;re visible: a cap on tool calls, one on wall-clock time, one on spend. The morning report is a single file, not a pile of logs — each lane writes its own short report into it, or a coordinator assembles them, so I read one file in the morning instead of chasing logs.</p>
-          <span class="badge badge-sourced">Sourced</span>
+        <div class="answer" id="panel-q-cf2c8b2307">
+          <p class="answer-text">That&#39;s my own estimate, not a timed measurement — nothing in the record clocked it. And no, it doesn&#39;t include mornings spent reading results, or checking things on my phone. It only covers the time I spent during the day setting agents up for overnight runs.</p>
+          <span class="badge badge-testimony">Testimony</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">Before the run</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">Morning-report template</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">That&#39;s my estimate; nothing in the record measures it</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-08bed40cd0">
-        <summary class="card-summary" aria-controls="panel-q-08bed40cd0">
+      <details class="card" data-personas="designer" data-id="q-f3c8d00e6a">
+        <summary class="card-summary" aria-controls="panel-q-f3c8d00e6a">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·12</span>
-            <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
-              <span class="score-num">4</span>
+            <span class="score-wrap" title="likelihood score 5">
+              <span class="meter"><span class="meter-fill" style="width:37%"></span></span>
+              <span class="score-num">5</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What&#39;s the actual first thing a product manager who doesn&#39;t run worktrees should do Monday morning?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">Dez&#39;s task time went from 30 seconds to 9, simulated — do you treat that as a usability number at all, or only as a proxy until a human confirms it?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-08bed40cd0">
-          <p class="answer-text">That&#39;s not in the record. The excerpts cover a software engineer&#39;s &#39;can I start Monday&#39; checklist for running gated worktree lanes, and a persona brief describing how drafts should be written for a product manager audience — but nothing describes a Monday-morning action for a PM who isn&#39;t using worktrees at all. I don&#39;t have a documented first step for that case.</p>
-          <span class="badge badge-not-in-record">Not in the record</span>
+        <div class="answer" id="panel-q-f3c8d00e6a">
+          <p class="answer-text">That&#39;s a simulated persona number, not a usability measurement — the panel walked a fixed-size browser, no human involved. And the record on this one cuts against trusting it: that same panel said DONE, and the next morning on my own phone it was pretty much unusable. So I treat panel numbers like Dez&#39;s as a proxy only, never a done signal by themselves. After that gate failed, I moved every labeler test to run at phone, tablet and desktop widths in a live browser, and a real-device walk became the last step before calling anything done.</p>
+          <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/plan/critique2/mid-swe.md</code><span class="citation-sep"> · </span><span class="citation-locator">Can I start Monday?</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-drafts/personas/pm.md</code><span class="citation-sep"> · </span><span class="citation-locator">Persona: Product Manager — draft-lane brief</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">For Dez, a task went from 30 seconds to 9, simulated</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">pretty much unusable</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-0d29b274c7">
-        <summary class="card-summary" aria-controls="panel-q-0d29b274c7">
+      <details class="card" data-personas="senior-swe" data-id="q-1833d3c445">
+        <summary class="card-summary" aria-controls="panel-q-1833d3c445">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·13</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">How do you pick the kill-line number before the run — is that just your gut, or is there a rule for how strict to set it?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">You showed four different ways of scoring top-3 accuracy that don&#39;t agree — why pick the roughly two-in-three number as the one headline claim instead of reporting a range?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-0d29b274c7">
-          <p class="answer-text">What&#39;s in the record is a rule about timing, not strictness: the kill number gets written before I see any output, worded as a single number or condition I can check by reading it — the example given is killing an approach if it loses more than 2.0 points against baseline. E67 shows this in practice: a pre-registered KILL line that fired when the dedup arm lost 14.43 points. But how strict to set that number for a given run — the actual sizing logic — isn&#39;t spelled out in what I have here, so I can&#39;t say more than that.</p>
+        <div class="answer" id="panel-q-1833d3c445">
+          <p class="answer-text">Fair point — those four numbers really don&#39;t line up: crops as served came in at 78.2%, the same crops scored offline at 74.3%, a six-crop consensus proxy ranged 70.3% to 82.9%, and live lots pooled at 71.3%, dropping to 65.2% on lots that never auto-locked. I picked one bar on slide 12 and said explicitly which measure it was, rather than reporting a range, because you can&#39;t draw one trend line through four yardsticks that disagree — a single labeled number lets the audience know exactly what was measured, while a range would blur which of those four definitions it came from. The full spread is in the backup slide for anyone who wants it.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">Before the run</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/A-experiments.md</code><span class="citation-sep"> · </span><span class="citation-locator">pre-registered KILL line</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">Backup · four yardsticks</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/lot-top3-unlocked.md</code><span class="citation-sep"> · </span><span class="citation-locator">1 · What &quot;lock state&quot; means here, and where it came from</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-0dae00d91c">
-        <summary class="card-summary" aria-controls="panel-q-0dae00d91c">
+      <details class="card" data-personas="mid-swe" data-id="q-53d8bc728e">
+        <summary class="card-summary" aria-controls="panel-q-53d8bc728e">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·14</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">A hundred experiments in two weeks — was that one person working full time, or could a team hit that pace part-time?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">Once a gate passes, does the lane merge on its own, or do you still review the diff before it lands?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-0dae00d91c">
-          <p class="answer-text">That was me, not a team — the record only describes my own setup time, about half an hour a day, which is my estimate rather than a measurement, and it doesn&#39;t count the mornings I spent reading results. The hundred experiments in two weeks ran unattended in worktrees, many overnight, gated so they didn&#39;t need me watching. Whether a part-time team could hit the same pace isn&#39;t something the record addresses at all — it only speaks to my own time on this project.</p>
-          <span class="badge badge-testimony">Testimony</span>
+        <div class="answer" id="panel-q-53d8bc728e">
+          <p class="answer-text">No, a passed gate doesn&#39;t merge itself. The checklist calls for a stronger model to review each lane first, naming what it actually checked — re-running the gate&#39;s command, spot-checking specific claims, diffing against the contract, not just &quot;looks good.&quot; Only after that review does the merge happen, with `merge --no-ff` and a commit body stating what was learned. The unattended-run diagram shows the same order: a cleared gate unlocks the next lane, but only a cleared and reviewed gate reaches me for the production flip or merge decision. So review comes before landing, not after.</p>
+          <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 6 · What changed</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/checklist.md</code><span class="citation-sep"> · </span><span class="citation-locator">The 5 steps</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/gates-and-flags.md</code><span class="citation-sep"> · </span><span class="citation-locator">(d) Diagram content — `gates-flags.svg` (≤ 7 boxes, ≤ 6 words each)</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-11e8ef611b">
-        <summary class="card-summary" aria-controls="panel-q-11e8ef611b">
+      <details class="card" data-personas="senior-swe" data-id="q-5cd4bdb891">
+        <summary class="card-summary" aria-controls="panel-q-5cd4bdb891">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·15</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What does &#39;reviewer one tier up&#39; mean in practice — do you hardcode which model reviews which, or does the coordinator pick per task?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">Is the full experiment ledger and decisions log in the public repo, or are some of the sources you cited private?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-11e8ef611b">
-          <p class="answer-text">It&#39;s a hardcoded tier ladder, not something the coordinator picks per task: haiku gets reviewed by sonnet, sonnet by opus 4.6, and opus by Fable. The rule is fixed policy, not a judgment call made per lane — review is mandatory before merge, and the reviewer is never a peer of whoever built it. The excerpts don&#39;t show the coordinator dynamically selecting a reviewer model on a case-by-case basis; it&#39;s the same tier-above rule applied every time.</p>
+        <div class="answer" id="panel-q-5cd4bdb891">
+          <p class="answer-text">Only part of it is public. My talk repo has the decisions log itself (D1: raw material never committed, only findings with provenance) and a paraphrased experiments index built by sweeping the source docs. But the underlying experiment write-ups and the full ledger live in the separate Grailith project repo, cited as `[src: docs/experiments/...]` or `G:` references rather than copied in. A reviewer flagged the same gap: the EXP sources are in private Grailith, not this public repo. So the record here is a curated summary, not the complete ledger.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/E-coordinator.md</code><span class="citation-sep"> · </span><span class="citation-locator">reviewer sits ONE TIER ABOVE the implementer</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/cross-arc.md</code><span class="citation-sep"> · </span><span class="citation-locator">haiku→sonnet, sonnet→opus 4.6, opus→fable</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/decisions.md</code><span class="citation-sep"> · </span><span class="citation-locator">raw material never committed</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/findings/experiments-index.md</code><span class="citation-sep"> · </span><span class="citation-locator">Provenance: `[src: docs/experiments/&lt;file&gt;.md]` means the grAIde-main repo path</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/plan/critique2/senior-swe.md</code><span class="citation-sep"> · </span><span class="citation-locator">the `G:`/EXP sources are in private Grailith</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-22af88e47d">
-        <summary class="card-summary" aria-controls="panel-q-22af88e47d">
+      <details class="card" data-personas="mid-swe" data-id="q-5dead91e34">
+        <summary class="card-summary" aria-controls="panel-q-5dead91e34">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·16</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">The persona panel said DONE but your own phone said no — what changed in your process so that gap doesn&#39;t happen again?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">What exactly goes in the brief for a lane, and who writes the acceptance test when the fix isn&#39;t something you can score with a simple pass or fail?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-22af88e47d">
-          <p class="answer-text">The panel&#39;s headless walk ran against a fixed viewport, so it certified DONE on the phone experience twice, but the next morning I opened the deployed app on my own iPhone and it was pretty much unusable, three scrolling sections, a help modal on every task, and having to rotate the phone to reach options. The fix I took from that failure was to add a real-device check as the actual last step before calling anything done, not a formality, an actual re-walk on real hardware, on top of the panel pass rather than instead of it.</p>
+        <div class="answer" id="panel-q-5dead91e34">
+          <p class="answer-text">A lane&#39;s brief lists the files involved, exact signatures and data shapes, the acceptance tests by name, the commands to run, and what&#39;s off limits. My strongest model writes those briefs and judges the results, while I make the final calls. The record doesn&#39;t spell out a separate process for a fix inside a lane that can&#39;t be scored as simple pass or fail. The closest case I have is comparing competing ideas, where I wrote the pass/fail bar myself before the run, spelling out the score that would drop the idea. That&#39;s a different situation though, not a lane brief, so I can&#39;t say the same rule applies there.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">add a real-device check before DONE</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">pretty much unusable</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/E-coordinator.md</code><span class="citation-sep"> · </span><span class="citation-locator">3. The transferable move</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">How do I chase five fixes at once?</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">Is my favourite idea actually better?</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-3d168aa278">
-        <summary class="card-summary" aria-controls="panel-q-3d168aa278">
+      <details class="card" data-personas="pm" data-id="q-699fd94af1">
+        <summary class="card-summary" aria-controls="panel-q-699fd94af1">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·17</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">You showed four different top-3 numbers that don&#39;t agree, from 65 to 83 percent — how do you decide which one to report when someone asks &#39;is it better&#39; outside a talk?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">Who sets the pass/fail bar for each gate, and how do you stop that number from being picked to guarantee the result you want?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-3d168aa278">
-          <p class="answer-text">I don&#39;t average the four. In the deck itself, that&#39;s a backup slide only pulled out in Q&amp;A — crops as served, crops scored offline, a six-crop consensus proxy, and live lots pooled all measure top-3 differently and don&#39;t agree. So on the main line I pick one bar and say plainly which yardstick it is rather than quoting a blended number. The record shows the live-lot number gets its own callout — 65.2% on lots that never auto-locked, stated as &#39;about 2 in 3&#39; — rather than folding it into lock rate and precision, which get pushed to backup.</p>
+        <div class="answer" id="panel-q-699fd94af1">
+          <p class="answer-text">From the record, I write the pass/fail bar myself, before I see any output — the rule is to write the bar first, not just the gate. To keep that number honest, one experiment write-up splits the data in two: a calibration set any threshold is allowed to look at, and a separate gate set that stays untouched until the bar is frozen. It also states upfront that if a bar fails, nothing gets promoted, and that outcome can&#39;t be re-argued afterward. The excerpts don&#39;t show a second person or independent reviewer checking my bars — just this write-before-looking and split-data setup.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">Backup 2 · Four yardsticks</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/plan/critique2/designer.md</code><span class="citation-sep"> · </span><span class="citation-locator">&quot;65.2 %, about 2 in 3&quot;</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">Write the gate&#39;s pass/fail bar first</span></span></li><li class="citation citation-private"><span class="citation-line"><code class="citation-path">docs/experiments/EXP-SETTLE-1-2026-09-08.md</code><span class="citation-sep"> · </span><span class="citation-locator">the split that keeps it honest</span></span><span class="citation-note">private source, not in this repo</span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-42b9213867">
-        <summary class="card-summary" aria-controls="panel-q-42b9213867">
+      <details class="card" data-personas="designer" data-id="q-753101677d">
+        <summary class="card-summary" aria-controls="panel-q-753101677d">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·18</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What actually stops an unattended overnight agent from merging a change that passes its gate but is wrong in a way the gate didn&#39;t anticipate?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">When the scout was flapping, what did that actually look like to someone watching the stream — did you observe a real user&#39;s reaction, or only your own instrumented session?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-42b9213867">
-          <p class="answer-text">The record&#39;s answer is the flag, not the gate. A gate only checks the result against a bar decided in advance, so it can pass something wrong in a way that bar didn&#39;t cover. What stops that from reaching users is that new behavior ships behind a flag that defaults off in production even after merging — a lane can flip its own dev flag, but only I flip the production flag, explicitly, the next morning, never automatically when a lane finishes. So a bad merge sits inert until I look at it. Beyond that, the record doesn&#39;t show additional unanticipated-error catches.</p>
+        <div class="answer" id="panel-q-753101677d">
+          <p class="answer-text">That flapping was from my own instrumented session, not a real viewer&#39;s reaction. On September 2nd I ran my first instrumented live session, and on screen the scout was locking onto a card and letting go at least once a second — jittery, not close to usable, even though the identification underneath was working. That&#39;s the only account in the record: me watching my own build on a live stream, not a separate user&#39;s response. I don&#39;t have anything documenting how an actual outside viewer perceived it during that run.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/unattended.md</code><span class="citation-sep"> · </span><span class="citation-locator">only a human flips the production flag</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">gates decide the merge; flags keep it reversible</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 4 · It almost worked, and I could see 45+ ways to fix it</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-5f46cc334d">
-        <summary class="card-summary" aria-controls="panel-q-5f46cc334d">
+      <details class="card" data-personas="designer" data-id="q-86c2317fc4">
+        <summary class="card-summary" aria-controls="panel-q-86c2317fc4">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·19</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What did the flapping actually look like to someone trying to use the scout, and did you watch a real person react to it before calling it fixed?</span>
+          <span class="question" role="heading" aria-level="2">What changed on the labeler review screen itself that cut your review time from three minutes to 20 to 30 seconds, and was that redesign tested on anyone besides you?</span>
           <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-5f46cc334d">
-          <p class="answer-text">That&#39;s not in the record. Nothing in what I have describes a &#39;flapping&#39; symptom or names the scout specifically in that context. The closest documented case is a persona-gate review: a synthetic panel of personas called a UI DONE at a healthy pace, but the next morning a real phone, in the real flow, called the result &#39;pretty much unusable&#39; — catching browser chrome eating space and a modal reopening on every task switch. So there is a real-device check before calling things done, but not the flapping behavior you&#39;re asking about.</p>
-          <span class="badge badge-not-in-record">Not in the record</span>
+        <div class="answer" id="panel-q-86c2317fc4">
+          <p class="answer-text">The fix was placement: on September 13 my review sessions still ran over a minute because the one-tap answer rendered below the fold. The persona-driven P0/P1 redesign fixed that placement, and by the next morning I cleared roughly 30 label tasks in about ten minutes, close to 20 to 30 seconds each. As for whether it was tested on anyone besides me, the record only shows my own review sessions, in admin mode on the live stack, both for the 20-30 second figure and the next-morning estimate. There&#39;s no mention of anyone else using or testing that redesigned screen.</p>
+          <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">pretty much unusable</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">starter/persona-gate/verdict.md</code><span class="citation-sep"> · </span><span class="citation-locator">The real-device check (do this before calling it DONE)</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/F-agent-labeling.md</code><span class="citation-sep"> · </span><span class="citation-locator">1. The arc in one paragraph</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/F-agent-labeling.md</code><span class="citation-sep"> · </span><span class="citation-locator">The number: two levers, not one</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-6044324aa6">
-        <summary class="card-summary" aria-controls="panel-q-6044324aa6">
+      <details class="card" data-personas="mid-swe" data-id="q-9d51cce471">
+        <summary class="card-summary" aria-controls="panel-q-9d51cce471">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·20</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Are the four persona briefs built from real usability research, or are they demographics like &#39;22, phone-only&#39; dressed up as jobs?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">What does &#39;one tier up&#39; actually mean in terms of which models you use for building versus reviewing?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-6044324aa6">
-          <p class="answer-text">No usability research behind them, and I don&#39;t claim there is. The panel is four fictional personas, each just a short brief: a device and a job in their own words, not a feature list — for example Dez, 22, phone-only, job &#39;swipe-fast, not homework.&#39; The point was to avoid pure demographics by anchoring on the job, but the walk itself was simulated, not a real human, and the record doesn&#39;t show any interviews or data behind the briefs. Real users only enter through the real-device check after the panel passes.</p>
+        <div class="answer" id="panel-q-9d51cce471">
+          <p class="answer-text">It means the model reviewing a lane&#39;s output has to be a stronger tier than the model that built it, never a peer — the ordering runs haiku to sonnet to opus to my strongest model. A sonnet-tier build lane gets an opus-tier reviewer, for example. And the review can&#39;t just say &#39;looks good&#39; — it has to state plainly what it checked, like a count, a spot-check with exact lines, or a re-run of the gate&#39;s command. My strongest model is the one writing the briefs and judging results, while I make the final calls.</p>
           <span class="badge badge-sourced">Sourced</span>
           
-          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">talk/notes.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ Slide 17 · Method: persona review gates</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/C-personas-review.md</code><span class="citation-sep"> · </span><span class="citation-locator">§ 3 · The transferable move</span></span></li></ul>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">starter/two-lanes/lane-brief.md</code><span class="citation-sep"> · </span><span class="citation-locator">Reviewer one tier up</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">mining/arcs/E-coordinator.md</code><span class="citation-sep"> · </span><span class="citation-locator">reviewer sits ONE TIER ABOVE the implementer</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/slides/deck.md</code><span class="citation-sep"> · </span><span class="citation-locator">stronger model reviews, always one tier up, never a peer</span></span></li></ul>
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-6aea00d5ca">
-        <summary class="card-summary" aria-controls="panel-q-6aea00d5ca">
+      <details class="card" data-personas="designer" data-id="q-9f90953dca">
+        <summary class="card-summary" aria-controls="panel-q-9f90953dca">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·21</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">The August bakeoff median of 10.4 seconds came from only six captures — how confident are you that number would hold up with a larger sample?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">After moving to a live browser and three widths, what specifically did the next panel catch before merge, beyond your own sense that things got better?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-6aea00d5ca">
+        <div class="answer" id="panel-q-9f90953dca">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -827,19 +827,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-760566dd9c">
-        <summary class="card-summary" aria-controls="panel-q-760566dd9c">
+      <details class="card" data-personas="mid-swe" data-id="q-d1103c71a5">
+        <summary class="card-summary" aria-controls="panel-q-d1103c71a5">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·22</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">You call the 30-minutes-a-day figure your own estimate rather than a measurement — did you ever actually log your hours, and if not why present it alongside otherwise-instrumented numbers?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">How did you land on caps like 8 calls, 60 seconds and $6 per run — is that trial and error, or is there a way to estimate it up front?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-760566dd9c">
+        <div class="answer" id="panel-q-d1103c71a5">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -847,19 +847,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-a6ab5def27">
-        <summary class="card-summary" aria-controls="panel-q-a6ab5def27">
+      <details class="card" data-personas="senior-swe" data-id="q-d2adc813cc">
+        <summary class="card-summary" aria-controls="panel-q-d2adc813cc">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·23</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">For the persona review gate, who writes the persona briefs and how does the agent &#39;walk&#39; the build — screenshots, Playwright, something else?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">The persona panel said the build was done and it was unusable on your phone the next morning — what makes you confident the redesigned panel process wouldn&#39;t fail the same way again?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-a6ab5def27">
+        <div class="answer" id="panel-q-d2adc813cc">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -867,19 +867,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-bc9499b56f">
-        <summary class="card-summary" aria-controls="panel-q-bc9499b56f">
+      <details class="card" data-personas="designer" data-id="q-eb8a971917">
+        <summary class="card-summary" aria-controls="panel-q-eb8a971917">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·24</span>
             <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:29.6%"></span></span>
               <span class="score-num">4</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Thirty minutes a day is your estimate and doesn&#39;t count morning review time — what&#39;s the real daily time cost end to end?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">Is the persona panel meant to replace hands-on usability testing with real people, or only to feed and prioritize it — where&#39;s that line for you?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
         </summary>
-        <div class="answer" id="panel-q-bc9499b56f">
+        <div class="answer" id="panel-q-eb8a971917">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -887,39 +887,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-c944ed9417">
-        <summary class="card-summary" aria-controls="panel-q-c944ed9417">
+      <details class="card" data-personas="pm" data-id="q-2f6569d714">
+        <summary class="card-summary" aria-controls="panel-q-2f6569d714">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·25</span>
-            <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
-              <span class="score-num">4</span>
+            <span class="score-wrap" title="likelihood score 3">
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
+              <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">After the panel missed the fixed-viewport failure, did you change how the panel walks screens, or just add the human phone check on top?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
-        </summary>
-        <div class="answer" id="panel-q-c944ed9417">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="pm" data-id="q-d1041d3f1d">
-        <summary class="card-summary" aria-controls="panel-q-d1041d3f1d">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·26</span>
-            <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
-              <span class="score-num">4</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">The coordinator is your strongest model judging your own lanes — on a team, who plays that role, and can a junior PM own it?</span>
+          <span class="question" role="heading" aria-level="2">The starter kit covers finding the fix, testing the idea, and checking it&#39;s done — why is there nothing repeatable for deciding what to build first?</span>
           <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-d1041d3f1d">
+        <div class="answer" id="panel-q-2f6569d714">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -927,39 +907,39 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-f912329ff1">
-        <summary class="card-summary" aria-controls="panel-q-f912329ff1">
+      <details class="card" data-personas="pm" data-id="q-3bab30433d">
+        <summary class="card-summary" aria-controls="panel-q-3bab30433d">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·26</span>
+            <span class="score-wrap" title="likelihood score 3">
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
+              <span class="score-num">3</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">The persona panel said done and your own phone said otherwise the next morning — has that gap shown up again since you added the live-browser step?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+        </summary>
+        <div class="answer" id="panel-q-3bab30433d">
+          <p class="answer-text">No answer recorded.</p>
+          <span class="badge badge-unknown">Ungrounded</span>
+          
+          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
+        </div>
+      </details>
+
+      <details class="card" data-personas="mid-swe" data-id="q-7a32f6ac96">
+        <summary class="card-summary" aria-controls="panel-q-7a32f6ac96">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·27</span>
-            <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
-              <span class="score-num">4</span>
+            <span class="score-wrap" title="likelihood score 3">
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
+              <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What specifically changed on the review screen that cut your labeling verdict from three minutes to twenty seconds, and did anyone other than you time it?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
-        </summary>
-        <div class="answer" id="panel-q-f912329ff1">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="mid-swe" data-id="q-fdad42f8dc">
-        <summary class="card-summary" aria-controls="panel-q-fdad42f8dc">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·28</span>
-            <span class="score-wrap" title="likelihood score 4">
-              <span class="meter"><span class="meter-fill" style="width:80%"></span></span>
-              <span class="score-num">4</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">When a usage limit killed three build lanes mid-work, what happened next — did you manually restart them, or is there a retry mechanism?</span>
+          <span class="question" role="heading" aria-level="2">Realistically how many lanes can you run at once before you&#39;re back to being the bottleneck reviewing all of them?</span>
           <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-fdad42f8dc">
+        <div class="answer" id="panel-q-7a32f6ac96">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -967,19 +947,39 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-003507fffe">
-        <summary class="card-summary" aria-controls="panel-q-003507fffe">
+      <details class="card" data-personas="designer" data-id="q-7af78e20fb">
+        <summary class="card-summary" aria-controls="panel-q-7af78e20fb">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·28</span>
+            <span class="score-wrap" title="likelihood score 3">
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
+              <span class="score-num">3</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">Before the phone test caught it, did anyone actually hold a device while building the UI, or was &#39;done&#39; judged entirely on the fixed-size panel screens?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+        </summary>
+        <div class="answer" id="panel-q-7af78e20fb">
+          <p class="answer-text">No answer recorded.</p>
+          <span class="badge badge-unknown">Ungrounded</span>
+          
+          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
+        </div>
+      </details>
+
+      <details class="card" data-personas="senior-swe" data-id="q-a7a69c62d5">
+        <summary class="card-summary" aria-controls="panel-q-a7a69c62d5">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·29</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Who writes the kill bar before a run — you alone, or could someone else on a team set that gate?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+          <span class="question" role="heading" aria-level="2">Your strongest model both writes the briefs and judges the results of the lanes it set up — what checks catch that model grading its own work favorably?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-003507fffe">
+        <div class="answer" id="panel-q-a7a69c62d5">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -987,19 +987,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-11a68ab46d">
-        <summary class="card-summary" aria-controls="panel-q-11a68ab46d">
+      <details class="card" data-personas="senior-swe" data-id="q-aaf300c8d1">
+        <summary class="card-summary" aria-controls="panel-q-aaf300c8d1">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·30</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Is the full experiment ledger and the replay data behind these charts public in the repo, or are some of these numbers from private logs I can&#39;t verify myself?</span>
+          <span class="question" role="heading" aria-level="2">Is the forty-five-fork count and the claim that only two forks mattered a pre-registered tally, or a retrospective count made after you already knew which fixes worked?</span>
           <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
         </summary>
-        <div class="answer" id="panel-q-11a68ab46d">
+        <div class="answer" id="panel-q-aaf300c8d1">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -1007,19 +1007,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="mid-swe" data-id="q-20a25977b6">
-        <summary class="card-summary" aria-controls="panel-q-20a25977b6">
+      <details class="card" data-personas="pm" data-id="q-b502e76c35">
+        <summary class="card-summary" aria-controls="panel-q-b502e76c35">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·31</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">What is the language head, mechanically — a small classifier bolted onto the embedding output?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
+          <span class="question" role="heading" aria-level="2">About how many of the roughly hundred experiments ran fully unattended overnight versus needing you to check in or intervene?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-20a25977b6">
+        <div class="answer" id="panel-q-b502e76c35">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -1027,19 +1027,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="senior-swe" data-id="q-3042fe310c">
-        <summary class="card-summary" aria-controls="panel-q-3042fe310c">
+      <details class="card" data-personas="mid-swe" data-id="q-d4f707d1e8">
+        <summary class="card-summary" aria-controls="panel-q-d4f707d1e8">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·32</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">The persona panel said DONE on a fixed viewport but your own phone showed it was unusable — how many other DONE verdicts from that panel have you since re-checked on a real device?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">For someone trying this next week, which single file in the starter kit should they open first?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-3042fe310c">
+        <div class="answer" id="panel-q-d4f707d1e8">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -1047,19 +1047,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-68c06793f2">
-        <summary class="card-summary" aria-controls="panel-q-68c06793f2">
+      <details class="card" data-personas="pm" data-id="q-d6be4adb98">
+        <summary class="card-summary" aria-controls="panel-q-d6be4adb98">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·33</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">For the live demo, was the card that held actually held long enough for a hand to tap it, or just long enough to look stable on stage?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">A usage limit cut off three build lanes mid-work at one point — how would you plan capacity or budget around that at team scale?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
         </summary>
-        <div class="answer" id="panel-q-68c06793f2">
+        <div class="answer" id="panel-q-d6be4adb98">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -1067,19 +1067,19 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="designer" data-id="q-69abcc944a">
-        <summary class="card-summary" aria-controls="panel-q-69abcc944a">
+      <details class="card" data-personas="mid-swe" data-id="q-ef12ffba07">
+        <summary class="card-summary" aria-controls="panel-q-ef12ffba07">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·34</span>
             <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:22.2%"></span></span>
               <span class="score-num">3</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">Do the persona briefs ever get revised based on what real users actually do, or do they stay fixed once written?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+          <span class="question" role="heading" aria-level="2">Is the morning report with the calls only you can make something the gate assembles automatically, or do you have to write it yourself each night?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-69abcc944a">
+        <div class="answer" id="panel-q-ef12ffba07">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           
@@ -1087,119 +1087,39 @@ details[open] > .card-summary::before {
         </div>
       </details>
 
-      <details class="card" data-personas="pm" data-id="q-8bd67ccb85">
-        <summary class="card-summary" aria-controls="panel-q-8bd67ccb85">
+      <details class="card" data-personas="mid-swe" data-id="q-953842408f">
+        <summary class="card-summary" aria-controls="panel-q-953842408f">
           <span class="card-head">
             <span class="rank-tag" aria-hidden="true">Q·35</span>
-            <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
-              <span class="score-num">3</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">Beyond the $9 in labeling calls, what does the Claude Max subscription itself cost, and does that scale if a whole team runs this?</span>
-          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
-        </summary>
-        <div class="answer" id="panel-q-8bd67ccb85">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="senior-swe" data-id="q-9265949895">
-        <summary class="card-summary" aria-controls="panel-q-9265949895">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·36</span>
-            <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
-              <span class="score-num">3</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">Letting the swarm self-steer broke the next day and you had to keep correcting it — what exactly went wrong, and is that failure mode still possible today?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
-        </summary>
-        <div class="answer" id="panel-q-9265949895">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="mid-swe" data-id="q-a6af02b0ec">
-        <summary class="card-summary" aria-controls="panel-q-a6af02b0ec">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·37</span>
-            <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
-              <span class="score-num">3</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">How do the lane branches actually merge back once a gate passes — do you squash-merge automatically, or is that a manual review step too?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
-        </summary>
-        <div class="answer" id="panel-q-a6af02b0ec">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="mid-swe" data-id="q-ec3985f322">
-        <summary class="card-summary" aria-controls="panel-q-ec3985f322">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·38</span>
-            <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
-              <span class="score-num">3</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">What does replaying a recorded session offline actually involve — is that a custom tool, or something off the shelf?</span>
-          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
-        </summary>
-        <div class="answer" id="panel-q-ec3985f322">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="designer" data-id="q-ed93fdad32">
-        <summary class="card-summary" aria-controls="panel-q-ed93fdad32">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·39</span>
-            <span class="score-wrap" title="likelihood score 3">
-              <span class="meter"><span class="meter-fill" style="width:60%"></span></span>
-              <span class="score-num">3</span>
-            </span>
-          </span>
-          <span class="question" role="heading" aria-level="2">Since one panel already returned a false DONE on a real device, how many other screens have you not yet re-checked by hand?</span>
-          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
-        </summary>
-        <div class="answer" id="panel-q-ed93fdad32">
-          <p class="answer-text">No answer recorded.</p>
-          <span class="badge badge-unknown">Ungrounded</span>
-          
-          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
-        </div>
-      </details>
-
-      <details class="card" data-personas="senior-swe" data-id="q-ac6380920e">
-        <summary class="card-summary" aria-controls="panel-q-ac6380920e">
-          <span class="card-head">
-            <span class="rank-tag" aria-hidden="true">Q·40</span>
             <span class="score-wrap" title="likelihood score 2">
-              <span class="meter"><span class="meter-fill" style="width:40%"></span></span>
+              <span class="meter"><span class="meter-fill" style="width:14.8%"></span></span>
               <span class="score-num">2</span>
             </span>
           </span>
-          <span class="question" role="heading" aria-level="2">For the jitter fix, how do you attribute the drop between the 3x faster server and the cancel-but-keep-answer change beyond just not crediting one alone?</span>
-          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+          <span class="question" role="heading" aria-level="2">You used terms like top-3 and the box vote pretty quickly during the demo — can you spell out in plain terms what those mean?</span>
+          <span class="chips"><span class="chip" data-persona="mid-swe">New to agents</span></span>
         </summary>
-        <div class="answer" id="panel-q-ac6380920e">
+        <div class="answer" id="panel-q-953842408f">
+          <p class="answer-text">No answer recorded.</p>
+          <span class="badge badge-unknown">Ungrounded</span>
+          
+          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
+        </div>
+      </details>
+
+      <details class="card" data-personas="designer" data-id="q-c8ea867b0b">
+        <summary class="card-summary" aria-controls="panel-q-c8ea867b0b">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·36</span>
+            <span class="score-wrap" title="likelihood score 2">
+              <span class="meter"><span class="meter-fill" style="width:14.8%"></span></span>
+              <span class="score-num">2</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">For the crop-versus-vote decision that fixed misidentified cards, was that judged only by replaying recordings, or did a person watch it live on a real stream before it shipped?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span></span>
+        </summary>
+        <div class="answer" id="panel-q-c8ea867b0b">
           <p class="answer-text">No answer recorded.</p>
           <span class="badge badge-unknown">Ungrounded</span>
           

@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "73483da923af1febbc0716b3db4c9b9a9a4aa2142d9ed5d4297fbce6f28c4ec0",
+  "id": "q-684a371bb1",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 12,
+      "sha256": "7ea53bcc71bbbb9d8113a1cbebb7241d4128afed382894197655d7a09d442d7f"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "fef4af703b2f80b456504489e414e6601aef31a268834178ab6ed2afd050a3ba"
+    },
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "chunk": 1,
+      "sha256": "11bd9b51128dc6b2ef96b67a1469281257b1bb74276b08a057fa50e3b8eca7fd"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 14,
+      "sha256": "bd659e2ddc5c9ce9a105d14c16f0772033db5bc932daad26335f1379c3747a2c"
+    },
+    {
+      "path": "starter/README.md",
+      "chunk": 5,
+      "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 6,
+      "sha256": "f884ffe6af50a1f2ba6338a1a99fef1b52445d5fa405fefea0e51f02a9b1f679"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+      "chunk": 17,
+      "sha256": "a296b9d2331d159c26d845afb6e3d5a39197f25cb7ec9ee890ebe8b5b91cc0d9"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E17c-zhcn-shadow-2026-09-05.md",
+      "chunk": 5,
+      "sha256": "c1d558a4a230686f81c2c0454b984c22ed5fca484c06ba2c17f3289c137969e2"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E46h-student-coldstart-2026-09-08.md",
+      "chunk": 12,
+      "sha256": "b8149e6b2e2fd72ec2e6281195145fb0101d4fa899246d098b911ab791567761"
+    }
+  ],
+  "output": {
+    "answer": "Beyond the bar and the flag, each run got hard caps set before it started — a cap on tool calls, on wall-clock time, and on spend, written into the lane brief rather than buried in a config file. Production also had guard rails that refuse unsafe configuration at boot, and the gate itself was judged offline against frozen, recorded data rather than a live session, so nothing merges on a live judgment call. Each run also got a named end time instead of an open-ended 'overnight.' It wasn't airtight — before I added a watchdog, an idle tab used up a full day's API allowance overnight.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Before the run"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(a) Mechanism table"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "used up a full day's API allowance overnight"
+      }
+    ]
+  }
+}

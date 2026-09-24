@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "e2f398e69f167fc41e50b98c6459fa6e579986ee38fb139f6230827454bcd500",
+  "id": "q-ab06028eb0",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 15,
+      "sha256": "689252b5b2ca0efef305727ee63c550c09318e896efc82aada66e3558f4286ce"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 14,
+      "sha256": "0aa6a4c299d2f29424d29f429e93a13188c32551b4cde03572341144f3a58113"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 13,
+      "sha256": "e88fd0a88b8db299c8b9319d3f89c60506b4e62885d2c872abfe89b054b4a3e9"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 25,
+      "sha256": "c2f4d09b1d5f0f41d78328a745cfe7615f3ccd37bd5a2907987306af1dbbe818"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 4,
+      "sha256": "1b9459cf710046b7515c4a13d44c21254a23a5640048910c1449b624ca786933"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 21,
+      "sha256": "e83d49543050ff7df61bd7e4db6134753e04cc1820e0641f2d27355206d6e122"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E65-improved-gallery-2026-09-08.md",
+      "chunk": 17,
+      "sha256": "2f2df307b63421f3f90d4a307a3bf41bfd2b3c59efe1c3eabbf7831e9b0b8900"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E78-box-fleet-2026-09-09.md",
+      "chunk": 4,
+      "sha256": "0e31827444410c0d434bf39488ff4241f24c5daa707014697c99acef33f1a3cb"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E75-local-vector-store-2026-09-09.md",
+      "chunk": 3,
+      "sha256": "11a717a2ba7b504fd35f50dbf2e76ba3fe14948cbfba2ad6f329684e3dee0559"
+    }
+  ],
+  "output": {
+    "answer": "It did ship, but not on the strength of that one 201-photo test. I flagged it precisely because it was found after my favorite idea failed the bar, on the same photos — that's a coincidence I wanted checked, not trusted outright. It went out behind a flag rather than as a plain announced win, and it was flipped into production only after a replay reproduced the first-guess numbers. The training itself was held out separately: the language head trained on catalogue images only with its one knob set on a separate dev split, and none of the 201 test photos touched that training.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "§ Slide 11 · Is my favourite idea actually better?"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "§ Backup · cost, hours, hold-out"
+      }
+    ]
+  }
+}

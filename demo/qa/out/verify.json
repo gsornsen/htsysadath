@@ -1,149 +1,214 @@
 [
   {
-    "id": "q-01fd23ac86",
+    "id": "q-83c3befec6",
     "ok": true,
     "citations": [
       {
-        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
-        "locator": "a fail line without an exit code is not a gate",
-        "status": "unverifiable"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "1 · The arc",
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page",
         "status": "verified"
       },
       {
-        "path": "starter/two-lanes/checklist.md",
-        "locator": "A gate chained with `;` is not a gate.",
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "3 · The transferable move",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-0d3aa1f759",
-    "ok": true,
-    "citations": [
-      {
-        "path": "docs/project/decisions.md",
-        "locator": "D14 · 2026-09-24 · Two verified answers: the jitter story's ending, and the hold-out",
-        "status": "verified"
-      },
-      {
-        "path": "grailith:docs/experiments/EXP-E65a-language-head-2026-09-08.md",
-        "locator": "4 · Results",
-        "status": "unverifiable"
-      },
-      {
-        "path": "talk/slides/deck.md",
-        "locator": "Method: kill lines in action",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-36bab273b3",
-    "ok": true,
-    "citations": [
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "only a human flips the production flag",
-        "status": "verified"
-      },
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "What needs your word",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-3e67f3797f",
-    "ok": true,
-    "citations": [
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "1 · The arc",
-        "status": "verified"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "log refusals explicitly",
-        "status": "verified"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "ask → accepted/reshaped/declined + reason",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-55a06a9a84",
+    "id": "q-45884e8dde",
     "ok": true,
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates",
+        "locator": "Slide 9 · How do I chase five fixes at once?",
         "status": "verified"
       },
       {
-        "path": "mining/arcs/F-agent-labeling.md",
-        "locator": "§ Scope caveats (read before quoting)",
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(c) Honest failures",
+        "status": "verified"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "locator": "RESUMED from their worktrees at 16:33 PDT",
+        "status": "unverifiable"
+      }
+    ]
+  },
+  {
+    "id": "q-684a371bb1",
+    "ok": true,
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Before the run",
+        "status": "verified"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(a) Mechanism table",
+        "status": "verified"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "used up a full day's API allowance overnight",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-6344986c68",
+    "id": "q-eecdcba323",
     "ok": true,
     "citations": [
       {
         "path": "mining/findings/lot-top3-unlocked.md",
-        "locator": "5 · Caveats",
+        "locator": "Headline",
         "status": "verified"
       },
       {
-        "path": "talk/notes.md",
-        "locator": "Slide 14 · Method: measure the bar: the bar, live",
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "5 · Caveats",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-7bfd511a55",
+    "id": "q-02bbe21a0a",
+    "ok": true,
+    "citations": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "The method, in one page",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-7330d1f727",
+    "ok": true,
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D2 · 2026-09-24 · Fable coordinates; smaller models do bounded work",
+        "status": "verified"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-8c56458655",
+    "ok": true,
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Backup · cost, hours, hold-out",
+        "status": "verified"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-9654e5a068",
     "ok": true,
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates",
+        "locator": "§ Slide 14 · The tests pass. Is it actually done?",
         "status": "verified"
       },
       {
         "path": "starter/persona-gate/README.md",
-        "locator": "The panel walks the BUILT thing, not a description of it",
-        "status": "verified"
-      },
-      {
-        "path": "starter/persona-gate/verdict.md",
-        "locator": "§ The real-device check (do this before calling it DONE)",
+        "locator": "\"the device they're on, and the one thing\"",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-b06db9f644",
+    "id": "q-ab06028eb0",
     "ok": true,
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "§Slide 14 · Method: measure the bar: the bar, live",
+        "locator": "§ Slide 11 · Is my favourite idea actually better?",
+        "status": "verified"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "§ Backup · cost, hours, hold-out",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-bf7d3647b1",
+    "id": "q-cdd3b7872c",
+    "ok": true,
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "the right card was in its three on 45 of 69 lots",
+        "status": "verified"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Not done, but measurable; I know which number to move",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-cf2c8b2307",
+    "ok": true,
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "That's my estimate; nothing in the record measures it",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-f3c8d00e6a",
+    "ok": true,
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "For Dez, a task went from 30 seconds to 9, simulated",
+        "status": "verified"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "pretty much unusable",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-1833d3c445",
+    "ok": true,
+    "citations": [
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Backup · four yardsticks",
+        "status": "verified"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "1 · What \"lock state\" means here, and where it came from",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-53d8bc728e",
     "ok": true,
     "citations": [
       {
@@ -152,174 +217,114 @@
         "status": "verified"
       },
       {
-        "path": "talk/plan/critique2/mid-swe.md",
-        "locator": "a new worktree and branch per lane",
+        "path": "mining/findings/gates-and-flags.md",
+        "locator": "(d) Diagram content — `gates-flags.svg` (≤ 7 boxes, ≤ 6 words each)",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-c4aa68cb06",
+    "id": "q-5cd4bdb891",
+    "ok": true,
+    "citations": [
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "raw material never committed",
+        "status": "verified"
+      },
+      {
+        "path": "mining/findings/experiments-index.md",
+        "locator": "Provenance: `[src: docs/experiments/<file>.md]` means the grAIde-main repo path",
+        "status": "verified"
+      },
+      {
+        "path": "talk/plan/critique2/senior-swe.md",
+        "locator": "the `G:`/EXP sources are in private Grailith",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-5dead91e34",
+    "ok": true,
+    "citations": [
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "locator": "3. The transferable move",
+        "status": "verified"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "How do I chase five fixes at once?",
+        "status": "verified"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "Is my favourite idea actually better?",
+        "status": "verified"
+      }
+    ]
+  },
+  {
+    "id": "q-699fd94af1",
+    "ok": true,
+    "citations": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "Write the gate's pass/fail bar first",
+        "status": "verified"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-SETTLE-1-2026-09-08.md",
+        "locator": "the split that keeps it honest",
+        "status": "unverifiable"
+      }
+    ]
+  },
+  {
+    "id": "q-753101677d",
     "ok": true,
     "citations": [
       {
         "path": "talk/notes.md",
-        "locator": "pick the fix I know best, push",
+        "locator": "§ Slide 4 · It almost worked, and I could see 45+ ways to fix it",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-eb71b91ad7",
+    "id": "q-86c2317fc4",
     "ok": true,
     "citations": [
       {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Before the run",
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "1. The arc in one paragraph",
         "status": "verified"
       },
       {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Morning-report template",
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "The number: two levers, not one",
         "status": "verified"
       }
     ]
   },
   {
-    "id": "q-08bed40cd0",
+    "id": "q-9d51cce471",
     "ok": true,
     "citations": [
       {
-        "path": "talk/plan/critique2/mid-swe.md",
-        "locator": "Can I start Monday?",
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up",
         "status": "verified"
       },
-      {
-        "path": "starter/persona-drafts/personas/pm.md",
-        "locator": "Persona: Product Manager — draft-lane brief",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-0d29b274c7",
-    "ok": true,
-    "citations": [
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "Before the run",
-        "status": "verified"
-      },
-      {
-        "path": "mining/arcs/A-experiments.md",
-        "locator": "pre-registered KILL line",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-0dae00d91c",
-    "ok": true,
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "§ Slide 6 · What changed",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-11e8ef611b",
-    "ok": true,
-    "citations": [
       {
         "path": "mining/arcs/E-coordinator.md",
         "locator": "reviewer sits ONE TIER ABOVE the implementer",
         "status": "verified"
       },
       {
-        "path": "mining/findings/cross-arc.md",
-        "locator": "haiku→sonnet, sonnet→opus 4.6, opus→fable",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-22af88e47d",
-    "ok": true,
-    "citations": [
-      {
-        "path": "starter/persona-gate/README.md",
-        "locator": "add a real-device check before DONE",
-        "status": "verified"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "pretty much unusable",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-3d168aa278",
-    "ok": true,
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "Backup 2 · Four yardsticks",
-        "status": "verified"
-      },
-      {
-        "path": "talk/plan/critique2/designer.md",
-        "locator": "\"65.2 %, about 2 in 3\"",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-42b9213867",
-    "ok": true,
-    "citations": [
-      {
-        "path": "starter/two-lanes/unattended.md",
-        "locator": "only a human flips the production flag",
-        "status": "verified"
-      },
-      {
         "path": "talk/slides/deck.md",
-        "locator": "gates decide the merge; flags keep it reversible",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-5f46cc334d",
-    "ok": true,
-    "citations": [
-      {
-        "path": "starter/persona-gate/README.md",
-        "locator": "pretty much unusable",
-        "status": "verified"
-      },
-      {
-        "path": "starter/persona-gate/verdict.md",
-        "locator": "The real-device check (do this before calling it DONE)",
-        "status": "verified"
-      }
-    ]
-  },
-  {
-    "id": "q-6044324aa6",
-    "ok": true,
-    "citations": [
-      {
-        "path": "talk/notes.md",
-        "locator": "§ Slide 17 · Method: persona review gates",
-        "status": "verified"
-      },
-      {
-        "path": "mining/arcs/C-personas-review.md",
-        "locator": "§ 3 · The transferable move",
+        "locator": "stronger model reviews, always one tier up, never a peer",
         "status": "verified"
       }
     ]

@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "ff788396fdaf498e53488eafe02c9be5e2c78873f255d595db3a3a226d45c657",
+  "id": "q-f3c8d00e6a",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "85c91ec2e3e1976e8bdb0b9aff29f700880b131517235287a0271e0893732cc6"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "ead4771bc9c82ef598e82ecd61b6da452fdd7e6792aaf0cbcef09c421e23955a"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 10,
+      "sha256": "28b6e549e9d0f8b2e995b2b744d76e29356e653cba541adaf337ed76c9b8c665"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 10,
+      "sha256": "443081180e41623263b7d4fffe91f22f23835bd84cd0f77124221320647fda45"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 2,
+      "sha256": "448731cbd750d205aaad4dd1e9c9db91c38c6f5fb0f47d07e61205987b35589a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+      "chunk": 12,
+      "sha256": "db15d718c695175761a77682a363c490d23fb17f8eab232a8afd94a2dffe87be"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "chunk": 6,
+      "sha256": "e0d5e0851294faacacb6a5e3f1fd130e112719197b12f9b820f2d65bf098d578"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+      "chunk": 3,
+      "sha256": "8d4759502c52b28894b5f84be2bc6f18c9b4c1a8a4c8269a7e5ac6892672f29e"
+    }
+  ],
+  "output": {
+    "answer": "That's a simulated persona number, not a usability measurement — the panel walked a fixed-size browser, no human involved. And the record on this one cuts against trusting it: that same panel said DONE, and the next morning on my own phone it was pretty much unusable. So I treat panel numbers like Dez's as a proxy only, never a done signal by themselves. After that gate failed, I moved every labeler test to run at phone, tablet and desktop widths in a live browser, and a real-device walk became the last step before calling anything done.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "For Dez, a task went from 30 seconds to 9, simulated"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "pretty much unusable"
+      }
+    ]
+  }
+}

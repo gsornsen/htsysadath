@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "11c9d3741562394cc2ba202639e21ee248b3c01ff498ba296657ea567358bf8d",
+  "id": "q-9d51cce471",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/README.md",
+      "chunk": 5,
+      "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 2,
+      "sha256": "eac1664fcbb62d28bcc052aac141e50f0b10c7e31db401d843eff13dbd280c59"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 11,
+      "sha256": "7a75c10440d1b47c5bdc9041e28f2d2f1a35f47b6adf6b77f924dcd3434d6f9e"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 21,
+      "sha256": "20b2b874553747d788ecd22e3fe223cceb0a7d872f23850a6e1d6306083ad58f"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "0cd6f67e78a7007f4c316b48015907b9804aff86cde182380b0830333b984633"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 1,
+      "sha256": "4665e50e09f493bfdae762b0019ab4450983fb160705da2564f2263a825cc078"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 132,
+      "sha256": "dbeb1ea0137cc6192061b1327d4f6a97d50b628fdaf10a8fca8ef0a196585ad8"
+    },
+    {
+      "path": "grailith:docs/plan/2026-09-18-trunk-consolidation/experiment-ledger.md",
+      "chunk": 34,
+      "sha256": "e7d87fc9d6236b71632d2d772bd57d2adb50b9a24ac2c2f1fe86cbce397032a6"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E53c-cold-start-2026-09-07.md",
+      "chunk": 41,
+      "sha256": "574d4ea84eba4992f14ea58ec40fca4544287d04825bcb9fe39164a92a904b4e"
+    }
+  ],
+  "output": {
+    "answer": "It means the model reviewing a lane's output has to be a stronger tier than the model that built it, never a peer — the ordering runs haiku to sonnet to opus to my strongest model. A sonnet-tier build lane gets an opus-tier reviewer, for example. And the review can't just say 'looks good' — it has to state plainly what it checked, like a count, a spot-check with exact lines, or a re-run of the gate's command. My strongest model is the one writing the briefs and judging results, while I make the final calls.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "Reviewer one tier up"
+      },
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "locator": "reviewer sits ONE TIER ABOVE the implementer"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "locator": "stronger model reviews, always one tier up, never a peer"
+      }
+    ]
+  }
+}
