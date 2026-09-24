@@ -1,23 +1,9 @@
-# Abstract — rough draft (PLACEHOLDER — Gerald writes this; lanes must not invent it)
+# Abstract — rough draft
 
-Status: NOT WRITTEN. Until this file has a real draft, prompts/04 Part 2 uses the thesis
-paragraph in docs/project/brief.md as the stand-in and says so in every output.
+Status: In Progress
 
-## Criteria for the rough draft (write fast; do not polish — polish is what the fan-out is for)
+## Draft
 
-- 150–300 words, plain prose, first person is fine. Typos are fine.
-- It must contain, in any order: (1) the moment — the fork where instinct says push through;
-  (2) why that instinct wins under scope/staffing/timeline pressure; (3) what changed — parallel
-  exploration is now cheap, deciding fast is the skill; (4) one concrete example you would tell
-  a colleague in the hallway (the Japanese-index call, or the "when to run identify" call);
-  (5) the two takeaways for next week (persona drafts for documents; a coordinator + lanes for
-  technical exploration).
-- Include at least one number you are willing to defend (a time saved, a count of experiments,
-  a review-round count). Mark it `[verify]` if unsure — the mining lanes will check it.
-- Do NOT include: tool or vendor names as the point (the method is the point), anything from the
-  hygiene "never" list, praise for the tools.
-- Leave a line at the end: `Audience I most want to reach: ___` — the fan-out uses it to weight
-  the hybrid.
+Early on with Scout, I was trying to solve for an issue at the boundary of the detect card and identify step where the client detects a card is present, generates a crop, sends it off to the server to generate an embedding, then the image to image search query is run. It was working and we were getting results at about once every 500 ms, but the app was jittery, presenting matches, overriding matches, etc. It wasn't even close to usable but everything beyond the presentation layer looked promising. I knew there could be ways to tackle it from the UI/UX as well as at the detect layer, and if necessary the embedding generation step. Altogether across UI/UX, Card Detection, Embedding Generation, lanes each fanned out into at least 3 different parts of the system that could be explored, and each of those fanned out to 5 different experiments that could be run. The key unlock ended up being instrumenting key transitions in posthog and ensuring data could be replayed and tests/experiments could be run concurrently offline before pushing and testing in the real world. Once this was in place, I was able to work with a team of agents to come up with nearly 100 different experiments to run in isolated git worktrees, all replaying the same data. Using a hypotheses driven method with gates allowed me to let agents run through experiments while I slept and during the day while I was busy doing other things, even when an experiment was blocked by another experiment.. if that gate was cleared, it was deployed/merged and the next experiment unlocked. My big thing I would say to a colleague is: when you give agents the right context, the right autonomy, and the right guardrails, they can work as if you had multiple versions of yourself on those tasks/goals/problems while you focus on other things. Two takeaways next week: when you come to the next for in the road, think about how you could get an answer to that problem while you focus on something else. How could you validate the different forks? Could that be automated? Try it out!
 
-When done: replace this file's contents, commit on `main` as `talk: rough abstract v1`, and
-mark the "Audience drafts" lane in docs/project/tracking.md as unblocked.
+The audience I most want to reach: Software Engineers, Product Managers, Product Designers

@@ -202,3 +202,21 @@ inference from a partial record was allowed to overrule the person who was there
 instance; it becomes the counter-example, **the record can be over-read too**, which the talk's
 spine needs so it doesn't become "trust the logs over people". Data-viz lane told to drop the
 concurrency swimlane and Art Binder.
+
+## D10 · 2026-09-24 · Abstract written; Demo 1 fallback is Gerald's own video; the opening fork
+
+- **Abstract:** Gerald wrote `talk/abstract-rough.md` (383 words). It's Demo 1's input.
+- **Demo 1 fallback:** Gerald has a ~2-minute recorded video of the demo and states the live demo
+  won't stall. The fallback ladder in presentation-plan §4 is replaced by: live, or play the video.
+  The labelled-rehearsal fallback is dropped. The video stays outside the public repo unless
+  Gerald asks for it to be committed after a hygiene review.
+- **Opening fork (plan Q3) answered by the abstract:** neither the Japanese-index call nor "when to
+  run identify", but the scout's jittery detect→identify boundary (results every ~500 ms,
+  matches presented then overridden). The unlock: instrument key transitions in PostHog so data
+  can be replayed and experiments run concurrently offline, then about 100 hypothesis-gated
+  experiments in isolated worktrees overnight, each gate unlocking the next.
+- **Audience emphasis:** Software Engineers, Product Managers, Product Designers.
+- **Plan status:** `talk/plan/presentation-plan.md` proceeds as written plus §8 and this entry;
+  build swarm L1–L5 launched. The abstract's checkable claims (~500 ms cadence, "nearly 100
+  experiments", PostHog replay, overnight gates) are sourced by L5 as provenance. Contradictions
+  go to Gerald as questions; they don't overrule him.
