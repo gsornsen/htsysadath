@@ -268,7 +268,7 @@ section blockquote p {
   margin: 0;
 }
 section.story blockquote::after {
-  content: "— Gerald";
+  content: "— my account";
   display: block;
   margin-top: 0.2em;
   font-size: 0.6em;
@@ -389,4 +389,93 @@ section.backup {
 }
 section.backup h2 {
   color: var(--ink-dim);
+}
+
+/* ---- v5 layout (story/deck-v4: audience-first methods) ------------- */
+
+/* Wayfinding header on method slides: which of the four problems this is.
+   Green = method, small and dim enough not to compete with the title. */
+section header {
+  position: absolute;
+  top: 16px;
+  left: 72px;
+  right: 120px;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-3);
+}
+
+/* The one-line method under the audience's question. */
+section p.method {
+  margin: 0.1em 0 0;
+  padding-left: 0.5em;
+  border-left: 6px solid var(--accent-3);
+  font-size: 0.85em;
+}
+
+/* Slide 2: the audience's moment, three beats, no data. */
+section.moment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.moment p.beat {
+  font-size: 1.3em;
+  margin: 0.25em 0;
+  padding-left: 0.6em;
+  border-left: 6px solid var(--ink-dim);
+}
+section.moment p.default {
+  color: var(--ink-dim);
+  font-style: italic;
+}
+
+/* Slide 12: a chart plus one big line. */
+section.measure img {
+  max-height: 330px;
+}
+section p.bigline {
+  font-size: 0.95em;
+  margin: 0.4em 0 0;
+}
+section p.bigline b {
+  color: var(--accent-2);
+}
+
+/* Method slides with a bulleted evidence list. */
+section ul {
+  margin: 0.4em 0 0;
+}
+section li {
+  margin-bottom: 0.2em;
+}
+
+/* Slide 17: the cheat sheet, a full-width table. */
+section.cheat table {
+  width: 100%;
+  font-size: 0.72em;
+  margin-top: 0.4em;
+  display: table;
+}
+section.cheat th {
+  text-align: left;
+  color: var(--ink-dim);
+  font-weight: 600;
+}
+section.cheat td,
+section.cheat th {
+  background: var(--surface);
+  vertical-align: top;
+}
+section.cheat td strong {
+  color: var(--accent-3);
+}
+section.cheat code {
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+section.cheat td:last-child {
+  width: 30%;
 }

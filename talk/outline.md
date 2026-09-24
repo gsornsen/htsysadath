@@ -1,129 +1,125 @@
-# Outline v4: "How to scale yourself and do all the things"
+# Outline v5: "How to scale yourself"
 
-Lane `fix/F2-deck` · Opus 5.5 · 2026-09-24 11:48 PDT. v3 (lane `story/S1-deck-v2`: structure v2,
-D16, with D17's order and cuts, and D18's crop vote) revised against critique round 2
-(`talk/plan/critique2.md`, F2). Old slide 13 splits into 13 and 14, so every later slide moves up
-by one. Speaker notes with citations live in `talk/notes.md`; this file carries the argument only.
+Lane `story/deck-v4` · Opus 5.5 · 2026-09-24 12:1x PDT. A proposal on `talk/plan/structure-v4.md`
+(audience-first; the coordinator merges only after I approve). v4 (lane `fix/F2-deck`) is
+rebuilt around the audience's questions: engineers, PMs and product designers asking "what do I do in
+MY project?". Speaker notes with citations live in `talk/notes.md` (generated from the deck's
+notes); this file carries the argument only.
 
-**Format.** 35 min live + 10 min Q&A, 19 slides + 2 backup. Audience: software engineers, product
+**Format.** 35 min live + 10 min Q&A, 18 slides + 3 backup. Audience: software engineers, product
 managers, product designers (D10).
 
-**The talk in one sentence.** When a hard fork lands mid-project, you don't have to push through on
-the fix you know: instrument it, replay it, and let gated experiments run unattended while you work,
-picking the method that fits the kind of problem, with a human verdict at the gates that matter.
+**The talk in one sentence.** When a hard problem lands mid-project, there are four problems you'll
+hit (too many forks for one of you; is my favourite idea better; is it done; where to start), and a
+method for each, shown with the card scout as evidence and one step to try next week.
 
-**Shape.** Situation → complication → resolution, with Gerald as protagonist and narrator (story
-plan §a). Situation: the scout works today (2), and here's the trip (3). Complication: the first
-sign we were onto something was a jitter (4), and it forked 45 ways (5). Resolution: what changed,
-and what it cost (6), the jitter resolved early (7), the working thing live (8), then the methods,
-one per kind of problem (9–18), and two things to do (19). Visual grammar (story plan §d): STORY
-beats (4, 5, and the testimony lines on 6, 18, 19) use a quotation treatment, a grey rule, and carry
+**Shape.** Situation → complication → resolution for Part 1, told from the audience's seat first
+(slide 2: their moment, no card scout) and then as my version (3–7). Part 2 is not an arc: four
+problems, each a short run of method slides in one fixed pattern. Part 3 hands it back: a cheat sheet
+and two actions.
+
+**The method-slide pattern (9–16).** A small green header names the problem (A–D). The title is the
+audience's question, in their words. One line, with a green rule, gives the method in plain words.
+The card scout is the evidence: one visual or one number, labelled in plain words. Codes (E67, G0h…)
+live only in the source footer and the notes. The notes run in three moves: "you'll see this
+when…", what I did and what the evidence says (cited), and "try it" (pointing into `starter/`).
+
+**Visual grammar.** STORY beats (2, 4, and the testimony lines on 5 and 18) use a grey rule and carry
 no numbers as data; EVIDENCE beats carry a visual and a source footer. Colour: one meaning per hue
-(blue = before, orange = after, green = method/gate, grey = context and testimony).
+(blue = before, orange = after/shipped, green = method/gate, grey = context and testimony).
 
 ## Slide map
 
-### Part 1 · Where it ended up, and how (3.5 min, slides 1–3)
+### Part 1 · A moment you'll recognise (13.0 min, slides 1–7)
+
+| # | Min | Title (as the audience reads it) | The argument it carries |
+|---|---|---|---|
+| 1 | 0.5 | How to scale yourself: methods for when a hard problem lands mid-project | The promise, with the repo URL. |
+| 2 | 1.5 | You've been here | Their moment, no card scout: a hard problem lands mid-project; five fixes, one week, one of you; the default is to pick one and push. Situation, not data. |
+| 3 | 1.0 | My version: the card scout | The screenshot; one line on what it does. In August naming a card took 6–15 s. |
+| 4 | 1.5 | It almost worked, and I could see 45+ ways to fix it | Story: it got fast enough to flap (09-02); 3 areas × 3 parts × ~5 experiments, my estimate (P5). `fork-tree.svg`. |
+| 5 | 2.0 | What changed: trying an idea got cheap | Worktree, gate, flag defined; the loop (record → replay offline → gated experiments in worktrees, overnight). Cost on stage: ~30 min a day (my estimate), a flat Claude Max subscription, ~100 experiments in two weeks, the flapping fixed in 3 days (D13, D14, D16). |
+| 6 | 1.5 | Did it work? The flapping was gone in 3 days | E19 against a control: 35.8 → 15.4 → 0.14 per 100. Both levers get credit. |
+| 7 | 5.0 | Demo · the card scout, live | The dev-box build, vote on (D18): it lands and holds. Fallback: the recorded clip, said as recorded. |
+
+*Transition:* "That's where it ended up. Now the part that's about your projects."
+
+### Part 2 · Four methods for four problems (16.0 min, slides 8–16)
+
+| # | Min | Title (as the audience reads it) | Method (one line) | Evidence on screen |
+|---|---|---|---|---|
+| 8 | 1.0 | Four problems you'll hit, four methods | The map: A–D, problem → method. | `four-problems.svg` (to be drawn) |
+| **A** | | **Too many forks, one of you** | | |
+| 9 | 2.0 | How do I chase five fixes at once? | A lane per fix (own copy of the code, own agent, own gate); a smaller model builds, a stronger one reviews, I decide. | `e-lane-dag.svg`: this repo's lanes |
+| 10 | 3.5 | Can it keep working while I sleep? (focus) | Pass/kill bar first, flag, caps per run; the gate decides the merge, I flip production. Honest failure: the idle tab. | `gates-flags.svg` |
+| **B** | | **Is my favourite idea better?** | | |
+| 11 | 1.5 | Is my favourite idea actually better? | Write the score that kills the idea before the run, then let it. Dedup lost 14.43 points and died; the shipped re-rank came after the kill, on the same photos: a lead, then a flag and a replay. | `d4-arms.svg` |
+| 12 | 1.5 | Are we measuring what users feel? | Score what the user sees: the win halves (+9.95 first guess → +5.47 right card among the 3 shown). Live: about 2 in 3 (45/69 non-locked lots, one tapper). | `d4-slope.svg` + one line |
+| 13 | 1.0 | What should we stop working on? | Give every expensive idea a bar before it starts; a clean no is a result. Four stops from the ledger. | text list |
+| **C** | | **Is it actually done?** | | |
+| 14 | 2.5 | The tests pass. Is it actually done? | A persona panel in front of "done", then a real device. The panel said DONE; my iPhone said unusable. | `persona-gate.svg` (F1 lane) |
+| 15 | 1.5 | Too many judgment calls to do by hand? | Agents take the first pass, a person gives the verdict: labeling 180 s (my stopwatch) → 31–46 s. Two levers. | `f-two-levers.svg` |
+| **D** | | **Where do we even start?** | | |
+| 16 | 1.5 | Which piece do I build first? | Solve the hardest shared piece once, first: naming the card, for two apps (D11). | `shared-core.svg` |
+
+*Transition:* "Here's all of that on one slide."
+
+### Part 3 · Close (3.5 min, slides 17–18)
 
 | # | Min | Title | The argument it carries |
 |---|---|---|---|
-| 1 | 0.5 | How to scale yourself and do all the things | The promise, with the repo URL: orchestration, gates and experiments, and which fits which problem. |
-| 2 | 1.0 | The scout today | Open on the working thing: a card on a live stream, identified (screenshot; "it holds" is left for the live demo). |
-| 3 | 2.0 | How we got here | One timeline in one unit, identify latency as the client sees it: 6–15 s live (10.4 s median of 6 bakeoff captures, 08-18) → 375 ms p50 by 09-11 (EXP-E88), with seven areas that could each have eaten weeks. |
-
-*Transition:* "It didn't look like this in September. Here's the first sign we were onto something."
-
-### Part 2 · The complication (3.0 min, slides 4–5)
-
-| # | Min | Title | The argument it carries |
-|---|---|---|---|
-| 4 | 1.5 | The first sign | Story: identify had got fast enough to flap. Unusable on screen, promising underneath. |
-| 5 | 1.5 | The fork | Story: 3 areas × 3 parts × ~5 experiments (testimony); the default is to pick the fix you know and push. |
-
-*Transition:* "So what changed, so I didn't have to pick one?"
-
-### Part 3 · The resolution, shown (8.5 min, slides 6–8)
-
-| # | Min | Title | The argument it carries |
-|---|---|---|---|
-| 6 | 2.0 | What changed | Worktree, gate and flag in plain words; instrument → replay offline → gated experiments in worktrees overnight. The cost on stage: ~30 min a day of my time (my estimate) · a flat Claude Max subscription · ~100 experiments in two weeks · the jitter fixed in 3 days (D13, D14, D16). |
-| 7 | 1.5 | Jitter, resolved | Evidence: E19 against a control, 35.8 → 15.4 → 0.14 per 100, in 3 days. Both levers get credit: a faster server, then cancel-but-keep. |
-| 8 | 5.0 | Demo: the card scout, live | The dev-box build on a live stream, crop vote on: it lands and holds. Said in plain words: a little margin around each box, and keep the vote (D18). Fallback: the recorded clip. |
-
-*Transition:* "The jitter was one fork. They didn't all want the same tool. Here's the map."
-
-### Part 4 · The methods, one per kind of problem (18.0 min, slides 9–18)
-
-| # | Min | Title | The argument it carries |
-|---|---|---|---|
-| 9 | 1.5 | Which method fits which problem | The table of contents: 8 rows in slide order, problem → method → slide 10…18. |
-| 10 | 2.0 | Method: orchestration | The coordinator (my strongest model: briefs and judging, never building) defined once; a lane is a new worktree + branch + one session with a brief; gate written first; reviewer one tier up; commit early. This repo's own lanes on screen. |
-| 11 | 4.0 | Method: gates and flags (focus) | What let experiments run while I slept: a window with an end time, then the six numbered boxes (kill bar; flag dev on / prod off; per-run caps, the example from the labeling agents; guard rails + idle-tab watchdog; judged offline on frozen data; gate passes → merge → next unlocks), the morning prod flip, and one honest failure (an idle tab burned a day's allowance). [gates-and-flags] |
-| 12 | 1.5 | Method: kill lines in action | Pre-register the kill: de-duplication hit it. The language-head arm was added AFTER the kill, on the same 201 test crops: a lead, not proof, so it went out behind a flag and prod flipped after a replay. |
-| 13 | 1.0 | Method: measure the bar · top-3 | Full-width slope: the same win halves at top-3 (+9.95 → +5.47 points). |
-| 14 | 1.5 | Method: measure the bar · live lots | Full-width tiles, plain words on screen (auto-lock; top-3 when it doesn't): locks 18/87, right on 16/18, top-3 on 45/69 non-locked = 65.2 %. One tapper, mostly English. Not done, but measurable. |
-| 15 | 1.0 | Method: stop things | Four clean no's the gates bought: an encoder swap, a fine-tune and a smaller model, a re-embed, paid art. Source footer: the ledger. |
-| 16 | 1.5 | Method: hardest shared core first | One identify core for bulk scan and the scout; the LLM came out of both (D11). |
-| 17 | 2.5 | Method: persona review gates | `persona-gate.svg`: Dez's brief → panel DONE, 30 s → 9 s → "pretty much unusable" on my own iPhone next morning → a real-device check before DONE (the rule I draw from it; the record's fix was another panel pass). |
-| 18 | 1.5 | Method: agents first, human verdict | Labeling: 180 s by hand → ~31–46 s with an agent first pass plus my review. Two levers; agents alone would overclaim. |
-
-*Transition:* "So if you only take two things from this..."
-
-### Part 5 · Close (1.5 min, slide 19)
-
-| # | Min | Title | The argument it carries |
-|---|---|---|---|
-| 19 | 1.5 | Two things for next week | (1) Run your next fork as gated experiments that can run unattended. First step + `starter/two-lanes/`, `starter/two-lanes/unattended.md`. (2) Put a persona review gate in front of "done" for UI and design work. First step + `starter/persona-gate/`. One sentence for your boss, labelled as Gerald's framing. Repo URL. |
+| 17 | 2.0 | If you see this in your project → try this | Cheat sheet, text only, 4 rows A–D: what you'll see → what to try → where to start in `starter/`. |
+| 18 | 1.5 | Two things for next week | (1) Gated experiments that can run unattended, first step + `starter/two-lanes/`, `unattended.md`. (2) A persona review gate in front of "done", first step + `starter/persona-gate/`. The boss sentence, labelled as my framing. Repo URL. |
 
 ### Backup (not in the timed total)
 
 | # | Title | The argument it carries |
 |---|---|---|
-| B1 | Cost, hours, hold-out | All Claude work within a Claude Max subscription; the only metered spend ~$9 for 760 labeling tasks on another provider [D13]. ~30 min a day, my estimate [D16]. Held out: the language head never saw a test photo [D14]. |
-| B2 | Four yardsticks | Top-3 measured four incompatible ways; why slide 14 picks one bar. |
+| B1 | Cost, hours, hold-out | Claude Max; ~$9 metered on another provider [D13]; ~30 min a day, my estimate [D16]; the re-rank never saw a test photo [D14]. |
+| B2 | How we got here | The old timeline, simplified on the slide to its start and end: 6–15 s in August → under half a second (375 ms p50, E88) by 09-11. The seven areas stay in the notes. |
+| B3 | Four yardsticks | Top-3 measured four incompatible ways; why slide 12 picks one bar. Lock rate and precision (18/87, 16/18) moved here from the old slide 14. |
 
 ## Timing (shown)
 
 | Part | Slides | Minutes | Running |
 |---|---|---:|---:|
-| 1 · Where it ended up | 1–3 | 0.5 + 1.0 + 2.0 = 3.5 | 3.5 |
-| 2 · The complication | 4–5 | 1.5 + 1.5 = 3.0 | 6.5 |
-| 3 · The resolution, shown | 6–8 | 2.0 + 1.5 + 5.0 = 8.5 | 15.0 |
-| 4 · The methods | 9–18 | 1.5 + 2.0 + 4.0 + 1.5 + 1.0 + 1.5 + 1.0 + 1.5 + 2.5 + 1.5 = 18.0 | 33.0 |
-| 5 · Close | 19 | 1.5 | 34.5 |
-| **Total** | **19** | **34.5** | |
-| Buffer | | 0.5 | |
+| 1 · A moment you'll recognise | 1–7 | 0.5 + 1.5 + 1.0 + 1.5 + 2.0 + 1.5 + 5.0 = 13.0 | 13.0 |
+| 2 · Four methods for four problems | 8–16 | 1.0 + 2.0 + 3.5 + 1.5 + 1.5 + 1.0 + 2.5 + 1.5 + 1.5 = 16.0 | 29.0 |
+| 3 · Close | 17–18 | 2.0 + 1.5 = 3.5 | 32.5 |
+| **Total** | **18** | **32.5** | |
+| Buffer | | 2.5 | |
 | **Live slot** | | **35.0** | |
 
-The split of old slide 13 (2.0 min) into 13 (1.0) + 14 (1.5) costs 0.5 min; the methods map gives
-it back (2.0 → 1.5), since it is now a plain table of contents. Live time inside the total: slide 8,
-5.0 min (the one live moment).
+The minutes are structure-v4's targets. The 2.5 min buffer covers a slow demo (slide 7 is the one
+live moment) and the pauses on slides 2 and 10.
 
-## What changed from v3 (critique round 2, F2), and why
+## What changed from v4, and why (structure-v4 diagnosis)
 
-1. **13 split into 13 + 14**, each with one full-width chart (`d4-slope.svg`, `lot-bar.svg`); the
-   side-by-side layout is gone. Slide 14 defines auto-lock and top-3 in plain words; no "CI" on the
-   deck's text (designer, pm, mid-swe).
-2. **Slide 6 carries the cost on stage** and defines worktree, gate and flag (pm fix 1, mid-swe).
-3. **Slide 3's units** are said out loud: both ends are identify latency as the client sees it; the
-   10.4 s is n = 6 (senior fix 1).
-4. **Slide 12 says the shipped arm came after the kill, on the same split** (senior fix 2, arc A).
-5. **Slide 11's notes follow the six numbered boxes**; the caps are the labeling agents' (senior
-   fix 3, designer, mid-swe).
-6. **"Fable" is said once, as the coordinator**, on slide 10, with how a lane starts (mid-swe fix 3).
-7. **Slide 8's notes** drop "crops vote", "pad 17 px" and "E79" for plain words (pm).
-8. **Slide 19** gives each action a first step and its starter path, plus the boss sentence (pm
-   fixes 1–2, mid-swe fix 1).
-9. **Slide 17** uses `persona-gate.svg` (F1) instead of two unreadable phone captures (designer fix 1).
-10. **Testimony rule is grey**, not orange, so orange keeps one meaning (designer, colour).
+1. **Titles are the audience's questions** (9–16), with the method in one line under them. v4's
+   titles answered "what happened in card scout".
+2. **No internal labels in the slide text.** G0/G3/G0h, print@1, auto-lock, lock precision, E-numbers,
+   cohort and frozen split are gone from titles and lines; codes live in footers and notes. Several
+   visuals still carry them (see open items).
+3. **Every method has a bridge back**: the notes open with "you'll see this when…" and close with
+   "try it".
+4. **Nine methods in a row became four problems** (A–D), with a header on each method slide and a map
+   (8) and cheat sheet (17) that use the same letters.
+5. **The opening starts on their moment** (2) before card scout; the timeline moved to backup B2;
+   old slides 4 + 5 merged into 4; old 13 + 14 merged into 12 (lot tiles to backup).
+6. **Kept:** the live demo with the vote on (D18), its stage notes and fallback; the cost line (5);
+   testimony labelled as testimony; the story vs evidence grammar.
 
 ## Open items (notes-only; nothing on a slide)
 
-- **F1 visuals** land on their own branch under the filenames in `critique2.md`; until then
-  `assets/diagrams/persona-gate.svg` is missing on this branch and slide 17 renders without its
-  diagram. `experiment-loop.svg` still has its own "~30 min" bar; slide 6 crops it off (top 350 px)
-  so the cost line isn't said twice. F1 could drop that bar and the crop can go.
-- **F3 starter paths** (`starter/persona-gate/`, `starter/two-lanes/unattended.md`) are referenced on
-  slide 19 before they exist on this branch.
-- `persona-gate.svg`'s last step, "a real-device check before DONE", is Gerald's rule drawn from the
-  failure; the record's recorded fix was another panel pass (arc C). The notes say so.
+- **Missing visuals, referenced anyway:** `assets/diagrams/four-problems.svg` (8, new) and
+  `assets/diagrams/persona-gate.svg` (14, F1). Both slides render without their picture until the
+  visuals lane lands them.
+- **Internal labels still baked into visuals** (for the visuals lane to relabel): `d4-arms` (G0/G3/G0h,
+  "pre-registered kill line: G0 − 2.0 pts", n/201; the kill-line label overlaps the first bar);
+  `d4-slope` (G0/G0h legend, "top-1"/"top-3"); `e-lane-dag` (model names, "mine:", "main", clipped
+  "Opus 5.5"); `gates-flags` ("E67's fired", "E84: …", the third-person "…'s word" chip, "frozen data");
+  `f-two-levers` ("E84", and testimony labels in the third person: they should read "my stopwatch", "my estimate"); `jitter-drops` (BASE/CTRL/F5, p50);
+  `experiment-loop` ("key transitions"); `fork-tree` and `shared-core` ("embedding", "identify core",
+  "LLM"); `identify-timeline` (B2: E88, E67, E79b, p50).
+- **"A small language filter"** (structure-v4's suggested label for G0h) is not quite right: the head
+  is a soft re-rank by language, not a filter (arc A). The slides and notes say "re-rank".
