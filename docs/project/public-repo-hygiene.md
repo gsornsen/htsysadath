@@ -17,8 +17,9 @@ docs, a production codebase.
 
 ## Always
 
-- Run `git diff --cached | grep -iE "api[_-]?key|sk-|token|@gmail|@.*\.com|\.dev\.vars|192\.168|100\."`
-  before committing. A hit is a stop.
+- Run `git diff --cached | grep -iE "api[_-]?key|sk-[A-Za-z0-9_-]{20,}|token|@gmail|@.*\.com|\.dev\.vars|192\.168|100\."`
+  before committing. A hit is a stop. Check only ADDED lines (`grep -E "^\+"` first): a hit on a removed line is
+  history, not a leak, but the decision is the coordinator's, not the lane's.
 - Keep raw working copies under `mining/raw/` (git-ignored) or in the session scratchpad.
 - Prefer numbers that are already public-safe (counts, dates, percentages) over identifiers.
 

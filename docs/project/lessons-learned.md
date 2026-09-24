@@ -72,3 +72,17 @@ entry; link the finding or commit that proves it.
   and a merge in one command joined by `;`, so the merge ran before the grep's 15 hits were read.
   They turned out to be `@1`/`@3` metric names, not handles, and nothing was pushed. Chain gates
   with `&&`, and make the grep exit non-zero on a hit.
+
+- `[method]` 2026-09-24: **a lane's "I cleaned up" is a claim like any other, and so is the
+  coordinator's.** The visual-assets lane reported its Storybook stopped; it was still listening
+  on :6009 from the Grailith trunk checkout. The coordinator verified and stopped it by exact
+  pid. Ten minutes later the coordinator itself left a Marp test server running, then "fixed" it
+  by killing the process group holding the port without checking whose it was. That was a
+  second lane's Python preview server, sharing the port. Harmless this time, but it's exactly
+  the rule Grailith wrote down on 09-13 (`devbox-shell-gotchas`: kill the port holder's group),
+  minus the part that matters: confirm the holder is yours (command line, cwd, start time)
+  before signalling it. Rules: lanes pick ports above 9000 and name them in their report; every
+  cleanup claim gets a `lsof` check; never signal a pid you didn't record starting.
+- `[method]` 2026-09-24: the hygiene grep's `sk-` term matches "task-", so lanes learned to wave
+  its hits through as false positives, which is how a real hit gets waved through too. Narrowed to
+  `sk-[A-Za-z0-9_-]{20,}` in public-repo-hygiene.md so a hit means something again.
