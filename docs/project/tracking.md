@@ -15,11 +15,15 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
 | Mine: agent labeling (arc F) | mine/labeling → review/labeling | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | optional: Gerald re-times one label with no agent pre-labels |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
+| E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | running | Opus 5.5 | — | positive control @1 must reproduce first |
+| Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | running | Opus 5.5 | — | Grailith branch NOT merged by us; actual n reported |
 | Outline v1 | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 09:0x PDT — D8: Gerald approved the E67 top-3 replay, the harness lock-state flag, and the offline lot run; "michi" stays. Two Opus 5.5 lanes running.
 
 - 2026-09-24 08:5x PDT — **Opus 5.5 review pass complete; arcs A, B, F merged.** Coordinator
   re-checked 12 of the Opus lanes' claims against source: 12 held; one E89 figure looked wrong

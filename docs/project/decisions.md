@@ -150,3 +150,16 @@ first asking the one person who was there. The corpus-coverage gap is logged in 
 for ~$9** ($2.99 + $6.09; 40 human-labelled tasks were skipped) [src: EXP-E84 lines 103–104]. Its
 "zero wrong agreements" holds for E28a and the E84 pilot only; the 760-task run had no ground
 truth, so wrong-agreement can't be measured there.
+
+## D8 · 2026-09-24 · Gerald's answers after the Opus review pass
+
+- **"michi" in Grailith file/branch names stays.** Gerald: fine to publish, do not scrub.
+- **Top-3 replay of D4 (G0 vs G0h), offline:** run it. Lane `mine/e67-top3-replay` re-scores the
+  saved E67 vectors on the devbox (no inference), with a positive control that print@1 must
+  reproduce 67.66% / 77.61% exactly before any @3 number counts.
+- **Lock-state flag in the lot harness:** approved as a Grailith code change on branch
+  `eval/lot-top3-lock-state` (worktree `grAIde-lotlock`, off Grailith main `f75d531d`), not merged
+  by this project. The founder's accuracy bar becomes measurable: top-3 on NON-locked lots, plus
+  lock rate × lock precision.
+- **The ≥ 200-lot run:** run offline over every truth lot available, and report the actual n
+  instead of padding to 200.
