@@ -47,6 +47,6 @@ customers; a tools tutorial (the method matters, the vendor does not).
 
 ## Open questions for Gerald (answer in decisions.md)
 
-1. Talk length and slide budget? (assume 30 min + Q&A, ~20 slides until told otherwise)
+1. Talk length and slide budget? ANSWERED: 35 min live + 10 min Q&A (~22 slides)
 2. Live demo (persona drafting on the abstract) or recorded?
 3. Which ONE arc is the spine if time is cut in half? (recommend B, with A as the deep-dive)

@@ -10,7 +10,7 @@ decisions, and keeps tracking.md true.
 |---|---|---|
 | **Haiku** | mechanical, well-specified, verifiable by count | run the inventory script and format its output; list experiment files with their first heading; extract dates from filenames; grep a transcript for a keyword list and return line numbers |
 | **Sonnet** | bounded extraction/summary that needs some judgment, within one source | summarise one experiment doc into hypothesis/test/result/decision; build the pivot timeline from plan docs; draft one audience version of the abstract from a persona brief |
-| **Opus** (confirm exact id — Gerald named "Opus 5.5"; this session knows `claude-opus-5`; in Grailith the pinned agent type `opus46` was preferred for instruction-following) | synthesis across sources; building an argument; persona critique; reviewing Sonnet output | write arc A's narrative from 20 experiment summaries + 3 transcript slices; the persona panel on outline v1; reconcile two lanes' conflicting timelines |
+| **Opus 5.5** (`claude-opus-5-5`; fall back to Opus 5 `claude-opus-5` when the client does not offer 5.5 — check with a one-line spawn before a swarm; note which ran in the lane report) | synthesis across sources; building an argument; persona critique; reviewing Sonnet output | write arc A's narrative from 20 experiment summaries + 3 transcript slices; the persona panel on outline v1; reconcile two lanes' conflicting timelines |
 | **Fable** (coordinator) | briefs, judgment, reconciliation, anything the talk's thesis depends on | this doc; choosing the spine arc; final outline |
 
 **Reviewer is one tier above the implementer.** Haiku work is checked by Sonnet, Sonnet by Opus,

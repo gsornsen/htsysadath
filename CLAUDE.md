@@ -36,5 +36,5 @@ needs — this file exists so agents do not drag the whole repo into context.
 
 Coordinator = Fable (this session). Fable writes briefs, judges results, and reconciles
 disagreements. Mechanical extraction → Haiku. Well-defined extraction/summary with judgment →
-Sonnet. Synthesis across sources, argument-building, persona critique → Opus. Reviewer is one
+Sonnet. Synthesis across sources, argument-building, persona critique → Opus 5.5 (fallback Opus 5). Reviewer is one
 tier above the implementer.
