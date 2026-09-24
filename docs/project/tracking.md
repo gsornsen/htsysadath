@@ -23,11 +23,32 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
+| Build L6 integrate | build/integrate | committed, not merged | Sonnet | fe1c632 | 22/22 slides referenced + filled + rendered clean; not merged/pushed per instructions — awaiting coordinator merge |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:2x PDT — **L6 integrate committed (fe1c632, branch `build/integrate`, not merged).**
+  Applied the coordinator's exact asset-reference fixes (4 chart renames, 2 anachronistic shots
+  removed per §8/manifest, 2 founder-mobile shots renamed); all 12 remaining refs resolve, 2
+  shots present but unused (c-dissent-consensus-withheld-1440, c-dissent-taxonomy-review-1440,
+  both alternate frames for slide 13). Filled every slide body from outline.md and removed all
+  ⚠ markers. Moved all speaker notes + stage directions + citations from notes.md into Marp
+  `<!-- -->` comments; the provenance appendix stays in notes.md (not duplicated into the deck).
+  `npm run build`/`pdf` both succeed. Rendered all 22 slides to PNG and looked at every one:
+  found and fixed a systematic bottom-of-canvas clip (3-line body + full-height chart exceeded
+  the 720px slide — Marp clips silently, doesn't shrink) by shortening 13 chart/shot slide bodies
+  to one line and tightening `dark.css` image/paragraph sizing; found and fixed a Marp html-block
+  bug where consecutive images with no blank line between them collapsed into one `<br>`-joined
+  `<p>`, breaking the slide-13/14 multi-image flex row; added a `.shot-tall` crop class for the
+  two extreme-aspect (780×7208) before/after shots, which would otherwise shrink to an illegible
+  sliver; fixed slide 15's demo link (kramdown `{target="_blank"}` attr syntax isn't supported by
+  this Marp config, replaced with a raw `<a>` tag). Serve-check on PORT=9180: pid 23025, curled
+  `/deck.md#12` (200), killed by pid, `lsof -i :9180` confirmed free. One upstream issue noted,
+  not fixed (out of scope — charts are read-only): `top3-measures.svg`'s own source-citation
+  footer text runs past its own right edge on slide 11.
 
 - 2026-09-24 10:3x PDT — L3 shots merged (e6dd10c). Dependabot 12 → 2 after rescan (the accepted extract-zip chain). L2 charts returned for 4 review fixes, two of them content errors in the remembered-vs-recorded table. Then L6 integrate.
 
