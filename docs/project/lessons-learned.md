@@ -138,3 +138,9 @@ entry; link the finding or commit that proves it.
   Same session: a kramdown-style `{target="_blank"}` attribute after a Markdown link isn't
   supported by this Marp config — it renders as literal trailing text on the slide. Use a raw
   `<a href=... target=...>` tag instead (html: true is already on).
+
+- `[method]` 2026-09-24: **a message to a lane that has finished resumes it.** The coordinator
+  sent L6 a slide 20 correction, merged L6 itself when the lane seemed done, then applied the fix
+  on main. The message then resumed L6, which re-did the same fix on its branch (162a761,
+  ac709b9): duplicate work, older than main's, so left unmerged. Rule: once a lane has reported,
+  either wait for its fix OR do it yourself. Pick one and tell the lane which.
