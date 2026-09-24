@@ -7,7 +7,8 @@
     "high": 180,
     "unit": "s",
     "testimony": true,
-    "tierLabel": "my testimony (D7) — original message not in the mined corpus"
+    "tierLabel": "my testimony (D7) — original message not in the mined corpus",
+    "caption": "about 3 minutes, on my stopwatch"
   },
   "barB": {
     "label": "With agents",
@@ -19,7 +20,8 @@
         "high": 16,
         "unit": "s",
         "tierLabel": "instrumented — E84, Gemini 2.5 Flash / Haiku 4.5",
-        "shortTag": "measured"
+        "shortTag": "measured",
+        "onScreen": "Agent first pass: 11–16s, measured"
       },
       {
         "key": "human",
@@ -28,7 +30,8 @@
         "high": 30,
         "unit": "s",
         "tierLabel": "my estimate, not instrumented — 09-13/09-14",
-        "shortTag": "my estimate — not instrumented"
+        "shortTag": "my estimate — not instrumented",
+        "onScreen": "My review: about 20–30s, by my count"
       }
     ],
     "totalLow": 31,

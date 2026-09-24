@@ -21,7 +21,7 @@
 <text x="276" y="138" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">By hand, fresh label</text>
 <rect x="300" y="98" width="716.4" height="64" rx="4" fill="url(#hatch-hand)" stroke="#3987e5" stroke-width="2"/>
 <text x="1032.4" y="139" fill="#ffffff" font-size="28" font-weight="700">180s</text>
-<text x="300" y="188" fill="#898781" font-size="22">my stopwatch — not instrumented</text>
+<text x="300" y="188" fill="#898781" font-size="22">about 3 minutes, on my stopwatch</text>
 <text x="276" y="288" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">With agents</text>
 <rect x="300" y="248" width="53.73000000000002" height="64" fill="#d95926"/>
 <rect x="355.73" y="248" width="97.5" height="64" fill="#d95926" opacity="0.62"/>
@@ -30,6 +30,6 @@
 <line x1="423.38" y1="228" x2="423.38" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
 <line x1="483.08000000000004" y1="228" x2="483.08000000000004" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
 <text x="469.23" y="289" fill="#ffffff" font-size="28" font-weight="700">31–46s total</text>
-<text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s (measured)</text>
-<text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">Human review: 20–30s (my estimate — not instrumented)</text>
+<text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s, measured</text>
+<text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">My review: about 20–30s, by my count</text>
 </svg>

@@ -1,6 +1,6 @@
-# Speaker notes v5
+# Speaker notes v6
 
-Lane `story/deck-v4` · Opus 5.5 · 2026-09-24 12:1x PDT. A proposal built on
+Lane `story/final-pass` · Opus 5.5 · 2026-09-24 (final-copy pass, D23, on v5 from `story/deck-v4`). Built on
 `talk/plan/structure-v4.md` (audience-first): every method slide's title is the audience's question,
 one line gives the method, the card scout is the evidence, and the notes run in three moves: the
 problem as you'll meet it ("you'll see this when…"), what I did and what the evidence says (cited),
@@ -14,7 +14,7 @@ is generated from the Marp notes in `talk/slides/deck.md`, so the two match word
 | Tag | Source |
 |---|---|
 | `[abstract]` | `talk/abstract-rough.md`, my own words: my testimony (D10) |
-| `[D1]`…`[D18]` | `docs/project/decisions.md` |
+| `[D1]`…`[D23]` | `docs/project/decisions.md` |
 | `[arc A]` `[arc B]` `[arc C]` `[arc E]` `[arc F]` | `mining/arcs/{A-experiments,B-pivots,C-personas-review,E-coordinator,F-agent-labeling}.md` |
 | `[E67-top3]` `[lot-top3]` `[top3-traj]` | `mining/findings/{E67-top3-replay,lot-top3-unlocked,top3-trajectory}.md` |
 | `[gates-and-flags]` | `mining/findings/gates-and-flags.md` |
@@ -24,16 +24,24 @@ is generated from the Marp notes in `talk/slides/deck.md`, so the two match word
 | `[G:<sha>]` | a Grailith (grAIde-main) commit, read-only |
 | `[G:ledger]` | Grailith `docs/plan/2026-09-18-trunk-consolidation/experiment-ledger.md` |
 | `[G:backlog]` | Grailith `docs/experiments/EXPERIMENT-BACKLOG.md` |
+| `[G:exp · E12, E39]` | Grailith `docs/experiments/EXP-E12-reference-domain-2026-09-05.md` (re-embedding the JA refs into the query domain: EN→JA capture 22.7 % → 69.3 %; "re-embed NOTHING"), `EXP-E39-offdomain-refs-2026-09-05.md` (re-embedding 838 off-domain refs: +1 of 41 gold prints; "do NOT re-embed") |
+| `[G:exp · E119]` | Grailith `docs/experiments/EXP-E119-ja-keyspace-art-2026-09-12.md`: 992 PriceCharting JA images; "measured lift on the available replay harness is 0"; JA 11/11 on the 335-crop split; its advice: fix the eval (a labeling round) first |
+| `[G:ja-map]` | Grailith `docs/experiments/ja-pc-tcgplayer-jp-map-2026-09-20/README.md`: JA catalogue rows → TCGplayer JP product ids, 3,401 mapped (2,660 with a market price) |
+| `[G:trainset]` | Grailith `docs/plan/2026-09-14-trainset-track.md` §1 readiness bars: student training needs ≥ 1,000 tier ≥ 4 (human-confirmed) crops across ≥ 60 scenes, JA ≥ 25 %; the ledger's thread 2 (09-18): every student arm so far failed its adoption bar |
+| `[G:three-widths]` | Grailith `docs/plan/2026-09-15-labeler-stability-plan.md`: every labeler test runs at 390 / 1024 / 1440 px |
+| `[G:finish-selector]` | Grailith `docs/design/2026-09-21-finish-selector/05-build-plan.md`: the verification walk at 390, 1024 and 1440 px |
 
 **Plain words on screen, codes in the notes.** The slides say "the first guess" for top-1 (E67's
 print@1), "the right card among the 3 shown" for top-3, "my favourite idea" for the dedup arm (G3),
 "what shipped" for the flat index plus the language head (G0h, a soft re-rank by language), "naming
 the card" for identify, and "the flapping" for the jitter.
 
-**Testimony vs evidence.** Three things here are my own account, not the record, and I say so on
-stage: the 3 × 3 × 5 fork grid [P5], the ~3 min a label by hand [D7], and ~30 minutes a day of my
-time [D16]. Slide 2 is the audience's situation, not data. One more line is my framing, not a
-finding: the sentence for your boss on slide 18.
+**My account vs the record.** Four things here are my own account, not the record, and the slides
+say so in the sentence ("by my count", "on my stopwatch"), never with a tag: the 3 × 3 × 5 fork grid
+[P5], the ~3 min a label by hand [D7], ~30 minutes a day of my time [D16], and, on slide 14, that
+giving the personas a live browser meant less rework before merge [D23]; the record shows the
+three-width walks that followed, not the rework. Slide 2 is the audience's situation, not data. The
+planning-meeting sentence on slide 18 is a suggestion, not a finding.
 
 ---
 
@@ -89,7 +97,7 @@ on. Then the loop: record what the app does at the key moments during live sessi
 [P2; G:1267e680e · 08-22; G:3c52c2b72 · 09-04], replay those recordings offline [P2], and run gated
 experiments in worktrees, many overnight [P3; P4]. When a gate cleared, the work merged and the next
 experiment unlocked [P4]. The cost, along the bottom: about half an hour a day of my time setting it
-up, my estimate, not counting mornings reading results [D16]. A
+up, by my count, not counting mornings reading results [D16]. A
 flat Claude Max subscription; the only metered spend was about $9 of labeling calls on another
 provider [D13]. About a hundred experiments in two weeks [D13]. The flapping, fixed in three days
 [D14].
@@ -186,8 +194,8 @@ English twin with the same art [arc A]. My favourite idea was to remove the dupl
 pass/fail bar down first: lose more than two points and it's dropped. It lost 14.43 points, and it
 was dropped [arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
 language. On the same 201 test photos, the first guess went from 67.66 % to 77.61 % right: 20 fixed,
-none broken [arc A; E67-top3]. Found after it failed the bar, on the same photos, so a lead, not proof; it
-shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
+none broken [arc A; E67-top3]. It was found after my favourite failed the bar, on the same photos, so I
+treated it as a lead, not proof: it shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
 ticket before you start: "we drop this if…".
 
 ## Slide 12 · Are we measuring what users feel?
@@ -208,14 +216,18 @@ Try it: write the number your user feels next to the one on your dashboard.
 
 *Problem B · Is my favourite idea better?*
 
-You'll see this when the backlog has four expensive ideas, each with a champion, and nobody wants to
-be the one who says no. Gates pay off as much in what they let you stop. We stopped a newer image
-model that came in 9.55 points less accurate on the test photos [G:ledger · E57]. Retraining the
-model and a smaller copy of it both failed their bars [G:ledger · E58, E53d]. We never re-processed
-the reference images [G:ledger · E12, E39]. And paying for more Japanese card art showed no gain, so
-we didn't scale it [G:ledger · E119]. A lot of the hundred experiments were like these: a clean no,
-and nobody had to argue about it afterwards. Try it: give each expensive idea its bar before anyone
-starts on it. A clean no is a result.
+You'll see this when the backlog has a few expensive ideas, each with a champion, and nobody wants to
+be the one who says no. Gates pay off as much in what they let you stop. Re-processing every
+reference image looked like an obvious clean-up. We measured it on a sample first: one version made
+Japanese images steal English matches about three times as often, the other fixed one card in 41.
+So we never started it [G:exp · E12, E39; G:ledger]. Buying more Japanese card art: we pulled in
+992 images and the measured gain was zero. Our catalogue already named all 11 Japanese test photos,
+and the Japanese-to-TCGplayer mapping links 3,401 Japanese cards to their prices [G:exp · E119;
+G:ja-map]. Eleven photos is a small test, so that's no gain we can see, not proof of none [G:exp ·
+E119]. That experiment's own advice was to label first, so the test can see those cards. And that's
+what we do instead: labeling first. The plan's own bar for training a smaller "student"
+model is a thousand labels I've checked, so that model comes later [G:trainset]. Try it: give each
+expensive idea its bar before anyone starts on it. A clean no is a result.
 
 ## Slide 14 · The tests pass. Is it actually done?
 
@@ -228,8 +240,12 @@ device and a job, plus three critics [arc C]. One is Dez: phone only, one thumb,
 went from 30 seconds to 9, simulated, not a human [arc C]. Then the gate failed. The panel said DONE
 at 21:50. At 09:40 the next morning I opened it on my own iPhone, and it was pretty much unusable:
 three scrolling sections, a help pop-up on every task, rotating the phone to reach options. The panel
-had walked a fixed screen size [arc C]. Try it: three persona briefs, an agent walks the build,
-then your phone. `starter/persona-gate/`.
+had walked a fixed screen size [arc C]. So the personas got a live browser: a real Chrome to walk,
+not rendered screens. From then on every labeler test ran at phone, tablet and desktop widths
+[G:three-widths], and the next panel's plan walks the build at all three [G:finish-selector]. In my
+experience the gates got much better after that, with far fewer surprises and less rework before a
+merge; I haven't measured it [D23]. Try it: three persona briefs, an agent walks the build in a
+real browser, then your phone. `starter/persona-gate/`.
 
 ## Slide 15 · Too many judgment calls to do by hand?
 
@@ -263,8 +279,8 @@ Here's the whole talk on one slide; this is the one to photograph. A: you can se
 there's one of you. Give each fix a lane, write the gate first, and let them run behind a flag while
 you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the
 pass/fail bar before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
-C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done",
-then pick it up on your own phone [arc C]. D: two things need the same hard part. Build that part
+C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done", let
+it walk a live browser, then pick it up on your own phone [arc C; D23]. D: two things need the same hard part. Build that part
 first, once [D11]. The starter kit covers A, B and C; D is a conversation for your next planning
 meeting [starter].
 
@@ -276,11 +292,12 @@ First step: before you pick a fix, write the pass/fail bar, give each option its
 behind a flag. `starter/two-lanes/` has the lane brief, and `unattended.md` has the flags, caps and
 the morning report [starter; gates-and-flags; arc E]. Two: put a persona review gate in front of
 "done". First step: write three persona briefs, each a device and a job, have an agent walk the
-build, then pick it up on your own phone. That's `starter/persona-gate/` [starter; arc C]. And if you
-need one sentence for your boss, this is how I'd put it; it's my framing, not a finding. It's all in
-the repo. Thanks.
+build in a real browser, then pick it up on your own phone. That's `starter/persona-gate/` [starter; arc C]. And if you
+need one sentence for your next planning meeting, this is how I'd put it. It's all in the repo.
+Thanks.
 
-**Stage.** Read the boss sentence on the slide aloud as written; don't paraphrase it into a claim.
+**Stage.** Read the planning-meeting sentence aloud as written; it's a suggestion, not a finding, so
+don't paraphrase it into a claim.
 
 ## Backup 1 · Cost, hours, hold-out
 

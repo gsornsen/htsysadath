@@ -1,36 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-<title id="t">The persona gate said DONE; the real phone said unusable</title>
-<desc id="d">Four cards, left to right. (1) The brief: persona Dez, 22, phone-only, one thumb, "swipe-fast, not homework". (2) The panel verdict, P0, 2026-09-13: DONE, median seconds per task down from 30 s to 9 s. (3) The real device the next morning, 2026-09-14 09:40: I tried the deployed app on my own iPhone and called mobile "pretty much unusable" (bug B19). (4) My takeaway, testimony rather than a recorded rule: check on a real device before DONE. Sources: mining/arcs/C-personas-review.md (personas, P0 verdict table, the gate's honest failure: docs/design/2026-09-13-labeler-critique/p0-panel-verdict.md; docs/plan/2026-09-15-labeler-bug-ledger.md B19).</desc>
+<title id="t">The persona gate said DONE; the real phone said unusable; then the personas got a live browser</title>
+<desc id="d">Five cards, left to right. (1) The brief: persona Dez, phone only, one thumb, "swipe-fast, not homework". (2) The panel verdict, 2026-09-13: DONE, median seconds per task down from 30 s to 9 s, simulated. (3) My iPhone the next morning, 2026-09-14 09:40: the deployed app was "pretty much unusable" (bug ledger B19). (4) The fix: check on a real device before DONE. (5) Then: the personas walk a live browser (a real Chrome, not rendered screens), which in my experience meant fewer surprises before merge; that last part is my account, not measured. Sources: mining/arcs/C-personas-review.md (personas, P0 verdict, the gate's honest failure); Grailith docs/plan/2026-09-15-labeler-stability-plan.md (every labeler test at 390/1024/1440); docs/design/2026-09-21-finish-selector/05-build-plan.md (browser walk at three widths); decisions.md D23.</desc>
 <defs><marker id="ah-grey" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
-<rect x="16" y="36" width="243" height="368" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
-<text x="137.5" y="66" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781">THE BRIEF</text>
-<text x="137.5" y="132" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Dez</text>
-<text x="137.5" y="186" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">22 · phone-only</text>
-<text x="137.5" y="218" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">one thumb</text>
-<text x="137.5" y="286" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">“swipe-fast,</text>
-<text x="137.5" y="318" font-size="26" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">not homework”</text>
-<rect x="303" y="36" width="243" height="368" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2"/>
-<text x="424.5" y="66" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">THE PANEL · 09-13</text>
-<text x="424.5" y="132" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">DONE</text>
-<text x="424.5" y="200" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">30 s → 9 s</text>
-<text x="424.5" y="240" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">per task, median</text>
-<text x="424.5" y="318" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781">P0 verdict</text>
-<rect x="590" y="36" width="243" height="368" rx="12" data-fill-role="surface-tint" fill="#35221a" data-stroke-role="focus" stroke="#d95926" stroke-width="2"/>
-<text x="711.5" y="66" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283">MY IPHONE · 09-14</text>
-<text x="711.5" y="132" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">“pretty much</text>
-<text x="711.5" y="168" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">unusable”</text>
-<text x="711.5" y="226" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">the next morning,</text>
-<text x="711.5" y="258" font-size="22" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">09:40, deployed app</text>
-<text x="711.5" y="318" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781">bug B19</text>
-<rect x="877" y="36" width="243" height="368" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="6 5"/>
-<text x="998.5" y="66" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781">NEXT TIME</text>
-<text x="998.5" y="146" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">check on a</text>
-<text x="998.5" y="182" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">real device</text>
-<text x="998.5" y="218" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">before DONE</text>
-<rect x="918.5" y="301" width="160" height="34" rx="17" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="5 4"/>
-<text x="998.5" y="318" font-size="20" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">my takeaway</text>
-<path d="M267 220 L293 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
-<path d="M554 220 L580 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
-<path d="M841 220 L867 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<rect x="16" y="36" width="192" height="368" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
+<text x="112" y="72" font-size="24" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#a3a19a">THE BRIEF</text>
+<text x="112" y="140" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Dez</text>
+<text x="112" y="198" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">phone only</text>
+<text x="112" y="230" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">one thumb</text>
+<text x="112" y="292" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">“swipe-fast,</text>
+<text x="112" y="324" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">not homework”</text>
+<rect x="244" y="36" width="192" height="368" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2"/>
+<text x="340" y="72" font-size="24" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">THE PANEL</text>
+<text x="340" y="140" font-size="44" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">DONE</text>
+<text x="340" y="206" font-size="32" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">30 s → 9 s</text>
+<text x="340" y="254" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">per task,</text>
+<text x="340" y="286" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">simulated</text>
+<rect x="472" y="36" width="192" height="368" rx="12" data-fill-role="surface-tint" fill="#35221a" data-stroke-role="focus" stroke="#d95926" stroke-width="2"/>
+<text x="568" y="72" font-size="24" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283">MY IPHONE</text>
+<text x="568" y="140" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">“pretty much</text>
+<text x="568" y="174" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">unusable”</text>
+<text x="568" y="254" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">the next</text>
+<text x="568" y="286" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7">morning</text>
+<rect x="700" y="36" width="192" height="368" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="796" y="72" font-size="24" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#a3a19a">THE FIX</text>
+<text x="796" y="186" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">check on a</text>
+<text x="796" y="220" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">real device</text>
+<text x="796" y="254" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">before DONE</text>
+<rect x="928" y="36" width="192" height="368" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2"/>
+<text x="1024" y="72" font-size="24" font-weight="700" letter-spacing="1" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">THEN</text>
+<text x="1024" y="140" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">personas on</text>
+<text x="1024" y="174" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">a live</text>
+<text x="1024" y="208" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">browser</text>
+<text x="1024" y="268" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">→ fewer</text>
+<text x="1024" y="300" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">surprises</text>
+<text x="1024" y="332" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">before merge</text>
+<path d="M214 220 L236 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<path d="M442 220 L464 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<path d="M670 220 L692 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<path d="M898 220 L920 220" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
 </svg>
