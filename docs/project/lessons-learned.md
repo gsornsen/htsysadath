@@ -161,9 +161,10 @@ entry; link the finding or commit that proves it.
   phrase, so it retrieved persona DONE docs, not slide 13). Rerun: 14 sourced, 2 testimony,
   4 not in the record.
 
-- `[method]` 2026-09-24: **"reproducible" has to be tested from the reader's side of the wall.** The
-  Q&A demo's check.sh passed on the lane's machine, but a public replay (no GRAILITH_DIR) failed:
-  the answer fixtures were keyed on the PRIVATE excerpts retrieved in the live run, which a public
-  checkout can't retrieve. Fix: key on things the public can compute (the prompt, the question, the
-  repo excerpts, the committed manifest hash), and make the check itself run with the private source
-  unset. The coordinator found it only by running the README's commands as a stranger would.
+- `[method]` 2026-09-24: **"reproducible" has to be tested from the reader's side of the wall, and a
+  fixture key must not hash anything that drifts.** A public replay (no GRAILITH_DIR) of the Q&A demo
+  failed after the deck changed. The coordinator first blamed private excerpts in the key; the lane
+  corrected it: the key hashed the retrieved REPO excerpts, and a small repo edit swapped two excerpts
+  with near-tied scores (10.057 vs 10.054). Fix: key on what the call is ABOUT (prompt, question, the
+  committed manifest hash), RECORD what the model saw inside the fixture, and print `stale:` when
+  today's inputs differ, instead of failing. check.sh now always runs with the private source unset.
