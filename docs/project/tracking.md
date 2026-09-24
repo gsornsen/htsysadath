@@ -20,7 +20,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Presentation plan swarm (Marp) | plan/* → plan/synthesis | merged; proceeding (D10) | Sonnet ×3 + Opus 5.5 ×2, Fable review | see log | talk/plan/presentation-plan.md §6 has 8 questions; build swarm L1–L5 ready to launch on approval |
 | Build L1 scaffold | build/scaffold | merged | Sonnet → coordinator check | c3182ea | + deps triage and --no-stdin (da1f055); chart filenames to reconcile in L6 |
 | Build L2 charts | build/charts | merged | Sonnet → coordinator check | 3142b3e | 7 SVGs; 4 review fixes (2 content) confirmed by render |
-| Build L6 integrate | build/integrate | running | Sonnet → Opus 5.5 | — | reference remap (4 charts, 3 shots), notes into deck, all 22 slides looked at |
+| Build L6 integrate | build/integrate | merged | Sonnet → coordinator | 112694c | deck assembled; 22 slides render; D12 applied to slide 20 on merge |
+| Devbox health | — | reported, needs Gerald (sudo) | Opus 5.5 | — | tailscaled wedged since ~04:44 → box DNS + tailnet front doors down; local services up; :8989 down since 09-21; mirror unit failing (178.7 MB file) |
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
@@ -29,6 +30,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:5x PDT — D12: the single-crop win STANDS (E79b 31 vs 26 of 41). The '09-13 replay' compared two single crops, never the vote; now a third counter-example on slide 20. L6 deck merged (112694c). Devbox: tailscaled wedged → DNS and tailnet down; the fix needs sudo, so it's Gerald's call. Next: L7 persona critique + rehearsal.
 
 - 2026-09-24 10:4x PDT — All five build lanes merged (L1–L5). L6 integrate launched with the exact reference remap from the coordinator's deck-vs-assets diff. Next: Opus 5.5 review of the deck, then L7 persona critique and rehearsal.
 
