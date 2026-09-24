@@ -86,3 +86,10 @@ entry; link the finding or commit that proves it.
 - `[method]` 2026-09-24: the hygiene grep's `sk-` term matches "task-", so lanes learned to wave
   its hits through as false positives, which is how a real hit gets waved through too. Narrowed to
   `sk-[A-Za-z0-9_-]{20,}` in public-repo-hygiene.md so a hit means something again.
+
+- `[method]` 2026-09-24: **an ownership contract has to fix NAMES, not just paths.** The build
+  swarm's contract gave each lane disjoint directories and one owner for `deck.md`, so nothing
+  conflicted in git. But L1 invented chart filenames for its image references, and L2 got a
+  different list from the coordinator. The merge was clean; the integration broke. A parallel
+  contract needs the shared identifiers (filenames, ids, ports) written into every brief from
+  one list, not just the directory split.
