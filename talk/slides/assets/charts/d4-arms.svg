@@ -19,12 +19,12 @@
 <text x="257.66666666666663" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="257.66666666666663" y="354">G0 — flat, no</tspan><tspan x="257.66666666666663" y="381">head</tspan></text>
 <rect x="518" y="170.9452736318408" width="150" height="149.0547263681592" rx="4" fill="#726f68"/>
 <text x="593" y="156.9452736318408" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">53.2%</text>
-<text x="593" y="132.9452736318408" text-anchor="middle" fill="#898781" font-size="22">107/201</text>
-<text x="593" y="112.94527363184079" text-anchor="middle" fill="#e66767" font-size="22" font-weight="700">KILLED</text>
+<text x="593" y="124.15200000000002" text-anchor="middle" fill="#898781" font-size="22">107/201</text>
+<text x="593" y="104.15200000000002" text-anchor="middle" fill="#e66767" font-size="22" font-weight="700">KILLED</text>
 <text x="593" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="593" y="354">G3 — dedup</tspan></text>
 <rect x="853.3333333333333" y="102.68656716417911" width="150" height="217.3134328358209" rx="4" fill="#d95926"/>
 <text x="928.3333333333333" y="88.68656716417911" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">77.6%</text>
 <text x="928.3333333333333" y="64.68656716417911" text-anchor="middle" fill="#898781" font-size="22">156/201</text>
 <text x="928.3333333333333" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="928.3333333333333" y="354">G0h — flat +</tspan><tspan x="928.3333333333333" y="381">language head</tspan></text>
-<text x="1096" y="126.15200000000002" text-anchor="end" fill="#e66767" font-size="22" font-weight="600">pre-registered kill line: G0 − 2.0 pts (65.7%)</text>
+<text x="90" y="162.15200000000002" text-anchor="start" fill="#e66767" font-size="22" font-weight="600">pre-registered kill line: G0 − 2.0 pts (65.7%)</text>
 </svg>

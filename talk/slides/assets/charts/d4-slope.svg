@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556 440" width="556" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="556" height="440" fill="#1a1a19"/>
+<line x1="130" y1="190.8457711442786" x2="426" y2="151.044776119403" stroke="#3987e5" stroke-width="3"/>
+<circle cx="130" cy="190.8457711442786" r="9" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="426" cy="151.044776119403" r="9" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<line x1="130" y1="165.97014925373134" x2="426" y2="137.36318407960198" stroke="#d95926" stroke-width="3"/>
+<circle cx="130" cy="165.97014925373134" r="9" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="426" cy="137.36318407960198" r="9" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<text x="112" y="155.97014925373134" text-anchor="end" fill="#ffffff" font-size="24" font-weight="700">77.61%</text>
+<text x="112" y="216.8457711442786" text-anchor="end" fill="#ffffff" font-size="24" font-weight="700">67.66%</text>
+<text x="444" y="127.36318407960198" text-anchor="start" fill="#ffffff" font-size="24" font-weight="700">89.05%</text>
+<text x="444" y="177.044776119403" text-anchor="start" fill="#ffffff" font-size="24" font-weight="700">83.58%</text>
+<text x="130" y="400" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">top-1</text>
+<text x="426" y="400" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">top-3</text>
+<text x="144" y="186.40796019900495" text-anchor="start" fill="#c3c2b7" font-size="24" font-weight="700">+9.95</text>
+<text x="412" y="152.20398009950247" text-anchor="end" fill="#c3c2b7" font-size="24" font-weight="700">+5.47</text>
+<rect x="24" y="7" width="18" height="18" rx="3" fill="#3987e5"/>
+<text x="50" y="22" fill="#c3c2b7" font-size="22">G0 — flat, no head</text>
+<rect x="24" y="33" width="18" height="18" rx="3" fill="#d95926"/>
+<text x="50" y="48" fill="#c3c2b7" font-size="22">G0h — flat + language head</text>
+<text x="278" y="86" text-anchor="middle" fill="#898781" font-size="22">the gain halves</text>
+</svg>

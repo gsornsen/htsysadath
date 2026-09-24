@@ -1,0 +1,30 @@
+{
+  "source": "mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75)",
+  "title": "Top-1 to top-3: the gain halves",
+  "columns": ["top-1", "top-3"],
+  "series": [
+    {
+      "key": "g0",
+      "label": "G0 — flat, no head",
+      "role": "baseline",
+      "points": [
+        { "numerator": 136, "denominator": 201 },
+        { "numerator": 168, "denominator": 201 }
+      ]
+    },
+    {
+      "key": "g0h",
+      "label": "G0h — flat + language head",
+      "role": "after",
+      "points": [
+        { "numerator": 156, "denominator": 201 },
+        { "numerator": 179, "denominator": 201 }
+      ]
+    }
+  ],
+  "gaps": [
+    { "column": 0, "delta": "+9.95" },
+    { "column": 1, "delta": "+5.47" }
+  ],
+  "note": "the gain halves"
+}

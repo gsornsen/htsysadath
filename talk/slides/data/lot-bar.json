@@ -1,20 +1,9 @@
 {
-  "source": "mining/findings/lot-top3-unlocked.md §3 (stat tiles: lock rate, lock precision, non-locked top-3, with Wilson 95% CIs as stated), §4 (per-day counts, overall 71.3% reference)",
+  "source": "mining/findings/lot-top3-unlocked.md §3 (stat tiles: lock rate, lock precision, non-locked top-3, with Wilson 95% CIs as stated)",
   "title": "Lot-level top-3, on lots the scout did not auto-lock",
   "tiles": [
     { "label": "Lock rate",                  "numerator": 18, "denominator": 87, "ciLo": 13.5, "ciHi": 30.4 },
     { "label": "Lock precision",             "numerator": 16, "denominator": 18, "ciLo": 67.2, "ciHi": 96.9 },
     { "label": "Top-3 on non-locked lots",   "numerator": 45, "denominator": 69, "ciLo": 53.4, "ciHi": 75.4 }
-  ],
-  "overall": { "label": "all lots", "numerator": 62, "denominator": 87, "ciLo": 61.0, "ciHi": 79.7 },
-  "dotplot": {
-    "unit": "all lots, by day",
-    "points": [
-      { "day": "09-12", "numerator": 23, "denominator": 34 },
-      { "day": "09-13", "numerator": 17, "denominator": 18 },
-      { "day": "09-14", "numerator": 11, "denominator": 15 },
-      { "day": "09-15", "numerator": 6,  "denominator": 13 },
-      { "day": "09-16", "numerator": 5,  "denominator": 7 }
-    ]
-  }
+  ]
 }

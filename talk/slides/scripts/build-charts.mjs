@@ -200,6 +200,14 @@ function buildD4Arms(d) {
   const killY = plotY + plotH - (d.killLine.pct / axisMax) * plotH;
   svg += `<line x1="${plotX}" y1="${killY}" x2="${plotX + plotW}" y2="${killY}" stroke="${C.critical}" stroke-width="2" stroke-dasharray="8,6"/>\n`;
 
+  // A bar's label stack (value% / numerator / KILLED tag) is normally
+  // anchored just above its own bar top. When the bar falls short of the
+  // kill line (a killed arm, by construction), that stack can straddle the
+  // dashed line on its way up. Clamp any label that lands within `band` px
+  // of the line so the stack jumps clear of it instead of sitting on it.
+  const killBand = 12;
+  const clampAboveLine = (labelY) => (Math.abs(labelY - killY) < killBand ? killY - killBand : labelY);
+
   d.bars.forEach((b, i) => {
     const pct = pctOf(b.numerator, b.denominator);
     const cx = plotX + groupW * i + groupW / 2;
@@ -207,18 +215,25 @@ function buildD4Arms(d) {
     const barH = (pct / axisMax) * plotH;
     const y = plotY + plotH - barH;
     svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="4" fill="${roleColor[b.role]}"/>\n`;
-    svg += `<text x="${cx}" y="${y - 14}" text-anchor="middle" fill="${C.textPrimary}" font-size="26" font-weight="700">${fmt1(pct)}%</text>\n`;
-    svg += `<text x="${cx}" y="${y - 38}" text-anchor="middle" fill="${C.textMuted}" font-size="22">${b.numerator}/${b.denominator}</text>\n`;
+
+    const yVal = clampAboveLine(y - 14);
+    svg += `<text x="${cx}" y="${yVal}" text-anchor="middle" fill="${C.textPrimary}" font-size="26" font-weight="700">${fmt1(pct)}%</text>\n`;
+    const yNum = clampAboveLine(yVal - 24);
+    svg += `<text x="${cx}" y="${yNum}" text-anchor="middle" fill="${C.textMuted}" font-size="22">${b.numerator}/${b.denominator}</text>\n`;
     if (b.killed) {
-      svg += `<text x="${cx}" y="${y - 58}" text-anchor="middle" fill="${C.critical}" font-size="22" font-weight="700">KILLED</text>\n`;
+      const yKilled = clampAboveLine(yNum - 20);
+      svg += `<text x="${cx}" y="${yKilled}" text-anchor="middle" fill="${C.critical}" font-size="22" font-weight="700">KILLED</text>\n`;
     }
     const labLines = wrap(b.label, barW + 30, 22);
     const labY = plotY + plotH + 34;
     svg += `<text x="${cx}" y="${labY}" text-anchor="middle" fill="${C.textPrimary}" font-size="22" font-weight="700">${tspans(labLines, cx, labY, 27)}</text>\n`;
   });
 
-  // kill-line label, placed at the right end, clear of bar labels
-  svg += `<text x="${plotX + plotW}" y="${killY - 10}" text-anchor="end" fill="${C.critical}" font-size="22" font-weight="600">${esc(d.killLine.label)} (${fmt1(d.killLine.pct)}%)</text>\n`;
+  // kill-line label, placed at the LEFT end, below the line — the right end
+  // sits over G0h's bar top, and the line's own height sits close under
+  // G0h's bar labels, so anything pinned "above, right" collides with one
+  // or the other. Left end, below the line, stays clear of both.
+  svg += `<text x="${plotX}" y="${killY + 26}" text-anchor="start" fill="${C.critical}" font-size="22" font-weight="600">${esc(d.killLine.label)} (${fmt1(d.killLine.pct)}%)</text>\n`;
 
   svg += svgClose;
   return svg;
@@ -299,7 +314,181 @@ function buildD4Top3(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 4. top3-measures.svg — four separate yardsticks, one strip, never joined
+// 4. jitter-drops.svg — step-down bars on a LINEAR per-100 axis, two lever
+// callouts in the headroom above the plot. 0.14 stays on the same linear
+// scale as 35.8/15.4 on purpose (it is supposed to look like almost
+// nothing) but gets an explicit value + "about 1 in 700" note so it never
+// reads as zero.
+// ---------------------------------------------------------------------------
+function buildJitterDrops(d) {
+  let svg = svgOpen();
+  svg += `<defs>
+    <marker id="jitter-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="${C.textMuted}"/>
+    </marker>
+  </defs>\n`;
+
+  const roleColor = { baseline: C.blue, context: C.grey, after: C.orange };
+
+  const plotX = 90;
+  const plotY = 100;
+  const plotW = W - plotX - 40;
+  const plotH = 220;
+  const axisMax = d.axisMax;
+
+  const ticks = [0, 10, 20, 30, 40].filter((v) => v <= axisMax);
+  ticks.forEach((v) => {
+    const y = plotY + plotH - (v / axisMax) * plotH;
+    svg += `<line x1="${plotX}" y1="${y}" x2="${plotX + plotW}" y2="${y}" stroke="${C.grid}" stroke-width="1"/>\n`;
+    svg += `<text x="${plotX - 14}" y="${y + 7}" text-anchor="end" fill="${C.textMuted}" font-size="22">${v}</text>\n`;
+  });
+  svg += `<text x="${plotX}" y="${plotY - 34}" fill="${C.textMuted}" font-size="22">${esc(d.unit)}</text>\n`;
+
+  const n = d.bars.length;
+  const groupW = plotW / n;
+  const barW = 150;
+  const centers = [];
+
+  d.bars.forEach((b, i) => {
+    const cx = plotX + groupW * i + groupW / 2;
+    centers.push(cx);
+    const x = cx - barW / 2;
+    // Minimum-height floor so the 0.14 bar stays a visible sliver rather
+    // than vanishing at this scale — the LABEL, not a log axis, is what
+    // makes the number legible (per the brief).
+    const barH = Math.max(1.5, (b.value / axisMax) * plotH);
+    const y = plotY + plotH - barH;
+    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="4" fill="${roleColor[b.role]}"/>\n`;
+
+    const valTxt = b.value < 1 ? b.value.toFixed(2) : fmt1(b.value);
+    svg += `<text x="${cx}" y="${y - 14}" text-anchor="middle" fill="${C.textPrimary}" font-size="26" font-weight="700">${esc(valTxt)}</text>\n`;
+    if (b.note) {
+      svg += `<text x="${cx}" y="${y - 40}" text-anchor="middle" fill="${C.textMuted}" font-size="22">${esc(b.note)}</text>\n`;
+    }
+
+    const labLines = wrap(b.label, groupW - 10, 22);
+    const labY = plotY + plotH + 34;
+    svg += `<text x="${cx}" y="${labY}" text-anchor="middle" fill="${C.textPrimary}" font-size="22" font-weight="700">${tspans(labLines, cx, labY, 27)}</text>\n`;
+  });
+
+  svg += `<line x1="${plotX}" y1="${plotY + plotH}" x2="${plotX + plotW}" y2="${plotY + plotH}" stroke="${C.baseline}" stroke-width="2"/>\n`;
+
+  // lever annotations, one per gap between consecutive bars, in the
+  // headroom above the plot — clear of both the axis-unit label and every
+  // bar's value label (which sit at/below plotY).
+  const leverY = 46;
+  const arrowY = 72;
+  (d.levers || []).forEach((lv, i) => {
+    const cx0 = centers[i];
+    const cx1 = centers[i + 1];
+    const mx = (cx0 + cx1) / 2;
+    svg += `<text x="${mx}" y="${leverY}" text-anchor="middle" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(lv.label)}</text>\n`;
+    svg += `<line x1="${cx0 + barW / 2 + 10}" y1="${arrowY}" x2="${cx1 - barW / 2 - 10}" y2="${arrowY}" stroke="${C.textMuted}" stroke-width="2" marker-end="url(#jitter-arrow)"/>\n`;
+  });
+
+  svg += svgClose;
+  return svg;
+}
+
+// ---------------------------------------------------------------------------
+// 5. d4-slope.svg — slopegraph, top-1 -> top-3, for G0 and G0h. The gap between
+// the two series is labelled at each end column ("the gain halves").
+// ---------------------------------------------------------------------------
+// Slide 13 runs d4-slope.svg and lot-bar.svg side by side in two 556x440
+// boxes (coordinator, 2026-09-24) — half the standard chart width, same
+// height. Every offset below is sized for that box, not derived from the
+// deck-wide W/H constants.
+const SLOPE_W = 556;
+const SLOPE_H = 440;
+
+function buildD4Slope(d) {
+  let svg = svgOpen(SLOPE_W, SLOPE_H);
+
+  const roleColor = { baseline: C.blue, after: C.orange };
+
+  // No drawn axis/gridlines here (unlike the other bar/dot charts): at
+  // 556px wide there isn't room for both a left tick-label column ("100%"
+  // etc.) and the outward value labels beside col0 without the two
+  // colliding, and a slopegraph's points are already directly labeled, so
+  // the axis is redundant. The 0-100 scale is still used for the y mapping
+  // (unstated but implied — same scale as every other top-1/top-3 chart in
+  // the deck), just not drawn.
+  const plotY = 110;
+  const plotH = 250;
+  const axisMax = 100;
+  const marginSide = 130; // room for the outward value label + its gap
+  const colX = [marginSide, SLOPE_W - marginSide];
+  const yOf = (pct) => plotY + plotH - (pct / axisMax) * plotH;
+
+  const seriesPts = d.series.map((s) => ({
+    ...s,
+    pts: s.points.map((p) => pctOf(p.numerator, p.denominator)),
+  }));
+
+  seriesPts.forEach((s) => {
+    const y0 = yOf(s.pts[0]);
+    const y1 = yOf(s.pts[1]);
+    svg += `<line x1="${colX[0]}" y1="${y0}" x2="${colX[1]}" y2="${y1}" stroke="${roleColor[s.role]}" stroke-width="3"/>\n`;
+    svg += `<circle cx="${colX[0]}" cy="${y0}" r="9" fill="${roleColor[s.role]}" stroke="${C.surface}" stroke-width="2"/>\n`;
+    svg += `<circle cx="${colX[1]}" cy="${y1}" r="9" fill="${roleColor[s.role]}" stroke="${C.surface}" stroke-width="2"/>\n`;
+  });
+
+  // Endpoint value labels sit OUTWARD of the plot (left of col0, right of
+  // col1) so they never contest the gap labels, which sit inward. At top-3
+  // the two series are only ~12px apart — too close for both labels to use
+  // a fixed same-side offset from their own dot without touching — so each
+  // column ranks its two points by y and staggers the label of the LOWER
+  // one further down, clear of the upper one, regardless of the raw gap.
+  [0, 1].forEach((col) => {
+    const ranked = seriesPts
+      .map((s) => ({ s, y: yOf(s.pts[col]) }))
+      .sort((a, b) => a.y - b.y); // ascending: top of chart first
+    const anchor = col === 0 ? 'end' : 'start';
+    const lx = col === 0 ? colX[0] - 18 : colX[1] + 18;
+    svg += `<text x="${lx}" y="${ranked[0].y - 10}" text-anchor="${anchor}" fill="${C.textPrimary}" font-size="24" font-weight="700">${ranked[0].s.pts[col].toFixed(2)}%</text>\n`;
+    svg += `<text x="${lx}" y="${ranked[1].y + 26}" text-anchor="${anchor}" fill="${C.textPrimary}" font-size="24" font-weight="700">${ranked[1].s.pts[col].toFixed(2)}%</text>\n`;
+  });
+
+  d.columns.forEach((label, i) => {
+    svg += `<text x="${colX[i]}" y="${plotY + plotH + 40}" text-anchor="middle" fill="${C.textPrimary}" font-size="24" font-weight="700">${esc(label)}</text>\n`;
+  });
+
+  // gap labels, one per column, placed INWARD (toward the other column) at
+  // the vertical midpoint between the two series' points at that column. In
+  // the half-width box the two columns are only ~226px apart, so a short
+  // form ("+9.95", no "pts" suffix — matching d4-top3.svg's own delta
+  // convention) and a tight inward offset keep the two labels from
+  // colliding with each other in the middle.
+  d.gaps.forEach((g, gi) => {
+    const x = colX[gi];
+    const ys = seriesPts.map((s) => yOf(s.pts[gi]));
+    const midY = (ys[0] + ys[1]) / 2;
+    const inward = gi === 0 ? 1 : -1;
+    const lx = x + inward * 14;
+    const anchor = gi === 0 ? 'start' : 'end';
+    svg += `<text x="${lx}" y="${midY + 8}" text-anchor="${anchor}" fill="${C.textSecondary}" font-size="24" font-weight="700">${esc(g.delta)}</text>\n`;
+  });
+
+  // legend, stacked (two rows — the box is too narrow for a single row of
+  // both series' full labels), then the note below both rows.
+  const legX = 24;
+  let legY = 22;
+  seriesPts.forEach((s) => {
+    svg += `<rect x="${legX}" y="${legY - 15}" width="18" height="18" rx="3" fill="${roleColor[s.role]}"/>\n`;
+    svg += `<text x="${legX + 26}" y="${legY}" fill="${C.textSecondary}" font-size="22">${esc(s.label)}</text>\n`;
+    legY += 26;
+  });
+
+  if (d.note) {
+    svg += `<text x="${SLOPE_W / 2}" y="${legY + 12}" text-anchor="middle" fill="${C.textMuted}" font-size="22">${esc(d.note)}</text>\n`;
+  }
+
+  svg += svgClose;
+  return svg;
+}
+
+// ---------------------------------------------------------------------------
+// 6. top3-measures.svg — four separate yardsticks, one strip, never joined
 //    (except the before→after pair inside its own lane)
 // ---------------------------------------------------------------------------
 function buildTop3Measures(d) {
@@ -369,32 +558,51 @@ function buildTop3Measures(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 5. lot-bar.svg — stat tiles + day-dot panel, labelled "all lots, by day"
+// 7. lot-bar.svg — stat tiles + day-dot panel, labelled "all lots, by day"
 // ---------------------------------------------------------------------------
+// Slide 13 runs lot-bar.svg and d4-slope.svg side by side in two 556x440
+// boxes (coordinator, 2026-09-24). lot-bar.svg now carries only the three
+// stat tiles, stacked (a 3-across row does not fit a 556-wide box at
+// text >= 24px); the day-dot panel moves to its own full-width chart,
+// lot-days.svg, kept as backup/appendix material.
 function buildLotBar(d) {
-  let svg = svgOpen();
+  let svg = svgOpen(SLOPE_W, SLOPE_H);
 
-  // stat tiles
-  const tileW = (W - 80 - 2 * 24) / 3;
+  const tileX = 40;
+  const tileW = SLOPE_W - 80;
   const tileH = 118;
-  const tileY = 24;
+  const gap = 24;
+  const topY = 26;
+
   d.tiles.forEach((tile, i) => {
-    const x = 40 + i * (tileW + 24);
+    const y = topY + i * (tileH + gap);
     const pct = pctOf(tile.numerator, tile.denominator);
-    svg += `<rect x="${x}" y="${tileY}" width="${tileW}" height="${tileH}" rx="8" fill="${C.grid}" opacity="0.45"/>\n`;
-    svg += `<text x="${x + 20}" y="${tileY + 28}" fill="${C.textMuted}" font-size="22">${tspans(wrap(tile.label, tileW - 40, 22), x + 20, tileY + 28, 26)}</text>\n`;
-    svg += `<text x="${x + 20}" y="${tileY + 76}" fill="${C.blue}" font-size="38" font-weight="700">${fmt1(pct)}%</text>\n`;
-    svg += `<text x="${x + 20}" y="${tileY + 100}" fill="${C.textMuted}" font-size="22">${tile.numerator}/${tile.denominator}, CI ${fmt1(tile.ciLo)}–${fmt1(tile.ciHi)}</text>\n`;
+    svg += `<rect x="${tileX}" y="${y}" width="${tileW}" height="${tileH}" rx="8" fill="${C.grid}" opacity="0.45"/>\n`;
+    svg += `<text x="${tileX + 20}" y="${y + 28}" fill="${C.textMuted}" font-size="22">${tspans(wrap(tile.label, tileW - 40, 22), tileX + 20, y + 28, 26)}</text>\n`;
+    svg += `<text x="${tileX + 20}" y="${y + 76}" fill="${C.blue}" font-size="38" font-weight="700">${fmt1(pct)}%</text>\n`;
+    svg += `<text x="${tileX + 20}" y="${y + 100}" fill="${C.textMuted}" font-size="22">${tile.numerator}/${tile.denominator}, CI ${fmt1(tile.ciLo)}–${fmt1(tile.ciHi)}</text>\n`;
   });
 
-  // day-dot panel
-  const panelTitleY = tileY + tileH + 42;
-  svg += `<text x="40" y="${panelTitleY}" fill="${C.textPrimary}" font-size="26" font-weight="700">all lots, by day</text>\n`;
+  svg += svgClose;
+  return svg;
+}
+
+// ---------------------------------------------------------------------------
+// lot-days.svg — the day-dot panel split out of lot-bar.svg (backup/appendix
+// use at full 1136x440 width). Same "all lots" reference line and per-dot
+// label-position logic as before.
+// ---------------------------------------------------------------------------
+function buildLotDays(d) {
+  let svg = svgOpen();
+
+  const overallPct = pctOf(d.overall.numerator, d.overall.denominator);
+  const titleY = 44;
+  svg += `<text x="40" y="${titleY}" fill="${C.textPrimary}" font-size="26" font-weight="700">all lots, by day <tspan fill="${C.textSecondary}" font-size="22" font-weight="600">— dashed line: all lots ${fmt1(overallPct)}%</tspan></text>\n`;
 
   const plotX = 90;
-  const plotY = panelTitleY + 24;
+  const plotY = titleY + 50;
   const plotW = W - plotX - 40;
-  const plotH = 170;
+  const plotH = 300;
   const axisMax = 100;
 
   [0, 25, 50, 75, 100].forEach((v) => {
@@ -403,13 +611,14 @@ function buildLotBar(d) {
     svg += `<text x="${plotX - 14}" y="${y + 6}" text-anchor="end" fill="${C.textMuted}" font-size="22">${v}%</text>\n`;
   });
 
-  const overallPct = pctOf(d.overall.numerator, d.overall.denominator);
   const yOverall = plotY + plotH - (overallPct / axisMax) * plotH;
   svg += `<line x1="${plotX}" y1="${yOverall}" x2="${plotX + plotW}" y2="${yOverall}" stroke="${C.textSecondary}" stroke-width="2" stroke-dasharray="7,7"/>\n`;
-  svg += `<text x="${plotX + plotW}" y="${yOverall - 10}" text-anchor="end" fill="${C.textSecondary}" font-size="22" font-weight="600">all lots ${fmt1(overallPct)}%</text>\n`;
 
   const pts = d.dotplot.points;
   const slotW = plotW / (pts.length + 1);
+  // Each dot gets its own label position: default just above the dot, but
+  // pushed further up whenever the dot itself sits close to the dashed
+  // "all lots" line, so its label never lands on top of the line.
   pts.forEach((pt, i) => {
     const pct = pctOf(pt.numerator, pt.denominator);
     const w = wilson(pt.numerator, pt.denominator);
@@ -417,9 +626,11 @@ function buildLotBar(d) {
     const y = plotY + plotH - (pct / axisMax) * plotH;
     const yLo = plotY + plotH - (w.lo / axisMax) * plotH;
     const yHi = plotY + plotH - (w.hi / axisMax) * plotH;
+    const nearLine = Math.abs(y - yOverall) < 24;
+    const labelY = y + (nearLine ? -34 : -16);
     svg += `<line x1="${x}" y1="${yLo}" x2="${x}" y2="${yHi}" stroke="${C.textPrimary}" stroke-width="2" opacity="0.4"/>\n`;
     svg += `<circle cx="${x}" cy="${y}" r="9" fill="${C.orange}" stroke="${C.surface}" stroke-width="2"/>\n`;
-    svg += `<text x="${x}" y="${y - 16}" text-anchor="middle" fill="${C.textPrimary}" font-size="24" font-weight="700">${fmt1(pct)}%</text>\n`;
+    svg += `<text x="${x}" y="${labelY}" text-anchor="middle" fill="${C.textPrimary}" font-size="24" font-weight="700">${fmt1(pct)}%</text>\n`;
     svg += `<text x="${x}" y="${plotY + plotH + 30}" text-anchor="middle" fill="${C.textSecondary}" font-size="22">${esc(pt.day)}</text>\n`;
   });
 
@@ -430,7 +641,7 @@ function buildLotBar(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 6. f-two-levers.svg — linear seconds axis, hand vs stacked agent+review
+// 8. f-two-levers.svg — linear seconds axis, hand vs stacked agent+review
 // ---------------------------------------------------------------------------
 function buildTwoLevers(d) {
   let svg = svgOpen();
@@ -503,7 +714,7 @@ function buildTwoLevers(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 7. e-lane-dag.svg — coordinator pattern: tiers, reviewer-above arrows,
+// 9. e-lane-dag.svg — coordinator pattern: tiers, reviewer-above arrows,
 //    3-5 real lanes from this repo. No commit hashes.
 // ---------------------------------------------------------------------------
 function buildLaneDag(d) {
@@ -593,77 +804,30 @@ function buildLaneDag(d) {
 }
 
 // ---------------------------------------------------------------------------
-// 8. rvr-memory.svg / rvr-counter.svg — remembered-vs-recorded table, split
-// ---------------------------------------------------------------------------
-function buildRvrTable(d, colHeaders) {
-  let svg = svgOpen();
-
-  const colX = [40, 340, 730];
-  const colW = [280, 370, 366];
-  let y = 46;
-  const rowGap = 22;
-
-  colHeaders.forEach((h, i) => {
-    svg += `<text x="${colX[i]}" y="${y}" fill="${C.textMuted}" font-size="22" font-weight="700" letter-spacing="0.4">${esc(h.toUpperCase())}</text>\n`;
-  });
-  y += 20;
-  svg += `<line x1="40" y1="${y}" x2="${W - 40}" y2="${y}" stroke="${C.baseline}" stroke-width="2"/>\n`;
-  y += 40;
-
-  const fontSize = 22;
-  const lineH = 28;
-
-  d.rows.forEach((row) => {
-    const [k1, k2] = Object.keys(row).filter((k) => k !== 'instance' && k !== 'source');
-    const instLines = wrap(row.instance, colW[0] - 10, 22);
-    const c1Lines = wrap(row[k1], colW[1] - 16, fontSize);
-    const c2Lines = wrap(row[k2], colW[2] - 16, fontSize);
-    const contentLines = Math.max(instLines.length, c1Lines.length, c2Lines.length);
-    const rowH = contentLines * lineH + rowGap;
-
-    const textY = y + fontSize;
-    svg += `<text x="${colX[0]}" y="${textY}" fill="${C.textPrimary}" font-size="22" font-weight="700">${tspans(instLines, colX[0], textY, lineH)}</text>\n`;
-    svg += `<text x="${colX[1]}" y="${textY}" fill="${C.textSecondary}" font-size="${fontSize}">${tspans(c1Lines, colX[1], textY, lineH)}</text>\n`;
-    svg += `<text x="${colX[2]}" y="${textY}" fill="${C.textPrimary}" font-size="${fontSize}">${tspans(c2Lines, colX[2], textY, lineH)}</text>\n`;
-
-    y += rowH;
-    if (row !== d.rows[d.rows.length - 1]) {
-      svg += `<line x1="40" y1="${y - rowGap / 2}" x2="${W - 40}" y2="${y - rowGap / 2}" stroke="${C.grid}" stroke-width="1"/>\n`;
-    }
-  });
-
-  svg += svgClose;
-  return svg;
-}
-
-function buildRvrMemory(d) {
-  return buildRvrTable(d, ['Instance', 'I remembered', 'The record says']);
-}
-
-function buildRvrCounter(d) {
-  return buildRvrTable(d, ['Instance', 'We read', 'Gerald corrected']);
-}
-
-// ---------------------------------------------------------------------------
 
 const charts = [
   ['b-four-acts', buildFourActs],
   ['d4-arms', buildD4Arms],
   ['d4-top3', buildD4Top3],
+  ['d4-slope', buildD4Slope],
   ['top3-measures', buildTop3Measures],
   ['lot-bar', buildLotBar],
+  ['lot-days', buildLotDays],
+  ['jitter-drops', buildJitterDrops],
   ['f-two-levers', buildTwoLevers],
   ['e-lane-dag', buildLaneDag],
-  ['rvr-memory', buildRvrMemory],
-  ['rvr-counter', buildRvrCounter],
 ];
 
-// A prior revision of this deck drew a single combined remembered-vs-recorded
-// table; it is now split into rvr-memory.svg and rvr-counter.svg (see
-// revise/charts). Delete the old file if a stale copy is still on disk.
-const stale = path.join(OUT_DIR, 'remembered-vs-recorded.svg');
-if (existsSync(stale)) {
-  console.log(`note: stale ${path.relative(process.cwd(), stale)} still on disk — delete it manually`);
+// The remembered-vs-recorded section is cut (D16, structure v2) — its two
+// charts and their JSON are deleted. Warn if a stale copy is still on disk
+// (e.g. from an unclean worktree) rather than silently leaving it behind.
+// A prior revision before that also drew a single combined table under this
+// name; both are handled the same way.
+for (const stale of ['remembered-vs-recorded.svg', 'rvr-memory.svg', 'rvr-counter.svg']) {
+  const stalePath = path.join(OUT_DIR, stale);
+  if (existsSync(stalePath)) {
+    console.log(`note: stale ${path.relative(process.cwd(), stalePath)} still on disk — delete it manually`);
+  }
 }
 
 for (const [name, fn] of charts) {
