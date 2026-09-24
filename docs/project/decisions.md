@@ -328,3 +328,20 @@ concepts, the champion build) is used ONLY as a reference for how the toolchain 
 of its content, numbers or imagery goes into slides, notes or the public repo. The six pulled skills
 (`.claude/skills/`, git-ignored) are used as TOOLS for this deck: svg-infographic for structural
 diagrams; svg-design / svg-linyaosky for hand-authored charts; impeccable + hallmark as design gates.
+
+## D16 · 2026-09-24 · Structure v2: a talk about applying the methods; Gerald as protagonist
+
+From Gerald's answers in `talk/plan/story-plan.md` §e and his 11:1x message:
+- The talk is about **applying orchestration, gates, experiments, and which method fits which
+  problem type**. Remembered-vs-recorded is CUT (no stage time); the D-log stays in the repo.
+- Gerald is protagonist AND narrator. The opening demos the CURRENT state live (Demo 0: the scout),
+  then gives one timeline from ~10–15 s identify to today, with the areas that could have eaten weeks.
+- **The jitter is reframed:** the first sign we were onto something (identify got fast enough to
+  flap). Experiments then brought it to today's clean state.
+- **Hours (testimony):** ~30 minutes a day, spread out, setting agents up for overnight
+  experiments. Goes on the backup slide and in the notes, labelled as Gerald's estimate.
+- Polish is LAST. Before it, the new visuals get generated with the pulled skills
+  (svg-infographic for structure, svg-linyaosky for the step and slope charts).
+- **Demo 0 (proposer off):** no lane had been asked before 11:1x. Lane `demo/scout-single-crop`
+  builds it on a Grailith branch (no merge, no deploy).
+Structure: `talk/plan/structure-v2.md`.
