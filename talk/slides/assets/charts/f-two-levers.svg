@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<title id="t">3 minutes fell through two levers</title>
+<desc id="d">Source: mining/arcs/F-agent-labeling.md — Metrics: &quot;two levers, not one&quot; table</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <defs><pattern id="hatch-hand" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
     <rect width="8" height="8" fill="#3987e5"/>
@@ -19,7 +21,7 @@
 <text x="276" y="138" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">By hand, fresh label</text>
 <rect x="300" y="98" width="716.4" height="64" rx="4" fill="url(#hatch-hand)" stroke="#3987e5" stroke-width="2"/>
 <text x="1032.4" y="139" fill="#ffffff" font-size="28" font-weight="700">180s</text>
-<text x="300" y="188" fill="#898781" font-size="22">founder testimony — not instrumented</text>
+<text x="300" y="188" fill="#898781" font-size="22">my stopwatch — not instrumented</text>
 <text x="276" y="288" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">With agents</text>
 <rect x="300" y="248" width="53.73000000000002" height="64" fill="#d95926"/>
 <rect x="355.73" y="248" width="97.5" height="64" fill="#d95926" opacity="0.62"/>
@@ -29,5 +31,5 @@
 <line x1="483.08000000000004" y1="228" x2="483.08000000000004" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
 <text x="469.23" y="289" fill="#ffffff" font-size="28" font-weight="700">31–46s total</text>
 <text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s (instrumented, E84)</text>
-<text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">Human review: 20–30s (founder estimate — not instrumented)</text>
+<text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">Human review: 20–30s (my estimate — not instrumented)</text>
 </svg>

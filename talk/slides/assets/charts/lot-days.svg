@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<title id="t">All lots, by day</title>
+<desc id="d">Source: mining/findings/lot-top3-unlocked.md §4 (per-day counts, overall 71.3% reference) — backup/appendix panel split out of lot-bar.svg</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <text x="40" y="44" fill="#ffffff" font-size="26" font-weight="700">all lots, by day <tspan fill="#c3c2b7" font-size="22" font-weight="600">— dashed line: all lots 71.3%</tspan></text>
 <line x1="90" y1="394" x2="1096" y2="394" stroke="#2c2c2a" stroke-width="1"/>

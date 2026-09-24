@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">45+ forks: 3 areas × 3 parts × ~5 experiments</title>
-<desc id="d">Fork tree: one jittery overlay branches into three areas (UI/UX, card detection, embedding generation), each into about three parts of the system, each into about five experiments, 45 or more forks for one person. The fan-out is Gerald's own estimate (testimony, not in the record). Sources: talk/abstract-rough.md; docs/project/decisions.md D14 (the 3x5 fork grid is testimony), D16.</desc>
+<desc id="d">Fork tree: one jittery overlay branches into three areas (UI/UX, card detection, embedding generation), each into about three parts of the system, each into about five experiments, 45 or more forks for one person. The fan-out is my own estimate (testimony, not in the record). Sources: talk/abstract-rough.md; docs/project/decisions.md D14 (the 3x5 fork grid is testimony), D16.</desc>
 <defs></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
 <rect x="418" y="14" width="300" height="52" rx="12" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2"/>

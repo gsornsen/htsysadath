@@ -1,6 +1,7 @@
 {
   "source": "mining/findings/top3-trajectory.md Group A (E108, line ~38), Group B (E103/E119, lines ~47-48), Group C (E109, line ~58); mining/findings/lot-top3-unlocked.md §3 (line ~67, ~75) — B1 replay and the 76.9%/42.1% points dropped per D12",
   "title": "Top-3 was measured four incompatible ways",
+  "desc": "Four yardsticks on one 0-100% axis, never joined. Served crops: 78.2% pooled (262/335). Same crops, offline: 74.3% pooled (249/335). Six-crop consensus over 41 scenes: 70.3% for a single crop to 82.9% with consensus. Live lots: 71.3% of all lots (62/87), 65.2% of lots not auto-locked (45/69).",
   "lanes": [
     {
       "key": "served",
@@ -28,8 +29,8 @@
       "label": "Live lots",
       "role": "context",
       "points": [
-        { "label": "pooled, n=87",      "numerator": 62, "denominator": 87 },
-        { "label": "non-locked, n=69",  "numerator": 45, "denominator": 69 }
+        { "label": "all lots",        "numerator": 62, "denominator": 87 },
+        { "label": "not auto-locked", "numerator": 45, "denominator": 69 }
       ]
     }
   ]
