@@ -60,3 +60,63 @@ grAIde/memory/model-words-not-model-ids.md · 09-13].
   per-item time reported), an order slower than 10 s. [E28a §12]
 - **For the talk:** quote 11–16 s agent wall time with its scope caveat (agent-only, no human
   review); mark the 3-min baseline NOT FOUND rather than present a guess as measured.
+
+## 1. The arc in one paragraph
+
+The labeling program moved from "the founder is the only labeler and it's the bottleneck" to
+"agents label, paired and blind, and the founder reviews the disagreements." E28a showed two
+independent agent labelers agree 95.8% of the time and, when they agree, are right often enough
+(71% exact, 96.5% modulo print language) to turn a stalled ±25-point precision estimate into a
+usable ±8-point one, at no founder cost. E84 then ran a tool-using agent labeler at 800-task scale
+for ~$9, with zero cases of agreement on a wrong answer. The catch, found by the founder auditing
+the agents' own "not in catalogue" calls: agreement is not correctness — it can hide a blind spot
+only a human spot-check catches.
+
+## 2. Pivotal moments
+
+1. **2026-09-06 — pair the agents, then adjudicate only the residual.** Fork: relabel everything vs.
+   founder adjudicating only what two blind agents disagree on. Decision: paired-blind; founder
+   adjudicates the residual. Evidence: κ = 0.952; dissents clustered on the print-language
+   ambiguity the study targeted; the founder closed 3 of 6 residual fires blind in a 6-minute
+   session. Benefit: turned a blocked ship decision into a measured one and shrank the CI band
+   ±2.5→±1.25 points for ~6 minutes of his time instead of a full re-run. [E28a §2,§3.4,§9,§12]
+2. **2026-09-09 — give the agent tools, not just a picture.** Fork: vision-only vs. catalog/
+   reference-art/web tools, capped (8 calls, 60 s, $6/run). Decision: tools, capped. Evidence:
+   Gemini nearly doubled the best embedding model's exact-id rate at $0.004/task, zero wrong
+   agreements. Not pursued: unlimited budget — Haiku's cap drove most abstentions, fixed by raising
+   it, not swapping models. [E84 §1,§3]
+3. **2026-09-10/11 — a founder audit reverses a written "converged" claim.** Fork: trust the
+   pipeline's "48 named/19 gap" summary vs. re-opening it by hand. Decision: he read all 20
+   remaining tasks himself. Evidence: 9/20 were actually in the catalogue — the model had refused
+   hits it already had, or searched by the wrong-language name. Benefit: reversed a stated
+   conclusion, drove 4 fix passes ($1.24) recovering 20 written-off labels. [E84 §14,§15]
+4. **2026-09-13 — the UI, not the agents, is the real bottleneck.** Fork: push agent coverage
+   further vs. fix why the founder's own review sessions were slow. Decision: a labeling-UI design
+   critique. Evidence: the one-tap answer rendered 276–639 px below the fold; sessions ran "NOT <
+   1 min" against a 60 s target. Benefit: shifted the arc from "can agents label" to "can the human
+   review fast enough." [src: docs/plan/2026-09-08-handoff-siglip2.md; docs/design/2026-09-13-
+   labeler-critique/final-critique-and-plan.md]
+
+## 3. The transferable move
+
+Don't ask "can an agent do this task" — ask "can two independent, blind agents agree often enough
+that agreement is informative." Pay for a cheap pair, not one strong model: a capped, tool-using
+agent paired against a second gives a usable signal at a fraction of human time, and the
+disagreement — or an audit showing agreement hid a shared blind spot — is where scarce human
+minutes belong. Agreement means a question is answerable, never that the answer is right; auditing
+the agreements, not just the dissents, caught §15.
+
+## 4. Slide candidates
+
+- **"Two blind agents agree 96% of the time, and where they don't is where the system is wrong."**
+  Artifact: E28a's 3×3 decision matrix next to the dissent-clustering finding.
+- **"Agreement is not correctness."** Artifact: E84 §15's table — 9/20 "genuine gaps" a human
+  audit found were actually in the catalogue, one-line cause each.
+- **"The number the talk almost quoted."** Artifact: E84's 11–16 s wall time next to a "3 min by
+  hand — NOT FOUND" label.
+
+## 5. Open questions for Gerald
+
+1. Source for "~3 minutes per label by hand"? Name it and it can be re-checked.
+2. Does "~10 s with agents" include the human `[verify]` step, or is it agent-only (as sourced)?
+3. Is the founder's E28a adjudication (~1 min/item, derived) what you mean by "verify"?
