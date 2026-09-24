@@ -407,3 +407,18 @@ excepted). Testimony labels become "my estimate", "my stopwatch", "my call". The
 (decisions, mining, tracking) keeps its existing wording, since it's provenance, not narration.
 Merge gate: `grep -niE "founder|gerald"` over the deck, notes, outline, `talk/slides/assets`,
 `talk/slides/data` and `demo/qa/out` returns nothing but the title slide's name.
+
+## D21 · 2026-09-24 · Dev stack matched to prod for Japanese identify (Gerald approved)
+
+Applied by the coordinator on the dev box, on Gerald's direct approval in this session (a subagent's
+attempt had been denied by the permission system and correctly stopped; it was not worked around):
+migrations 0051–0058 (ledger 50 → 58); the 1i catalogue seed via `apply_catalog_index.py --langs
+en,ja` (45,155 rows: 23,996 JA / 21,159 EN, same as prod); the 09-20 JA map `apply.sql` (1,902 JA
+tid_identities rows; alakazam-65 → 575601); `IDENTIFY_LANG_SWITCH=true` in dev `.dev.vars`; `:8988`
+restarted twice by the runbook (the idle check, then Gerald closed the tab; port-holder group
+confirmed, identical argv relaunched, health 200). The box's seed file is NEWER than prod's (3,401 JA
+tids vs prod's 2,660), and a 09-21 note says the extra 741 unpriced ids must not be applied without a
+price gate, so they were nulled back to prod's 2,660. Backups: `~/backups/d1-pre-ja-20260924T185945Z`
+(before anything) and `~/backups/d1-post-1i-20260924T190941Z` (before the 741 null-out). The trunk's
+tracked files stayed clean. The Alakazam fire itself couldn't be replayed (the demo build doesn't
+record frames), so the live check is Gerald's next Japanese card on the extension.
