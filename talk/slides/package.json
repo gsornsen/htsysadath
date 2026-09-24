@@ -1,0 +1,17 @@
+{
+  "name": "htsysadath-slides",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Marp deck for \"How to scale yourself and do all the things\"",
+  "scripts": {
+    "author": "marp -s -w --html --server-port \"${PORT:-8080}\" .",
+    "serve": "marp -s --html --server-port \"${PORT:-8080}\" .",
+    "build": "marp --html deck.md -o dist/deck.html",
+    "pdf": "marp --html --pdf --allow-local-files deck.md -o dist/deck.pdf",
+    "charts": "node scripts/build-charts.mjs",
+    "shots": "node scripts/shoot.mjs"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1"
+  }
+}

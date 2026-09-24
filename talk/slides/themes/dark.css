@@ -1,0 +1,160 @@
+/* @theme dark */
+
+/*
+ * Custom dark theme for "How to scale yourself and do all the things".
+ * Surface and categorical colours per talk/plan/04-data-viz.md (validated
+ * with validate_palette.js: worst adjacent CVD ΔE 26.8, normal-vision ΔE
+ * 31.8, clear of the ≥8/≥15 floors). System sans, large readable type for a
+ * projected stage talk.
+ */
+
+section {
+  --surface: #1a1a19;
+  --surface-raised: #242422;
+  --ink: #f4f3ef;
+  --ink-dim: #b8b6ae;
+  --accent-1: #3987e5; /* categorical slot 1 (blue) */
+  --accent-2: #d95926; /* categorical slot 2 (orange) */
+  --accent-3: #4caf7d; /* categorical slot 3 (green), 3-way comparisons only */
+  --rule: #3a3a37;
+
+  background: var(--surface);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 32px;
+  line-height: 1.4;
+  padding: 64px 72px;
+}
+
+section h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.3em;
+}
+
+section h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.3em;
+}
+
+section h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--ink-dim);
+}
+
+section a {
+  color: var(--accent-1);
+}
+
+section strong {
+  color: var(--ink);
+}
+
+section code,
+section pre {
+  background: var(--surface-raised);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+section table {
+  border-collapse: collapse;
+  font-size: 0.85em;
+}
+
+section table th,
+section table td {
+  border: 1px solid var(--rule);
+  padding: 0.4em 0.7em;
+}
+
+section table th {
+  background: var(--surface-raised);
+}
+
+section img {
+  background: var(--surface);
+}
+
+section footer,
+section header {
+  color: var(--ink-dim);
+  font-size: 0.5em;
+}
+
+/* Title slide */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.lead h1 {
+  font-size: 2.4em;
+}
+
+/* Section divider between arcs */
+section.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--surface-raised);
+}
+
+section.section h1 {
+  font-size: 2.2em;
+  color: var(--accent-1);
+}
+
+section.section h2 {
+  color: var(--ink-dim);
+  font-weight: 400;
+}
+
+/* Demo hand-off slides: link out to a running app, or a terminal note.
+   Big, unambiguous target — this is read from the back of the room while
+   the presenter switches windows. */
+section.demo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.demo h2 {
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+section.demo a {
+  display: inline-block;
+  margin-top: 0.4em;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--accent-2);
+  padding: 0.3em 0.7em;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+section.demo .terminal-note {
+  margin-top: 0.4em;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  color: var(--accent-1);
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  display: inline-block;
+}

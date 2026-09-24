@@ -1,0 +1,11 @@
+# Marp CLI config for this deck.
+# NOTE: no `inputDir` here on purpose — 01-marp-runtime.md proved that setting
+# inputDir in this file conflicts with passing a filename on the CLI/npm
+# scripts ("Cannot pass files together with input directory", hard error).
+# `build`/`pdf` pass `deck.md` explicitly; `author`/`serve` pass `.` as a
+# server-mode directory argument on the command line, not via this config,
+# so the two never collide.
+html: true
+themeSet:
+  - themes
+allowLocalFiles: false
