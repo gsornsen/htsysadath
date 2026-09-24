@@ -1,0 +1,15 @@
+{
+  "source": "mining/findings/lot-top3-unlocked.md §4 (per-day counts, overall 71.3% reference) — backup/appendix panel split out of lot-bar.svg",
+  "title": "All lots, by day",
+  "overall": { "label": "all lots", "numerator": 62, "denominator": 87, "ciLo": 61.0, "ciHi": 79.7 },
+  "dotplot": {
+    "unit": "all lots, by day",
+    "points": [
+      { "day": "09-12", "numerator": 23, "denominator": 34 },
+      { "day": "09-13", "numerator": 17, "denominator": 18 },
+      { "day": "09-14", "numerator": 11, "denominator": 15 },
+      { "day": "09-15", "numerator": 6,  "denominator": 13 },
+      { "day": "09-16", "numerator": 5,  "denominator": 7 }
+    ]
+  }
+}

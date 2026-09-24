@@ -1,0 +1,15 @@
+{
+  "source": "grAIde-main docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md §0 headline table (lines ~21-24) — measured against a control, 09-05",
+  "title": "Jitter, resolved: answers thrown away per 100",
+  "unit": "per 100 answers",
+  "axisMax": 40,
+  "bars": [
+    { "key": "BASE", "label": "BASE — old client, slow server", "value": 35.8, "role": "baseline" },
+    { "key": "CTRL", "label": "CTRL — old client, 3× faster server (p50 1,157→433ms)", "value": 15.4, "role": "context" },
+    { "key": "F5",   "label": "F5 — cancel the request, keep the answer", "value": 0.14, "role": "after", "note": "≈ 1 in 700" }
+  ],
+  "levers": [
+    { "label": "3× faster server" },
+    { "label": "keep the answer" }
+  ]
+}
