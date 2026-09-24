@@ -1,0 +1,22 @@
+{
+  "source": "mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75), paired McNemar (lines 77-85)",
+  "title": "The language-head win, at top-1 and top-3",
+  "groups": [
+    {
+      "key": "@1",
+      "label": "@1",
+      "g0":  { "numerator": 136, "denominator": 201 },
+      "g0h": { "numerator": 156, "denominator": 201 },
+      "delta": "+9.95",
+      "mcnemar": "McNemar b = 0, c = 20, p = 1.9e-06"
+    },
+    {
+      "key": "@3",
+      "label": "@3",
+      "g0":  { "numerator": 168, "denominator": 201, "ciLo": 77.8, "ciHi": 88.1 },
+      "g0h": { "numerator": 179, "denominator": 201, "ciLo": 84.0, "ciHi": 92.7 },
+      "delta": "+5.47",
+      "mcnemar": "McNemar b = 1, c = 12, p = 0.0034"
+    }
+  ]
+}

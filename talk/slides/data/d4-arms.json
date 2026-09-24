@@ -1,23 +1,10 @@
 {
-  "source": "mining/findings/E67-top3-replay.md — positive control @1 (print@1 table, lines 55-64) and @3 results (lines 66-75), paired McNemar (lines 77-85)",
-  "title": "The language-head win, at top-1 and top-3",
-  "groups": [
-    {
-      "label": "@1",
-      "bars": [
-        { "series": "G0",  "seriesLabel": "G0 — flat, no head",     "numerator": 136, "denominator": 201 },
-        { "series": "G0h", "seriesLabel": "G0h — flat + language head", "numerator": 156, "denominator": 201 }
-      ],
-      "mcnemar": "McNemar b = 0, c = 20, p = 1.9e-06"
-    },
-    {
-      "label": "@3",
-      "bars": [
-        { "series": "G0",  "seriesLabel": "G0 — flat, no head",     "numerator": 168, "denominator": 201, "ciLo": 77.8, "ciHi": 88.1 },
-        { "series": "G0h", "seriesLabel": "G0h — flat + language head", "numerator": 179, "denominator": 201, "ciLo": 84.0, "ciHi": 92.7 }
-      ],
-      "mcnemar": "McNemar b = 1, c = 12, p = 0.0034"
-    }
+  "source": "grAIde-main docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.2 (arm print@1 table) and §4.3 (a) (kill criterion, ~line 662)",
+  "title": "The dedup arm failed its pre-registered kill line",
+  "bars": [
+    { "key": "G0",  "label": "G0 — flat, no head",           "numerator": 136, "denominator": 201, "role": "baseline" },
+    { "key": "G3",  "label": "G3 — dedup",                     "numerator": 107, "denominator": 201, "role": "context", "killed": true },
+    { "key": "G0h", "label": "G0h — flat + language head",     "numerator": 156, "denominator": 201, "role": "after" }
   ],
-  "caption": "The gain carries to top-3, at about half its @1 size (+9.95 → +5.47 pts): 13 of the 20 crops the head fixed at @1 already had the truth print at rank 2–3, so the unaided gallery already counted them as top-3 hits. n = 201, one frozen test split."
+  "killLine": { "pct": 65.66, "label": "pre-registered kill line: G0 − 2.0 pts" }
 }

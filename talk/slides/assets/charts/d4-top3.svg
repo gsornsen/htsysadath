@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
+<line x1="90" y1="320" x2="876" y2="320" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="327" text-anchor="end" fill="#898781" font-size="22">0%</text>
+<line x1="90" y1="264" x2="876" y2="264" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="271" text-anchor="end" fill="#898781" font-size="22">20%</text>
+<line x1="90" y1="208" x2="876" y2="208" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="215" text-anchor="end" fill="#898781" font-size="22">40%</text>
+<line x1="90" y1="152" x2="876" y2="152" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="159" text-anchor="end" fill="#898781" font-size="22">60%</text>
+<line x1="90" y1="96" x2="876" y2="96" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="103" text-anchor="end" fill="#898781" font-size="22">80%</text>
+<line x1="90" y1="40" x2="876" y2="40" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="47" text-anchor="end" fill="#898781" font-size="22">100%</text>
+<line x1="90" y1="320" x2="876" y2="320" stroke="#383835" stroke-width="2"/>
+<rect x="176.5" y="130.54726368159203" width="100" height="189.45273631840797" rx="4" fill="#3987e5"/>
+<text x="226.5" y="118.54726368159203" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">67.7%</text>
+<rect x="296.5" y="102.68656716417911" width="100" height="217.3134328358209" rx="4" fill="#d95926"/>
+<text x="346.5" y="90.68656716417911" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">77.6%</text>
+<text x="286.5" y="62.68656716417911" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">+9.95</text>
+<text x="286.5" y="356" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">@1</text>
+<rect x="569.5" y="85.97014925373136" width="100" height="234.02985074626864" rx="4" fill="#3987e5"/>
+<line x1="619.5" y1="102.16" x2="619.5" y2="73.32000000000002" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<line x1="612.5" y1="102.16" x2="626.5" y2="102.16" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<line x1="612.5" y1="73.32000000000002" x2="626.5" y2="73.32000000000002" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<text x="619.5" y="61.32000000000002" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">83.6%</text>
+<rect x="689.5" y="70.6467661691542" width="100" height="249.3532338308458" rx="4" fill="#d95926"/>
+<line x1="739.5" y1="84.80000000000001" x2="739.5" y2="60.44" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<line x1="732.5" y1="84.80000000000001" x2="746.5" y2="84.80000000000001" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<line x1="732.5" y1="60.44" x2="746.5" y2="60.44" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+<text x="739.5" y="48.44" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">89.1%</text>
+<text x="679.5" y="20.439999999999998" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">+5.47</text>
+<text x="679.5" y="356" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">@3</text>
+<rect x="916" y="42" width="22" height="22" rx="3" fill="#3987e5"/>
+<text x="948" y="60" fill="#c3c2b7" font-size="22"><tspan x="948" y="60">G0 — flat, no</tspan><tspan x="948" y="85">head</tspan></text>
+<rect x="916" y="116" width="22" height="22" rx="3" fill="#d95926"/>
+<text x="948" y="134" fill="#c3c2b7" font-size="22"><tspan x="948" y="134">G0h — flat +</tspan><tspan x="948" y="159">language head</tspan></text>
+</svg>

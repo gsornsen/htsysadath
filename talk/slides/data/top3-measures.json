@@ -1,44 +1,36 @@
 {
-  "source": "mining/findings/top3-trajectory.md §1 — Group A (E108, RESULT-2026-09-11.md), Group B (E103/E119 RESULT-2026-09-12.md), Group C (E109/B1 replay), Group D (run-4 reads, E100b, lot_top3 harness §10a)",
+  "source": "mining/findings/top3-trajectory.md Group A (E108, line ~38), Group B (E103/E119, lines ~47-48), Group C (E109, line ~58); mining/findings/lot-top3-unlocked.md §3 (line ~67, ~75) — B1 replay and the 76.9%/42.1% points dropped per D12",
   "title": "Top-3 was measured four incompatible ways",
-  "panels": [
+  "lanes": [
     {
-      "id": "A",
-      "title": "A — crop-level, served path",
-      "unit": "pooled top-3 %, frozen 335-crop split",
+      "key": "served",
+      "label": "Served crops",
+      "role": "context",
+      "points": [ { "label": "pooled", "numerator": 262, "denominator": 335 } ]
+    },
+    {
+      "key": "offline",
+      "label": "Same crops, offline",
+      "role": "context",
+      "points": [ { "label": "pooled", "numerator": 249, "denominator": 335 } ]
+    },
+    {
+      "key": "consensus",
+      "label": "Six-crop consensus, 41 scenes",
+      "role": "before-after",
       "points": [
-        { "label": "E108 pooled", "numerator": 262, "denominator": 335, "date": "2026-09-11" }
+        { "label": "single crop", "pct": 70.3, "role": "baseline" },
+        { "label": "consensus",   "pct": 82.9, "role": "after" }
       ]
     },
     {
-      "id": "B",
-      "title": "B — crop-level, offline cosine",
-      "unit": "top-3 %, same 335 crops, numpy replay",
+      "key": "lots",
+      "label": "Live lots",
+      "role": "context",
       "points": [
-        { "label": "E103 old gallery",      "numerator": 249, "denominator": 335, "date": "2026-09-12" },
-        { "label": "E119 promoted gallery",  "numerator": 249, "denominator": 335, "date": "2026-09-12" }
-      ]
-    },
-    {
-      "id": "C",
-      "title": "C — redundant crops, one photo",
-      "unit": "top-3 %, 41 scenes, group-level",
-      "points": [
-        { "label": "E109 Σ-ordering", "numerator": 34, "denominator": 41, "date": "2026-09-11" },
-        { "label": "B1 replay",         "numerator": 33, "denominator": 41, "date": "2026-09-13" }
-      ]
-    },
-    {
-      "id": "D",
-      "title": "D — lot-level, live auctions",
-      "unit": "top-3 %, founder-tapped lots",
-      "points": [
-        { "label": "single fire",        "numerator": 8,  "denominator": 19, "date": "2026-09-11" },
-        { "label": "R3 consensus",       "numerator": 12, "denominator": 19, "date": "2026-09-11" },
-        { "label": "lot_top3 harness",   "numerator": 23, "denominator": 34, "date": "2026-09-12" },
-        { "label": "+18 lots",           "numerator": 40, "denominator": 52, "date": "2026-09-12" }
+        { "label": "pooled, n=87",      "numerator": 62, "denominator": 87 },
+        { "label": "non-locked, n=69",  "numerator": 45, "denominator": 69 }
       ]
     }
-  ],
-  "caption": "Four structurally different measurements of “top-3” — crop-level served, crop-level offline, redundant-crop groups, live lots. Points are never joined, within or across panels: none forms a trend line."
+  ]
 }

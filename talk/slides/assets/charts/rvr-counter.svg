@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
+<text x="40" y="46" fill="#898781" font-size="22" font-weight="700" letter-spacing="0.4">INSTANCE</text>
+<text x="340" y="46" fill="#898781" font-size="22" font-weight="700" letter-spacing="0.4">WE READ</text>
+<text x="730" y="46" fill="#898781" font-size="22" font-weight="700" letter-spacing="0.4">GERALD CORRECTED</text>
+<line x1="40" y1="66" x2="1096" y2="66" stroke="#383835" stroke-width="2"/>
+<text x="40" y="128" fill="#ffffff" font-size="22" font-weight="700"><tspan x="40" y="128">Arc B ordering (D5 →</tspan><tspan x="40" y="156">D9)</tspan></text>
+<text x="340" y="128" fill="#c3c2b7" font-size="22"><tspan x="340" y="128">Overlapping commit dates</tspan><tspan x="340" y="156">looked like concurrent work,</tspan><tspan x="340" y="184">so we rebuilt it as</tspan><tspan x="340" y="212">parallel.</tspan></text>
+<text x="730" y="128" fill="#ffffff" font-size="22"><tspan x="730" y="128">Not concurrent — four</tspan><tspan x="730" y="156">sequential acts, each begun</tspan><tspan x="730" y="184">for a stated reason.</tspan></text>
+<line x1="40" y1="229" x2="1096" y2="229" stroke="#2c2c2a" stroke-width="1"/>
+<text x="40" y="262" fill="#ffffff" font-size="22" font-weight="700"><tspan x="40" y="262">The 3-min baseline</tspan><tspan x="40" y="290">(D6 → D7)</tspan></text>
+<text x="340" y="262" fill="#c3c2b7" font-size="22"><tspan x="340" y="262">Absent from the mined</tspan><tspan x="340" y="290">transcripts, so we called it</tspan><tspan x="340" y="318">unsourced and dropped it.</tspan></text>
+<text x="730" y="262" fill="#ffffff" font-size="22"><tspan x="730" y="262">He timed himself; the</tspan><tspan x="730" y="290">message just lived outside</tspan><tspan x="730" y="318">the mined corpus.</tspan></text>
+<line x1="40" y1="335" x2="1096" y2="335" stroke="#2c2c2a" stroke-width="1"/>
+<text x="40" y="368" fill="#ffffff" font-size="22" font-weight="700"><tspan x="40" y="368">Single crop vs the</tspan><tspan x="40" y="396">vote (E79 / D12)</tspan></text>
+<text x="340" y="368" fill="#c3c2b7" font-size="22"><tspan x="340" y="368">A 09-13 replay looked like</tspan><tspan x="340" y="396">it undid the single-crop</tspan><tspan x="340" y="424">win.</tspan></text>
+<text x="730" y="368" fill="#ffffff" font-size="22"><tspan x="730" y="368">The replay tested two single</tspan><tspan x="730" y="396">crops, never the vote;</tspan><tspan x="730" y="424">single crop still won.</tspan></text>
+</svg>

@@ -1,69 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
-<text x="56" y="56" fill="#ffffff" font-size="30" font-weight="700">Top-3 was measured four incompatible ways</text>
-<rect x="62" y="96" width="572" height="221" rx="6" fill="none" stroke="#2c2c2a" stroke-width="1"/>
-<text x="80" y="122" fill="#ffffff" font-size="17" font-weight="700">A — crop-level, served path</text>
-<text x="80" y="140" fill="#898781" font-size="13">pooled top-3 %, frozen 335-crop split</text>
-<line x1="80" y1="301" x2="616" y2="301" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="305" text-anchor="end" fill="#898781" font-size="11">0</text>
-<line x1="80" y1="227.5" x2="616" y2="227.5" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="231.5" text-anchor="end" fill="#898781" font-size="11">50</text>
-<line x1="80" y1="154" x2="616" y2="154" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="158" text-anchor="end" fill="#898781" font-size="11">100</text>
-<circle cx="348" cy="186.0328358208955" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="348" y="170.0328358208955" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">78.2%</text>
-<text x="348" y="317" text-anchor="middle" fill="#898781" font-size="11"><tspan x="348" y="317">E108 pooled (262/335)</tspan></text>
-<rect x="646" y="96" width="572" height="221" rx="6" fill="none" stroke="#2c2c2a" stroke-width="1"/>
-<text x="664" y="122" fill="#ffffff" font-size="17" font-weight="700">B — crop-level, offline cosine</text>
-<text x="664" y="140" fill="#898781" font-size="13">top-3 %, same 335 crops, numpy replay</text>
-<line x1="664" y1="301" x2="1200" y2="301" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="305" text-anchor="end" fill="#898781" font-size="11">0</text>
-<line x1="664" y1="227.5" x2="1200" y2="227.5" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="231.5" text-anchor="end" fill="#898781" font-size="11">50</text>
-<line x1="664" y1="154" x2="1200" y2="154" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="158" text-anchor="end" fill="#898781" font-size="11">100</text>
-<circle cx="842.6666666666666" cy="191.73731343283583" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="842.6666666666666" y="175.73731343283583" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">74.3%</text>
-<text x="842.6666666666666" y="317" text-anchor="middle" fill="#898781" font-size="11"><tspan x="842.6666666666666" y="317">E103 old gallery (249/335)</tspan></text>
-<circle cx="1021.3333333333333" cy="191.73731343283583" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="1021.3333333333333" y="175.73731343283583" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">74.3%</text>
-<text x="1021.3333333333333" y="317" text-anchor="middle" fill="#898781" font-size="11"><tspan x="1021.3333333333333" y="317">E119 promoted gallery (249/335)</tspan></text>
-<rect x="62" y="331" width="572" height="221" rx="6" fill="none" stroke="#2c2c2a" stroke-width="1"/>
-<text x="80" y="357" fill="#ffffff" font-size="17" font-weight="700">C — redundant crops, one photo</text>
-<text x="80" y="375" fill="#898781" font-size="13">top-3 %, 41 scenes, group-level</text>
-<line x1="80" y1="536" x2="616" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="540" text-anchor="end" fill="#898781" font-size="11">0</text>
-<line x1="80" y1="462.5" x2="616" y2="462.5" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="466.5" text-anchor="end" fill="#898781" font-size="11">50</text>
-<line x1="80" y1="389" x2="616" y2="389" stroke="#2c2c2a" stroke-width="1"/>
-<text x="72" y="393" text-anchor="end" fill="#898781" font-size="11">100</text>
-<circle cx="258.66666666666663" cy="414.0975609756098" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="258.66666666666663" y="398.0975609756098" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">82.9%</text>
-<text x="258.66666666666663" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="258.66666666666663" y="552">E109 Σ-ordering (34/41)</tspan></text>
-<circle cx="437.3333333333333" cy="417.68292682926824" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="437.3333333333333" y="401.68292682926824" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">80.5%</text>
-<text x="437.3333333333333" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="437.3333333333333" y="552">B1 replay (33/41)</tspan></text>
-<rect x="646" y="331" width="572" height="221" rx="6" fill="none" stroke="#2c2c2a" stroke-width="1"/>
-<text x="664" y="357" fill="#ffffff" font-size="17" font-weight="700">D — lot-level, live auctions</text>
-<text x="664" y="375" fill="#898781" font-size="13">top-3 %, founder-tapped lots</text>
-<line x1="664" y1="536" x2="1200" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="540" text-anchor="end" fill="#898781" font-size="11">0</text>
-<line x1="664" y1="462.5" x2="1200" y2="462.5" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="466.5" text-anchor="end" fill="#898781" font-size="11">50</text>
-<line x1="664" y1="389" x2="1200" y2="389" stroke="#2c2c2a" stroke-width="1"/>
-<text x="656" y="393" text-anchor="end" fill="#898781" font-size="11">100</text>
-<circle cx="771.2" cy="474.10526315789474" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="771.2" y="458.10526315789474" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">42.1%</text>
-<text x="771.2" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="771.2" y="552">single fire (8/19)</tspan></text>
-<circle cx="878.4" cy="443.1578947368421" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="878.4" y="427.1578947368421" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">63.2%</text>
-<text x="878.4" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="878.4" y="552">R3 consensus (12/19)</tspan></text>
-<circle cx="985.6" cy="436.55882352941177" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="985.6" y="420.55882352941177" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">67.6%</text>
-<text x="985.6" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="985.6" y="552">lot_top3 harness</tspan><tspan x="985.6" y="565">(23/34)</tspan></text>
-<circle cx="1092.8" cy="422.9230769230769" r="7" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
-<text x="1092.8" y="406.9230769230769" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">76.9%</text>
-<text x="1092.8" y="552" text-anchor="middle" fill="#898781" font-size="11"><tspan x="1092.8" y="552">+18 lots (40/52)</tspan></text>
-<text x="56" y="612" fill="#c3c2b7" font-size="18"><tspan x="56" y="612">Four structurally different measurements of “top-3” — crop-level served, crop-level offline, redundant-crop groups,</tspan><tspan x="56" y="636">live lots. Points are never joined, within or across panels: none forms a trend line.</tspan></text>
-<text x="56" y="700" fill="#898781" font-size="14">source: mining/findings/top3-trajectory.md §1 — Group A (E108, RESULT-2026-09-11.md), Group B (E103/E119 RESULT-2026-09-12.md), Group C (E109/B1 replay), Group D (run-4 reads, E100b, lot_top3 harness §10a)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<defs><marker id="top3-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#898781"/></marker></defs>
+<rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
+<line x1="320" y1="30" x2="320" y2="370" stroke="#2c2c2a" stroke-width="1"/>
+<text x="320" y="400" text-anchor="middle" fill="#898781" font-size="22">0%</text>
+<line x1="514" y1="30" x2="514" y2="370" stroke="#2c2c2a" stroke-width="1"/>
+<text x="514" y="400" text-anchor="middle" fill="#898781" font-size="22">25%</text>
+<line x1="708" y1="30" x2="708" y2="370" stroke="#2c2c2a" stroke-width="1"/>
+<text x="708" y="400" text-anchor="middle" fill="#898781" font-size="22">50%</text>
+<line x1="902" y1="30" x2="902" y2="370" stroke="#2c2c2a" stroke-width="1"/>
+<text x="902" y="400" text-anchor="middle" fill="#898781" font-size="22">75%</text>
+<line x1="1096" y1="30" x2="1096" y2="370" stroke="#2c2c2a" stroke-width="1"/>
+<text x="1096" y="400" text-anchor="middle" fill="#898781" font-size="22">100%</text>
+<line x1="320" y1="370" x2="1096" y2="370" stroke="#383835" stroke-width="2"/>
+<text x="296" y="72.5" text-anchor="end" fill="#ffffff" font-size="24" font-weight="600"><tspan x="296" y="72.5">Served crops</tspan></text>
+<circle cx="926.9014925373134" cy="72.5" r="9" fill="#726f68" stroke="#1a1a19" stroke-width="2"/>
+<text x="926.9014925373134" y="56.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">78.2% pooled (262/335)</text>
+<text x="296" y="157.5" text-anchor="end" fill="#ffffff" font-size="24" font-weight="600"><tspan x="296" y="157.5">Same crops, offline</tspan></text>
+<circle cx="896.7880597014926" cy="157.5" r="9" fill="#726f68" stroke="#1a1a19" stroke-width="2"/>
+<text x="896.7880597014926" y="141.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">74.3% pooled (249/335)</text>
+<text x="296" y="228.5" text-anchor="end" fill="#ffffff" font-size="24" font-weight="600"><tspan x="296" y="228.5">Six-crop consensus,</tspan><tspan x="296" y="256.5">41 scenes</tspan></text>
+<line x1="865.528" y1="242.5" x2="963.3040000000001" y2="242.5" stroke="#898781" stroke-width="2" marker-end="url(#top3-arrow)"/>
+<circle cx="865.528" cy="242.5" r="9" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="963.3040000000001" cy="242.5" r="9" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<text x="865.528" y="224.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">70.3%</text>
+<text x="963.3040000000001" y="224.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">82.9%</text>
+<text x="296" y="327.5" text-anchor="end" fill="#ffffff" font-size="24" font-weight="600"><tspan x="296" y="327.5">Live lots</tspan></text>
+<circle cx="873.0114942528737" cy="309.5" r="9" fill="#726f68" stroke="#1a1a19" stroke-width="2"/>
+<text x="873.0114942528737" y="293.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">71.3% pooled, n=87 (62/87)</text>
+<circle cx="826.0869565217391" cy="345.5" r="9" fill="#726f68" stroke="#1a1a19" stroke-width="2"/>
+<text x="826.0869565217391" y="329.5" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">65.2% non-locked, n=69 (45/69)</text>
 </svg>

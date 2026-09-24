@@ -6,32 +6,29 @@
       "n": 1,
       "label": "Pregrade",
       "date": "2026-07-04",
-      "trigger": "LLM-vision identify as a proof of concept — feasibility and a baseline before image-to-image",
+      "trigger": "LLM vision as proof of concept",
       "flag": false
     },
     {
       "n": 2,
       "label": "Live-stream scout",
       "date": "2026-08-18",
-      "trigger": "image-to-image identify — a card is on screen for seconds; 6–15s breaks “feels live”",
+      "trigger": "image-to-image identify",
       "flag": false
     },
     {
       "n": 3,
       "label": "Bulk scan / lots",
-      "date": "2026-08-19 → 09-20",
-      "trigger": "one shared identify core, fast and accurate for BOTH bulk scan and scout — every app tested was slow and inaccurate, and identify was the hardest part; solve it once, build both apps around it",
-      "detail": "image-to-image lane 08-20 · scout switched to it 09-02 · LLM identify retired 09-03",
+      "date": "2026-08-20 → 09-03",
+      "trigger": "one shared identify core, LLM removed",
       "flag": false
     },
     {
       "n": 4,
       "label": "Comps / pricing",
       "date": "2026-09-06",
-      "trigger": "raw comps across NM / LP / MP / HP / DMG became its own problem, outgrowing “use an API”",
-      "detail": "precursor: per-condition tiers shipped 08-23, inside lots",
+      "trigger": "comps across conditions",
       "flag": false
     }
-  ],
-  "caption": "Four sequential acts, each begun for a stated reason (D9). Act 3 and act 4 framings settled by the founder (D11), superseding the earlier open questions."
+  ]
 }

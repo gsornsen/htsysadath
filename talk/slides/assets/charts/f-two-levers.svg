@@ -1,30 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
-<text x="56" y="56" fill="#ffffff" font-size="30" font-weight="700">3 minutes fell through two levers</text>
-<line x1="433.8430496874189" y1="130" x2="433.8430496874189" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="433.8430496874189" y="120" text-anchor="middle" fill="#898781" font-size="13">10s</text>
-<line x1="698.9308628802494" y1="130" x2="698.9308628802494" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="698.9308628802494" y="120" text-anchor="middle" fill="#898781" font-size="13">30s</text>
-<line x1="989.441465332485" y1="130" x2="989.441465332485" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="989.441465332485" y="120" text-anchor="middle" fill="#898781" font-size="13">100s</text>
-<line x1="1220" y1="130" x2="1220" y2="536" stroke="#2c2c2a" stroke-width="1"/>
-<text x="1220" y="120" text-anchor="middle" fill="#898781" font-size="13">260s</text>
-<text x="356" y="205" text-anchor="end" fill="#ffffff" font-size="16" font-weight="600"><tspan x="356" y="205">By hand (fresh label, no agent)</tspan></text>
-<rect x="380" y="190" width="751.2704647256287" height="30" rx="4" fill="#3987e5"/>
-<text x="1145.2704647256287" y="211" fill="#ffffff" font-size="22" font-weight="700">180s</text>
-<text x="380" y="242" fill="#898781" font-size="13">founder testimony (D7) — original message not in the mined corpus</text>
-<text x="356" y="325" text-anchor="end" fill="#ffffff" font-size="16" font-weight="600"><tspan x="356" y="325">Agent first pass (wall time</tspan><tspan x="356" y="345">only, no human)</tspan></text>
-<rect x="380" y="320" width="167.25178865254907" height="30" rx="4" fill="#3987e5"/>
-<line x1="456.8407599806237" y1="314" x2="456.8407599806237" y2="356" stroke="#ffffff" stroke-width="3"/>
-<text x="561.2517886525491" y="341" fill="#ffffff" font-size="22" font-weight="700">11–16s</text>
-<text x="380" y="372" fill="#898781" font-size="13">instrumented — E84, Gemini 2.5 Flash / Haiku 4.5</text>
-<text x="356" y="455" text-anchor="end" fill="#ffffff" font-size="16" font-weight="600"><tspan x="356" y="455">Human review, after P0/P1</tspan><tspan x="356" y="475">redesign</tspan></text>
-<rect x="380" y="450" width="318.9308628802494" height="30" rx="4" fill="#3987e5"/>
-<line x1="601.094838339968" y1="444" x2="601.094838339968" y2="486" stroke="#ffffff" stroke-width="3"/>
-<text x="712.9308628802494" y="471" fill="#ffffff" font-size="22" font-weight="700">20–30s</text>
-<text x="380" y="502" fill="#898781" font-size="13">founder estimate, not instrumented — 09-13/09-14</text>
-<rect x="56" y="538" width="1168" height="52" rx="6" fill="#2c2c2a" opacity="0.5"/>
-<text x="72" y="558" fill="#c3c2b7" font-size="14.5"><tspan x="72" y="558">Task-shape caveat: the 3-min figure is a FRESH label by hand; 11–16s and 20–30s are per REVIEW task, made with agent pre-labels already on</tspan><tspan x="72" y="577">screen — different task shapes.</tspan></text>
-<text x="56" y="630" fill="#c3c2b7" font-size="18"><tspan x="56" y="630">3 min → ~20 s fell through two levers, not one: an agent first pass (11–16s) and a redesigned review UI (~20–30s).</tspan><tspan x="56" y="654">Crediting agents alone would overclaim.</tspan></text>
-<text x="56" y="700" fill="#898781" font-size="14">source: mining/arcs/F-agent-labeling.md — Metrics: “two levers, not one” table</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
+<defs><pattern id="hatch-hand" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" fill="#3987e5"/>
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#0d2a52" stroke-width="3"/>
+  </pattern>
+</defs>
+<line x1="300" y1="40" x2="300" y2="400" stroke="#2c2c2a" stroke-width="1"/>
+<text x="300" y="430" text-anchor="middle" fill="#898781" font-size="22">0s</text>
+<line x1="499" y1="40" x2="499" y2="400" stroke="#2c2c2a" stroke-width="1"/>
+<text x="499" y="430" text-anchor="middle" fill="#898781" font-size="22">50s</text>
+<line x1="698" y1="40" x2="698" y2="400" stroke="#2c2c2a" stroke-width="1"/>
+<text x="698" y="430" text-anchor="middle" fill="#898781" font-size="22">100s</text>
+<line x1="897" y1="40" x2="897" y2="400" stroke="#2c2c2a" stroke-width="1"/>
+<text x="897" y="430" text-anchor="middle" fill="#898781" font-size="22">150s</text>
+<line x1="1096" y1="40" x2="1096" y2="400" stroke="#2c2c2a" stroke-width="1"/>
+<text x="1096" y="430" text-anchor="middle" fill="#898781" font-size="22">200s</text>
+<line x1="300" y1="400" x2="1096" y2="400" stroke="#383835" stroke-width="2"/>
+<text x="276" y="138" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">By hand, fresh label</text>
+<rect x="300" y="98" width="716.4" height="64" rx="4" fill="url(#hatch-hand)" stroke="#3987e5" stroke-width="2"/>
+<text x="1032.4" y="139" fill="#ffffff" font-size="28" font-weight="700">180s</text>
+<text x="300" y="188" fill="#898781" font-size="22">founder testimony — not instrumented</text>
+<text x="276" y="288" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">With agents</text>
+<rect x="300" y="248" width="53.73000000000002" height="64" fill="#d95926"/>
+<rect x="355.73" y="248" width="97.5" height="64" fill="#d95926" opacity="0.62"/>
+<rect x="300" y="248" width="153.23000000000002" height="64" fill="none" stroke="#d95926" stroke-width="2" rx="4"/>
+<line x1="423.38" y1="234" x2="483.08000000000004" y2="234" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<line x1="423.38" y1="228" x2="423.38" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<line x1="483.08000000000004" y1="228" x2="483.08000000000004" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+<text x="469.23" y="289" fill="#ffffff" font-size="28" font-weight="700">31–46s total</text>
+<text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s (instrumented, E84)</text>
+<text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">Human review: 20–30s (founder estimate — not instrumented)</text>
 </svg>

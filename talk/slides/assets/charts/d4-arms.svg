@@ -1,46 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
-<text x="56" y="56" fill="#ffffff" font-size="30" font-weight="700">The language-head win, at top-1 and top-3</text>
-<line x1="130" y1="490" x2="980" y2="490" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="495" text-anchor="end" fill="#898781" font-size="15">0%</text>
-<line x1="130" y1="414" x2="980" y2="414" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="419" text-anchor="end" fill="#898781" font-size="15">20%</text>
-<line x1="130" y1="338" x2="980" y2="338" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="343" text-anchor="end" fill="#898781" font-size="15">40%</text>
-<line x1="130" y1="262" x2="980" y2="262" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="267" text-anchor="end" fill="#898781" font-size="15">60%</text>
-<line x1="130" y1="186" x2="980" y2="186" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="191" text-anchor="end" fill="#898781" font-size="15">80%</text>
-<line x1="130" y1="110" x2="980" y2="110" stroke="#2c2c2a" stroke-width="1"/>
-<text x="116" y="115" text-anchor="end" fill="#898781" font-size="15">100%</text>
-<line x1="130" y1="490" x2="980" y2="490" stroke="#383835" stroke-width="2"/>
-<rect x="250.5" y="232.88557213930346" width="84" height="257.11442786069654" rx="4" fill="#3987e5"/>
-<text x="292.5" y="220.88557213930346" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">67.7%</text>
-<text x="292.5" y="198.88557213930346" text-anchor="middle" fill="#898781" font-size="13">136/201</text>
-<rect x="350.5" y="195.07462686567163" width="84" height="294.92537313432837" rx="4" fill="#d95926"/>
-<text x="392.5" y="183.07462686567163" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">77.6%</text>
-<text x="392.5" y="161.07462686567163" text-anchor="middle" fill="#898781" font-size="13">156/201</text>
-<text x="342.5" y="524" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">@1</text>
-<text x="342.5" y="84" text-anchor="middle" fill="#c3c2b7" font-size="15">McNemar b = 0, c = 20, p = 1.9e-06</text>
-<rect x="675.5" y="172.38805970149252" width="84" height="317.6119402985075" rx="4" fill="#3987e5"/>
-<text x="717.5" y="143.22000000000003" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">83.6%</text>
-<text x="717.5" y="121.22000000000003" text-anchor="middle" fill="#898781" font-size="13">168/201</text>
-<line x1="717.5" y1="194.36" x2="717.5" y2="155.22000000000003" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<line x1="711.5" y1="194.36" x2="723.5" y2="194.36" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<line x1="711.5" y1="155.22000000000003" x2="723.5" y2="155.22000000000003" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<rect x="775.5" y="151.592039800995" width="84" height="338.407960199005" rx="4" fill="#d95926"/>
-<text x="817.5" y="125.74000000000001" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">89.1%</text>
-<text x="817.5" y="103.74000000000001" text-anchor="middle" fill="#898781" font-size="13">179/201</text>
-<line x1="817.5" y1="170.8" x2="817.5" y2="137.74" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<line x1="811.5" y1="170.8" x2="823.5" y2="170.8" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<line x1="811.5" y1="137.74" x2="823.5" y2="137.74" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
-<text x="767.5" y="524" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">@3</text>
-<text x="767.5" y="84" text-anchor="middle" fill="#c3c2b7" font-size="15">McNemar b = 1, c = 12, p = 0.0034</text>
-<text x="1020" y="120" fill="#ffffff" font-size="16" font-weight="700">Arm</text>
-<rect x="1020" y="136" width="18" height="18" rx="3" fill="#3987e5"/>
-<text x="1048" y="150" fill="#c3c2b7" font-size="15"><tspan x="1048" y="150">G0 — flat, no head</tspan></text>
-<rect x="1020" y="171" width="18" height="18" rx="3" fill="#d95926"/>
-<text x="1048" y="185" fill="#c3c2b7" font-size="15"><tspan x="1048" y="185">G0h — flat + language</tspan><tspan x="1048" y="204">head</tspan></text>
-<text x="56" y="580" fill="#c3c2b7" font-size="18"><tspan x="56" y="580">The gain carries to top-3, at about half its @1 size (+9.95 → +5.47 pts): 13 of the 20 crops the head fixed at @1</tspan><tspan x="56" y="604">already had the truth print at rank 2–3, so the unaided gallery already counted them as top-3 hits. n = 201, one</tspan><tspan x="56" y="628">frozen test split.</tspan></text>
-<text x="56" y="700" fill="#898781" font-size="14">source: mining/findings/E67-top3-replay.md — positive control @1 (print@1 table, lines 55-64) and @3 results (lines 66-75), paired McNemar (lines 77-85)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
+<line x1="90" y1="320" x2="1096" y2="320" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="327" text-anchor="end" fill="#898781" font-size="22">0%</text>
+<line x1="90" y1="264" x2="1096" y2="264" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="271" text-anchor="end" fill="#898781" font-size="22">20%</text>
+<line x1="90" y1="208" x2="1096" y2="208" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="215" text-anchor="end" fill="#898781" font-size="22">40%</text>
+<line x1="90" y1="152" x2="1096" y2="152" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="159" text-anchor="end" fill="#898781" font-size="22">60%</text>
+<line x1="90" y1="96" x2="1096" y2="96" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="103" text-anchor="end" fill="#898781" font-size="22">80%</text>
+<line x1="90" y1="40" x2="1096" y2="40" stroke="#2c2c2a" stroke-width="1"/>
+<text x="76" y="47" text-anchor="end" fill="#898781" font-size="22">100%</text>
+<line x1="90" y1="136.15200000000002" x2="1096" y2="136.15200000000002" stroke="#e66767" stroke-width="2" stroke-dasharray="8,6"/>
+<rect x="182.66666666666663" y="130.54726368159203" width="150" height="189.45273631840797" rx="4" fill="#3987e5"/>
+<text x="257.66666666666663" y="116.54726368159203" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">67.7%</text>
+<text x="257.66666666666663" y="92.54726368159203" text-anchor="middle" fill="#898781" font-size="22">136/201</text>
+<text x="257.66666666666663" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="257.66666666666663" y="354">G0 — flat, no</tspan><tspan x="257.66666666666663" y="381">head</tspan></text>
+<rect x="518" y="170.9452736318408" width="150" height="149.0547263681592" rx="4" fill="#726f68"/>
+<text x="593" y="156.9452736318408" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">53.2%</text>
+<text x="593" y="132.9452736318408" text-anchor="middle" fill="#898781" font-size="22">107/201</text>
+<text x="593" y="112.94527363184079" text-anchor="middle" fill="#e66767" font-size="22" font-weight="700">KILLED</text>
+<text x="593" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="593" y="354">G3 — dedup</tspan></text>
+<rect x="853.3333333333333" y="102.68656716417911" width="150" height="217.3134328358209" rx="4" fill="#d95926"/>
+<text x="928.3333333333333" y="88.68656716417911" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">77.6%</text>
+<text x="928.3333333333333" y="64.68656716417911" text-anchor="middle" fill="#898781" font-size="22">156/201</text>
+<text x="928.3333333333333" y="354" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700"><tspan x="928.3333333333333" y="354">G0h — flat +</tspan><tspan x="928.3333333333333" y="381">language head</tspan></text>
+<text x="1096" y="126.15200000000002" text-anchor="end" fill="#e66767" font-size="22" font-weight="600">pre-registered kill line: G0 − 2.0 pts (65.7%)</text>
 </svg>
