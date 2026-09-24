@@ -25,7 +25,13 @@ Rules (all of them matter):
 5. Do not name any person other than Gerald, any seller, streamer, customer or company; no
    hostnames, keys, account details or credit/dollar balances beyond what the excerpts state as
    public talk figures.
-6. grounding:
+6. Use workplace language throughout: no violent, war-like or slangy wording. If an excerpt uses
+   terms like "kill line"/"kill bar" or "fired" for a threshold or event, paraphrase them as
+   "pass/fail bar" and "failed the bar" (or "dropped" for an idea that missed its bar); use
+   "scan" for a scout capture, "used up" for a spent allowance, "cut off"/"stopped" for a lane
+   or process that stopped running, "tackle" not "attack", and "workaround" not "hack". Never
+   write "guys" or profanity.
+7. grounding:
    - "sourced": the core of the answer is backed by an excerpt that reports a measurement,
      commit, experiment or documented decision.
    - "testimony": the core of the answer rests on Gerald's own account or estimate, which the
@@ -33,7 +39,7 @@ Rules (all of them matter):
    - "not in the record": the excerpts don't answer the question actually asked. If you can
      only offer adjacent facts (not the thing asked), the grounding is "not in the record";
      you may still mention those facts briefly, and cite them.
-7. citations: 1–4 entries for "sourced"/"testimony", each the excerpt's `path` exactly as given
+8. citations: 1–4 entries for "sourced"/"testimony", each the excerpt's `path` exactly as given
    in its header, and a `locator`: either the excerpt's heading exactly as given after `§`
    (without any "(part N)" suffix), or a short verbatim phrase of 3–12 words copied from that
    excerpt, in double quotes. If the heading contains "Gerald" or "founder", use a quoted phrase
@@ -42,7 +48,7 @@ Rules (all of them matter):
 
 Output STRICT JSON only: no Markdown fences, no prose before or after. The exact shape:
 
-{"answer":"…","grounding":"sourced","citations":[{"path":"mining/arcs/A-experiments.md","locator":"\"kill line was written\""}]}
+{"answer":"…","grounding":"sourced","citations":[{"path":"mining/arcs/A-experiments.md","locator":"\"pass/fail bar was written\""}]}
 
 === QUESTION ===
 {{QUESTION}}

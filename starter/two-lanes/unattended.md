@@ -6,9 +6,9 @@ overnight" and "ran overnight safely."
 
 ## Before the run
 
-1. **Write the gate's pass/kill bar first — not just the gate.** `checklist.md` already says
+1. **Write the gate's pass/fail bar first — not just the gate.** `checklist.md` already says
    write the gate before you see output. Unattended, go one step further: write the exact
-   number or condition that KILLS the attempt, not just what counts as success. Example: "kill
+   number or condition that DROPS the attempt, not just what counts as success. Example: "drop
    if the new approach loses more than 2.0 points against the current baseline." A bar you can
    check by reading one number means the lane (or you, in the morning) doesn't have to
    interpret anything to know whether to stop.
@@ -32,15 +32,15 @@ overnight" and "ran overnight safely."
 
 ## The failures to guard against
 
-- **An idle tab (or a dead orchestrator) burns your API allowance overnight, and no gate
+- **An idle tab (or a stopped orchestrator) uses up your API allowance overnight, and no gate
   catches it** — a gate checks the *result*, not whether something got left running that
   shouldn't be. Run a separate idle/spend watchdog alongside every unattended window: something
   that checks "is anything still consuming budget with no lane actively using it" on its own
   schedule, independent of whatever the lanes themselves report.
-- **A usage limit or crash kills a lane mid-run, and uncommitted work is gone.** Commit early,
+- **A usage limit or crash stops a lane mid-run, and uncommitted work is gone.** Commit early,
   in small chunks, on every lane — the same rule as `checklist.md` § "rules that came from
   pain," worth repeating here because unattended runs are exactly when you're not there to
-  notice a kill happened. A lane that resumes from its last commit costs you nothing; a lane
+  notice a lane got cut off. A lane that resumes from its last commit costs you nothing; a lane
   that loses an evening's work to an uncommitted diff costs you the evening.
 - **A cap set too tight starves the agent, and it looks like a capability failure.** If a lane
   hits its call or time cap partway through a task, the result you get back is *what it could
@@ -62,7 +62,7 @@ assembles it from each lane's own short report.
 - ...
 
 ## Gate results
-- <lane name>: PASS/KILL against <the bar you wrote before the run> — <the number>
+- <lane name>: PASS/FAIL against <the bar you wrote before the run> — <the number>
 - ...
 
 ## What unlocked
@@ -72,9 +72,9 @@ assembles it from each lane's own short report.
 - <anything that touched a flag default, a production flip, a spend/cap decision, or crossed
   a line only a human should cross — named explicitly, not buried in a lane's full report>
 
-## Caps hit (check before reading a KILL as a capability finding)
+## Caps hit (check before reading a FAIL as a capability finding)
 - <any lane that hit a call/time/$ cap before finishing — flag these separately from real
-  KILLs>
+  FAILs>
 ```
 
 Read "what needs your word" first. That's the only section that requires you before the day's

@@ -74,7 +74,7 @@ On September 2nd I ran my first instrumented live session, and the scout was loc
 letting go at least once a second. When it didn't clobber itself, it identified well
 [G:70b2f1b9e · 09-02; D14]. On screen it was super jittery, not close to usable. But everything under
 the presentation layer looked promising [abstract]. It could only flap because naming the card had
-got fast enough to change its mind [D16]. This is the moment from slide 2. I could attack it from
+got fast enough to change its mind [D16]. This is the moment from slide 2. I could tackle it from
 the UI, from card detection, or from how we generate the image fingerprints we search with. Each had
 at least three parts to explore, and each part about five experiments [abstract]. Forty-five forks or
 more, and that grid is my own count, not something in the record [P5]. The project had come close to
@@ -120,7 +120,7 @@ identifies, and it holds. If it misses, that's the one in three I'll show you in
    (`cropMode: "proposals"`) and point it at the dev stack; confirm the stack answers from the
    venue network; open a stream tab with cards on screen [D18]. The build: Grailith branch
    `demo/scout-single-crop` at `7e38ca42`, v0.4.37, loaded unpacked (disable the regular scout
-   build first, or every card fires twice). Options → the dev-box preset. Sign in to the dev web
+   build first, or every card scans twice). Options → the dev-box preset. Sign in to the dev web
    app in the same browser profile. The vote is the default; nothing to set [D18]. Health: the dev
    stack's `/api/health` answers 200 from the venue network. Stream: any live show with cards on
    screen. Afterwards, park the tab on about:blank, because an idle live tab keeps spending
@@ -153,7 +153,7 @@ gets its own lane. A lane is a new git worktree and branch, one Claude Code sess
 brief with the files, the acceptance test and what's off limits [arc E]. A smaller model builds. A
 stronger model reviews, always one tier up, never a peer. My strongest model writes the briefs and
 judges results; I make the calls [arc E; D2]. The chart is this talk's own repo. It
-isn't free. A usage limit killed three build lanes mid-work on September 7th, so lanes
+isn't free. A usage limit cut off three build lanes mid-work on September 7th, so lanes
 commit early, and an early rule letting the swarm steer itself broke the next day [arc E]. Try it:
 two lanes, one fix each, gate first. `starter/two-lanes/checklist.md` has the five
 steps.
@@ -163,14 +163,14 @@ steps.
 *Problem A · Too many forks, one of you*
 
 You'll see this when an experiment takes hours, you can't babysit it, and you come back to something
-half-merged. Here's what let mine run while I slept; follow the numbers. One: a pass-or-kill bar,
+half-merged. Here's what let mine run while I slept; follow the numbers. One: a pass-or-fail bar,
 written before the run. Two: the change sits behind a flag, on in dev, off in production. Three:
 every run is capped on calls, time and money; my labeling agents got 8 calls, 60 seconds and $6.
 Four: guard rails, so production refuses unsafe config at boot. Five: judged offline, on recorded
 data. Six: the gate passes, it merges, the next experiment unlocks. In the morning I get one file
 with the calls only I can make, like flipping production [gates-and-flags]. It isn't airtight:
-before a watchdog, an idle tab burned a full day's API allowance overnight [gates-and-flags]. Try
-it: before your next long run, write the kill bar and an end time. `starter/two-lanes/unattended.md`.
+before a watchdog, an idle tab used up a full day's API allowance overnight [gates-and-flags]. Try
+it: before your next long run, write the pass/fail bar and an end time. `starter/two-lanes/unattended.md`.
 
 **Stage (3.5 min).** The focus slide. Slow down. The six boxes snake, so follow the numbers, not left
 to right, and point at each box as you say its number. Don't quote any credit or dollar amount for
@@ -183,10 +183,10 @@ the idle tab; "a full day's allowance" is the line.
 You'll see this when there's a favourite idea, and every result gets read in its favour.
 Japanese cards were matching better than English ones, and 96 % of 19,258 Japanese card images had an
 English twin with the same art [arc A]. My favourite idea was to remove the duplicates. I wrote the
-kill line down first: lose more than two points and it's dead. It lost 14.43 points, and it died
-[arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
+pass/fail bar down first: lose more than two points and it's dropped. It lost 14.43 points, and it
+was dropped [arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
 language. On the same 201 test photos, the first guess went from 67.66 % to 77.61 % right: 20 fixed,
-none broken [arc A; E67-top3]. Found after the kill, on the same photos, so a lead, not proof; it
+none broken [arc A; E67-top3]. Found after it failed the bar, on the same photos, so a lead, not proof; it
 shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
 ticket before you start: "we drop this if…".
 
@@ -261,8 +261,8 @@ the hardest of those first.
 
 Here's the whole talk on one slide; this is the one to photograph. A: you can see five fixes and
 there's one of you. Give each fix a lane, write the gate first, and let them run behind a flag while
-you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the kill
-line before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
+you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the
+pass/fail bar before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
 C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done",
 then pick it up on your own phone [arc C]. D: two things need the same hard part. Build that part
 first, once [D11]. The starter kit covers A, B and C; D is a conversation for your next planning
@@ -272,7 +272,7 @@ meeting [starter].
 
 If you only take two things. At the next fork, ask how you could get an answer while you focus on
 something else [abstract]. One: run your next fork as gated experiments that can run unattended.
-First step: before you pick a fix, write the kill bar, give each option its own worktree, and put it
+First step: before you pick a fix, write the pass/fail bar, give each option its own worktree, and put it
 behind a flag. `starter/two-lanes/` has the lane brief, and `unattended.md` has the flags, caps and
 the morning report [starter; gates-and-flags; arc E]. Two: put a persona review gate in front of
 "done". First step: write three persona briefs, each a device and a job, have an agent walk the
@@ -325,7 +325,7 @@ was read whole. Grailith paths are relative to its `docs/`.
 | # | Claim | Verdict | Source |
 |---|---|---|---|
 | P1 | Jitter at the detect/identify boundary; identify round trip in September | **Sourced** | `G:45b8bddb7` (08-18): anti-jitter state machine, built against 6–15 s identify. `G:70b2f1b9e` (09-02): first live session, locking and unlocking at least once a second. `experiments/EXP-E88-identify-timer-retune-2026-09-11.md` §1 (09-11): client round trip p50 375 ms, p95 692 ms. The abstract's "~500 ms" is the round trip after the 09-05 speedup (D14), so v3 no longer states it as the August cadence. |
-| P2 | Key transitions instrumented in PostHog; data replayable offline | **Sourced** | `G:1267e680e` (08-22): PostHog event taxonomy. `G:70b2f1b9e` (09-02): per-frame phase-transition ring buffer. `G:912a455d4` (09-04): `ui_result_dropped`. `G:3c52c2b72` (09-04): capture ledger joining frame ↔ panel state ↔ fire record ↔ worker log. E13–E16, E43 (09-05) state offline replay. Nuance: lock state per fire lives in the fire records [lot-top3 §1]. |
+| P2 | Key transitions instrumented in PostHog; data replayable offline | **Sourced** | `G:1267e680e` (08-22): PostHog event taxonomy. `G:70b2f1b9e` (09-02): per-frame phase-transition ring buffer. `G:912a455d4` (09-04): `ui_result_dropped`. `G:3c52c2b72` (09-04): capture ledger joining frame ↔ panel state ↔ scan record ↔ worker log. E13–E16, E43 (09-05) state offline replay. Nuance: lock state per scan lives in the scan records [lot-top3 §1]. |
 | P3 | ~100 experiments in two weeks, each in its own worktree | **Sourced (conservative); wording D13** | `G:ledger` (09-18): ~150 experiment docs, ~108 done or shipped. `G:backlog` §EXP-001: each arm in its own worktree off frozen commits against frozen captured data; ledger §4 checked 72 worktrees. Several frozen corpora, not one [top3-traj]. |
 | P4 | Gates unlocked the next experiment overnight | **Sourced** | `G:backlog` line 57: 09-07 23:00 PDT ask; queue autonomous 23:05 → 07:00 on 09-08. `G:backlog` §"Overnight wave": ~25 merges. `G:7ca4e5eab` (09-05): overnight queue table. |
 | P5 | 3 areas × ≥ 3 parts × ~5 experiments | **My testimony (D10)** | No planning doc with that fan-out found. Ledger thread 6 (scout detection and cadence) holds 16 experiments, which fits one area. |

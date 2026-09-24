@@ -14,7 +14,7 @@ experiment design.
   happens when a usage limit hits mid-run.
 - Unattended runs: how to set caps, flags, an end time and a morning report without a platform
   team.
-- Terms they didn't catch: embedding, top-3, kill line, replay harness, language head.
+- Terms they didn't catch: embedding, top-3, pass/fail bar, replay harness, language head.
 - The starter kit: which file to open first for each closing action.
 
 **What makes them distrust a talk.** Undefined jargon; a method that seems to need a staff

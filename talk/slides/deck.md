@@ -81,7 +81,7 @@ On September 2nd I ran my first instrumented live session, and the scout was loc
 letting go at least once a second. When it didn't clobber itself, it identified well
 [G:70b2f1b9e · 09-02; D14]. On screen it was super jittery, not close to usable. But everything under
 the presentation layer looked promising [abstract]. It could only flap because naming the card had
-got fast enough to change its mind [D16]. This is the moment from slide 2. I could attack it from
+got fast enough to change its mind [D16]. This is the moment from slide 2. I could tackle it from
 the UI, from card detection, or from how we generate the image fingerprints we search with. Each had
 at least three parts to explore, and each part about five experiments [abstract]. Forty-five forks or
 more, and that grid is my own count, not something in the record [P5]. The project had come close to
@@ -158,7 +158,7 @@ identifies, and it holds. If it misses, that's the one in three I'll show you in
    (`cropMode: "proposals"`) and point it at the dev stack; confirm the stack answers from the
    venue network; open a stream tab with cards on screen [D18]. The build: Grailith branch
    `demo/scout-single-crop` at `7e38ca42`, v0.4.37, loaded unpacked (disable the regular scout
-   build first, or every card fires twice). Options → the dev-box preset. Sign in to the dev web
+   build first, or every card scans twice). Options → the dev-box preset. Sign in to the dev web
    app in the same browser profile. The vote is the default; nothing to set [D18]. Health: the dev
    stack's `/api/health` answers 200 from the venue network. Stream: any live show with cards on
    screen. Afterwards, park the tab on about:blank, because an idle live tab keeps spending
@@ -209,7 +209,7 @@ gets its own lane. A lane is a new git worktree and branch, one Claude Code sess
 brief with the files, the acceptance test and what's off limits [arc E]. A smaller model builds. A
 stronger model reviews, always one tier up, never a peer. My strongest model writes the briefs and
 judges results; I make the calls [arc E; D2]. The chart is this talk's own repo. It
-isn't free. A usage limit killed three build lanes mid-work on September 7th, so lanes
+isn't free. A usage limit cut off three build lanes mid-work on September 7th, so lanes
 commit early, and an early rule letting the swarm steer itself broke the next day [arc E]. Try it:
 two lanes, one fix each, gate first. `starter/two-lanes/checklist.md` has the five
 steps.
@@ -222,20 +222,20 @@ steps.
 
 ## Can it keep working while I sleep?
 
-<p class="method">Write the pass/kill bar first, keep new code behind a flag, cap every run. The gate decides the merge; I flip production.</p>
+<p class="method">Write the pass/fail bar first, keep new code behind a flag, cap every run. The gate decides the merge; I flip production.</p>
 
 ![](assets/diagrams/gates-flags.svg)
 
 <!--
 You'll see this when an experiment takes hours, you can't babysit it, and you come back to something
-half-merged. Here's what let mine run while I slept; follow the numbers. One: a pass-or-kill bar,
+half-merged. Here's what let mine run while I slept; follow the numbers. One: a pass-or-fail bar,
 written before the run. Two: the change sits behind a flag, on in dev, off in production. Three:
 every run is capped on calls, time and money; my labeling agents got 8 calls, 60 seconds and $6.
 Four: guard rails, so production refuses unsafe config at boot. Five: judged offline, on recorded
 data. Six: the gate passes, it merges, the next experiment unlocks. In the morning I get one file
 with the calls only I can make, like flipping production [gates-and-flags]. It isn't airtight:
-before a watchdog, an idle tab burned a full day's API allowance overnight [gates-and-flags]. Try
-it: before your next long run, write the kill bar and an end time. `starter/two-lanes/unattended.md`.
+before a watchdog, an idle tab used up a full day's API allowance overnight [gates-and-flags]. Try
+it: before your next long run, write the pass/fail bar and an end time. `starter/two-lanes/unattended.md`.
 
 **Stage (3.5 min).** The focus slide. Slow down. The six boxes snake, so follow the numbers, not left
 to right, and point at each box as you say its number. Don't quote any credit or dollar amount for
@@ -245,11 +245,11 @@ the idle tab; "a full day's allowance" is the line.
 ---
 
 <!-- _header: "Problem B · Is my favourite idea better?" -->
-<!-- _footer: "Source: mining/arcs/A-experiments.md (E67: kill fired; the language re-rank added after it, same 201-photo test set); mining/findings/E67-top3-replay.md" -->
+<!-- _footer: "Source: mining/arcs/A-experiments.md (E67: failed the bar; the language re-rank added after it, same 201-photo test set); mining/findings/E67-top3-replay.md" -->
 
 ## Is my favourite idea actually better?
 
-<p class="method">Before the run, write down the score that kills the idea. Then let it. Bars: before · my favourite (killed) · what shipped.</p>
+<p class="method">Before the run, write down the score that drops the idea. Then let it. Bars: before · my favourite (dropped) · what shipped.</p>
 
 ![](assets/charts/d4-arms.svg)
 
@@ -257,10 +257,10 @@ the idle tab; "a full day's allowance" is the line.
 You'll see this when there's a favourite idea, and every result gets read in its favour.
 Japanese cards were matching better than English ones, and 96 % of 19,258 Japanese card images had an
 English twin with the same art [arc A]. My favourite idea was to remove the duplicates. I wrote the
-kill line down first: lose more than two points and it's dead. It lost 14.43 points, and it died
-[arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
+pass/fail bar down first: lose more than two points and it's dropped. It lost 14.43 points, and it
+was dropped [arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
 language. On the same 201 test photos, the first guess went from 67.66 % to 77.61 % right: 20 fixed,
-none broken [arc A; E67-top3]. Found after the kill, on the same photos, so a lead, not proof; it
+none broken [arc A; E67-top3]. Found after it failed the bar, on the same photos, so a lead, not proof; it
 shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
 ticket before you start: "we drop this if…".
 -->
@@ -395,15 +395,15 @@ the hardest of those first.
 | If you see this | Try this | Start with |
 |---|---|---|
 | **A** · Five fixes that might work, and one of you | A lane per fix, a gate written first, runs behind a flag overnight | `starter/two-lanes/` |
-| **B** · Everyone's sure one idea is better | Write the kill line before the run; score what the user sees | `starter/two-lanes/unattended.md`, step 1 |
+| **B** · Everyone's sure one idea is better | Write the pass/fail bar before the run; score what the user sees | `starter/two-lanes/unattended.md`, step 1 |
 | **C** · The tests pass, but is it usable? | A persona panel in front of "done", then your own phone | `starter/persona-gate/` |
 | **D** · Two things need the same hard part | Build that part first, once, and share it | your next planning meeting |
 
 <!--
 Here's the whole talk on one slide; this is the one to photograph. A: you can see five fixes and
 there's one of you. Give each fix a lane, write the gate first, and let them run behind a flag while
-you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the kill
-line before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
+you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the
+pass/fail bar before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
 C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done",
 then pick it up on your own phone [arc C]. D: two things need the same hard part. Build that part
 first, once [D11]. The starter kit covers A, B and C; D is a conversation for your next planning
@@ -417,18 +417,18 @@ meeting [starter].
 ## Two things for next week
 
 1. **Run your next fork as gated experiments that can run unattended.**
-   <span class="step">First step: before you pick a fix, write the kill bar, give each option a worktree, put it behind a flag. → `starter/two-lanes/` · `starter/two-lanes/unattended.md`</span>
+   <span class="step">First step: before you pick a fix, write the pass/fail bar, give each option a worktree, put it behind a flag. → `starter/two-lanes/` · `starter/two-lanes/unattended.md`</span>
 2. **Put a persona review gate in front of “done” for UI and design work.**
    <span class="step">First step: write three persona briefs (a device, a job), have an agent walk the build, then use your own phone. → `starter/persona-gate/`</span>
 
-<p class="testimony">“Before we pick a fix, let’s write down what would kill each option, run three of them overnight, and ship the winner behind a flag.” <cite>my framing: one sentence for your boss</cite></p>
+<p class="testimony">“Before we pick a fix, let’s write down what would drop each option, run three of them overnight, and ship the winner behind a flag.” <cite>my framing: one sentence for your boss</cite></p>
 
 github.com/gsornsen/htsysadath · starter kit: `starter/`
 
 <!--
 If you only take two things. At the next fork, ask how you could get an answer while you focus on
 something else [abstract]. One: run your next fork as gated experiments that can run unattended.
-First step: before you pick a fix, write the kill bar, give each option its own worktree, and put it
+First step: before you pick a fix, write the pass/fail bar, give each option its own worktree, and put it
 behind a flag. `starter/two-lanes/` has the lane brief, and `unattended.md` has the flags, caps and
 the morning report [starter; gates-and-flags; arc E]. Two: put a persona review gate in front of
 "done". First step: write three persona briefs, each a device and a job, have an agent walk the
