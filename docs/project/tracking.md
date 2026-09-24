@@ -26,11 +26,18 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
+| Verify: jitter ending | — | running | Opus 5.5 | — | from experiment docs + ledger (Gerald) |
+| Verify: hold-out (E67 test vs head training) | — | running | Opus 5.5 | — | crop-id overlap, devbox read-only |
+| Revise R1 charts | revise/charts | running | Sonnet → coordinator | — | 9 charts at 1136×440, ≥24 px; fixed filename + number contract |
+| Revise R2 deck + notes | revise/deck | running | Sonnet → coordinator | — | 21 slides + backup; slides 5–8 merged; persona method on screen |
+| Revise R3 starter kit | revise/starter | running | Sonnet → coordinator | — | starter/: generic fanout, lane brief, 5-step checklist |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:4x PDT — D13 (cost within Claude Max; slide 4 wording). Launched 2 verify lanes (jitter ending, hold-out) and 3 revision lanes; the contract fixes filenames AND numbers across R1/R2.
 
 - 2026-09-24 10:3x PDT — L7 critique converged: only slide 3 DONE for all four personas; charts render at 0.53× (text ~6–8 px); slides 9/11/12/17 disagree with their own charts (verified); slide 16 placeholder; no repo URL. Revision swarm awaits Gerald's go plus answers on the jitter ending, total cost and the hold-out.
 
