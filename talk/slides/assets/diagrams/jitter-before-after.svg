@@ -3,42 +3,40 @@
 <desc id="d">Before/after of the scout overlay. Before: every returned answer replaced the last, so a match was shown, overridden, and shown again (flapping). After: one sticky answer stays on screen and stale requests are cancelled. Framed as the first sign we were onto something: identify had become fast enough to flap. Numbers are on the slide 7 chart. Sources: docs/project/decisions.md D14, D16; talk/abstract-rough.md.</desc>
 <defs><marker id="ah-grey" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
-<rect x="294.5" y="10" width="547" height="40" rx="20" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<text x="568" y="30" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >The first sign we were onto something</text>
-<rect x="16" y="64" width="540" height="360" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="rule" stroke="#383835" stroke-width="1.5" data-layout-container="jp0" data-min-pad="20" data-symmetry="x" data-symmetry-tol="2" data-layout-count="3" data-reserve-top="88"/>
-<text x="36" y="94" font-size="28" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >Before</text>
-<text x="36" y="128" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >each answer overwrites the last</text>
-<rect x="36" y="172" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-group="jf0" data-distribution="equal-gap" data-axis="x" data-group-count="3" data-gap-tol="1" data-layout-parent="jp0" data-layout-item="jf0"/>
-<text x="114" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
-<text x="114" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >shown</text>
-<rect x="208" y="172" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-parent="jp0" data-layout-item="jf0"/>
-<text x="286" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match B</text>
-<text x="286" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >overrides</text>
-<rect x="380" y="172" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-parent="jp0" data-layout-item="jf0"/>
-<text x="458" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
-<text x="458" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >shown again</text>
-<rect x="36" y="296" width="172" height="44" rx="0" data-fill-role="edge-line" fill="#3987e5"/>
-<text x="114" y="318" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A</text>
-<rect x="208" y="296" width="172" height="44" rx="0" data-fill-role="edge-line" fill="#2a5f9e"/>
-<text x="286" y="318" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match B</text>
-<rect x="380" y="296" width="156" height="44" rx="0" data-fill-role="edge-line" fill="#3987e5"/>
-<text x="458" y="318" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A</text>
-<path d="M36 384 L286 384" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
-<text x="536" y="384" font-size="24" text-anchor="end" dominant-baseline="central" data-fill-role="muted" fill="#898781" >on screen, over time</text>
-<rect x="580" y="64" width="540" height="360" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="rule" stroke="#383835" stroke-width="1.5" data-layout-container="jp1" data-min-pad="20" data-symmetry="x" data-symmetry-tol="2" data-layout-count="3" data-reserve-top="88"/>
-<text x="600" y="94" font-size="28" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >After</text>
-<text x="600" y="128" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >one sticky answer, stale ones cancelled</text>
-<rect x="600" y="172" width="156" height="104" rx="10" data-fill-role="surface-tint" fill="#35221a" data-stroke-role="focus" stroke="#d95926" stroke-width="2" data-layout-group="jf1" data-distribution="equal-gap" data-axis="x" data-group-count="3" data-gap-tol="1" data-layout-parent="jp1" data-layout-item="jf1"/>
-<text x="678" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
-<text x="678" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >shown</text>
-<rect x="772" y="172" width="156" height="104" rx="10" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-dasharray="6 5" data-layout-parent="jp1" data-layout-item="jf1"/>
-<text x="850" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >request 2</text>
-<text x="850" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >cancelled</text>
-<rect x="944" y="172" width="156" height="104" rx="10" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-dasharray="6 5" data-layout-parent="jp1" data-layout-item="jf1"/>
-<text x="1022" y="209" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >request 3</text>
-<text x="1022" y="241" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >cancelled</text>
-<rect x="600" y="296" width="500" height="44" rx="0" data-fill-role="focus" fill="#d95926"/>
-<text x="850" y="318" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A, held on screen</text>
-<path d="M600 384 L850 384" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
-<text x="1100" y="384" font-size="24" text-anchor="end" dominant-baseline="central" data-fill-role="muted" fill="#898781" >on screen, over time</text>
+<rect x="16" y="40" width="540" height="360" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="rule" stroke="#383835" stroke-width="1.5" data-layout-container="jp0" data-min-pad="20" data-symmetry="x" data-symmetry-tol="2" data-layout-count="3" data-reserve-top="88"/>
+<text x="36" y="70" font-size="28" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >Before</text>
+<text x="36" y="104" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >each answer overwrites the last</text>
+<rect x="36" y="148" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-group="jf0" data-distribution="equal-gap" data-axis="x" data-group-count="3" data-gap-tol="1" data-layout-parent="jp0" data-layout-item="jf0"/>
+<text x="114" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
+<text x="114" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >shown</text>
+<rect x="208" y="148" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-parent="jp0" data-layout-item="jf0"/>
+<text x="286" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match B</text>
+<text x="286" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >overrides</text>
+<rect x="380" y="148" width="156" height="104" rx="10" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2" data-layout-parent="jp0" data-layout-item="jf0"/>
+<text x="458" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
+<text x="458" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >shown again</text>
+<rect x="36" y="272" width="172" height="44" rx="0" data-fill-role="edge-line" fill="#3987e5"/>
+<text x="114" y="294" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A</text>
+<rect x="208" y="272" width="172" height="44" rx="0" data-fill-role="edge-line" fill="#2a5f9e"/>
+<text x="286" y="294" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match B</text>
+<rect x="380" y="272" width="156" height="44" rx="0" data-fill-role="edge-line" fill="#3987e5"/>
+<text x="458" y="294" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A</text>
+<path d="M36 360 L286 360" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<text x="536" y="360" font-size="24" text-anchor="end" dominant-baseline="central" data-fill-role="muted" fill="#898781" >on screen, over time</text>
+<rect x="580" y="40" width="540" height="360" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="rule" stroke="#383835" stroke-width="1.5" data-layout-container="jp1" data-min-pad="20" data-symmetry="x" data-symmetry-tol="2" data-layout-count="3" data-reserve-top="88"/>
+<text x="600" y="70" font-size="28" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >After</text>
+<text x="600" y="104" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >one sticky answer, stale ones cancelled</text>
+<rect x="600" y="148" width="156" height="104" rx="10" data-fill-role="surface-tint" fill="#35221a" data-stroke-role="focus" stroke="#d95926" stroke-width="2" data-layout-group="jf1" data-distribution="equal-gap" data-axis="x" data-group-count="3" data-gap-tol="1" data-layout-parent="jp1" data-layout-item="jf1"/>
+<text x="678" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >match A</text>
+<text x="678" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >shown</text>
+<rect x="772" y="148" width="156" height="104" rx="10" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-dasharray="6 5" data-layout-parent="jp1" data-layout-item="jf1"/>
+<text x="850" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >request 2</text>
+<text x="850" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >cancelled</text>
+<rect x="944" y="148" width="156" height="104" rx="10" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-dasharray="6 5" data-layout-parent="jp1" data-layout-item="jf1"/>
+<text x="1022" y="185" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >request 3</text>
+<text x="1022" y="217" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >cancelled</text>
+<rect x="600" y="272" width="500" height="44" rx="0" data-fill-role="focus" fill="#d95926"/>
+<text x="850" y="294" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >match A, held on screen</text>
+<path d="M600 360 L850 360" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<text x="1100" y="360" font-size="24" text-anchor="end" dominant-baseline="central" data-fill-role="muted" fill="#898781" >on screen, over time</text>
 </svg>

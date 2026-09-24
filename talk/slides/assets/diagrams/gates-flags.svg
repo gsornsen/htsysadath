@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">Gates and flags that let experiments run unattended</title>
-<desc id="d">Flow of seven safeguards: (1) before the run, a pre-registered pass/kill bar (E67's fired at a 14.43-point loss); (2) behind a flag, dev on and prod off; (3) capped per run on tool calls, time and spend (E84: 8 calls, 60 s, $6); (4) guard rails, production refuses unsafe config, with an idle-tab watchdog running in parallel; (5) judged offline on frozen data, replayed rather than live; (6) the gate passes, the change merges, and the next experiment unlocks; (7) in the morning Gerald flips production himself (logged as the founder's word). Source: mining/findings/gates-and-flags.md.</desc>
+<desc id="d">Flow of seven safeguards: (1) before the run, a pre-registered pass/kill bar (E67's fired at a 14.43-point loss); (2) behind a flag, dev on and prod off; (3) capped per run on tool calls, time and spend (the labeling agents in E84: 8 calls, 60 s, $6 per run); (4) guard rails, production refuses unsafe config, with an idle-tab watchdog running in parallel; (5) judged offline on frozen data, replayed rather than live; (6) the gate passes, the change merges, and the next experiment unlocks; (7) in the morning I flip production myself (my call). Source: mining/findings/gates-and-flags.md.</desc>
 <defs><marker id="ah-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
 <rect x="16" y="10" width="328" height="112" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
@@ -18,8 +18,8 @@
 <circle cx="828" cy="66" r="18" data-fill-role="data-line" fill="#726f68"/>
 <text x="828" y="66" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >3</text>
 <text x="858" y="38" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Capped per run</text>
-<text x="858" y="66" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >tool calls, time, $</text>
-<text x="858" y="94" font-size="20" text-anchor="start" dominant-baseline="central" data-fill-role="muted" fill="#898781" >E84: 8 calls · 60 s · $6</text>
+<text x="858" y="66" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >8 calls · 60 s · $6</text>
+<text x="858" y="94" font-size="20" text-anchor="start" dominant-baseline="central" data-fill-role="muted" fill="#898781" >(labeling agents, E84)</text>
 <rect x="792" y="172" width="328" height="112" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
 <circle cx="828" cy="228" r="18" data-fill-role="data-line" fill="#726f68"/>
 <text x="828" y="228" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >4</text>
@@ -36,7 +36,7 @@
 <circle cx="52" cy="228" r="18" data-fill-role="compute-line" fill="#199e70"/>
 <text x="52" y="228" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >6</text>
 <text x="82" y="214" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Gate passes → merge</text>
-<text x="82" y="242" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >next experiment unlocks</text>
+<text x="82" y="242" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >the next one unlocks</text>
 <path d="M354 66 L394 66" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
 <path d="M742 66 L782 66" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
 <path d="M956 132 L956 162" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
@@ -49,5 +49,5 @@
 <circle cx="386" cy="381" r="8" fill="none" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2.5"/>
 <path d="M372 408 Q386 384 400 408" fill="none" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2.5" stroke-linecap="round"/>
 <text x="418" y="390" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Morning: I flip prod myself.</text>
-<rect x="889" y="374" width="202" height="32" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="5 4"/><text x="990" y="390" font-size="20" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >“founder’s word”</text>
+<rect x="930" y="374" width="120" height="32" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="5 4"/><text x="990" y="390" font-size="20" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >my call</text>
 </svg>

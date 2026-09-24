@@ -1,8 +1,13 @@
 {
   "source": "docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)",
   "title": "Coordinator: the reviewer sits one tier above",
+  "desc": "Lanes from this repo, one column each, merging into main. Rows are model tiers, bottom to top: Haiku, Sonnet, Opus 5.5, and the coordinator (Fable). Grey boxes do the work; green boxes review it one tier up; the coordinator's review is a white outline. Haiku mined the inventory and merged. Sonnet mined experiments and pivots; Opus reviewed each (top-3, pivots) before merge. Opus wrote the synthesis plan; the coordinator reviewed it before merge.",
   "tierOrder": ["haiku", "sonnet", "opus", "fable"],
-  "tierLabels": { "haiku": "Haiku", "sonnet": "Sonnet", "opus": "Opus 5.5", "fable": "Fable — coordinator" },
+  "tierLabels": { "haiku": "Haiku", "sonnet": "Sonnet", "opus": "Opus 5.5", "fable": "coordinator\n(Fable)" },
+  "roleKey": [
+    { "role": "implementer", "label": "does the work" },
+    { "role": "reviewer",    "label": "reviews it,\none tier up" }
+  ],
   "nodes": [
     { "id": "main",               "label": "main",                "tier": "root" },
     { "id": "inventory",          "label": "mine: inventory",     "tier": "haiku" },
@@ -11,7 +16,7 @@
     { "id": "pivots",             "label": "mine: pivots",        "tier": "sonnet" },
     { "id": "review-pivots",      "label": "review: pivots",      "tier": "opus" },
     { "id": "synthesis",          "label": "plan: synthesis",     "tier": "opus" },
-    { "id": "fable-review",       "label": "coordinator review",  "tier": "fable" }
+    { "id": "fable-review",       "label": "final review",        "tier": "fable" }
   ],
   "edges": [
     { "from": "inventory",          "to": "main" },

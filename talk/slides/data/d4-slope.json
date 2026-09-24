@@ -1,6 +1,8 @@
 {
   "source": "mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75)",
   "title": "Top-1 to top-3: the gain halves",
+  "desc": "Slopegraph on the same 201 test crops, y-axis 60 to 95 percent. G0 (flat, no head): 67.7% top-1, 83.6% top-3. G0h (flat plus language head): 77.6% top-1, 89.1% top-3. The gap between them is 9.95 points at top-1 and 5.47 points at top-3: the gain roughly halves.",
+  "yRange": [60, 95],
   "columns": ["top-1", "top-3"],
   "series": [
     {
@@ -23,8 +25,7 @@
     }
   ],
   "gaps": [
-    { "column": 0, "delta": "+9.95" },
-    { "column": 1, "delta": "+5.47" }
-  ],
-  "note": "the gain halves"
+    { "column": 0, "delta": "+9.95 pts" },
+    { "column": 1, "delta": "+5.47 pts" }
+  ]
 }

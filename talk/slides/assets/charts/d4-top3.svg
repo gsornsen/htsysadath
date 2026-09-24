@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<title id="t">The language-head win, at top-1 and top-3</title>
+<desc id="d">Source: mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75), paired McNemar (lines 77-85)</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <line x1="90" y1="320" x2="876" y2="320" stroke="#2c2c2a" stroke-width="1"/>
 <text x="76" y="327" text-anchor="end" fill="#898781" font-size="22">0%</text>

@@ -1,23 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<title id="t">Arc B — four sequential acts, each with its reason (D9, D11)</title>
+<desc id="d">Source: mining/arcs/B-pivots.md §2 (dates from cited Grailith commits); act 3 framing and act 4 start per D11 (my call, coordinator update superseding B-pivots.md §5 Q1/Q2)</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <line x1="120" y1="130" x2="1016" y2="130" stroke="#383835" stroke-width="3"/>
 <path d="M 1016 121 L 1032 130 L 1016 139 Z" fill="#383835"/>
-<circle cx="120" cy="130" r="27" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<circle cx="120" cy="130" r="27" fill="#726f68" stroke="#1a1a19" stroke-width="4"/>
 <text x="120" y="139" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">1</text>
 <text x="120" y="60" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">Pregrade</text>
 <text x="120" y="90" text-anchor="middle" fill="#898781" font-size="22">2026-07-04</text>
 <text x="120" y="196" text-anchor="middle" fill="#c3c2b7" font-size="24" font-weight="600"><tspan x="120" y="196">LLM vision as</tspan><tspan x="120" y="226">proof of</tspan><tspan x="120" y="256">concept</tspan></text>
-<circle cx="418.6666666666667" cy="130" r="27" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<circle cx="418.6666666666667" cy="130" r="27" fill="#726f68" stroke="#1a1a19" stroke-width="4"/>
 <text x="418.6666666666667" y="139" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">2</text>
 <text x="418.6666666666667" y="60" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">Live-stream scout</text>
 <text x="418.6666666666667" y="90" text-anchor="middle" fill="#898781" font-size="22">2026-08-18</text>
 <text x="418.6666666666667" y="196" text-anchor="middle" fill="#c3c2b7" font-size="24" font-weight="600"><tspan x="418.6666666666667" y="196">image-to-image</tspan><tspan x="418.6666666666667" y="226">identify</tspan></text>
-<circle cx="717.3333333333334" cy="130" r="27" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<circle cx="717.3333333333334" cy="130" r="27" fill="#726f68" stroke="#1a1a19" stroke-width="4"/>
 <text x="717.3333333333334" y="139" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">3</text>
 <text x="717.3333333333334" y="60" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">Bulk scan / lots</text>
 <text x="717.3333333333334" y="90" text-anchor="middle" fill="#898781" font-size="22">2026-08-20 → 09-03</text>
 <text x="717.3333333333334" y="196" text-anchor="middle" fill="#c3c2b7" font-size="24" font-weight="600"><tspan x="717.3333333333334" y="196">one shared identify</tspan><tspan x="717.3333333333334" y="226">core, LLM removed</tspan></text>
-<circle cx="1016" cy="130" r="27" fill="#3987e5" stroke="#1a1a19" stroke-width="4"/>
+<circle cx="1016" cy="130" r="27" fill="#726f68" stroke="#1a1a19" stroke-width="4"/>
 <text x="1016" y="139" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">4</text>
 <text x="1016" y="60" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">Comps / pricing</text>
 <text x="1016" y="90" text-anchor="middle" fill="#898781" font-size="22">2026-09-06</text>

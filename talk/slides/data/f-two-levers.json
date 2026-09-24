@@ -5,13 +5,13 @@
     "label": "By hand, fresh label",
     "low": 180, "high": 180, "unit": "s",
     "testimony": true,
-    "tierLabel": "founder testimony (D7) — original message not in the mined corpus"
+    "tierLabel": "my testimony (D7) — original message not in the mined corpus"
   },
   "barB": {
     "label": "With agents",
     "segments": [
       { "key": "agent", "label": "Agent first pass",  "low": 11, "high": 16, "unit": "s", "tierLabel": "instrumented — E84, Gemini 2.5 Flash / Haiku 4.5" },
-      { "key": "human", "label": "Human review",      "low": 20, "high": 30, "unit": "s", "tierLabel": "founder estimate, not instrumented — 09-13/09-14" }
+      { "key": "human", "label": "Human review",      "low": 20, "high": 30, "unit": "s", "tierLabel": "my estimate, not instrumented — 09-13/09-14" }
     ],
     "totalLow": 31, "totalHigh": 46
   },

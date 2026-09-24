@@ -1,52 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">The experiment loop</title>
-<desc id="d">Process loop: (1) instrument key transitions, (2) record live sessions, (3) replay the same recorded data offline, then a loop: (4) gated experiments in isolated git worktrees overnight, (5) the gate passes against a bar set before the run, (6) merge behind a feature flag with production left off (Gerald flips production himself), (7) the next experiment unlocks. Human in the loop: about 30 minutes a day setting it up, Gerald's own estimate. Sources: talk/abstract-rough.md; docs/project/decisions.md D14, D16.</desc>
+<desc id="d">Process loop: (1) instrument key transitions, (2) record live sessions, (3) replay the same recorded data offline, then a loop: (4) gated experiments in isolated git worktrees overnight, (5) the gate passes against a bar set before the run, (6) merge behind a feature flag with production left off (I flip production myself), (7) the next experiment unlocks. Sources: talk/abstract-rough.md; docs/project/decisions.md D14, D16.</desc>
 <defs><marker id="ah-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
-<rect x="16" y="20" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-group="es" data-distribution="equal-gap" data-axis="y" data-group-count="3" data-gap-tol="1" data-layout-item="es"/>
-<circle cx="52" cy="64" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="52" y="64" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >1</text>
-<text x="82" y="49" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Instrument</text>
-<text x="82" y="81" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >key transitions</text>
-<rect x="16" y="130" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-item="es"/>
-<circle cx="52" cy="174" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="52" y="174" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >2</text>
-<text x="82" y="159" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Record</text>
-<text x="82" y="191" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >live sessions</text>
-<rect x="16" y="240" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-item="es"/>
-<circle cx="52" cy="284" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="52" y="284" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >3</text>
-<text x="82" y="269" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Replay offline</text>
-<text x="82" y="301" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >same recorded data</text>
-<rect x="366" y="240" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
-<circle cx="402" cy="284" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="402" y="284" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >4</text>
-<text x="432" y="269" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Gated experiments</text>
-<text x="432" y="301" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >worktrees, overnight</text>
-<rect x="785" y="240" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<circle cx="821" cy="284" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="821" y="284" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >5</text>
-<text x="851" y="269" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Gate passes</text>
-<text x="851" y="301" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >bar set before the run</text>
-<rect x="785" y="60" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<circle cx="821" cy="104" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="821" y="104" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >6</text>
-<text x="851" y="89" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Merge behind a flag</text>
-<text x="851" y="121" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >prod stays off</text>
-<rect x="366" y="60" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<circle cx="402" cy="104" r="18" data-fill-role="compute-line" fill="#199e70"/>
-<text x="402" y="104" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >7</text>
-<text x="432" y="89" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Next experiment</text>
-<text x="432" y="121" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >unlocks</text>
-<path d="M316 284 L356 284" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<path d="M711 284 L775 284" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<path d="M952.5 230 L952.5 158" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<path d="M775 104 L711 104" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<path d="M533.5 158 L533.5 230" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<text x="743" y="194" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >while I sleep</text>
-<rect x="16" y="358" width="1104" height="64" rx="14" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="6 5"/>
-<circle cx="56" cy="381" r="8" fill="none" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2.5"/>
-<path d="M42 408 Q56 384 70 408" fill="none" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2.5" stroke-linecap="round"/>
-<text x="88" y="390" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >~30 min a day: me, setting it up. Agents run it overnight.</text>
-<rect x="945.5" y="374" width="149" height="32" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="5 4"/><text x="1020" y="390" font-size="20" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >my estimate</text>
+<rect x="16" y="66" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-group="es" data-distribution="equal-gap" data-axis="y" data-group-count="3" data-gap-tol="1" data-layout-item="es"/>
+<circle cx="52" cy="110" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="52" y="110" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >1</text>
+<text x="82" y="95" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Instrument</text>
+<text x="82" y="127" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >key transitions</text>
+<rect x="16" y="176" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-item="es"/>
+<circle cx="52" cy="220" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="52" y="220" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >2</text>
+<text x="82" y="205" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Record</text>
+<text x="82" y="237" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >live sessions</text>
+<rect x="16" y="286" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-item="es"/>
+<circle cx="52" cy="330" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="52" y="330" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >3</text>
+<text x="82" y="315" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Replay offline</text>
+<text x="82" y="347" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >same recorded data</text>
+<rect x="366" y="286" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<circle cx="402" cy="330" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="402" y="330" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >4</text>
+<text x="432" y="315" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Gated experiments</text>
+<text x="432" y="347" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >worktrees, overnight</text>
+<rect x="785" y="286" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<circle cx="821" cy="330" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="821" y="330" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >5</text>
+<text x="851" y="315" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Gate passes</text>
+<text x="851" y="347" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >bar set before the run</text>
+<rect x="785" y="106" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<circle cx="821" cy="150" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="821" y="150" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >6</text>
+<text x="851" y="135" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Merge behind a flag</text>
+<text x="851" y="167" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >prod stays off</text>
+<rect x="366" y="106" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<circle cx="402" cy="150" r="18" data-fill-role="compute-line" fill="#199e70"/>
+<text x="402" y="150" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >7</text>
+<text x="432" y="135" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Next experiment</text>
+<text x="432" y="167" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >unlocks</text>
+<path d="M316 330 L356 330" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<path d="M711 330 L775 330" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<path d="M952.5 276 L952.5 204" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<path d="M775 150 L711 150" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<path d="M533.5 204 L533.5 276" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<text x="743" y="240" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >while I sleep</text>
 </svg>
