@@ -9,8 +9,9 @@ Usage:
       --out mining/timeline/sessions.md [--max-scan-mb 32]
 
 Reads at most --max-scan-mb from the head of each file plus 256 KB from the tail; a 6 GB
-directory inventories in seconds. Output is Markdown, safe to commit AFTER you redact the
-opening-request column (it can contain names/paths).
+directory inventories in seconds. Output is Markdown. The opening-request column is RAW and can contain names, paths and
+product ids: paraphrase it to <= 12 words BEFORE the first commit, not after. Committing the
+raw column puts it in git history, which a later redaction commit does not remove.
 """
 import argparse, json, os, sys, time
 from pathlib import Path
@@ -59,6 +60,16 @@ def tail_ts(path, tail_bytes=256 * 1024):
             continue
     return None
 
+def _safe_label(d):
+    """Project label with no home path. `-Users-me-git-foo` -> `foo`; never an absolute path.
+
+    The inventory is committed to a PUBLIC repo, so the header must not carry a
+    filesystem path (docs/project/public-repo-hygiene.md).
+    """
+    name = Path(d).name
+    return name.split("-")[-1] or "unknown"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("project_dir")
@@ -77,10 +88,10 @@ def main():
         rows.append((f_ts or "", l_ts or "", p.stem[:8], size, n, partial, opening.replace("|", "\\|")))
     rows.sort()
     out = []
-    out.append(f"# Session inventory — `{d}`\n")
+    out.append(f"# Session inventory — project `{_safe_label(d)}`\n")
     out.append(f"{len(files)} files · {sum(r[3] for r in rows)/1e9:.2f} GB · scanned {time.time()-t0:.1f}s · "
                f"head scan {a.max_scan_mb} MB (msg count is a lower bound when marked ~)\n")
-    out.append("| first | last | session | size | msgs | opening request (REDACT before commit) |")
+    out.append("| first | last | session | size | msgs | opening request (paraphrased, <= 12 words) |")
     out.append("|---|---|---|---|---|---|")
     for f_ts, l_ts, sid, size, n, partial, opening in rows:
         out.append(f"| {f_ts[:16]} | {l_ts[:16]} | {sid} | {size/1e6:,.0f} MB | {'~' if partial else ''}{n} | {opening} |")
