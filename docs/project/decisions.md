@@ -355,3 +355,5 @@ Gates: focus on the **experiment gates and flags that let experiments run unatte
 "against paralysis". The screenshot (`scout-gengar-today.jpg`) has the seller's and the winning
 bidder's avatars and usernames pixelated for the public repo; the original is in git-ignored `scratch/`.
 Demo 2 is kept pending Gerald (he didn't mention it). Details: structure-v2.md § v3.
+**D17 addendum (Gerald, 11:2x):** Demo 2 (the repo-record replay) is CUT too. 18 slides + backup; its
+minutes go to the live card-scout demo and the gates slide. The only live moment is now the card-scout demo.
