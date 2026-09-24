@@ -160,3 +160,10 @@ entry; link the finding or commit that proves it.
   instead of raw idf, and number words kept as tokens ("two in three" had been a stopword
   phrase, so it retrieved persona DONE docs, not slide 13). Rerun: 14 sourced, 2 testimony,
   4 not in the record.
+
+- `[method]` 2026-09-24: **"reproducible" has to be tested from the reader's side of the wall.** The
+  Q&A demo's check.sh passed on the lane's machine, but a public replay (no GRAILITH_DIR) failed:
+  the answer fixtures were keyed on the PRIVATE excerpts retrieved in the live run, which a public
+  checkout can't retrieve. Fix: key on things the public can compute (the prompt, the question, the
+  repo excerpts, the committed manifest hash), and make the check itself run with the private source
+  unset. The coordinator found it only by running the README's commands as a stranger would.
