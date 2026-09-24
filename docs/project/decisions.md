@@ -422,3 +422,13 @@ price gate, so they were nulled back to prod's 2,660. Backups: `~/backups/d1-pre
 (before anything) and `~/backups/d1-post-1i-20260924T190941Z` (before the 741 null-out). The trunk's
 tracked files stayed clean. The Alakazam fire itself couldn't be replayed (the demo build doesn't
 record frames), so the live check is Gerald's next Japanese card on the extension.
+
+## D22 · 2026-09-24 · Workplace terminology only
+
+Gerald: drop "kill"; use pass/fail or keep/drop; audit the rest so it's workplace terminology. The
+mapping across audience-facing text and visuals: kill line/bar → pass/fail bar; killed → dropped;
+fired (a bar) → failed the bar; fire (a scout capture) → scan; burned → used up; attack → tackle;
+hack → workaround; died/dead → stopped; screenshots "shot" → captured. Also audited: slang, profanity,
+gendered defaults, violent/military metaphors, master/slave, blacklist/whitelist. "Beat" (scored
+higher than) stays. The Q&A demo's prompts carry the rule; its questions and answers get a fresh live
+run after the text settles. The internal record (decisions, mining) keeps its wording as provenance.
