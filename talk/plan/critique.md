@@ -78,3 +78,12 @@ Per persona: designer 3/22 · mid-swe 8/22 · pm 7/22 · senior-swe 7/22. **NOT 
 - Jargon on slides (pm): McNemar/p, @1/@3, arm, dedup, frozen split, CI, auto-lock. Plain words on
   the slide; statistics go to the notes.
 - A copyable **starter kit** (mid): generic fan-out + briefs, a blank lane brief, and a five-step first-run checklist.
+
+## Coordinator's own look at the v3 render (2026-09-24 11:3x), held back from the critics so they judge independently
+- Slide 2: the screenshot is drawn small in its box; it could fill the width.
+- Slide 10: the tier label "Opus 5.5" is clipped at the left edge of e-lane-dag.
+- Slide 12: d4-arms's kill-line label still runs across the G0 bar.
+- Slide 13: the slopegraph is cramped at half width ("+9.95" sits on the line; legend crowds the top).
+- Slide 14: a text-only list on a methods slide; the one slide without a visual.
+- Slide 16: the two phone crops are too small to read at projection size.
+- Backup 2: the 71.3 % and 65.2 % labels overlap on the live-lots row.
