@@ -1,5 +1,5 @@
 {
-  "source": "docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4; docs/experiments/EXP-E79 (Grailith 177749ea6); experiment-ledger E79; decisions.md D12",
+  "source": "decisions.md D4, D5→D9, D6→D7, D12 · top3-trajectory.md §0 · lot-top3-unlocked.md §4 · EXP-E79 (177749ea6)",
   "title": "Remembered vs recorded",
   "rows": [
     {

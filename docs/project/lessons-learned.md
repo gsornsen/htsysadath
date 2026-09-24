@@ -122,3 +122,19 @@ entry; link the finding or commit that proves it.
   as a failed replication, because the numbers were real and the doc was right there. Third time
   today the record was over-read and the founder was right (D7, D9, D12). This one survived a
   numeric review because the numbers were accurate; only the arms were wrong.
+
+- `[method]` 2026-09-24 (L6 integrate, fe1c632): **`npm run build`/`pdf` succeeding proves nothing
+  about layout — Marp clips overflow silently instead of shrinking or erroring.** A 3-line body
+  paragraph plus a full-height chart pushed the chart's own bottom caption past the 720px canvas
+  on 7 of 22 slides; both `build` and `pdf` exited 0. Only rendering every slide to PNG and
+  looking (task step 5) caught it. Fix was two-part: shorten chart/shot-slide bodies to one line
+  (the brief's own rule — "the chart carries the slide" — turned out to be the actual fix, not
+  just a style preference), and cap `section img { max-height }` with a computed budget instead
+  of a number that looked generous in isolation.
+- `[method]` 2026-09-24 (L6 integrate): **consecutive Markdown images with no blank line between
+  them collapse into one `<br>`-joined paragraph**, which silently breaks a CSS flex row of
+  figures (they all become one flex *item*, so they stack instead of sitting side by side). The
+  fix is a blank line between every image/`<img>` in the group, even inside a raw `<div>` block.
+  Same session: a kramdown-style `{target="_blank"}` attribute after a Markdown link isn't
+  supported by this Marp config — it renders as literal trailing text on the slide. Use a raw
+  `<a href=... target=...>` tag instead (html: true is already on).

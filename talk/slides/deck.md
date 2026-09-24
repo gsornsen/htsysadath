@@ -11,192 +11,368 @@ paginate: true
 # How to scale yourself
 ## and do all the things
 
-Placeholder: title, subtitle, speaker byline.
+Explore every fork without stopping the job you're doing.
 
-<!-- notes: slide 1 -->
+Gerald Sornsen
+
+<!--
+Hi, I'm Gerald. This talk is about a fork in the road: the moment a hard problem lands in the
+middle of a project and your instinct says push through. I want to show you that stepping back
+has become cheap, and how I explore several forks at once while I keep doing my actual job.
+Everything I show you today is in a public repo, with its sources, so you can check me [D1].
+-->
 
 ---
 
-## The moment ⚠
+## The jitter
 
-One real fork, told straight (Q3: which fork opens the talk) — the scout's jittery
-detect→identify boundary: results every ~500 ms, matches presented then overridden.
+- The scout's detect→identify boundary: results about every 500 ms, matches shown then overridden.
+- Three layers to attack it, about five experiments per part — 45+ candidate forks for one bug.
 
-<!-- notes: slide 2 -->
+<!--
+Early on with the scout, a browser extension that identifies trading cards on live auction
+streams, I was stuck at the boundary between detect and identify. The client sees a card, cuts a
+crop, sends it to the server for an embedding, and runs an image-to-image search [abstract]. We
+got results about every 500 milliseconds [abstract; P1]. Everything under the presentation layer
+looked promising. On screen it was jittery. It showed a match, overrode it, showed another
+[abstract; G:45b8bddb7 · 08-18; G:70b2f1b9e · 09-02]. I could attack it in the UI, in card
+detection, or in how we generate embeddings. Each of those had at least three parts of the
+system to explore, and each part had about five experiments [abstract]. That's more than
+forty-five forks for one bug.
+-->
 
 ---
 
 ## Why we push through
 
-Scope, staffing, timeline — the ordinary reasons a fork in the road gets walked past
-instead of explored.
+- Scope, staffing and timeline make "pick the fix I know and push" the default.
+- Identify wasn't fast enough to win an auction, and the project came close to being parked.
 
-<!-- notes: slide 3 -->
+<!--
+Every project is boxed by scope, staffing and timeline [brief]. When a problem like that lands,
+the default is to lean on what you already know and push through. There's no time, no spare
+people, and maybe nobody on the team who knows the alternatives. The pressure was real for me.
+Identify wasn't fast enough end to end to win an auction, and the project came close to being
+parked [D4]. With forty-five forks and one of me, the honest move used to be: pick the fix I
+know best, ship it, and hope. I think that math has changed, and the rest of this talk is what
+changed it.
+-->
 
 ---
 
 <!-- _class: demo -->
 
-## Live demo: persona fan-out — kickoff ⚠
+## Live demo: persona fan-out — kickoff
 
-Exploring got cheap.
+Exploring got cheap: instrument the key transitions, replay offline, run about 100
+hypothesis-gated experiments in worktrees overnight.
 
 <div class="terminal-note">$ demo/fanout</div>
 
-Back to the deck when the fan-out is running.
+Four writers start now on my rough abstract — back to the deck when the fan-out is running.
 
-<!-- notes: slide 4 -->
+<!--
+The unlock wasn't a smarter model. It was instrumentation. We sent the key transitions to
+PostHog and made sure every fire could be replayed offline from recorded frames and fire records
+[P2; G:1267e680e · 08-22; G:3c52c2b72 · 09-04]. Once that existed, a team of agents and I came up
+with nearly 100 experiments [abstract; P3]. Each ran in its own git worktree against the same
+frozen data [P3]. Each was a hypothesis with a gate. When a gate cleared, the work merged and the
+next experiment unlocked, overnight while I slept, and during the day while I did other things
+[abstract; P4]. So let me prove it on something small. I'm starting four writers on my own rough
+abstract, right now.
 
----
-
-## Pregrade: LLM-vision identify (07-04)
-
-Act 1 of arc B — one-card LLM-vision identify as a proof of concept and baseline.
-
-![](assets/charts/b-step-timeline.svg)
-
-![](assets/shots/b-verdict-banner-before.png)
-
-<!-- notes: slide 5 -->
-
----
-
-## Scout: image-to-image (08-18)
-
-Act 2 of arc B — the bakeoff: vision got 5/6 at 10.4 s; embedding took ~130 ms.
-
-![](assets/charts/b-step-timeline.svg)
-
-<!-- notes: slide 6 -->
+Stage (0.5 min, Demo 1 kickoff).
+1. Advance to the `_class: demo` link-out slide and click it. The terminal is already in the demo
+   clone at tag `talk-demo`, prompt `$ `, 28 pt [plan §1, §4].
+2. Run `demo/fanout`. Say while it starts: "Executive, engineer, designer, product manager. Each
+   one gets my rough draft and a persona brief."
+3. When the four lane lines appear (about 30 s), say: "They'll be done before we need them. I'm
+   not going to wait." Return to the deck by URL hash to slide 5.
+4. If the lanes haven't started after 15 s, don't debug on stage. Say "I'll show you the
+   recording when we get there" and go on. The fallback is the ~2-minute video at slide 15 (D10).
+-->
 
 ---
 
-## Bulk scan: fast lane (08-20) ⚠
+## Act 1: a baseline on purpose
 
-Act 3 of arc B — the fast lane shipped 08-20; the LLM lane retired 09-03; the scout
-had 0 commits 08-19 → 09-01. "Ported from the scout" or "designed for the scout,
-proven in bulk scan" — pending confirmation.
+Pregrade (07-04): a baseline on purpose, not a false start.
 
-![](assets/charts/b-step-timeline.svg)
+![](assets/charts/b-four-acts.svg)
 
-![](assets/shots/b-finish-selector-before.png)
-
-<!-- notes: slide 7 -->
-
----
-
-## Comps: raw comps by condition ⚠
-
-Act 4 of arc B — comps by condition (NM–DMG) outgrew "use an API". Does it start
-08-23, or 09-06/07 — pending confirmation.
-
-![](assets/charts/b-step-timeline.svg)
-
-<!-- notes: slide 8 -->
+<!--
+First, some context on how the product got here. It happened in four acts, each with a reason
+[D9]. Act 1 was pregrade, in early July: identify one card from a photo with an LLM vision call.
+That was a proof of concept on purpose, to show the job was feasible and to set a baseline
+before moving to image-to-image [D9]. It shipped on day three of the repo. A vision agent read
+the collector number and a deterministic step resolved the card, in 6.9 seconds on the one photo
+it was checked on [arc B; G:f7a484e95 · 07-04]. I don't have an accuracy number from those
+weeks. The record doesn't hold one [arc B].
+-->
 
 ---
 
-## The discriminating experiment
+## Act 2: the scout
 
-D4: the negative result was the win.
+Live auctions broke identify; a one-night bakeoff moved it to image-to-image.
+
+![](assets/charts/b-four-acts.svg)
+
+<!--
+Act 2 started on August 18th: the scout. A card on a live auction is on screen for seconds, and
+identify took 6 to 15 seconds live [arc B]. We shipped three waves in about an hour, and wrote
+the spec afterwards [arc B; G:e04b6433b · 08-18]. That night, a three-lane bakeoff ran against
+the act 1 baseline. Vision got 5 of 6 right at a 10.4-second median. The embedding answered in
+about 130 milliseconds, but got top-1 on only 1 of 5 same-art prints [arc B; G:3f5eabd7e ·
+08-18]. A second overnight run on 84 real captures picked SigLIP, with top-1 of 0.84 at 44
+milliseconds [arc B; G:423e2e894 · 08-20]. The embedding became a ranker, never an authority on
+its own [arc B].
+-->
+
+---
+
+## Act 3: one core, two apps
+
+The hardest part, solved once: one shared identify core for both apps.
+
+![](assets/charts/b-four-acts.svg)
+
+<!--
+Here's where commit dates would tell the story wrong. Every app I'd tried for this was slow and
+inaccurate. Bulk scan and the scout both needed identify to be fast and accurate, and identify
+was the hardest part of the whole system. So I solved it once, as a shared core, and built both
+apps around it [D11]. The dates are the supporting detail. The image-to-image lane went into
+bulk-scan capture on August 20th with the LLM demoted to a fallback. The scout switched on
+September 2nd. The LLM identify lane was retired on September 3rd [arc B; G:5f76f4810 · 08-20;
+G:06119bc92 · 09-02; G:0d12da755 · 09-03]. Solve the hardest shared piece first, then you're
+free to focus elsewhere.
+-->
+
+---
+
+## Act 4: comps
+
+From 09-06: raw comps at every condition outgrew "use an API".
+
+![](assets/charts/b-four-acts.svg)
+
+<!--
+Act 4 started on September 6th [D11]. Comps had been in the repo since day two [D5], and pregrade
+got by with graded comps and near-mint raw prices from a service [D9]. The problem changed shape
+when I needed raw comps at every condition, from near mint down to damaged. That's a far bigger
+problem than "use an API" [D9; D11]. An earlier per-condition tier inside lots, on August 23rd,
+was a precursor at most [D11; arc B]. Condition tiles shipped in the scout on 09-06, and the
+next day's pricing-cache redesign got a founder go before anything was spent [arc B;
+G:a8b11dc96 · 09-06]. What we didn't do: no scraping, and no guessed prices across services
+[arc B].
+-->
+
+---
+
+## The negative result was the win
+
+A pre-registered kill line turned "dedup" into a no — then found the win.
 
 ![](assets/charts/d4-arms.svg)
 
-<!-- notes: slide 9 -->
+<!--
+Back to identify, and the one experiment that changed my mind the most [D4]. Japanese cards were
+scoring higher similarity than English ones. A census found that 96.14 % of 19,258 Japanese
+renders had an English twin with identical art [arc A]. My instinct was to dedup the index. E67
+tested that against a kill line written down before the run. Dedup lost 14.43 points of print@1,
+and the kill fired [arc A]. Scoring past it, one arm kept the flat index and added a small
+language head. It lifted print@1 from 67.66 % to 77.61 % on a 201-crop test split, 20 fixed and
+none broken [arc A; E67-top3]. The head shipped on 09-09 [arc A]. The experiment I expected to
+win lost, and that loss found the change we shipped.
+-->
 
 ---
 
 ## At top-3, the gain halves
 
-+9.95 → +5.47, because 13 of the 20 fixes were already rank 2–3.
+Same win, product units: +9.95 at top-1 becomes +5.47 at top-3.
 
 ![](assets/charts/d4-arms.svg)
 
-<!-- notes: slide 10 -->
+<!--
+But that was top-1, and my bar is top-3: the right card somewhere in the picker's three
+candidates [top3-traj]. So we replayed the saved E67 vectors at top-3, after checking that the
+replay reproduced E67's top-1 numbers exactly [E67-top3]. The win holds. Print@3 goes from
+83.58 % to 89.05 %, 12 fixed and 1 broken, p = 0.0034 [E67-top3]. But it's +5.47 points, not
++9.95. Why? Of the 20 crops the head fixed at top-1, 13 already had the right print at rank 2 or
+3 [E67-top3]. That's one frozen split, n = 201 [E67-top3]. Same experiment, same code, half the
+headline. The metric you pre-register is a decision too [arc A].
+-->
 
 ---
 
 ## What we didn't try
 
-Top-3 measured four structurally incompatible ways — none of them forms a trend.
+What we stopped — and four incompatible ways to measure top-3.
 
-![](assets/charts/top3-trajectory.svg)
+![](assets/charts/top3-measures.svg)
 
-<!-- notes: slide 11 -->
+<!--
+Gated experiments pay off in what they let you stop. We stopped a SigLIP2 encoder swap that came
+in 9.55 points down [G:ledger · E57]. The fine-tune and the distilled student both failed their
+bars [G:ledger · E58, E53d]. We didn't re-embed the reference art [G:ledger · E12, E39], and
+paying for more Japanese art showed zero lift, so we didn't scale it [G:ledger · E119]. A lot of
+the "nearly 100" were tests like these. And a caution. We measured top-3 four different ways:
+served crops at 78.2 %, the same crops offline at 74.3 %, a six-crop proxy going from 70.3 % to
+82.9 %, and live lots anywhere from 45.2 % to 76.9 % [top3-traj]. Those are four yardsticks. You
+can't draw one trend line through them.
+-->
 
 ---
 
-## Lot-level top-3 accuracy
+## The bar, measured
 
-Non-locked lots: 65.2% top-3 (45/69). Locked: 20.7% of lots, at 88.9% precision.
+On live lots: right card in the top 3 about two times in three (n=87).
 
-![](assets/charts/lot-top3-unlocked.svg)
+![](assets/charts/lot-bar.svg)
 
-<!-- notes: slide 12 -->
+<!--
+So how good is the scout by my own bar? We ran every truth lot in the record: 87, not the 200 I
+asked for [lot-top3; D8]. The scout auto-locked 18 of them, 20.7 %, and 16 of those 18 were
+right, 88.9 % [lot-top3]. On the 69 lots it didn't lock, the right card was in the top 3 on the
+last fire in 45: that's 65.2 %, with an interval of 53 to 75 % [lot-top3]. The truth here is my
+own taps. One tapper, five days of streams [lot-top3]. So, about two in three. It isn't done,
+but now it's measurable, and I know which number to move.
+-->
 
 ---
 
-## The panel as done gate
+## The panel is the done gate
 
-Placeholder: the review panel mechanism, before it broke.
+Persona and critic briefs re-walk the screens and return DONE or NOT.
+
+<div class="shot-row">
 
 ![](assets/shots/c-dissent-card-1440.png)
 
-![](assets/shots/f-answer-bar-before-390.png)
+<img class="shot-tall" src="assets/shots/f-answer-bar-before-390.png" alt="answer bar, before" />
 
-![](assets/shots/f-answer-bar-after-390.png)
+<img class="shot-tall" src="assets/shots/f-answer-bar-after-390.png" alt="answer bar, after" />
 
-<!-- notes: slide 13 -->
+</div>
+
+<!--
+For design forks, the gate is people, or stand-ins for them. On September 13th I made a design
+panel the done gate. Code-done isn't done [arc C]. There are four fictional personas, each a short
+brief with a device and a job. Dez, for example, is 22, phone-only, one thumb. Then three critics
+with a lens instead of a backstory [arc C]. They re-walk the built screens and return DONE or NOT,
+with blockers [arc C]. They also translate literal asks into jobs. I asked for a bulk-approve
+button. The job turned out to be "don't make me re-click my own answers", and that shipped with
+zero clicks [arc C]. The persona timings are simulated, not human [arc F].
+-->
 
 ---
 
 ## The gate fails
 
-Dez marked DONE on 09-13; "pretty much unusable" on the iPhone on 09-14.
+Panel said DONE on the phone — my iPhone said "pretty much unusable".
 
-![](assets/shots/c-founder-mobile-before.png)
+<div class="shot-row">
 
-<!-- notes: slide 14 -->
+![](assets/shots/c-founder-mobile-01-crop.png)
+
+![](assets/shots/c-founder-mobile-03.png)
+
+</div>
+
+<!--
+And then the gate failed. The second panel pass, at 21:50 on the 13th, had Dez DONE at 8 seconds
+with no scrolling to reach Submit [arc C]. At 09:40 the next morning I opened the deployed app on
+my own iPhone, and it was pretty much unusable. Three scrolling sections, a help modal reopening
+on every task, and I had to rotate the phone to reach some options [arc C]. The panel walked
+Storybook at a fixed viewport. It never saw iOS browser chrome or the real flow between tasks
+[arc C]. The fix was another pass, this time allowed to start from a blank canvas [arc C]. The
+panel is necessary. Your own hands on the real device are still the last gate.
+-->
 
 ---
 
 <!-- _class: demo -->
 
-## Live demo: persona fan-out — reveal ⚠
+## Live demo: persona fan-out — reveal
 
-Draft + 4 columns; a hybrid chosen aloud, per D4.
+Four drafts, each under 200 words, each from a persona brief — I pick a hybrid aloud: a tl;dr
+frame plus drill-down levels.
 
-[Open the fan-out viewer →](http://localhost:8090/){target="_blank"}
+<a href="http://localhost:8090/" target="_blank">Open the fan-out viewer →</a>
 
-<!-- notes: slide 15 -->
+<!--
+Remember the four writers from minute four? Here's what they did with my rough abstract [D10].
+Executive, engineer, designer, product manager, each under 200 words, each written from a
+persona brief [plan 02]. I pick a hybrid for structure. I want a tl;dr the busy reader actually
+finishes, then drill-down levels for the curious and for the people who need the data [D4]. So
+I'll take the tl;dr from one draft, the order of the drill-downs from another, and I'll cut one
+thing. I'll say each choice out loud. The real pass takes me about ten minutes. This is the
+two-minute version.
+
+Stage (4.0 min).
+1. Click the link-out slide; switch to the viewer tab on `localhost:8090`, opened before the talk
+   [plan §1].
+2. Show the rough draft on the left for five seconds, then the four columns. While the audience
+   reads, name each persona and one line it got right.
+3. Choose aloud: tl;dr frame from draft X, drill-down order from draft Y, one cut. Default is no
+   audience vote (plan Q8).
+4. If a lane hasn't finished or the viewer is blank after 15 s, say "Here's the same run,
+   recorded earlier" and play Gerald's ~2-minute video (D10). Say it's recorded. Never present
+   it as live. There is no labelled-rehearsal fallback any more (D10). If the live reveal is
+   stuck, this is the moment to cut to that video rather than debug on stage.
+5. Return to the deck by URL hash at slide 16.
+-->
 
 ---
 
-## What I took from each draft
+## What I took from each
 
-Placeholder: the one line taken from each of the four persona drafts.
+⟨Fill after rehearsal: one line per draft saying what I kept from it. The drafts don't exist
+until Demo 1 runs; don't invent them.⟩
 
-<!-- notes: slide 16 -->
+<!--
+The point isn't these particular drafts. I kept talking to you for eleven minutes while four
+versions were written, and choosing took two. The failure this replaced wasn't a bad doc. It was
+docs too long to read, which forced the very meetings the doc was meant to replace [D4].
+-->
 
 ---
 
 ## Two levers, not one
 
-180 s (hand) → 11–16 s (agents) → ~20 s (human review), trust tiers tagged on the slide.
+Hand: ~3 min/label. Agents: 11–16 s. After redesign, review: ~20 s/task.
 
 ![](assets/charts/f-two-levers.svg)
 
-<!-- notes: slide 17 -->
+<!--
+Agents can also do the work itself. Labeling card crops by hand took me about three minutes a
+label. That's my own stopwatch on the first labeler build; the original message isn't in the
+record we mined [D7]. With tools, an agent's first pass took 11 seconds on Gemini 2.5 Flash and
+16 on Haiku 4.5. That's agent wall time only [arc F]. A pair ran 760 tasks for about $9 [D7].
+But labeling wasn't fast until a persona-driven redesign. After it, I cleared about 30 review
+tasks in about 10 minutes, roughly 20 seconds each, and that's my estimate [D7]. Two levers.
+One caveat: three minutes is per fresh label, and 20 seconds is per task with agent pre-labels
+on screen [arc F].
+-->
 
 ---
 
-## Coordinator: the reviewer sits one tier above
+## The coordinator
 
-Placeholder: the curated lane DAG, model tier per node.
+One session writes the spec; cheaper models build; the reviewer sits one tier up.
 
-![](assets/charts/e-coordinator-dag.svg)
+![](assets/charts/e-lane-dag.svg)
 
-<!-- notes: slide 18 -->
+<!--
+So how did a hundred experiments run while I slept? With a coordinator pattern. One senior
+session writes the spec: files, signatures, acceptance tests, what's off limits. Cheaper models
+build to it [arc E]. The reviewer sits one tier above whoever wrote the work, never a peer
+[arc E]. Lanes commit early, because a usage limit killed three build lanes mid-work on
+September 7th [arc E]. That night at 23:00 I asked what was prepped to run overnight, and the
+queue ran on its own until 07:00 [P4; G:backlog]. It isn't free. An early rule to let the swarm
+steer itself broke the next day, and I had to keep correcting it [arc E].
+-->
 
 ---
 
@@ -204,38 +380,82 @@ Placeholder: the curated lane DAG, model tier per node.
 
 ## Live demo: the record itself
 
-`git log --graph --oneline main` — three stops: fan-out merges; D6→D7 and D5→D9;
-review merges.
+Three stops: fan-out merges; two memory corrections; tiered review merges.
 
 <div class="terminal-note">$ git log --graph --oneline main</div>
 
 Fallback: the coordinator lane DAG (slide 18's chart).
 
-<!-- notes: slide 19 -->
+<!--
+This talk was built the same way, and the log is public. Three stops. First, mining lanes fanning
+out and merging back, with merge messages that say what was learned [3de113f]. Second, two
+corrections. At 08:22 we dropped my three-minute number as unsourced. At 08:29 we reversed that,
+after asking the one person who was there: me [767b0c4; 7fefd2f; D7]. The same thing happened
+between 08:19 and 09:27, when the log said the product work was concurrent and I said it was
+sequential [b1d7e8f; 7607585; D9]. Third, review merges, each reviewed by a model one tier above
+the one that wrote the work [a0641ea; 6b0d9b9; 1f3a3f7; arc E]. ⟨Quote the commit count on main
+on the day; it was 75 at 09:5x PDT on 09-24.⟩
+
+Stage (3.0 min).
+1. Click the link-out slide to the terminal, in the demo clone on `main`.
+2. Use the aliases only; no typing, no network [plan 02]. The graph is `git log --graph --oneline
+   main`, never `--all`, so no worktree branches show [plan 02].
+3. Stop 1 at `3de113f`; stop 2 at `767b0c4` → `7fefd2f`, then `b1d7e8f` → `7607585`; stop 3 at
+   `a0641ea`, `6b0d9b9`, `1f3a3f7`. Read the one-line subject at each stop; don't scroll bodies.
+4. Fallback: the curated DAG slide (#18) [plan §2]. Return by URL hash to slide 20.
+-->
 
 ---
 
 ## Remembered vs recorded
 
-Four rows where the record corrects memory, two counter-example rows marked apart.
+Three times the record corrected memory; three times it was over-read.
 
 ![](assets/charts/remembered-vs-recorded.svg)
 
-<!-- notes: slide 20 -->
+<!--
+Three times, the record corrected my memory [plan §2]. I remembered the dedup work as the
+simplifying win. The record says dedup's own kill fired and a small head shipped: the negative
+result was the win [D4; arc A]. I dated my top-3 bar to the 13th. The docs have it on the 11th
+[cross-arc]. And 76.9 % on 52 lots was a small-sample high. On 87 lots it's 71.3 % [lot-top3].
+Three times, it went the other way. Overlapping dates were read as concurrent work [D9]. A
+message outside the corpus was read as unsourced [D7]. And a replay that compared two single
+crops was read as undoing my single-crop win over the five-crop vote. It never re-ran the vote;
+that win stands, 31 versus 26 of 41 [D12; E79b]. So keep both records, and check in both directions.
+-->
 
 ---
 
 ## Against paralysis
 
-An evidence threshold. A time box. "Go both" when it's reversible. Log the paths
-not taken.
+- An evidence threshold written before the run.
+- A time box and a budget, and "go both" when it's reversible.
+- A log of the paths not taken.
 
-<!-- notes: slide 21 -->
+<!--
+Cheap exploration can turn into analysis paralysis dressed up as rigor. To be honest, the record
+names that risk, but I couldn't find a dated incident of it [arc E]. What kept it in check were
+four habits. An evidence threshold written before the run, like E67's kill line [arc A]. A time
+box and a budget: the labeling agent was capped at 8 calls, 60 seconds and $6 a run [arc F]. "Go
+both" when it's reversible: the language head shipped first as a shadow ranker next to the
+served one [G:ledger · E65a]. And a log of the paths not taken, which is what slide 11 was.
+Decide on the evidence you have, and write down why.
+-->
 
 ---
 
 ## Two things for next week
 
-Persona drafts of your own next decision. A coordinator, plus lanes.
+- At your next fork: could you get the answer while working on something else?
+- Could validating the forks be automated?
+- Start here: the persona-drafts prompt and the coordinator brief.
 
-<!-- notes: slide 22 -->
+<!--
+Here's what I'd tell a colleague. When you give agents the right context, the right autonomy and
+the right guardrails, they work like extra copies of you on a problem while you focus on
+something else [abstract]. Two things for next week. One: at your next fork in the road, ask how
+you could get an answer to it while you work on something else. Two: ask how you could validate
+the different forks, and whether that could be automated [abstract]. Then try it. Two easy
+places to start are in the repo: the persona-drafts prompt and the coordinator brief [plan §2].
+Thanks.
+-->
