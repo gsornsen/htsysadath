@@ -397,3 +397,13 @@ opening starts on the AUDIENCE's moment; a "see this → try this" cheat-sheet c
 to backup. Built on branch `story/deck-v4`; NOT merged until Gerald approves. Polish is on hold until
 the structure is settled. The Q&A demo's question pass re-runs live after the deck settles, since its
 questions are generated from the deck text.
+
+## D20 · 2026-09-24 · First person throughout: "I", never "founder"
+
+Gerald narrates the things he did and drove himself, so every audience-facing surface (slides, visuals,
+speaker notes, outline, the Q&A demo's answers) uses "I" / "my". Never "founder", "the founder",
+"founder's word", "founder testimony", or "Gerald" in the third person (the title slide's speaker name
+excepted). Testimony labels become "my estimate", "my stopwatch", "my call". The internal record
+(decisions, mining, tracking) keeps its existing wording, since it's provenance, not narration.
+Merge gate: `grep -niE "founder|gerald"` over the deck, notes, outline, `talk/slides/assets`,
+`talk/slides/data` and `demo/qa/out` returns nothing but the title slide's name.
