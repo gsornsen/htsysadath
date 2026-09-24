@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Questions this audience is most likely to ask</title>
+<style>
+
+:root {
+  --bg: #f6f3ea;
+  --panel: #ffffff;
+  --panel-2: #f0ece0;
+  --ink: #241f19;
+  --ink-dim: #6b6458;
+  --rule: #ddd4bf;
+  --accent: #b3541e;
+  --accent-ink: #ffffff;
+  --ok: #3f6b4f;
+  --ok-bg: rgba(63, 107, 79, 0.10);
+  --warn: #8a5f1f;
+  --warn-bg: rgba(169, 120, 44, 0.14);
+  --danger: #a73b2e;
+  --danger-bg: rgba(167, 59, 46, 0.10);
+  --focus: #1b56d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171613;
+    --panel: #201f1b;
+    --panel-2: #27251f;
+    --ink: #f3efe4;
+    --ink-dim: #ab9f8b;
+    --rule: #3a3529;
+    --accent: #e08a3e;
+    --accent-ink: #171613;
+    --ok: #86c98d;
+    --ok-bg: rgba(134, 201, 141, 0.14);
+    --warn: #e0ab5c;
+    --warn-bg: rgba(224, 171, 92, 0.16);
+    --danger: #e58c7c;
+    --danger-bg: rgba(229, 140, 124, 0.14);
+    --focus: #7fb0ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.page-head {
+  padding: 32px 24px 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.page-head h1 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", Palatino, Georgia, serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+
+.page-head .sub {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 19px;
+  max-width: 56ch;
+}
+
+.toolbar {
+  max-width: 880px;
+  margin: 18px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-group, .view-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn, .view-btn {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+.filter-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.view-btn {
+  border-radius: 8px;
+}
+
+.view-btn:hover, .filter-btn:hover {
+  border-color: var(--accent);
+}
+
+.list {
+  max-width: 880px;
+  margin: 20px auto 0;
+  padding: 0 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 14px;
+  align-items: center;
+}
+
+.card-summary::-webkit-details-marker { display: none; }
+
+.card-summary::before {
+  content: "\25B8";
+  grid-row: 1 / 3;
+  grid-column: 1;
+  color: var(--ink-dim);
+  font-size: 18px;
+  transition: transform 0.15s ease;
+  justify-self: start;
+  align-self: start;
+  margin-top: 6px;
+}
+
+details[open] > .card-summary::before {
+  transform: rotate(90deg);
+}
+
+.card-head {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rank-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+  background: var(--panel-2);
+  border: 1px dashed var(--rule);
+  border-radius: 5px;
+  padding: 3px 7px;
+  background-image: radial-gradient(circle, var(--bg) 1.4px, transparent 1.6px);
+  background-size: 7px 7px;
+  background-position: right 2px center;
+  background-repeat: repeat-y;
+}
+
+.score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meter {
+  width: 84px;
+  height: 7px;
+  background: var(--panel-2);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+
+.meter-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.score-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  color: var(--ink-dim);
+}
+
+.question {
+  grid-column: 2;
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", Palatino, Georgia, serif;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.chips {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.chip {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-dim);
+  background: var(--panel-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+
+.answer {
+  padding: 4px 20px 22px 54px;
+  border-top: 1px solid var(--rule);
+  margin-top: 2px;
+  padding-top: 16px;
+}
+
+.answer-text {
+  margin: 0 0 14px;
+  font-size: 18px;
+  max-width: 68ch;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 2px solid currentColor;
+  border-radius: 3px 9px 3px 9px / 9px 3px 9px 3px;
+  transform: rotate(-2deg);
+  margin: 0 0 14px;
+}
+
+.badge-sourced { color: var(--ok); background: var(--ok-bg); }
+.badge-testimony { color: var(--warn); background: var(--warn-bg); }
+.badge-not-in-record { color: var(--danger); background: var(--danger-bg); }
+.badge-unknown { color: var(--ink-dim); background: var(--panel-2); }
+
+.answer-banner {
+  color: var(--danger);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+
+.citations {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.citation {
+  font-size: 15px;
+  color: var(--ink-dim);
+}
+
+.citation-line {
+  display: block;
+}
+
+.citation-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--panel-2);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.citation-locator {
+  font-style: italic;
+}
+
+.citation-note {
+  display: block;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-dim);
+  margin-top: 2px;
+}
+
+.citation-private .citation-path {
+  background: none;
+  border: 1px dashed var(--rule);
+}
+
+.citation-flag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--danger);
+  background: var(--danger-bg);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.no-citations {
+  color: var(--ink-dim);
+  font-style: italic;
+  font-size: 15px;
+  margin: 0;
+}
+
+.page-foot {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
+  color: var(--ink-dim);
+  font-size: 13px;
+}
+
+.page-foot code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .page-head { padding: 22px 16px 8px; }
+  .page-head h1 { font-size: 30px; }
+  .toolbar { padding: 0 16px; }
+  .list { padding: 0 16px 32px; }
+  .card-summary { padding: 14px 14px; grid-template-columns: auto 1fr; gap: 4px 10px; }
+  .answer { padding: 14px 14px 18px 14px; }
+  .question { font-size: 20px; }
+  .meter { width: 60px; }
+}
+
+</style>
+</head>
+<body>
+  <header class="page-head">
+    <h1>Ranked &amp; sourced</h1>
+    <p class="sub">Questions this audience is most likely to ask: ranked, with sourced answers.</p>
+  </header>
+
+  <div class="toolbar" role="toolbar" aria-label="Filter and view controls">
+    <div class="filter-group" role="group" aria-label="Filter by persona">
+      <button type="button" class="filter-btn filter-all" data-persona="" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-persona="senior-swe" aria-pressed="false">Engineer</button>
+        <button type="button" class="filter-btn" data-persona="pm" aria-pressed="false">PM</button>
+        <button type="button" class="filter-btn" data-persona="designer" aria-pressed="false">Designer</button>
+        <button type="button" class="filter-btn" data-persona="mid-swe" aria-pressed="false">New to agents</button>
+    </div>
+    <div class="view-group" role="group" aria-label="Expand or collapse all">
+      <button type="button" id="expand-all" class="view-btn">Expand all</button>
+      <button type="button" id="collapse-all" class="view-btn">Collapse all</button>
+    </div>
+  </div>
+
+  <main class="list" id="list" aria-label="Ranked questions">
+
+      <details class="card" data-personas="senior-swe pm designer mid-swe" data-id="cluster-delegation">
+        <summary class="card-summary" aria-controls="panel-cluster-delegation">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·01</span>
+            <span class="score-wrap" title="likelihood score 18">
+              <span class="meter"><span class="meter-fill" style="width:100%"></span></span>
+              <span class="score-num">18</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">How do you decide what to delegate to an agent versus do yourself?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span><span class="chip" data-persona="pm">PM</span><span class="chip" data-persona="designer">Designer</span><span class="chip" data-persona="mid-swe">New to agents</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-delegation">
+          <p class="answer-text">I delegate anything mechanical or well-specified — extraction, summarizing a known-shape doc, formatting — and keep judgment calls for myself: what the talk argues, which finding matters, how a persona would react. The rule I actually use is model routing by task shape, not by how much I trust the tool. If I can write the acceptance test in one line, an agent runs it. If I can&#39;t say what &quot;done&quot; looks like yet, I do it myself first, then hand off the repeatable part once the shape is clear.</p>
+          <span class="badge badge-sourced">Sourced</span>
+          
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/decisions.md</code><span class="citation-sep"> · </span><span class="citation-locator">## Delegate mechanical extraction to Haiku</span></span></li><li class="citation"><span class="citation-line"><code class="citation-path">talk/outline.md</code><span class="citation-sep"> · </span><span class="citation-locator">model routing</span></span></li></ul>
+        </div>
+      </details>
+
+      <details class="card" data-personas="senior-swe mid-swe" data-id="cluster-reproducibility">
+        <summary class="card-summary" aria-controls="panel-cluster-reproducibility">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·02</span>
+            <span class="score-wrap" title="likelihood score 9">
+              <span class="meter"><span class="meter-fill" style="width:50%"></span></span>
+              <span class="score-num">9</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">How do you make sure results are reproducible when the model&#39;s own output is not deterministic?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span><span class="chip" data-persona="mid-swe">New to agents</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-reproducibility">
+          <p class="answer-text">Every model call gets cached as a replay fixture keyed by a hash of the pass, prompt, persona and inputs. Replay mode — the default — never calls a model; a missing fixture is a hard error, not a silent live call. Every deterministic pass is a pure function of its inputs: stable ids, sorted output, no timestamps, no randomness. Two replay runs of the pipeline are supposed to produce a byte-identical page, checked by comparing hashes of the rendered output.</p>
+          <span class="badge badge-sourced">Sourced</span>
+          <p class="answer-banner" role="note">&#9888; One or more citations below failed verification.</p>
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">demo/qa/README.md</code><span class="citation-sep"> · </span><span class="citation-locator">## Reproducibility model</span></span></li><li class="citation citation-failed"><span class="citation-line"><code class="citation-path">talk/plan/qa-demo.md</code><span class="citation-sep"> · </span><span class="citation-locator">guaranteed live replay parity</span></span><span class="citation-flag" role="note">&#9888; citation not verified</span></li></ul>
+        </div>
+      </details>
+
+      <details class="card" data-personas="pm designer" data-id="cluster-hygiene">
+        <summary class="card-summary" aria-controls="panel-cluster-hygiene">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·03</span>
+            <span class="score-wrap" title="likelihood score 7.5">
+              <span class="meter"><span class="meter-fill" style="width:41.7%"></span></span>
+              <span class="score-num">7.5</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">What is your process for keeping private data out of a public repo?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span><span class="chip" data-persona="designer">Designer</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-hygiene">
+          <p class="answer-text">Findings get paraphrased before they&#39;re written down, never pasted verbatim, and attributed to a session id and date instead of a name. Before any commit I grep the staged diff for the shapes that tend to leak — API keys, emails, private IPs, local home paths — and treat a hit as a blocker, not a warning. The corpus behind this demo stores only a sha256 of anything private, never its content, so the public repo never sees the source material directly.</p>
+          <span class="badge badge-sourced">Sourced</span>
+          
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/public-repo-hygiene.md</code><span class="citation-sep"> · </span><span class="citation-locator">## No raw transcripts</span></span></li></ul>
+        </div>
+      </details>
+
+      <details class="card" data-personas="senior-swe" data-id="cluster-limits">
+        <summary class="card-summary" aria-controls="panel-cluster-limits">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·04</span>
+            <span class="score-wrap" title="likelihood score 5">
+              <span class="meter"><span class="meter-fill" style="width:27.8%"></span></span>
+              <span class="score-num">5</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">Where does this approach break down, or start costing more than it saves?</span>
+          <span class="chips"><span class="chip" data-persona="senior-swe">Engineer</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-limits">
+          <p class="answer-text">In my experience this breaks down fastest around shared state — a worktree that forked before a merge lands quietly diverges, and an agent working in it will confidently build on a stale assumption. The fix isn&#39;t more automation, it&#39;s a habit: check the fork point before trusting a branch. I don&#39;t have a clean measurement for how often this bites, just the one lesson logged after it did, so take this as my read on it rather than a proven rate.</p>
+          <span class="badge badge-testimony">Testimony</span>
+          
+          <ul class="citations"><li class="citation"><span class="citation-line"><code class="citation-path">docs/project/lessons-learned.md</code><span class="citation-sep"> · </span><span class="citation-locator">worktrees can fork stale</span></span></li></ul>
+        </div>
+      </details>
+
+      <details class="card" data-personas="designer mid-swe" data-id="cluster-onboarding">
+        <summary class="card-summary" aria-controls="panel-cluster-onboarding">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·05</span>
+            <span class="score-wrap" title="likelihood score 4.5">
+              <span class="meter"><span class="meter-fill" style="width:25%"></span></span>
+              <span class="score-num">4.5</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">What would a new team member need to learn before using this workflow?</span>
+          <span class="chips"><span class="chip" data-persona="designer">Designer</span><span class="chip" data-persona="mid-swe">New to agents</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-onboarding">
+          <p class="answer-text">I don&#39;t have this written down yet — the workflow has mostly lived in my own head and a handful of prompt files, and I haven&#39;t actually onboarded anyone else onto it. My honest guess is a new person would need to read the model-routing rule and the hygiene checklist before touching anything, but that&#39;s a guess, not something I can point to a document for.</p>
+          <span class="badge badge-not-in-record">Not in the record</span>
+          
+          <p class="no-citations">No citations — this answer draws on nothing in the corpus.</p>
+        </div>
+      </details>
+
+      <details class="card" data-personas="pm" data-id="cluster-cost">
+        <summary class="card-summary" aria-controls="panel-cluster-cost">
+          <span class="card-head">
+            <span class="rank-tag" aria-hidden="true">Q·06</span>
+            <span class="score-wrap" title="likelihood score 3">
+              <span class="meter"><span class="meter-fill" style="width:16.7%"></span></span>
+              <span class="score-num">3</span>
+            </span>
+          </span>
+          <span class="question" role="heading" aria-level="2">How much does the private ledger source cost to maintain versus how much time it saves?</span>
+          <span class="chips"><span class="chip" data-persona="pm">PM</span></span>
+        </summary>
+        <div class="answer" id="panel-cluster-cost">
+          <p class="answer-text">The private ledger tracks credit spend per session, and it&#39;s the thing that actually tells me when a lane is worth automating versus doing by hand. I can&#39;t publish the numbers themselves — that ledger lives outside this repo on purpose — but the shape of the answer is: the sessions that pay for themselves are the ones that get reused across lanes, not the one-off asks.</p>
+          <span class="badge badge-sourced">Sourced</span>
+          
+          <ul class="citations"><li class="citation citation-private"><span class="citation-line"><code class="citation-path">ledger/2026-09-credits.md</code><span class="citation-sep"> · </span><span class="citation-locator">monthly credit total</span></span><span class="citation-note">private source, not in this repo</span></li></ul>
+        </div>
+      </details>
+  </main>
+
+  <footer class="page-foot">
+    <p>Generated deterministically by <code>demo/qa/render.mjs</code> from replayed fixtures. No live model calls, no network requests.</p>
+  </footer>
+
+<script>
+
+(function () {
+  "use strict";
+  var list = document.getElementById("list");
+  var cards = Array.prototype.slice.call(list.querySelectorAll(".card"));
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll(".filter-btn"));
+  var allBtn = document.querySelector(".filter-all");
+  var active = new Set();
+
+  function applyFilter() {
+    cards.forEach(function (card) {
+      var personas = (card.getAttribute("data-personas") || "").split(" ").filter(Boolean);
+      var visible = active.size === 0 || personas.some(function (p) { return active.has(p); });
+      if (visible) card.removeAttribute("hidden");
+      else card.setAttribute("hidden", "");
+    });
+  }
+
+  filterBtns.forEach(function (btn) {
+    if (btn === allBtn) return;
+    btn.addEventListener("click", function () {
+      var persona = btn.getAttribute("data-persona");
+      if (active.has(persona)) {
+        active.delete(persona);
+        btn.setAttribute("aria-pressed", "false");
+      } else {
+        active.add(persona);
+        btn.setAttribute("aria-pressed", "true");
+      }
+      allBtn.setAttribute("aria-pressed", active.size === 0 ? "true" : "false");
+      applyFilter();
+    });
+  });
+
+  if (allBtn) {
+    allBtn.addEventListener("click", function () {
+      active.clear();
+      filterBtns.forEach(function (b) { b.setAttribute("aria-pressed", b === allBtn ? "true" : "false"); });
+      applyFilter();
+    });
+  }
+
+  var expandAll = document.getElementById("expand-all");
+  var collapseAll = document.getElementById("collapse-all");
+  if (expandAll) expandAll.addEventListener("click", function () {
+    cards.forEach(function (c) { c.setAttribute("open", ""); });
+  });
+  if (collapseAll) collapseAll.addEventListener("click", function () {
+    cards.forEach(function (c) { c.removeAttribute("open"); });
+  });
+
+  // Roving arrow-key navigation between question summaries, in addition to
+  // native Tab/Enter/Space support from <details>/<summary>.
+  list.addEventListener("keydown", function (ev) {
+    if (ev.key !== "ArrowDown" && ev.key !== "ArrowUp") return;
+    var summaries = cards
+      .filter(function (c) { return !c.hasAttribute("hidden"); })
+      .map(function (c) { return c.querySelector(".card-summary"); });
+    var idx = summaries.indexOf(document.activeElement);
+    if (idx === -1) return;
+    ev.preventDefault();
+    var next = ev.key === "ArrowDown" ? idx + 1 : idx - 1;
+    if (next < 0) next = summaries.length - 1;
+    if (next >= summaries.length) next = 0;
+    summaries[next].focus();
+  });
+})();
+
+</script>
+</body>
+</html>

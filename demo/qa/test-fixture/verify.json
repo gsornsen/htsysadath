@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cluster-delegation",
+    "ok": true,
+    "citations": [
+      {"path": "docs/project/decisions.md", "locator": "## Delegate mechanical extraction to Haiku", "status": "verified"},
+      {"path": "talk/outline.md", "locator": "model routing", "status": "verified"}
+    ]
+  },
+  {
+    "id": "cluster-reproducibility",
+    "ok": false,
+    "citations": [
+      {"path": "demo/qa/README.md", "locator": "## Reproducibility model", "status": "verified"},
+      {"path": "talk/plan/qa-demo.md", "locator": "guaranteed live replay parity", "status": "failed"}
+    ]
+  },
+  {
+    "id": "cluster-hygiene",
+    "ok": true,
+    "citations": [
+      {"path": "docs/project/public-repo-hygiene.md", "locator": "## No raw transcripts", "status": "verified"}
+    ]
+  },
+  {
+    "id": "cluster-limits",
+    "ok": true,
+    "citations": [
+      {"path": "docs/project/lessons-learned.md", "locator": "worktrees can fork stale", "status": "verified"}
+    ]
+  },
+  {
+    "id": "cluster-onboarding",
+    "ok": true,
+    "citations": []
+  },
+  {
+    "id": "cluster-cost",
+    "ok": true,
+    "citations": [
+      {"path": "grailith:ledger/2026-09-credits.md", "locator": "monthly credit total", "status": "unverifiable"}
+    ]
+  }
+]

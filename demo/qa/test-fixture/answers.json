@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cluster-delegation",
+    "answer": "I delegate anything mechanical or well-specified — extraction, summarizing a known-shape doc, formatting — and keep judgment calls for myself: what the talk argues, which finding matters, how a persona would react. The rule I actually use is model routing by task shape, not by how much I trust the tool. If I can write the acceptance test in one line, an agent runs it. If I can't say what \"done\" looks like yet, I do it myself first, then hand off the repeatable part once the shape is clear.",
+    "grounding": "sourced",
+    "citations": [
+      {"path": "docs/project/decisions.md", "locator": "## Delegate mechanical extraction to Haiku"},
+      {"path": "talk/outline.md", "locator": "model routing"}
+    ]
+  },
+  {
+    "id": "cluster-reproducibility",
+    "answer": "Every model call gets cached as a replay fixture keyed by a hash of the pass, prompt, persona and inputs. Replay mode — the default — never calls a model; a missing fixture is a hard error, not a silent live call. Every deterministic pass is a pure function of its inputs: stable ids, sorted output, no timestamps, no randomness. Two replay runs of the pipeline are supposed to produce a byte-identical page, checked by comparing hashes of the rendered output.",
+    "grounding": "sourced",
+    "citations": [
+      {"path": "demo/qa/README.md", "locator": "## Reproducibility model"},
+      {"path": "talk/plan/qa-demo.md", "locator": "guaranteed live replay parity"}
+    ]
+  },
+  {
+    "id": "cluster-hygiene",
+    "answer": "Findings get paraphrased before they're written down, never pasted verbatim, and attributed to a session id and date instead of a name. Before any commit I grep the staged diff for the shapes that tend to leak — API keys, emails, private IPs, local home paths — and treat a hit as a blocker, not a warning. The corpus behind this demo stores only a sha256 of anything private, never its content, so the public repo never sees the source material directly.",
+    "grounding": "sourced",
+    "citations": [
+      {"path": "docs/project/public-repo-hygiene.md", "locator": "## No raw transcripts"}
+    ]
+  },
+  {
+    "id": "cluster-limits",
+    "answer": "In my experience this breaks down fastest around shared state — a worktree that forked before a merge lands quietly diverges, and an agent working in it will confidently build on a stale assumption. The fix isn't more automation, it's a habit: check the fork point before trusting a branch. I don't have a clean measurement for how often this bites, just the one lesson logged after it did, so take this as my read on it rather than a proven rate.",
+    "grounding": "testimony",
+    "citations": [
+      {"path": "docs/project/lessons-learned.md", "locator": "worktrees can fork stale"}
+    ]
+  },
+  {
+    "id": "cluster-onboarding",
+    "answer": "I don't have this written down yet — the workflow has mostly lived in my own head and a handful of prompt files, and I haven't actually onboarded anyone else onto it. My honest guess is a new person would need to read the model-routing rule and the hygiene checklist before touching anything, but that's a guess, not something I can point to a document for.",
+    "grounding": "not in the record",
+    "citations": []
+  },
+  {
+    "id": "cluster-cost",
+    "answer": "The private ledger tracks credit spend per session, and it's the thing that actually tells me when a lane is worth automating versus doing by hand. I can't publish the numbers themselves — that ledger lives outside this repo on purpose — but the shape of the answer is: the sessions that pay for themselves are the ones that get reused across lanes, not the one-off asks.",
+    "grounding": "sourced",
+    "citations": [
+      {"path": "grailith:ledger/2026-09-credits.md", "locator": "monthly credit total"}
+    ]
+  }
+]
