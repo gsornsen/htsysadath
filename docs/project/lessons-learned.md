@@ -61,3 +61,14 @@ entry; link the finding or commit that proves it.
   right to report NOT FOUND. The coordinator's error was upgrading that into a DECISION without
   a one-line question to the person who was there. Rule: a NOT FOUND on a founder claim goes to
   the open-questions list, never straight into decisions.md.
+
+- `[method]` 2026-09-24: **the Opus 5.5 reviewers overturned the Sonnet lanes on the details the
+  talk would have quoted**: the SPADE ordering (after the build, not before), the 800-task run
+  (760), "0/13 OCR viable" (not in the doc), the E79 winning crop (padded, not tight), "all
+  pre-registered" (83 of 151). Every Sonnet claim the coordinator had spot-checked held; the
+  errors sat in the claims nobody had re-opened. Reviewing one tier up earned its cost, and
+  3 spot-checks per arc isn't enough coverage for a number that goes on a slide.
+- `[method]` 2026-09-24: a gate chained with `;` is not a gate. The coordinator ran a hygiene grep
+  and a merge in one command joined by `;`, so the merge ran before the grep's 15 hits were read.
+  They turned out to be `@1`/`@3` metric names, not handles, and nothing was pushed. Chain gates
+  with `&&`, and make the grep exit non-zero on a hit.

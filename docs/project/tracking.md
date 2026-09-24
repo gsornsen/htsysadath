@@ -9,17 +9,26 @@ blocked · dropped. Newest changes at the top of the changelog.
 |---|---|---|---|---|---|
 | Scaffold | main | merged | Fable | beb5177 | pushed to github.com/gsornsen/htsysadath |
 | Transcript inventory | mine/inventory | merged | Haiku | 105d837 | 28 sessions indexed; Phase 2 slices against it |
-| Mine: experiments (arc A) | mine/experiments → review/experiments-top3 | review running | Sonnet → Opus 5.5 | e37492e | re-cut around TOP-3 on the non-locked remainder (Gerald 08:2x) + auto-lock numbers |
-| Mine: pivots (arc B) | mine/pivots → review/pivots | review running | Sonnet → Opus 5.5 | 6544205 | restructure to concurrent spines (D5); source the 5-crop proposer |
+| Mine: experiments (arc A) | mine/experiments → review/experiments-top3 | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | top-3 on non-locked remainder NOT measured; add lock-state to lot harness? (Gerald) |
+| Mine: pivots (arc B) | mine/pivots → review/pivots | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | proposer retirement not in record; "michi" name question (Gerald) |
 | Mine: personas (arc C) | mine/personas | merged | Sonnet | a504755 | panel mechanism reconstructed; B19 failure case |
 | Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
-| Mine: agent labeling (arc F) | mine/labeling → review/labeling | review running | Sonnet → Opus 5.5 | 3de113f | two-lever rewrite per D7 (3 min founder stopwatch → agents 11–16 s + UI ~20 s) |
+| Mine: agent labeling (arc F) | mine/labeling → review/labeling | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | optional: Gerald re-times one label with no agent pre-labels |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
-| Outline v1 | talk/outline | planned | Opus | — | after any two arcs land |
+| Outline v1 | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 08:5x PDT — **Opus 5.5 review pass complete; arcs A, B, F merged.** Coordinator
+  re-checked 12 of the Opus lanes' claims against source: 12 held; one E89 figure looked wrong
+  but was a different table section, and the lane's arithmetic was right. A: the D4 win exists
+  ONLY at @1 (the top-3 bar dates to 09-11, after D4); top-3 was measured four incompatible ways;
+  the live auto-lock rate and top-3 on the non-locked remainder are NOT measured. B: the "5" was
+  5 crops in ONE identify request, not 5 calls, and there's no retirement in the record; SPADE
+  came after the build. F: 760 tasks, not 800; the two-lever timeline is dated. Phase 3 outline
+  is unblocked.
 
 - 2026-09-24 08:3x PDT — Client updated; **Opus tier re-probed: `claude-opus-5-5[1m]` (Opus 5.5)**.
   Gerald chose 5.5 for the held reviews by upgrading. Three Opus 5.5 review lanes spawned (A re-cut

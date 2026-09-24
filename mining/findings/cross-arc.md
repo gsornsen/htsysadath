@@ -31,3 +31,15 @@ outside its own arc files it here instead of editing another arc's doc.
   hand-labeling after 23 labels because of the interface, not the cards, and the fix that
   followed was design work (P0/P1), not model work. [src: memory labeler-ux-blockers-2026-09-09 ·
   2026-09-09 ~11:45 PDT; arc F review lane]
+- Talk spine ("the remembered version is tidier than the record"), instances 4 and 5: the top-3
+  bar is dated 09-11 in the docs (evening plan, E108), not 09-13; and E79's padded-crop win did not
+  hold on replay (09-13 prod-readiness B1: top-1 25 vs 24 of 41, top-3 33 vs 33). [src: arc A and
+  arc B Opus review lanes · 2026-09-24]
+- Arc A/F: the auto-lock precision figures (E89: 0.90 / 0.92) are scored against mostly
+  agent-agreed provisional truth, so they inherit arc F's labeling pipeline and its caveats.
+  [src: arc A review lane; EXP-E85/E89 · 2026-09-10/11]
+- Arc B pattern: build first, decide second. Scout Wave 1 shipped 17:50 on 08-18 and its SPADE
+  was written at 22:44; the 08-19 lots roadmap and Art Binder show the same order. [src: 8eb911a86,
+  e04b6433b; arc B review lane]
+- Arc B/A: a proxy that did not survive live data. E109 lifted six-crop top-3 by 12.6 pts, and
+  the live lot measure (E100b) moved 0. [src: arc A review lane · E109, E100b]
