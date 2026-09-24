@@ -9,7 +9,8 @@
     "build": "marp --html --no-stdin deck.md -o dist/deck.html",
     "pdf": "marp --html --pdf --no-stdin --allow-local-files deck.md -o dist/deck.pdf",
     "charts": "node scripts/build-charts.mjs",
-    "shots": "node scripts/shoot.mjs"
+    "shots": "node scripts/shoot.mjs",
+    "pptx": "marp --html --pptx --no-stdin --allow-local-files deck.md -o dist/deck.pptx"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "4.5.1"
