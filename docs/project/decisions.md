@@ -85,3 +85,39 @@ retrospective tidies away" beat now has two independent examples (D4 framing, D5
 may deserve its own slide. Open: the Art Binder detour (08-12 → 08-18) has no founder-quoted
 scope conversation in the mined docs — an honest counter-example to the "every pivot was an
 evidence conversation" claim, unresolved pending Gerald.
+
+## D6 · 2026-09-24 · The "3 min → 10 s per label" claim is not sourced; the talk drops it
+
+**Context.** brief.md and D4 both asserted that agent labeling took a label from ~3 minutes by
+hand to ~10 seconds with a `[verify]` step. The `mine/labeling` lane was briefed to source or
+refute it. Refuted, and the coordinator re-ran the search independently and agrees.
+
+- **"~3 min by hand": NOT FOUND.** No labeling source states a per-label manual duration —
+  not the feature spec, labeling-start-here, the E84 pilot spec, `docs/ops/labeling.md`, the
+  labeler-UX memories, or the 2026-09-13 critique. The record says the opposite of a measured
+  baseline: at 2026-09-13 13:12 PDT the critique headline is "labeler NOT < 1 min today", and its
+  plan calls a seconds-per-task counter "a new event" still to be built. The manual rate was
+  **uninstrumented**. The only "~3 min" in the corpus is the 2026-09-09 deploy rollback window
+  (an `assertEnvValid` boot failure) — a different thing entirely.
+- **"~10 s with agents": sourced but scope-mismatched.** EXP-E84 measures **11 s** (Gemini 2.5
+  Flash) and **16 s** (Claude Haiku 4.5) per task, 13.7 s / 12 s on re-runs — agent wall time
+  only, excluding human review. No `[verify]` bracket appears in any source. The nearest
+  human-verify analogue is E28a's blind adjudication, 6 dissents in 6 minutes ≈ 1 min/item,
+  an order of magnitude slower than 10 s.
+
+**Decision.** The talk does not use "3 min → 10 s". Arc F quotes **11–16 s of agent wall time per
+task at $0.004–$0.024**, states plainly that the manual baseline was never measured, and makes
+the honest point instead: the pipeline's value showed up in **agreement and cost** (E28a: 95.8%
+agreement, κ = 0.952, 71.1% exact id, zero wrong agreements; E84: 800 tasks for $9), not in a
+speedup nobody instrumented.
+
+**Alternatives not taken.** (a) Quote the number with a hedge — rejected: the repo is public and
+the number would be traced to nothing. (b) Reconstruct a 3-minute baseline by arithmetic and
+present it as measured — rejected outright; that is the "solutioning from thin data" anti-pattern
+the talk itself calls out, and doing it in the talk's own evidence would be self-refuting.
+
+**Consequences.** brief.md arc F row corrected. D4's arc F paragraph is superseded on this point.
+This is now the third instance of the same lesson (with D4's framing and D5's ordering):
+**the remembered number is tidier than the record.** That pattern has earned its own slide.
+Gerald still owes an answer on where his ~3 min came from — if it is a real stopwatch memory,
+it is worth instrumenting once and quoting properly rather than dropping.
