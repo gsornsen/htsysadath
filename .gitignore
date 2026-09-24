@@ -1,0 +1,12 @@
+# Raw material never enters this repo — it is PUBLIC. Mine it in place, commit only findings.
+mining/raw/
+*.jsonl
+*.jsonl.gz
+# secrets and local state
+.env
+*.env
+*.dev.vars
+.DS_Store
+node_modules/
+__pycache__/
+scratch/
