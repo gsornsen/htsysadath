@@ -37,17 +37,25 @@ wrong with the method; the failure it replaced was writing docs too long to be r
 forced the meetings the doc was meant to replace. The full worked example (Q1) is deferred to a
 later phase in case the other arcs fill the live slot.
 **Arc B — the pivots that needed evidence in hand (live scout).** (1) Accuracy was stuck and
-Japanese cards were scoring higher similarity than English ones on crops; dropping the Japanese
-index felt counter-intuitive, but setting up the experiments to test it simplified the system and
-cut training and maintenance — the single experiment that most changed his mind, and the one to
-tackle multiple languages from reference art alone. (2) Detection: WHEN to run identify and when
-not to; identify was not fast enough end-to-end to win an auction and the project was close to
-being parked. In hindsight the experiments that sped identify up were less valuable than thinking
-earlier about moving cards — the team ended up not needing ~5 identify calls per detect.
-**Verify during mining.** Memory `index-design-evidence-2026-09-19` reads "keep flat, JA is
-coverage-bound"; Gerald remembers dropping the JA index. The arc A/B lanes must reconcile the two
-from the experiment docs and transcripts (which index, which date, what was actually served) —
-this reconciliation is itself talk material (memory vs record).
+Japanese cards were scoring higher similarity than English ones on crops. The counter-intuitive
+call was about the INDEX COMPOSITION: what to do with duplicated art, and art re-used across
+prints in several languages (Gerald's clarification, 07:5x). Setting up the experiments to test
+it simplified the system and cut training and maintenance — the single experiment that most
+changed his mind, and the route to handling multiple languages from reference art. (2) Detection:
+WHEN to run identify and when not to; identify was not fast enough end-to-end to win an auction
+and the project was close to being parked. In hindsight the experiments that sped identify up
+were less valuable than thinking earlier about moving cards — the team ended up not needing ~5
+identify calls per detect.
+**Verify during mining.** Memory `index-design-evidence-2026-09-19` records E67 (artwork-dedup
+"loses 14–20 pts", "flat, no dedup" kept) and a language head as soft scope. Gerald remembers the
+dedup/cross-language experiments as the simplifying win. The arc A lane reconciles from the E65/
+E67 docs and transcripts: which arm was adopted, on what date, what was served — and whether
+"simplified" refers to the index, the language handling, or the training/maintenance burden. The
+reconciliation is talk material (memory vs record).
+**Arc F added (07:5x).** Agent labeling with skills + different vision models took a label from
+~3 minutes (human) to ~10 seconds `[verify]`. Sources: E28a adversarial agent labeling (09-06),
+E84 agent-tools pilot (09-09: $/task, tool calls, wall time, agreement/dissent rates), plan specs
+2026-09-06/08/09, memory `labeling-program-design-2026-09-09`, `model-words-not-model-ids`.
 **Model routing.** Opus 5.5 (`claude-opus-5-5`) for Opus-tier lanes once the client is updated;
 fall back to Opus 5 if 5.5 is unavailable. Gerald updates the client after this turn.
 **Remote.** Public GitHub repo `gsornsen/htsysadath` created via gh; `origin` set.

@@ -1,7 +1,7 @@
 # Lane body — mine project memory, experiment docs, plan docs, design docs
 
 **Model:** Sonnet; Opus reviews. **Branches:** `mine/experiments` (arc A), `mine/pivots` (arc B,
-pair with prompts/03), `mine/personas` (arc C), `mine/coordinator` (arc E).
+pair with prompts/03), `mine/personas` (arc C), `mine/coordinator` (arc E), `mine/labeling` (arc F).
 **Outputs:** `mining/arcs/<arc>.md` + supporting index tables in `mining/findings/`.
 
 ## Sources (read these; they are small enough)
@@ -16,6 +16,15 @@ pair with prompts/03), `mine/personas` (arc C), `mine/coordinator` (arc E).
   mark pivots. Build `mining/findings/pivots-timeline.md`: date · from → to · trigger · who decided
   · scope/timeline conversation held (yes/no/how).
 - Design: `~/git/grAIde-main/docs/design/` (19) + memories tagged design/panel/persona → arc C.
+- Arc F (agents as labelers): `docs/experiments/EXP-E28a-adversarial-agent-labeling-2026-09-06.md`,
+  `EXP-E84-agent-tools-pilot-2026-09-09.md` (+ folders `e28a/`, `e84/`), plan specs
+  `docs/plan/2026-09-06-labeling-feature-spec.md`, `2026-09-08-labeling-start-here.md`,
+  `2026-09-09-agent-tools-labeler-pilot-spec.md`, memories `labeling-program-design-2026-09-09`,
+  `model-words-not-model-ids`, `founder-wont-hunt-ids-on-poor-crops`. Extract: per-agent exact-id
+  rate, verdict accuracy, abstentions, $/task, tool calls, wall time; agreement vs dissent between
+  paired agents; what stayed human (verdict of record). Gerald's number to VERIFY: ~3 min/label by
+  hand → ~10 s with agents. Find where 3 min and 10 s come from (a plan doc, a transcript, a
+  ledger) or report "not found" — the talk quotes only what is sourced.
 
 ## Per-arc deliverable (`mining/arcs/<arc>.md`, ≤ 1,200 words)
 1. The arc in one paragraph.

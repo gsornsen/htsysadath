@@ -10,6 +10,7 @@ Phase 1  P  inventory transcripts (Haiku, minutes)                           │
          P  mine plans + git → arc B timeline (Haiku+Sonnet → Opus review)   │ all independent
          P  mine design + memories → arc C (Sonnet)                          │ of each other
          P  mine memories + this repo's log → arc E (Sonnet)                 │
+         P  mine E28a/E84 + labeling specs → arc F (Sonnet → Opus review)    │
          G  interview (6 questions) → arc D truth · answers spine/length     │
          G  write talk/abstract-rough.md (150–300 words)                     ┘
                     │
