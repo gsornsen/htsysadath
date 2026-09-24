@@ -40,12 +40,16 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | running | Opus 5.5 → coordinator | — | personas → questions → rank → sourced answers → verify; live once, then replay fixtures |
-| Q&A demo: page renderer | qa/render | running | Sonnet → coordinator | — | self-contained ranked click-to-reveal HTML; deterministic |
+| Q&A demo: page renderer | qa/render | merged | Sonnet → coordinator | see log | deterministic (fixture sha 7a953cc3…) |
+| JA on dev: config + data (J1) | dev box | running | Opus 5.5 | — | backup first; switch + JA map + migrations; runbook restart after the idle check; re-test the Alakazam |
+| JA code fix (J2) | grAIde fix/ja-identify-cohort (worktree grAIde-jafix) | running | Opus 5.5 → coordinator | — | cohort filter when all hits are JA; resolveCard language; tests; no merge/deploy |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 12:3x PDT — Gerald approved both JA fixes: J1 dev-only (backup first) and J2 a Grailith code branch. Q&A renderer merged.
 
 - 2026-09-24 12:2x PDT — D19: Gerald finds v3 confusing from the audience's seat. Structure v4 (audience-first) proposed; built on a branch; merges on his approval. Polish on hold.
 
