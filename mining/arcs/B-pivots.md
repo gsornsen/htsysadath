@@ -1,108 +1,107 @@
-# Arc B — the pivots (pregrade → bulk/lots → live-stream identify → comps)
+# Arc B — the pivots, as concurrent spines (per D5)
 
 ## 1. The arc in one paragraph
 
-Grailith started as a tool for grading and identifying one card at a time from an uploaded
-photo. Over eleven weeks it grew three more surfaces on the same identify/pricing core: bulk
-capture and organization ("lots," scanning a stack at a show), a live browser extension that
-watches a Whatnot auction stream and identifies the card the seller is holding up before the lot
-closes, and a pricing/comps layer that had existed since the repo's second day and matured in
-dated waves as the other two surfaces put load on it. The talk's claim: every pivot was a
-scope/timeline conversation held with evidence in hand, not a vibe shift. The record mostly
-supports that, with two honest exceptions: the claimed strict ordering (one → lots → live-stream
-→ comps) doesn't survive the commit dates, and one adjacent track (Art Binder) shows no
-equivalent documented founder conversation at all.
+Grailith was never one project moving through four acts. From day two it had two spines,
+single-card identify and comps [src: `f7a484e95`, `8b009b9f9` · 2026-07-04]. In one week in
+August three more opened: Art Binder (08-13), the live Whatnot scout (08-18) and bulk
+capture/lots (08-19). All five then ran side by side [src: `d93b68c35`, `e04b6433b`,
+`0f6b04285`]. Each spine has its own decision moments, and most of them are the same move: a
+number written down, a cheap test, a founder quote with a timestamp. The talk's thesis is that
+agentic tools let one person run several threads at once. The record shows Gerald already was,
+and it also shows where the tidy retelling ("pregrade → lots → live → comps") breaks down.
 
-## 2. Pivotal moments
+## 2. Pivotal moments, by spine
 
-**2026-08-19 — pregrade (single card) → bulk capture/lots.** The fork: keep polishing one-card
-identify, or build durable multi-card capture. Explored: little elaboration — the roadmap doc
-states the premise plainly ("single-scan flow is solid + identify is strong") and moves straight
-to milestones (M1 batch queue with a hard "never lose work on refresh" acceptance bar, M2
-captures management, M3 lots). Not explored in the doc: alternative sequencings, e.g. lots
-before hardening single-scan. Decision: founder-defined sequencing, dated in the doc's header.
-Evidence: the "solid" claim rests on seven prior weeks of pregrade work (W27–W33, ~700 commits)
-rather than a fresh measurement — the one pivot here where "evidence in hand" leans on track
-record over a discrete test. Cost/benefit later: lots shipped to prod flagged on 2026-09-20, a
-month after the roadmap. [src: docs/plan/2026-08-19-capture-persistence-and-lots-roadmap.md]
+**Spine: live scout (08-18 → Sept).** The densest spine, and the one Gerald remembers.
+- *08-18, build first, then decide.* Waves 1–3 shipped between 17:50 and 19:00. The SPADE came
+  at 22:44, after the live runs showed the vision-LLM identify at 6–15 s. It set "~2s
+  end-to-end … a gate, not a target." Its OCR spike cleared OCR as the cause (detection, frame
+  choice and rotation were failing) and it recommended client-OCR first [src: `e04b6433b`,
+  `8eb911a86`; docs/plan/2026-08-18-whatnot-sub2s-identify-spade.md].
+- *08-19, the plan revised by its own test.* An overnight 34-crop bakeoff killed the SPADE's
+  pick: OCR had a 25 s median, vision 10.4 s, and embedding ran at ~130 ms. The architecture was
+  rebuilt around embedding, with one fork left for the founder
+  [src: docs/plan/2026-08-19-id-lane-bakeoff-revised-architecture.md].
+- *09-02/03, the 5-crop proposer.* One detectQuad crop was the presented card in 0/36 live
+  frames. The fix cuts up to five card-shaped crops per fire and sends them in **one** identify
+  request, and the server embed-searches every crop and keeps the best-scoring one. The ship gate
+  was measured at 19 correct / 0 wrong, against 1 / 30 for the shipped path
+  [src: `3079bbc68` 2026-09-02; `3b66e82cc` 2026-09-03].
+- *09-07, what five crops cost.* A production incident traced to five concurrent embed-searches
+  × 2 orientations = 10 forward passes per identify on one vCPU. The fix batched them and left
+  "the founder's product number" (the 8 s deadline) untouched [src: `f5d6a6491` · 2026-09-07].
+- *09-09, the founder calls it a hack.* 02:00 PDT, quoted in the experiment doc: the 5 crops
+  were "a hack/optimization around poor accuracy prior to fixing catalog issues". Eleven minutes
+  later E79b answered. On 41 human-truth scenes the vote scored 26/41 at 1,893 ms, and one crop
+  with 17 px of padding scored 31/41 at 337 ms [src: docs/experiments/EXP-E79-single-crop-vs-proposal-vote-2026-09-09.md].
+- *09-11 → 09-13, the bar moves.* On the fast box stack the founder found identify "super fast"
+  and asked whether detection was still "a holdover from the 5-crop proposer and a slow
+  identify". E88 measured first quad → fire at p50 218 ms / p95 401 ms and the round trip at
+  375 / 692 ms [src: docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md]. Two days
+  later his bar became **detection ≤ 1 s; identification = right card in the top 3 per lot**
+  (session 403300ff · 2026-09-13 22:44). The 09-11 numbers meet the first half on the dev
+  stack [inference: dev box, not production]. The second half turned it into a ranking problem,
+  and the multi-crop set came back only to *order alternates*: top-3 went from 70.3 % to 82.9 %,
+  and the crops were never used to pick identity
+  [src: docs/plan/2026-09-13-scan-capture-prod-readiness.md §4, B3].
 
-**2026-08-18 — pregrade identify → live-stream auction identify (whatnot-scout).** The fork:
-port the existing (accurate but 6–15s) vision-LLM identify path into a browser extension
-watching a live Whatnot stream, where a card is on screen for roughly 5–10 seconds. Explored:
-the SPADE decision doc runs a full Setting/People/Perspectives/Alternatives/Decide/Explain pass
-before Wave 1 ships, and an OCR spike is run *first* to rule out the cheapest option (native
-OCR scored 0/13 viable on live crops, confirming the failure was upstream in detection/crop
-quality, not the reading step). Not explored: shipping the existing 6–15s vision path as-is and
-hoping "feels live" was negotiable — the doc explicitly rejects this ("a path that is
-accurate-but-4s fails"). Decision: founder, framed via the commit message ("the founder's first
-live test") and the SPADE's own format. Evidence in hand: a scored recipe with per-tier numbers,
-gathered before Wave 1's code shipped. Cost/benefit seen later: the very next day (08-19), an
-overnight 3-lane bakeoff (OCR/vision/embedding, 34 crops) found the SPADE's own primary
-recommendation (client-OCR) didn't survive contact with real crops and revised the architecture
-on the spot — the clearest example in this arc of a plan changing *because* of evidence, not
-before it. [src: docs/plan/2026-08-18-whatnot-sub2s-identify-spade.md,
-docs/plan/2026-08-19-id-lane-bakeoff-revised-architecture.md]
+**Spine: lots (08-19 → 09-20).** One founder-sequenced milestone plan (M1 batch queue, "never
+lose work on refresh", M2 captures, M3 lots), behind a flag from 08-21 and on in production on
+09-20. The evidence is track record ("single-scan flow is solid"), not a new test
+[src: docs/plan/2026-08-19-capture-persistence-and-lots-roadmap.md; `3359aabd8`, `9131c674b`].
 
-**2026-09-06/07 — whatnot + lots load → comps freshness/TTL/pubsub redesign.** The fork: keep
-comps as a simple 20-hour-TTL cache, or design per-class freshness and a pubsub layer so
-multiple watching extensions don't each pay for the same stale-comp refresh. Explored: both
-design docs are pre-registered (stated zero-credit, zero-write budget before any build) and
-cite specific experiments run first (`EXP-COMPS-TTL-2026-09-07`, `EXP-E53e-request-dedup`).
-Not explored: buying a higher-tier price-API plan to paper over the staleness — the founder's
-own quoted principle rejects this ("that math starts to change when we have ttls by
-classification," arguing against buying the tier before demand is honest). Decision: founder,
-quoted and timestamped to the minute in both docs, including an in-line "Founder go 14:47 PDT."
-Evidence: E53e's request-dedup measurement (falsified — under 1% of identify calls were
-intra-episode repeats) directly informed the pubsub design's scope. Cost/benefit: this is the
-best-instrumented pivot found in the mining — a direct founder quote, a dated pre-registration,
-and a cited experiment, all before a line of production code. [src: docs/plan/2026-09-07-comps-ttl-by-class-design.md, docs/plan/2026-09-07-comps-pubsub-design.md]
+**Spine: comps (07-04 → Sept).** Present from day two. It matured in waves (08-02, 08-24,
+09-06/07) as lots and scout put load on it. The 09-07 redesign is the best-instrumented moment
+in the arc: founder quotes at 13:38, 14:47 ("Founder go") and 17:11 PDT, two pre-registered
+experiments, and zero spend before any build. The pubsub design keys its limits to E53e's
+request-dedup measurement. (The prior draft's "under 1 %" figure was not re-verified in this
+review.) [src: docs/plan/2026-09-07-comps-ttl-by-class-design.md §0;
+docs/plan/2026-09-07-comps-pubsub-design.md].
 
-**2026-08-12→18 — Art Binder (undocumented fork, cautionary).** The honest counter-example the
-brief asked to surface: this collage/compose feature ran for a week directly before the whatnot
-pivot, with a handoff doc attributed to "the orchestrating session," not a founder decision. No
-timestamped quote, no pre-registered evidence, no scope conversation of the kind seen above. It
-is unclear whether that conversation happened elsewhere (a transcript this lane didn't read) or
-didn't happen. Flagged, not resolved. [src: docs/plan/2026-08-12-michi-binder-in-grailith-handoff.md]
+**Spine: Art Binder (08-12 → 08-29).** This spine had a scope conversation after all. Its SPADE
+(08-12) lists "Founder's locked decisions" and a founder product direction refined after
+community research. On 08-15 a *pre-written promotion trigger* fired (multi-step AND
+tens-of-seconds AND resume-across-reload). The branch was merged on 08-23 and kept shipping
+through 08-29, in parallel with lots and scout [src: docs/plan/2026-08-12-michi-binder-spade.md;
+docs/plan/2026-08-15-binder-agentic-promotion.md; `0a6119e7f`, `6fe0432e9`]. It remains the
+honest counter-example in a narrower form. Its decisions are paraphrased and dated to the day,
+not quoted to the minute. Its first locked decision is "plan all phases equally … no forced MVP
+cut", which is scope set by ambition, not by a kill number.
 
 ## 3. The transferable move
 
-The pattern across the three well-evidenced pivots: state the requirement as a number before
-building anything (2s, not "fast"; a TTL formula, not "fresher"), run the cheapest test that
-could kill the plan, and only then write the build doc — founder's words quoted and timestamped,
-not paraphrased into "the team decided." A colleague copying this next week doesn't need the
-SPADE template specifically; they need the discipline of writing the kill condition down
-*before* the spike, and preferring a timestamped direct quote over a summary — the quote is what
-makes "evidence in hand" checkable later, including by a mining lane eleven weeks on.
+Run the threads in parallel, but give each one a number that can kill it. The spines that held
+up (scout, comps) put the requirement in writing as a figure (2 s, then ≤ 1 s and top 3; a TTL
+formula) and ran the cheapest test that could overturn the plan. They also kept the founder's
+exact words with a timestamp. Two refinements to the tidy version. (a) The order was sometimes
+build first, decide second: scout Wave 1 was a probe, and the SPADE followed it that night.
+(b) The best decisions retired Gerald's own earlier fix. The 5-crop proposer was right on 09-03
+and a hack by 09-09, once the catalogue was fixed. A colleague can copy this next week: for each
+thread, write the kill condition before the spike, and note the date when a workaround stops
+earning its cost.
 
 ## 4. Slide candidates
 
-- **The SPADE's OCR-spike table** (docs/plan/2026-08-18-whatnot-sub2s-identify-spade.md) — a
-  three-tier scored table (clean scans / phone shots / live crops) showing OCR going from
-  viable to 0/13 non-viable as the input gets closer to the real product. Shows evidence
-  killing an idea before it shipped, not after.
-- **The comps-ttl-by-class-design.md founder quote block** — the doc literally opens on a
-  timestamped direct quote (§0) before any mechanism. A screenshot of that section is a ready-
-  made "decision, not a vibe" slide.
-- **git-timeline.md's phase table + "honesty check" section** — pairing the narrated order
-  against the dated commit record is itself a slide: claimed four sequential acts versus what
-  the shas show (a parallel spine plus one concurrent launch pair), the method self-correcting.
+- **Swim-lane chart, 07-02 → 09-21.** Five horizontal spines (identify/scout, comps, lots, Art
+  Binder, labeling), with decision dots at the dated moments above. It replaces the four-act
+  arrow and is the D5 slide.
+- **The proposer's life in four numbers.** 0/36 → 19/0 (09-03) → 10 forward passes per identify
+  in the incident (09-07) → 26 vs 31 of 41, 1.9 s vs 0.34 s (09-09). A workaround that worked,
+  cost money, then lost to a simpler path.
+- **The bar that moved.** "~2s … a gate, not a target" (08-18) beside "detection ≤ 1 s; right
+  card in the top 3 per lot" (09-13).
+- **The comps §0 founder quote block**, unchanged from the prior draft.
 
 ## 5. Open questions for Gerald
 
-1. Interview claim 1 ("close to being parked"): the record shows identify was too slow for the
-   live-auction use case (SPADE's explicit 2s gate against a measured 6–15s baseline), but no
-   doc or commit uses "parked"/"shelved" about the *whatnot-scout project itself* being at risk.
-   Is that memory from a conversation not captured in `docs/plan/` or the mined memory files —
-   and if so, roughly when?
-2. Interview claim 2 ("~5 identify calls per detect," not needed after moving-cards thinking):
-   this lane found a plausible mechanical source — the pre-Wave-3 design fired identify on a
-   "minimal-5-frame-lock placeholder," replaced by Wave 3's "one-call-per-committed-lock" state
-   machine — but that **bridges "5-frame" to "~5 calls" by inference, not a document stating the
-   figure directly**. [src: memory `whatnot-card-scout-extension.md` line 81;
-   `docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md`; `docs/ops/ppt-governor.md:1315`].
-   Right mechanism, or is "~5" from a different measurement this lane didn't find?
-3. Was there a scope conversation for Art Binder equivalent to the three pivots above, and if
-   so, where does it live?
-4. The arc's stated order (pregrade → lots → live-stream → comps) reads cleanly but the commit
-   dates show lots and live-stream a day apart and comps present from day two. Intentional
-   narrative compression, or should the slide show the truer concurrent shape?
+1. **"~5 identify calls per detect."** The record has five *crops* per fire in **one** identify
+   call, fanned out to five embed-searches (E79: "five embeds + five searches"). Is it fine to say
+   "five embeds per identify" on stage?
+2. **"5 crop proposer gone" (09-11).** No commit on any ref retires it. `main` still cuts up to
+   `MAX_PROPOSALS` crops per fire, and E79 named the change "one constant … gated on a replay"
+   that we cannot find. Did it ship from a build outside this repo, or is it still to do?
+3. **"Close to being parked."** Only the identify *speed work* is recorded as parked (09-08
+   problem brief §5), not the scout itself. When was the project at risk?
+4. **Art Binder.** The SPADE shows your scope decisions. Was there ever a kill or park number
+   for it, or was it deliberately open-ended?
