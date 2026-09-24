@@ -98,3 +98,36 @@ talk/slides/scripts/
 4. Confirm dark-theme-only is fine for the whole deck's app imagery.
 5. OK to model `shoot.mjs` directly on Grailith's `tools/labels/ux/beforeafter.mjs`, or keep it
    independent so this repo has no behavioral dependency on Grailith's harness?
+
+## Convergence (round 2)
+
+**Agree.** Runtime's `html: true` + link-out demo handoff needs stable asset paths, which I adopt.
+Data-viz's SVG-script pipeline (JSON → script → committed SVG) mirrors my Storybook-manifest
+approach — same shape, different source. D9: none of my assets touch Art Binder/michi-binder
+(`art-binder.stories.tsx`, `binder-*.stories.tsx` appeared in the story grep but never entered my
+table) — already consistent with dropping it.
+
+**Conflicts.**
+1. Path: I proposed `talk/assets/img/`; runtime's layout (01) reserves `talk/slides/assets/shots/`
+   for lane 3, `~1920×1080 max` PNG. Resolution: adopt runtime's path and size cap; rename all
+   entries below.
+2. Ownership overlap: data-viz Visual 6 (coordinator tier ladder *as* this repo's lane DAG,
+   script-rendered, curated from `tracking.md`) duplicates my two "draw" rows (tier ladder,
+   branch graph). Resolution: cede both to lane 4; I drop mine.
+3. Demos (02) asks me for things my pipeline doesn't reach: (a) P0 vs P1 Storybook stills at
+   phone width — the actual renders live only on "the box"/scratchpad per
+   `beforeafter/README.md`, not in git; feasible by re-running my probe's Playwright method
+   against the two historical commit pairs (`00488a20`/`29ec4ff8`, `5fb495ee`/`4297ed25`), extra
+   step, not yet done. (b) Scout clip, sellers/chat blurred — out of my static-screenshot scope;
+   hygiene-safe *if* blurring is total, but it's a live/recorded video from `whatnot-scout`
+   (real third-party auction data), not a Storybook capture — recommend lane 2 owns capture, I
+   supply the blur checklist. (c) Static "rehearsal drafts" slide — blocked on lane 2's demo dry
+   runs existing first.
+
+**Accepted dependencies.** Path/size from runtime (1); cede coordinator DAG to viz (4); founder
+09-14 iPhone failure asset (`founder-mobile-*`, already in my table) feeds demos' timeline stills
+directly.
+
+**Changes to my plan.** Rename folder → `talk/slides/assets/shots/`; drop the two draw rows;
+add a P0/P1-stills row (status: not yet captured, needs historical-commit re-render); add a
+scout-clip hygiene note (not owned by this lane).
