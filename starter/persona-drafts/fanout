@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+# starter/persona-drafts/fanout — start one headless `claude -p` run per persona brief,
+# in parallel, against a single rough draft. Prints one line and returns in under a second;
+# the runs continue in the background. Poll progress by reading out/*.status and out/*.md.
+#
+# Usage:
+#   fanout <draft.md> [persona-dir]
+#
+#   draft.md      required. The rough draft every persona lane reads (unedited).
+#   persona-dir   optional. Directory of persona briefs, one *.md file per persona.
+#                 Defaults to the "personas" directory next to this script.
+#
+# Every *.md file in persona-dir becomes one lane, named after the file (minus .md).
+# Output for persona "engineer" lands in ./out/engineer.md (plus .err and .status),
+# written relative to the CURRENT directory (not this script's directory) — cd into
+# wherever you want the out/ folder before running this.
+#
+# Env overrides:
+#   MODEL     claude model tier to use for every lane (default: sonnet)
+#   OUT_DIR   where to write outputs (default: ./out)
+#
+# This script never reads, passes, or echoes a key, token, or environment variable.
+# Auth is whatever `claude` is already logged in as on this machine.
+
+set -euo pipefail
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+DRAFT="${1:-}"
+PROMPT_DIR="${2:-$SELF_DIR/personas}"
+OUT_DIR="${OUT_DIR:-./out}"
+MODEL="${MODEL:-sonnet}"
+
+if [[ -z "$DRAFT" ]]; then
+  echo "usage: fanout <draft.md> [persona-dir]" >&2
+  exit 1
+fi
+
+if [[ ! -f "$DRAFT" ]]; then
+  echo "fanout: missing draft file $DRAFT" >&2
+  exit 1
+fi
+
+if [[ ! -d "$PROMPT_DIR" ]]; then
+  echo "fanout: missing persona directory $PROMPT_DIR" >&2
+  exit 1
+fi
+
+mkdir -p "$OUT_DIR"
+
+now_iso() { date -u +%Y-%m-%dT%H:%M:%SZ; }
+
+run_lane() {
+  local persona="$1"
+  local prompt_file="$2"
+  local draft_file="$OUT_DIR/${persona}.md"
+  local err_file="$OUT_DIR/${persona}.err"
+  local status_file="$OUT_DIR/${persona}.status"
+  local start_ts
+
+  start_ts="$(now_iso)"
+  {
+    echo "state=running"
+    echo "start=$start_ts"
+    echo "end="
+  } > "$status_file"
+
+  local prompt
+  prompt="$(cat "$prompt_file")
+
+---
+ROUGH DRAFT (unedited):
+---
+$(cat "$DRAFT")"
+
+  if claude -p "$prompt" \
+      --model "$MODEL" \
+      --output-format text \
+      --disallowed-tools "Bash,Edit,Write,Read,Glob,Grep,WebFetch,WebSearch,Task" \
+      > "$draft_file" 2> "$err_file"; then
+    {
+      echo "state=done"
+      echo "start=$start_ts"
+      echo "end=$(now_iso)"
+    } > "$status_file"
+  else
+    {
+      echo "state=failed"
+      echo "start=$start_ts"
+      echo "end=$(now_iso)"
+    } > "$status_file"
+  fi
+}
+
+PERSONAS=()
+for f in "$PROMPT_DIR"/*.md; do
+  [[ -f "$f" ]] || continue
+  PERSONAS+=("$(basename "$f" .md)")
+done
+
+if [[ "${#PERSONAS[@]}" -eq 0 ]]; then
+  echo "fanout: no *.md persona briefs found in $PROMPT_DIR" >&2
+  exit 1
+fi
+
+for persona in "${PERSONAS[@]}"; do
+  {
+    echo "state=queued"
+    echo "start="
+    echo "end="
+  } > "$OUT_DIR/${persona}.status"
+done
+
+for persona in "${PERSONAS[@]}"; do
+  ( run_lane "$persona" "$PROMPT_DIR/${persona}.md" ) &
+  disown
+done
+
+echo "fanout: ${#PERSONAS[@]} lanes started (${PERSONAS[*]}), model=$MODEL, writing $OUT_DIR/*.{status,md}"
