@@ -34,7 +34,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Story v3: deck + notes | story/deck-v2 | merged | Opus 5.5 → coordinator | 31e20c4 | 18 slides + 2 backup, 35.0 min; placeholders filled |
 | Visuals V1: diagrams (svg-infographic) | visuals/diagrams | merged | Opus 5.5 → coordinator | 53d87b9 | 7 diagrams incl. gates-flags; 2 honesty fixes |
 | Visuals V2: charts (svg-linyaosky) | visuals/charts2 | merged | Sonnet → coordinator | see log | jitter-drops, d4-slope (556), lot-bar tiles, lot-days |
-| Critique round 2 | critique2/{senior-swe,pm,designer,mid-swe} | running | Opus 5.5 ×4 → Fable | — | v3 deck; then polish (impeccable/hallmark) LAST |
+| Critique round 2 | critique2/* → talk/plan/critique2.md | converged | Opus 5.5 ×4 → Fable | 5fb7adb | 12/14/11/12 of 20; fix contract F1/F2/F3 |
+| Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | running | Opus 5.5 ×2 + Sonnet | — | then polish LAST (impeccable/hallmark) |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
@@ -42,6 +43,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 12:0x PDT — Critique round 2 converged (12/14/11/12 of 20, up from 7/7/3/8). Fix lanes F1/F2/F3 running on a shared contract (numbering, filenames, starter paths). JA-on-dev findings reported to Gerald; fixes await his go.
 
 - 2026-09-24 11:5x PDT — JA identify on the dev stack: root cause verified (cohort filter at index.ts:9797 with the switch off by default; dev D1 has 0 JA tid rows; resolve hardcodes EN → Alakazam V Jumbo $2.50 served on a JA Alakazam). Critique round 2: mid-swe 12/20, PM 14/20.
 

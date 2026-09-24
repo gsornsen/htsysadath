@@ -144,3 +144,9 @@ entry; link the finding or commit that proves it.
   on main. The message then resumed L6, which re-did the same fix on its branch (162a761,
   ac709b9): duplicate work, older than main's, so left unmerged. Rule: once a lane has reported,
   either wait for its fix OR do it yourself. Pick one and tell the lane which.
+
+- `[method]` 2026-09-24: **isolated worktrees can fork from a stale commit.** Three of the four
+  round-2 critics found their worktree at `157e1e0`, behind main, missing two charts; each noticed and
+  reset. A critic that hadn't would have judged blank slides. The fix went into every later brief as a
+  first step: assert the expected sha is an ancestor of HEAD (`git merge-base --is-ancestor <sha> HEAD`)
+  and reset to main if not.
