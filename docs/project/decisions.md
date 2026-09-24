@@ -345,3 +345,13 @@ From Gerald's answers in `talk/plan/story-plan.md` §e and his 11:1x message:
 - **Demo 0 (proposer off):** no lane had been asked before 11:1x. Lane `demo/scout-single-crop`
   builds it on a Grailith branch (no merge, no deploy).
 Structure: `talk/plan/structure-v2.md`.
+
+## D17 · 2026-09-24 · v3 order: screenshot open, live demo after the jitter; gates focus; cuts
+
+Gerald (11:1x): open with a screenshot of the working scout instead of a live demo; order: image →
+how we got here → first sign → fork → what changed → jitter resolved → **live card-scout demo**.
+Gates: focus on the **experiment gates and flags that let experiments run unattended**, and keep the
+**persona review gates** for UI/UX/design. CUT: persona drafts and their demo (Demo 1), and
+"against paralysis". The screenshot (`scout-gengar-today.jpg`) has the seller's and the winning
+bidder's avatars and usernames pixelated for the public repo; the original is in git-ignored `scratch/`.
+Demo 2 is kept pending Gerald (he didn't mention it). Details: structure-v2.md § v3.

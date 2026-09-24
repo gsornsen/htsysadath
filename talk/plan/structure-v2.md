@@ -56,3 +56,15 @@ Total 34.5 + 0.5 buffer. Three live moments (Demo 0, 1, 2): see risks.
   recorded clip. Demo 2 is the first to cut if time runs short.
 - "~10–15 s": Gerald recalls 11–15 s; the record shows 6–15 s live and a 10.4 s bakeoff median. The
   slide will show the sourced range.
+
+## v3 changes (Gerald, 2026-09-24 11:1x) supersede the table above where they differ
+Order: 1 Title · 2 **The scout today: a screenshot** (`assets/shots/scout-gengar-today.jpg`, usernames
+pixelated) · 3 How we got here · 4 The first sign · 5 The fork · 6 What changed · 7 Jitter, resolved ·
+8 **Demo: the card scout, live** (single-crop build; moved here from slide 2) · 9 Methods map ·
+10 Orchestration · 11 **Gates and flags that let experiments run unattended** (new focus; sourced from
+`mining/findings/gates-and-flags.md`) · 12 Kill lines in action (d4-arms) · 13 Measure the bar ·
+14 Stop things · 15 Hardest shared core first · 16 **Persona review gates** for UI/UX/design (kept) ·
+17 Agents first, human verdict · 18 Demo 2 (repo record; kept unless Gerald cuts it) · 19 Two things.
+CUT: persona drafts + Demo 1 (the fan-out), and "against paralysis". The two things become:
+(1) run your next fork as gated experiments that can run unattended; (2) put a persona review gate
+in front of "done" for UI/design work. `hybrid-layers.svg` is no longer needed.
