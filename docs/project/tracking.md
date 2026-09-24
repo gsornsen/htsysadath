@@ -38,7 +38,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Fix F1 visuals · F2 deck · F3 starter | fix/{visuals,deck,starter} | all merged | Opus 5.5 ×2 + Sonnet | 1de0c23 | polish after Gerald's v4 review |
 | Deck v4 (audience-first) | story/deck-v4 | MERGED on Gerald's call (fix forward) | Opus 5.5 | 2538683 | Gerald reviewing at localhost:8080 |
 | V4 visuals: four-problems + plain labels | fix/v4-visuals | merged | Opus 5.5 → coordinator | f91502e | all references resolve; no codes/kill/founder on screen |
-| Workplace wording (D22), text | fix/workplace-wording | running | Sonnet → coordinator | — | deck/notes/outline/starter/Q&A prompts; then a Q&A live re-run |
+| Workplace wording (D22), text | fix/workplace-wording | merged | Sonnet → coordinator | 92f84a6 | 36 kill-family + others replaced |
+| Final-copy pass (D23) | story/final-pass | running | Opus 5.5 → coordinator | — | no danglers; stop-list grounded; live-browser personas; slide 8 pivot; then Q&A --live re-run |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | merged; public replay verified | Opus 5.5 → coordinator | see log | site sha 8ed55e42…; check.sh OK with GRAILITH unset; 1 answer flagged stale (by design); re-run --live once the deck settles |
@@ -50,6 +51,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 13:3x PDT — D22 text merged. The D23 final-copy pass is running; the Q&A live re-run follows it.
 
 - 2026-09-24 13:2x PDT — V4 visuals merged: four-problems.svg drawn; every chart in plain words; workplace wording on all assets. Every deck reference resolves. The text wording lane is running.
 
