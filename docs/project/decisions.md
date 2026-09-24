@@ -273,3 +273,18 @@ extension code still sends five crops". Don't claim it's off.
 DNS resolves and the :8443 tailnet health endpoint returns 200 from the laptop. `mcpo-github` was
 still restart-looping 49 s after (exit 2); recheck later. The :8989 keyless pregrade (down since
 09-21) and the mirror unit's 178.7 MB file are unchanged and are Gerald's call.
+
+## D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups
+
+- **Cost:** all of the Claude work ran within Gerald's Claude Max subscription budget. No separate
+  Claude spend. The only metered model spend in the record is the labeling pilots' vision-model
+  calls (E84: $0.64 pilot; ~$9 for the 760-task run via another provider). The talk says exactly
+  that and makes NO claim about Gerald's hours; there's no source for them.
+- **Slide 4 wording (approved):** "~100 experiments in two weeks, many gated and run overnight."
+- **The jitter story's ending** is to be answered from the experiment markdown files and the ledger
+  (lane `verify/jitter-ending`), not from memory.
+- **Hold-out** (E67's 201 test crops vs the E65a head's 432 real training crops): lane
+  `verify/holdout` checks the crop ids directly.
+- **Revision swarm** (R1 charts, R2 deck + notes, R3 starter kit) proceeds on the converged
+  critique (`talk/plan/critique.md`). Slides that depend on the two verify lanes are patched
+  after they report.
