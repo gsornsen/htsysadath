@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "f421fe5613fb0b6bef0bd8e535a67e563df39c103b6f49915c9db1ccea56a9ba",
+  "id": "q-c9b31dd472",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/persona-gate/verdict.md",
+      "chunk": 2,
+      "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 4,
+      "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+    },
+    {
+      "path": "starter/persona-gate/README.md",
+      "chunk": 2,
+      "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+    },
+    {
+      "path": "talk/plan/critique2/designer.md",
+      "chunk": 3,
+      "sha256": "c154a24a000b936181f4d15b3114b2dc370719b4f1938230b2afd8024820102f"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+      "chunk": 27,
+      "sha256": "2279965b26ae2702f96cce263448bd96bd485d2b04b286641cf7f056ddde2781"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E42-client-number-ocr-2026-09-05.md",
+      "chunk": 3,
+      "sha256": "238c05406e45b712598f83f52dbaeaf5e75d893ca14d5f44e8bae65c1767a7dc"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E51-vintage-holo-nonholo-candidates-2026-09-06.md",
+      "chunk": 49,
+      "sha256": "abf0d99e4996f201967a2ff95ec9b192278349edd7a5afa6fc93f55c5f23e9a7"
+    }
+  ],
+  "output": {
+    "answer": "The panel is a synthetic walk-through: four persona briefs, each with a device and a job, plus three critics. It re-walks the built screens against those briefs and returns DONE or NOT with blockers, but it runs against a simulated, fixed-size viewport — no real phone chrome, no switching between tasks the way a real session does. I wrote those persona briefs myself on September 13th when I set the panel up as the done gate. The record doesn't show any separate acceptance-criteria document beyond those briefs, and it doesn't say anyone else authored them.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Slide 16 · Method: persona review gates"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "locator": "\"add a real-device check before DONE\""
+      },
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "locator": "The real-device check (do this before calling it DONE)"
+      }
+    ]
+  }
+}

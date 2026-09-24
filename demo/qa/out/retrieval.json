@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "q-23489b986e",
+    "rank": 1,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 13,
+        "sha256": "a452c4a633419e777edcb9bf0bec41a983b8ba967fc03a33920f195c8d9dba27"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 13,
+        "sha256": "378a1ad8ffeff542da1db266530614cd902b944b232c855e75820b210fecb658"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 5,
+        "sha256": "3961f1fa0436bfb11caaf1c41cc919325dd5aa635e5b9debdf88ea7f6dc74fee"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 3,
+        "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+      },
+      {
+        "path": "talk/outline.md",
+        "chunk": 6,
+        "sha256": "08e3086fb29323c2485abd4e99d48954ae2c20e7ac782bcda7ffc981d57e6841"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 2,
+        "sha256": "9b48910ad05a94d70a52fc397937912ea0df1994c0851a4a32a8c8379db11521"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "chunk": 113,
+        "sha256": "931ab2b99d004e6997d1b81553ec4e413e11b007d97f9132d0a51467d651674a"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "chunk": 111,
+        "sha256": "fd3ed39788e15d7acd52458814b352ef118c5a77618e7836969ec1c1ebbb2c53"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "chunk": 101,
+        "sha256": "723265139b4b3596454f0334fb0d4bcddaa8dec5baeade8273537704227b3bff"
+      }
+    ]
+  },
+  {
+    "id": "q-2bd03aa3b7",
+    "rank": 2,
+    "excerpts": [
+      {
+        "path": "starter/README.md",
+        "chunk": 5,
+        "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 14,
+        "sha256": "fec991c6b62ae20b769ebf6600ea2e4b5c956a71ed45362127c248a07f9c9875"
+      },
+      {
+        "path": "mining/findings/experiments-index.md",
+        "chunk": 5,
+        "sha256": "946d854ccc01af2b0392dba3aff8e0f8d83037fbaf397bfacf225a93ba055081"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 26,
+        "sha256": "1fe2418faf627f45ec5fa0ddff49f52ecf1ca4161da8faafe1cadac3d624367b"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 1,
+        "sha256": "11bd9b51128dc6b2ef96b67a1469281257b1bb74276b08a057fa50e3b8eca7fd"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 1,
+        "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-FLAGS-POSTHOG-2026-09-07.md",
+        "chunk": 19,
+        "sha256": "1cc6709cea7af20f4b7f31ca5acd210ace5649f1bc9364990663afa90da0bb7c"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-001-session-markers.md",
+        "chunk": 3,
+        "sha256": "96642fea4c8d0e25f23961aaa5133496061e05962e3e0baf16e4ad2e08814602"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+        "chunk": 36,
+        "sha256": "784e25278fd1b515f43df01d62df60ed9d0cba71ce959bd078a499a16d0ea759"
+      }
+    ]
+  },
+  {
+    "id": "q-3bb4d6fe85",
+    "rank": 3,
+    "excerpts": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 1,
+        "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 6,
+        "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "starter/persona-gate/panel-brief.md",
+        "chunk": 11,
+        "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 4,
+        "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 18,
+        "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E17b-zhcn-reference-set-2026-09-05.md",
+        "chunk": 3,
+        "sha256": "1436bd089f2abc221c20d2f362b6e9809857c3964f5b798083f707d3e16b2690"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E43-proposer-bottom-cut-2026-09-05.md",
+        "chunk": 0,
+        "sha256": "f92178b1374acd01d0f5d05abb7be2286b190542c174c4fd70d0c215e59b6fde"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E62-artwork-vs-print-2026-09-08.md",
+        "chunk": 0,
+        "sha256": "ec09a6a8cbe340d1f916dfc0e2dd2876e59f1e6f560924388ee3d9fd269df968"
+      }
+    ]
+  },
+  {
+    "id": "q-42b9213867",
+    "rank": 4,
+    "excerpts": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 3,
+        "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 1,
+        "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 7,
+        "sha256": "d2a09964160ccc1a20d98e0d045f6eb525327cc20471384bf820d4a6d0d56c69"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 2,
+        "sha256": "9b48910ad05a94d70a52fc397937912ea0df1994c0851a4a32a8c8379db11521"
+      },
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 0,
+        "sha256": "e43e60a015791dc6e93c8a6106c6e7a8825b2e49eeb92c3c2a52a3195efd634f"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 7,
+        "sha256": "2bf003ba0beeb3b5014cbeecdfa8629074721b60fa2eabb536ddb0d35a2e94da"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-GOV-DAYCAP-2026-09-07.md",
+        "chunk": 17,
+        "sha256": "a296b9d2331d159c26d845afb6e3d5a39197f25cb7ec9ee890ebe8b5b91cc0d9"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+        "chunk": 53,
+        "sha256": "a333a4b30c2356045a923ad575a0f0635277c89e0f144071602487e8dfe74b20"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "chunk": 140,
+        "sha256": "96da2223628dc538dc7c77f952055a8d1263edcef1c888c6a522041ecc9d8b9b"
+      }
+    ]
+  },
+  {
+    "id": "q-4ae90ed9df",
+    "rank": 5,
+    "excerpts": [
+      {
+        "path": "mining/findings/gates-and-flags.md",
+        "chunk": 0,
+        "sha256": "e43e60a015791dc6e93c8a6106c6e7a8825b2e49eeb92c3c2a52a3195efd634f"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 1,
+        "sha256": "3f22daeb5b5d08be294be053fc2f8ed513170d6d148be4a3b1c1cb834941bc58"
+      },
+      {
+        "path": "starter/persona-drafts/hybrid.md",
+        "chunk": 2,
+        "sha256": "436fbd7a2a6800931cb4d64af134711ba7b22493d6bb76b30e89c3eeeef5e021"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 8,
+        "sha256": "ab9990ef4a794f2069ea0d568163c136d9a20951203f421659e7d2ce88ff917e"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 8,
+        "sha256": "d9c4eac7ef8882aa9616862da325964a6bf947b8b8a57306b5888233b2b9d2f8"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 21,
+        "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-PPT-REPORT-V2-2026-09-07.md",
+        "chunk": 4,
+        "sha256": "4090104d7e429405f21e1f1b24de0666283287c11a855d0dca750295c49b156b"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E22-ppt-credit-costs-2026-09-05.md",
+        "chunk": 2,
+        "sha256": "459c5bb420ec64d6f96d1d960921a100babf17f7e5f861b0d25f618c8a413e32"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+        "chunk": 29,
+        "sha256": "a244b4cd99d9b0bb10f3cb420bb3e4514055c05abbfab87e900d45deb61333cc"
+      }
+    ]
+  },
+  {
+    "id": "q-52a770675b",
+    "rank": 6,
+    "excerpts": [
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 1,
+        "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 1,
+        "sha256": "f57528a0bf9b331c2575c27029500e2b0c3e8fdae3ba0b6ae8d1577392223c0b"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 3,
+        "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+      },
+      {
+        "path": "talk/plan/critique2/senior-swe.md",
+        "chunk": 3,
+        "sha256": "90671ccf5d54a124761057bbee478df65c32415c9c50d337ceb306b5e6dd84a0"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "chunk": 20,
+        "sha256": "2c4d09e91562263d3cda869d5390898c0437014cfd2685009345beee557de53c"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "chunk": 7,
+        "sha256": "b938d708b01d548fea0eaae617a39368367bc53aa2b6835f9784b3f086225bae"
+      },
+      {
+        "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+        "chunk": 25,
+        "sha256": "f20c0fb7ecb2c3446671980c37fe18c9232c7935b3a1d0966a66ce6044cc0317"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md",
+        "chunk": 1,
+        "sha256": "3ce18e5487eccd88993036ec7a23276b41e79aa34e23e36c84d1089021567c09"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-POCKET-EXCLUSION-2026-09-08.md",
+        "chunk": 14,
+        "sha256": "030a0f618befa53655710efb0dfeff9b080c351bdf119b76555308693ebbeb67"
+      }
+    ]
+  },
+  {
+    "id": "q-653cc209ee",
+    "rank": 7,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 18,
+        "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 4,
+        "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 7,
+        "sha256": "c2b1db9e13a2f73bf45a138fc50b596ff588002104747be97ce90cb2b3223dea"
+      },
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "chunk": 2,
+        "sha256": "448731cbd750d205aaad4dd1e9c9db91c38c6f5fb0f47d07e61205987b35589a"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E46g-coldvar-2026-09-07.md",
+        "chunk": 55,
+        "sha256": "f9b74f130b242cd3a834d62c3d21cd9a01c695dbf3b3b7dc4b4ca34ebb20a813"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E69a-real-crop-pseudolabels-2026-09-08.md",
+        "chunk": 6,
+        "sha256": "3672a2234a85c125b5b434ec3ec291e7314e2fbafcfac9ae7a8159f1e04452da"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E53d-3-margin-calibration-2026-09-08.md",
+        "chunk": 9,
+        "sha256": "e0c549d04d496031b3ecf2d97e9eda188807051451ee8072cf9142e90eea3ca6"
+      }
+    ]
+  },
+  {
+    "id": "q-81a6de606e",
+    "rank": 8,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 15,
+        "sha256": "aae218cea2cef9db2ab5b5c83fbac7d0651e59f896ed69219de6376d1431da07"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "chunk": 8,
+        "sha256": "bd29c57446abe015487ec16d808df003c5fbc7cac6c94a5fc2edcacc2bbe38ab"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 15,
+        "sha256": "ed6e0bbeeeda62971b82813b69cac9709fed0679f831f15393c979e79d88a451"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "chunk": 4,
+        "sha256": "6a851284cbb3b0eda8bcc7da4ed6e8760f925c31475f375f562c4a354e3601d2"
+      },
+      {
+        "path": "talk/plan/critique2/senior-swe.md",
+        "chunk": 1,
+        "sha256": "708ba8fbee5f0ae5669ea7ee262229cab505d78042088eef0389c6e05339de6d"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 21,
+        "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+        "chunk": 43,
+        "sha256": "41199bde57214919a14aef0a509eafc6e4933703e67b6686d1e3b445ae868c1b"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+        "chunk": 62,
+        "sha256": "282b3c023ffa503bec93d684d74bdd5e4c5f90bbaf594ed2ba50ade07257ace5"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E97-ring-budget-and-tap-health-2026-09-11.md",
+        "chunk": 21,
+        "sha256": "2167256d9dccca1e33e3c8a07989824426d1f7b228c5cdc5109cfc0150ef8737"
+      }
+    ]
+  },
+  {
+    "id": "q-86eb799664",
+    "rank": 9,
+    "excerpts": [
+      {
+        "path": "starter/two-lanes/checklist.md",
+        "chunk": 1,
+        "sha256": "455fc42cf9fa5579de5a98b2c08296e4bbb02f2ebb51935937cf5e1fbf1ca10d"
+      },
+      {
+        "path": "talk/plan/critique2/mid-swe.md",
+        "chunk": 3,
+        "sha256": "11c62ae9c7645afe99e868f399a0e526c1566a6f56a872e506313629130c7023"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 5,
+        "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 12,
+        "sha256": "1c98ac384ff0b2aa781e86e937044173e7f18f4241406283cf74e8d534aa2f0a"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 12,
+        "sha256": "f589ea6ea078eaa142a438dde1510c7b14ec5fd53c38cd49ba1896b3889f0eb0"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 6,
+        "sha256": "38fdd143062d88a4c2785f20c9b06e72b7f5b5967ffdbaa4f801986c7378a7be"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E53e-request-dedup-2026-09-07.md",
+        "chunk": 29,
+        "sha256": "dfac84d8a86bb9984fb3b89c78f2d717967f478bbdb042b9a974b2ff869b2efd"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E46g-coldvar-2026-09-07.md",
+        "chunk": 19,
+        "sha256": "27b8a6e6623cdd370a543285fd8ceacf412ed390f53961d5ec2b62f4fc2f3a1a"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E53a-runtime-levers-2026-09-07.md",
+        "chunk": 23,
+        "sha256": "26754ce9a27caf18e0a66a086cfe3a37aec5034e040aa508d8d17bf22b2a7f0d"
+      }
+    ]
+  },
+  {
+    "id": "q-a103d55233",
+    "rank": 10,
+    "excerpts": [
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 2,
+        "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 6,
+        "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+      },
+      {
+        "path": "starter/persona-gate/panel-brief.md",
+        "chunk": 11,
+        "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 1,
+        "sha256": "d762d66d37e53074bff949030d2448ca3098904431ff14f0809c2535390d709a"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "chunk": 31,
+        "sha256": "b5165d9c92249679628894b79be0cca2aae471ee4bcb7f6a5ff00065f7dba436"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+        "chunk": 3,
+        "sha256": "8d4759502c52b28894b5f84be2bc6f18c9b4c1a8a4c8269a7e5ac6892672f29e"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+        "chunk": 62,
+        "sha256": "97073872ed5a7fd387cedf341853781288a1008329782e8ba6428b72755caee5"
+      }
+    ]
+  },
+  {
+    "id": "q-bcd3c66893",
+    "rank": 11,
+    "excerpts": [
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 21,
+        "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+      },
+      {
+        "path": "talk/outline.md",
+        "chunk": 9,
+        "sha256": "f1ed71a02c25a6bd7614b87da54d6c3195e8665d7c1fa7173eb9c6293a1ee84f"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 21,
+        "sha256": "944d69e3f8477a22f6c5a507d1a44a7f8bb35dff9ff0ead4da6998b7f96ab8b4"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 19,
+        "sha256": "a97588969bc3fedcd9e7bdbe8469428d6c4e716848ef7915cd94bded1753b23c"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 1,
+        "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 9,
+        "sha256": "116a3bbc322b04d88add0ea7e4d9ef11c7f5e2ab9e8e7c815dd866cc936e797a"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+        "chunk": 29,
+        "sha256": "a244b4cd99d9b0bb10f3cb420bb3e4514055c05abbfab87e900d45deb61333cc"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E64-eval-weighting-2026-09-08.md",
+        "chunk": 17,
+        "sha256": "85a2fe837d6a0526dc41a93a40486a95c96876937e9a408babbaf1cb1e99b198"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+        "chunk": 33,
+        "sha256": "efe830a649f01bd5a663a8347895eb9a45a3ffb22ffa5597dc6e0f9bc669c023"
+      }
+    ]
+  },
+  {
+    "id": "q-c49923ca32",
+    "rank": 12,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 6,
+        "sha256": "ae0505c74065e2a585fc4a624ea5fb39b3703455304052897c600a70157df573"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 6,
+        "sha256": "68e6376406225cd59799ab31de626da1cd698c308df658ffe1775709125cf718"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 11,
+        "sha256": "adea9997a3731c9ec52180c0a46df379b4f5b7dbd661810f5e48f3f2f115830e"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 11,
+        "sha256": "08396ce7417ae2de779f188a8032c1192469a16c5ab910c55d49b2da17130a6f"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "chunk": 20,
+        "sha256": "2c4d09e91562263d3cda869d5390898c0437014cfd2685009345beee557de53c"
+      },
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "chunk": 3,
+        "sha256": "f6150b32f4e65ffe8f4e63a607149b4f9171399661d9c3ad3352c63d8ff4af97"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-PRICE-HISTORY-PRINTING-2026-09-08.md",
+        "chunk": 1,
+        "sha256": "c969f81587716497d9686c44f31e54607427d2ae2a47432cd0741791e807e925"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E33d-sibling-tids-from-rows-2026-09-06.md",
+        "chunk": 11,
+        "sha256": "b0b3de42d69988af7b9355e03008c9c80a670cf3e628339206279b4249a29fac"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E18-ood-gate-2026-09-05.md",
+        "chunk": 2,
+        "sha256": "b4b90c585b216ee108e2b4439530c4c69ad3ac3e09ad2e04178d1aca81feedf8"
+      }
+    ]
+  },
+  {
+    "id": "q-c9b31dd472",
+    "rank": 13,
+    "excerpts": [
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 2,
+        "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 4,
+        "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 18,
+        "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+      },
+      {
+        "path": "talk/plan/critique2/designer.md",
+        "chunk": 3,
+        "sha256": "c154a24a000b936181f4d15b3114b2dc370719b4f1938230b2afd8024820102f"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "chunk": 27,
+        "sha256": "2279965b26ae2702f96cce263448bd96bd485d2b04b286641cf7f056ddde2781"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E42-client-number-ocr-2026-09-05.md",
+        "chunk": 3,
+        "sha256": "238c05406e45b712598f83f52dbaeaf5e75d893ca14d5f44e8bae65c1767a7dc"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E51-vintage-holo-nonholo-candidates-2026-09-06.md",
+        "chunk": 49,
+        "sha256": "abf0d99e4996f201967a2ff95ec9b192278349edd7a5afa6fc93f55c5f23e9a7"
+      }
+    ]
+  },
+  {
+    "id": "q-d7da7b6587",
+    "rank": 14,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 15,
+        "sha256": "aae218cea2cef9db2ab5b5c83fbac7d0651e59f896ed69219de6376d1431da07"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 15,
+        "sha256": "ed6e0bbeeeda62971b82813b69cac9709fed0679f831f15393c979e79d88a451"
+      },
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "chunk": 7,
+        "sha256": "b58622d4e5851c0b33dade18bf463e6b6f5ea1e8f300970a1c19e54f3cf393f9"
+      },
+      {
+        "path": "mining/findings/E67-top3-replay.md",
+        "chunk": 1,
+        "sha256": "1a6b11723691929dc61903ae70fb90840e56fb1347d238176bc67af6a5e58918"
+      },
+      {
+        "path": "mining/arcs/A-experiments.md",
+        "chunk": 7,
+        "sha256": "ef32a83944bdb190c97c2a0192773af2186a2b4852658cb0f470a84315002e57"
+      },
+      {
+        "path": "mining/findings/top3-trajectory.md",
+        "chunk": 14,
+        "sha256": "b61ed4d1fc1c32428b9e3755113b1ae7f80139421755dba1a9cfff72e9b7f177"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+        "chunk": 1,
+        "sha256": "c85f4d99ea35d14a46a4bb031a3832501b3a78f54e5040ec93cfa5dfa32cbbe1"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-INDEX-JA-PC-2026-09-09.md",
+        "chunk": 23,
+        "sha256": "ecbb8adb0f51f5f1705a96defa1cd45c8ef165926831bde082333d3dc2e656fa"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-INDEX-COVERAGE-605-2026-09-07.md",
+        "chunk": 22,
+        "sha256": "1f5e481f49c129fe8761f0a95257934a99c99e975262636cf032406e1e31edc4"
+      }
+    ]
+  },
+  {
+    "id": "q-023fd96bd9",
+    "rank": 15,
+    "excerpts": [
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 8,
+        "sha256": "c2cc332a574b234ff0cced97d59f7fa7320e302a3226534cff641841e948f0f3"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 8,
+        "sha256": "045549d17ec04473dc071f5f77c40c6fe3feec41b63bbdbe006184c0a3c2a980"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 20,
+        "sha256": "2c18c1d54f15e113856691e2f12a5aae2dc7d1cc58df9eb590988c3f6257e9fe"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 13,
+        "sha256": "a452c4a633419e777edcb9bf0bec41a983b8ba967fc03a33920f195c8d9dba27"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 9,
+        "sha256": "fcd804f9928377aadeabcccc2c419fe427253603f210495c3483276a79bd38a7"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 13,
+        "sha256": "378a1ad8ffeff542da1db266530614cd902b944b232c855e75820b210fecb658"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E31-printing-fanout-2026-09-05.md",
+        "chunk": 13,
+        "sha256": "0511466cfd9cec3e2969a53b4ea529f8299fe682685ad78f1afb814f255a2900"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+        "chunk": 24,
+        "sha256": "15850f66e9fc96484bb75008ef0c74049089cf276e66c430da0214ae84c8a09e"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md",
+        "chunk": 16,
+        "sha256": "78e67ae8dd1e989a602111774720d9d34647924041102e832e585b870a1f7974"
+      }
+    ]
+  },
+  {
+    "id": "q-231e25b8b7",
+    "rank": 16,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 18,
+        "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 4,
+        "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+      },
+      {
+        "path": "talk/outline.md",
+        "chunk": 7,
+        "sha256": "edb58ae51b5850ba4b6a5c487536f258ff48b567df97946aa30cdb348cec6a1d"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 1,
+        "sha256": "3ee58f89e7e43b7555fe14bcb723553c3726959e279a634f04c5a4ad7893db41"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E14-tightening-gate-2026-09-05.md",
+        "chunk": 12,
+        "sha256": "b6acd539f34f3c7a0a280a099b1216d6dae7a60e51827c04848f40775eadb7a8"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "chunk": 32,
+        "sha256": "773cf8ef8a276d251055f687195facbf4a2fa69dfd743e3adac0d8eb35fbbc5c"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E53d-student-2026-09-07.md",
+        "chunk": 53,
+        "sha256": "a333a4b30c2356045a923ad575a0f0635277c89e0f144071602487e8dfe74b20"
+      }
+    ]
+  },
+  {
+    "id": "q-2854005b40",
+    "rank": 17,
+    "excerpts": [
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 18,
+        "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+      },
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "chunk": 10,
+        "sha256": "28b6e549e9d0f8b2e995b2b744d76e29356e653cba541adaf337ed76c9b8c665"
+      },
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "chunk": 2,
+        "sha256": "448731cbd750d205aaad4dd1e9c9db91c38c6f5fb0f47d07e61205987b35589a"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 9,
+        "sha256": "371e00d8780a33a81c9ab36f5723f2d532d9165a5bbe23b326dbc8da4c42461a"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "chunk": 10,
+        "sha256": "443081180e41623263b7d4fffe91f22f23835bd84cd0f77124221320647fda45"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+        "chunk": 8,
+        "sha256": "d2da3a431ea03ddc3c00837d54dccbce1c9be795e6fa86a3638eba628c36e475"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+        "chunk": 3,
+        "sha256": "8d4759502c52b28894b5f84be2bc6f18c9b4c1a8a4c8269a7e5ac6892672f29e"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+        "chunk": 7,
+        "sha256": "1e0feae4f46a3c545317619a2a72929c1ef711c044f7593cfe89dd03c7762982"
+      }
+    ]
+  },
+  {
+    "id": "q-376adb2a4a",
+    "rank": 18,
+    "excerpts": [
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 1,
+        "sha256": "cba889de4b877ba3055cd2a0eb988136214053f97dd0bfe2ef4d5f361dc7594a"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "chunk": 1,
+        "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "talk/slides/deck.md",
+        "chunk": 9,
+        "sha256": "d08d5ac2c2e000407f3e6e6eef69b9700bcd80c515ba3ed2c26e2fdffb072981"
+      },
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 2,
+        "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 4,
+        "sha256": "395837098bea8805b95ee1abdc308d86627666c403e8a128a954a7a8dd4296b6"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+        "chunk": 0,
+        "sha256": "bd944720afd69c75ebb046d293a7a1fe2712948e8f63335d460cde83ca08816a"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E52-print-attributes-2026-09-07.md",
+        "chunk": 14,
+        "sha256": "96a45cc052f90b641e032a17102294a67cdaf055bfbabd05cc71799b37b71da8"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E64b-market-volume-prior-2026-09-08.md",
+        "chunk": 21,
+        "sha256": "d485a418caa36404d1b3acb3855bee7d6eae5e044d44222c58c7bdd0d082b567"
+      }
+    ]
+  },
+  {
+    "id": "q-3be8a23693",
+    "rank": 19,
+    "excerpts": [
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 0,
+        "sha256": "1ba518f5cc388c8f440f5fe62c90cdea6aea7ccb1f2266e3a35a13e991b32fb9"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 4,
+        "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+      },
+      {
+        "path": "talk/notes.md",
+        "chunk": 18,
+        "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 6,
+        "sha256": "5a6e4c7a5cbb21a99c65b74d22c1e6a70fa2b7bceea5e4a5ba52574d8f2b499d"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 4,
+        "sha256": "6a8368f1245edd32ba66a40ee95fcaa8eea2dbda47a9da6d31d1bfea0e1d4f62"
+      },
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "chunk": 1,
+        "sha256": "4665e50e09f493bfdae762b0019ab4450983fb160705da2564f2263a825cc078"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E51-vintage-holo-nonholo-candidates-2026-09-06.md",
+        "chunk": 37,
+        "sha256": "8d8b94449b5c9622de625a996df950d7ddeea52f0c8500a6eb0d4e4f751652da"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E46e-colddist-2026-09-07.md",
+        "chunk": 15,
+        "sha256": "6e443454f4e9554fc94ead5d5f9af9c4e3a1b55f07c160fe88933061063e9a5e"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E42b-llm-number-read-2026-09-05.md",
+        "chunk": 10,
+        "sha256": "5c44c8418617ad2b047f2b83e868f5cdf46684ba0c3506bf8cae475f25151d54"
+      }
+    ]
+  },
+  {
+    "id": "q-48598d1c92",
+    "rank": 20,
+    "excerpts": [
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 8,
+        "sha256": "ab9990ef4a794f2069ea0d568163c136d9a20951203f421659e7d2ce88ff917e"
+      },
+      {
+        "path": "starter/README.md",
+        "chunk": 4,
+        "sha256": "ea776cbc9879d337f42769155e667d21e7cdbb7e0dfffaaebf0887bcf4a58031"
+      },
+      {
+        "path": "starter/persona-gate/verdict.md",
+        "chunk": 2,
+        "sha256": "9532b2ec8a57975896111865a8f8fafa24c3e292165ad63d5eb6604fb4ce2724"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "chunk": 6,
+        "sha256": "b6e63b33198197953428582388916f218353370b877d148d50780f6522e648db"
+      },
+      {
+        "path": "starter/persona-gate/README.md",
+        "chunk": 2,
+        "sha256": "5f4632ce34701d5c7aea620e1e4ca01602d4caf588b292a34b28ca2fa211fd5b"
+      },
+      {
+        "path": "starter/persona-gate/panel-brief.md",
+        "chunk": 11,
+        "sha256": "be5f51b2b818e28da46622cdb7d9adf00140377e181d5b27c37696cad82398a2"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "chunk": 4,
+        "sha256": "6b11b3283a7a96b2caa87f762f17c8b06601faeb072507acb53e03530a36abb8"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-ALT-PICK-2026-09-07.md",
+        "chunk": 34,
+        "sha256": "0f60c3314fad93decfd223a15a1ac8716580513058778e5b4759d4d31f000757"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E46i-fp16-teacher-coldstart-2026-09-08.md",
+        "chunk": 20,
+        "sha256": "87175411b0099e9f2cf44eb2d78c9cfb3e20d5f8ef1bce4036491494860cd700"
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "pass": "questions",
+  "key": "253fb4e8b8858e8e38744ca01e0247a8dd143c46805f437c2f29eb5e028a6d37",
+  "persona": "mid-swe",
+  "model": "sonnet",
+  "output": {
+    "questions": [
+      {
+        "question": "Concretely, what does a gate look like when you write it—is it a test script, a threshold number in a config file, or something a human still has to read?",
+        "likelihood": 5,
+        "why": "The talk keeps saying 'gate' as if it's obvious but never shows the actual file or check.",
+        "slide_ref": 10
+      },
+      {
+        "question": "When a usage limit killed three build lanes mid-work, how did you recover those lanes the next morning—rerun from scratch or resume from the last commit?",
+        "likelihood": 4,
+        "why": "The speaker mentions the kill on September 7th but not what recovery actually involved.",
+        "slide_ref": 10
+      },
+      {
+        "question": "What does 'reviewer one tier up' mean in practice—are you literally pointing a bigger model at a smaller model's diff, and how is that wired up?",
+        "likelihood": 4,
+        "why": "He names the rule but never shows the mechanism for picking or invoking the reviewer model.",
+        "slide_ref": 10
+      },
+      {
+        "question": "For the overnight caps—8 calls, 60 seconds, $6—where do you actually set those, and what stops an agent from just retrying past them?",
+        "likelihood": 4,
+        "why": "He gives the numbers but not where they live or how they're enforced without a platform team.",
+        "slide_ref": 11
+      },
+      {
+        "question": "The idle tab burned a full day's allowance before the watchdog caught it—what is the watchdog, and how would I build one for my own overnight runs?",
+        "likelihood": 4,
+        "why": "He flags the failure and says 'the watchdog came after' but never describes it.",
+        "slide_ref": 11
+      },
+      {
+        "question": "If I've never used a worktree before, what's the actual command sequence to spin up a lane, and how does it merge back when the gate passes?",
+        "likelihood": 5,
+        "why": "He assumes worktrees are familiar, but as someone who's only used git branches this is the part I'd get stuck on.",
+        "slide_ref": 10
+      },
+      {
+        "question": "You used 'top-3' and 'embedding' without defining them on screen—can you walk through what a top-3 check is actually computing?",
+        "likelihood": 3,
+        "why": "Several slides lean on top-3 and embedding scores as if they're self-explanatory to a first-time viewer.",
+        "slide_ref": 13
+      },
+      {
+        "question": "For the persona review gate, who or what actually plays the four personas and returns DONE or NOT—is that a scripted prompt, and how do I stop it from rubber-stamping?",
+        "likelihood": 4,
+        "why": "The panel said DONE while the real app was 'pretty much unusable,' so the mechanism behind the verdict matters.",
+        "slide_ref": 15
+      },
+      {
+        "question": "In the starter kit, which file would I open first if I just want to copy the gate-and-flag pattern for my own overnight runs?",
+        "likelihood": 3,
+        "why": "He points to starter/ at the end but gives no entry point for someone trying this next week.",
+        "slide_ref": 16
+      },
+      {
+        "question": "How many lanes can realistically run in parallel before the coordinator session itself becomes the bottleneck?",
+        "likelihood": 3,
+        "why": "The chart shows this talk's own lanes but never states a practical ceiling for parallelism.",
+        "slide_ref": 10
+      }
+    ]
+  }
+}

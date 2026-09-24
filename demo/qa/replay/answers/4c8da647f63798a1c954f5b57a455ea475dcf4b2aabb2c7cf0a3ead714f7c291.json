@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "4c8da647f63798a1c954f5b57a455ea475dcf4b2aabb2c7cf0a3ead714f7c291",
+  "id": "q-023fd96bd9",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 8,
+      "sha256": "c2cc332a574b234ff0cced97d59f7fa7320e302a3226534cff641841e948f0f3"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 8,
+      "sha256": "045549d17ec04473dc071f5f77c40c6fe3feec41b63bbdbe006184c0a3c2a980"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 20,
+      "sha256": "2c18c1d54f15e113856691e2f12a5aae2dc7d1cc58df9eb590988c3f6257e9fe"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 13,
+      "sha256": "a452c4a633419e777edcb9bf0bec41a983b8ba967fc03a33920f195c8d9dba27"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 9,
+      "sha256": "fcd804f9928377aadeabcccc2c419fe427253603f210495c3483276a79bd38a7"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 13,
+      "sha256": "378a1ad8ffeff542da1db266530614cd902b944b232c855e75820b210fecb658"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E31-printing-fanout-2026-09-05.md",
+      "chunk": 13,
+      "sha256": "0511466cfd9cec3e2969a53b4ea529f8299fe682685ad78f1afb814f255a2900"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+      "chunk": 24,
+      "sha256": "15850f66e9fc96484bb75008ef0c74049089cf276e66c430da0214ae84c8a09e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md",
+      "chunk": 16,
+      "sha256": "78e67ae8dd1e989a602111774720d9d34647924041102e832e585b870a1f7974"
+    }
+  ],
+  "output": {
+    "answer": "The jitter numbers I quote — drops per 100 answers going 35.8 to 15.4 to 0.14 — came from event logs in E19, measured against a control, not from someone watching a screen. That's consistent with how I ran gated experiments generally: gates were judged on frozen, offline data, so no verdict needed a live stream. Separately, in the live card-scout demo I do say 'watch the card, it identifies, and it holds' — but that's me narrating a demo in the moment, not the mechanism that established the jitter fix. The record doesn't show a person's screen-watching as the criterion for the jitter numbers.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "grailith:docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md",
+        "locator": "answers thrown away per 100 answers"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Gates are judged on frozen, offline data, so no verdict needs a live stream"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Watch the card. It identifies, and it holds"
+      }
+    ]
+  }
+}

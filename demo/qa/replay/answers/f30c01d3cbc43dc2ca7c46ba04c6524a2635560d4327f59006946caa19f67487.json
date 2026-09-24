@@ -1,0 +1,75 @@
+{
+  "pass": "answers",
+  "key": "f30c01d3cbc43dc2ca7c46ba04c6524a2635560d4327f59006946caa19f67487",
+  "id": "q-c49923ca32",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 6,
+      "sha256": "ae0505c74065e2a585fc4a624ea5fb39b3703455304052897c600a70157df573"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 6,
+      "sha256": "68e6376406225cd59799ab31de626da1cd698c308df658ffe1775709125cf718"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 11,
+      "sha256": "adea9997a3731c9ec52180c0a46df379b4f5b7dbd661810f5e48f3f2f115830e"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 11,
+      "sha256": "08396ce7417ae2de779f188a8032c1192469a16c5ab910c55d49b2da17130a6f"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 20,
+      "sha256": "2c4d09e91562263d3cda869d5390898c0437014cfd2685009345beee557de53c"
+    },
+    {
+      "path": "mining/arcs/E-coordinator.md",
+      "chunk": 3,
+      "sha256": "f6150b32f4e65ffe8f4e63a607149b4f9171399661d9c3ad3352c63d8ff4af97"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-PRICE-HISTORY-PRINTING-2026-09-08.md",
+      "chunk": 1,
+      "sha256": "c969f81587716497d9686c44f31e54607427d2ae2a47432cd0741791e807e925"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E33d-sibling-tids-from-rows-2026-09-06.md",
+      "chunk": 11,
+      "sha256": "b0b3de42d69988af7b9355e03008c9c80a670cf3e628339206279b4249a29fac"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E18-ood-gate-2026-09-05.md",
+      "chunk": 2,
+      "sha256": "b4b90c585b216ee108e2b4439530c4c69ad3ac3e09ad2e04178d1aca81feedf8"
+    }
+  ],
+  "output": {
+    "answer": "The record doesn't name a single decider for ordering all forty-five forks — I say myself that count is my own tally, not something documented as a formal process. What it does show: the methods map matches a fork's problem type to a tool — a fork with many plausible fixes gets orchestration, run as parallel lanes, and each lane only launches once a gate is written stating what output counts as success or failure, decided before any run starts. Separately, in one coordinator episode, the record notes the orchestrator overstepped by declaring its own verdict; my own call was supposed to outrank it, not the swarm's.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Slide 5 · The fork"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "Slide 9 · Which method fits which problem"
+      },
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "The gate"
+      },
+      {
+        "path": "mining/arcs/E-coordinator.md",
+        "locator": "2. Pivotal moments (part 2)"
+      }
+    ]
+  }
+}

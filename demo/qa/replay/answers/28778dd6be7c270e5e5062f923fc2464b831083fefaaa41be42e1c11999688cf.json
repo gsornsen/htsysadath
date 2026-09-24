@@ -1,0 +1,75 @@
+{
+  "pass": "answers",
+  "key": "28778dd6be7c270e5e5062f923fc2464b831083fefaaa41be42e1c11999688cf",
+  "id": "q-52a770675b",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "mining/arcs/C-personas-review.md",
+      "chunk": 1,
+      "sha256": "f57528a0bf9b331c2575c27029500e2b0c3e8fdae3ba0b6ae8d1577392223c0b"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 3,
+      "sha256": "775f6b75248dcaf6b7ae64a970226bac79702fa463b613a33e6846573490a9d7"
+    },
+    {
+      "path": "talk/plan/critique2/senior-swe.md",
+      "chunk": 3,
+      "sha256": "90671ccf5d54a124761057bbee478df65c32415c9c50d337ceb306b5e6dd84a0"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 20,
+      "sha256": "2c4d09e91562263d3cda869d5390898c0437014cfd2685009345beee557de53c"
+    },
+    {
+      "path": "starter/two-lanes/lane-brief.md",
+      "chunk": 7,
+      "sha256": "b938d708b01d548fea0eaae617a39368367bc53aa2b6835f9784b3f086225bae"
+    },
+    {
+      "path": "grailith:docs/experiments/EXPERIMENT-BACKLOG.md",
+      "chunk": 25,
+      "sha256": "f20c0fb7ecb2c3446671980c37fe18c9232c7935b3a1d0966a66ce6044cc0317"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md",
+      "chunk": 1,
+      "sha256": "3ce18e5487eccd88993036ec7a23276b41e79aa34e23e36c84d1089021567c09"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-POCKET-EXCLUSION-2026-09-08.md",
+      "chunk": 14,
+      "sha256": "030a0f618befa53655710efb0dfeff9b080c351bdf119b76555308693ebbeb67"
+    }
+  ],
+  "output": {
+    "answer": "It's not one format — it depends on the lane. My rule is to write the gate before I see any output: the single result that answers yes/no just by reading it, like \"the new test suite passes and covers the reported bug.\" For unattended runs I go further and write the exact kill number up front, e.g. \"kill if the new approach loses more than 2.0 points against baseline.\" Some gates are literal thresholds baked into code, like the card gate's 6% coverage and 0.55–0.9 aspect check. And for labeling work I built a persona/critic panel that reads the built screens and returns DONE or NOT DONE.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "starter/two-lanes/lane-brief.md",
+        "locator": "§ The gate"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "write the exact"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E88-identify-timer-retune-2026-09-11.md",
+        "locator": "card gate (6 % coverage, 0.55–0.9 aspect)"
+      },
+      {
+        "path": "mining/arcs/C-personas-review.md",
+        "locator": "returns DONE or NOT DONE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "9f882aaf8b85cf65870248e1bb3a6f75bdade12288d203fbaa4badc193a36366",
+  "id": "q-2bd03aa3b7",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "starter/README.md",
+      "chunk": 5,
+      "sha256": "4d8c2c84c58f8d3909fe4f26ea61c1c7ab11e38077de9759e484fa64bab3b9db"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 14,
+      "sha256": "fec991c6b62ae20b769ebf6600ea2e4b5c956a71ed45362127c248a07f9c9875"
+    },
+    {
+      "path": "mining/findings/experiments-index.md",
+      "chunk": 5,
+      "sha256": "946d854ccc01af2b0392dba3aff8e0f8d83037fbaf397bfacf225a93ba055081"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 26,
+      "sha256": "1fe2418faf627f45ec5fa0ddff49f52ecf1ca4161da8faafe1cadac3d624367b"
+    },
+    {
+      "path": "mining/findings/gates-and-flags.md",
+      "chunk": 1,
+      "sha256": "11bd9b51128dc6b2ef96b67a1469281257b1bb74276b08a057fa50e3b8eca7fd"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-FLAGS-POSTHOG-2026-09-07.md",
+      "chunk": 19,
+      "sha256": "1cc6709cea7af20f4b7f31ca5acd210ace5649f1bc9364990663afa90da0bb7c"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-001-session-markers.md",
+      "chunk": 3,
+      "sha256": "96642fea4c8d0e25f23961aaa5133496061e05962e3e0baf16e4ad2e08814602"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+      "chunk": 36,
+      "sha256": "784e25278fd1b515f43df01d62df60ed9d0cba71ce959bd078a499a16d0ea759"
+    }
+  ],
+  "output": {
+    "answer": "That question isn't really answered in the record — everything documented was one setup, mine, running lanes solo. What is in the record is that the roles themselves are already separate, not fused: the gate is written before a run, review is done by a stronger model one tier up, and only a human — not a lane — flips the production flag, explicitly, never as a side effect. I did see that split in practice once, where a coordinator built a change and I made the actual flip decision myself. But scaling that pattern across several people isn't something the record covers.",
+    "grounding": "not in the record",
+    "citations": [
+      {
+        "path": "starter/README.md",
+        "locator": "Reviewer one tier up"
+      },
+      {
+        "path": "starter/two-lanes/unattended.md",
+        "locator": "only a human flips the production flag"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "done by the coordinator on Grailith"
+      }
+    ]
+  }
+}

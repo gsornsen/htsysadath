@@ -1,0 +1,71 @@
+{
+  "pass": "answers",
+  "key": "c1149a27af548b23c968b13cb8b62deffe779beed9a5bcad48d002d9f3a873b9",
+  "id": "q-2854005b40",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 18,
+      "sha256": "2a65909f0ca246b8db6817fb68c62d5d12bf71a29b4bdbfc8add8413c758737f"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 18,
+      "sha256": "c00859096dcaf09b3ed465bd3d598328e04e101872ee1cd4007609b28b9127c9"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 10,
+      "sha256": "28b6e549e9d0f8b2e995b2b744d76e29356e653cba541adaf337ed76c9b8c665"
+    },
+    {
+      "path": "mining/arcs/F-agent-labeling.md",
+      "chunk": 2,
+      "sha256": "448731cbd750d205aaad4dd1e9c9db91c38c6f5fb0f47d07e61205987b35589a"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 9,
+      "sha256": "371e00d8780a33a81c9ab36f5723f2d532d9165a5bbe23b326dbc8da4c42461a"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 10,
+      "sha256": "443081180e41623263b7d4fffe91f22f23835bd84cd0f77124221320647fda45"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "chunk": 8,
+      "sha256": "d2da3a431ea03ddc3c00837d54dccbce1c9be795e6fa86a3638eba628c36e475"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E117-sol-arbiter-dissents-2026-09-12.md",
+      "chunk": 3,
+      "sha256": "8d4759502c52b28894b5f84be2bc6f18c9b4c1a8a4c8269a7e5ac6892672f29e"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E118-visual-search-tool-2026-09-12.md",
+      "chunk": 7,
+      "sha256": "1e0feae4f46a3c545317619a2a72929c1ef711c044f7593cfe89dd03c7762982"
+    }
+  ],
+  "output": {
+    "answer": "That's a fair challenge, and the record backs it up: Dez isn't a human tester, it's a fixed-viewport persona simulation, so 30 to 9 seconds is a model scoring its own output, not a usability measurement. That's exactly why the gate still failed — the panel said DONE at 21:50, and on my own iPhone the next morning it was pretty much unusable, three scrolling sections, a help modal on every task, rotating the phone to reach options. So the number tells you the panel's opinion of itself improved; it's necessary as a fast filter, but my own hands on the real device stayed the last gate.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Dez went from 30 seconds a task to 9, simulated, not human"
+      },
+      {
+        "path": "talk/notes.md",
+        "locator": "it was pretty much unusable"
+      },
+      {
+        "path": "mining/arcs/F-agent-labeling.md",
+        "locator": "simulated personas on fixtures, not humans"
+      }
+    ]
+  }
+}

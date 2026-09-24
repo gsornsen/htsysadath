@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "6cd7635ba1d40861d7d3f00f6897c308dd0421aae32cdabfa5a4b1c11182a633",
+  "id": "q-bcd3c66893",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 21,
+      "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+    },
+    {
+      "path": "talk/outline.md",
+      "chunk": 9,
+      "sha256": "f1ed71a02c25a6bd7614b87da54d6c3195e8665d7c1fa7173eb9c6293a1ee84f"
+    },
+    {
+      "path": "talk/notes.md",
+      "chunk": 21,
+      "sha256": "944d69e3f8477a22f6c5a507d1a44a7f8bb35dff9ff0ead4da6998b7f96ab8b4"
+    },
+    {
+      "path": "docs/project/decisions.md",
+      "chunk": 19,
+      "sha256": "a97588969bc3fedcd9e7bdbe8469428d6c4e716848ef7915cd94bded1753b23c"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 1,
+      "sha256": "7a0a5823c6be3d193f992a528c848354de93a103aa6e34da957821570053dd60"
+    },
+    {
+      "path": "starter/two-lanes/unattended.md",
+      "chunk": 9,
+      "sha256": "116a3bbc322b04d88add0ea7e4d9ef11c7f5e2ab9e8e7c815dd866cc936e797a"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-LOAD-REPLAY-1-2026-09-08.md",
+      "chunk": 29,
+      "sha256": "a244b4cd99d9b0bb10f3cb420bb3e4514055c05abbfab87e900d45deb61333cc"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E64-eval-weighting-2026-09-08.md",
+      "chunk": 17,
+      "sha256": "85a2fe837d6a0526dc41a93a40486a95c96876937e9a408babbaf1cb1e99b198"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E54-reverse-holo-framing-2026-09-07.md",
+      "chunk": 33,
+      "sha256": "efe830a649f01bd5a663a8347895eb9a45a3ffb22ffa5597dc6e0f9bc669c023"
+    }
+  ],
+  "output": {
+    "answer": "On dollars: every bit of Claude work ran inside my existing Claude Max subscription, so there was no separate Claude spend. The only metered model spend in the record is the labeling pilots, about $9 for 760 tasks. On hours: my own time was about thirty minutes a day, spread across the day, setting agents up for overnight runs — that's my own estimate, not something the record measured. Beyond those two figures, I don't have anything else in the record to add up into an end-to-end total.",
+    "grounding": "testimony",
+    "citations": [
+      {
+        "path": "talk/notes.md",
+        "locator": "Backup 1 · Cost, hours, hold-out"
+      },
+      {
+        "path": "docs/project/decisions.md",
+        "locator": "D13 · 2026-09-24 · Cost, slide 4 wording, and the critique follow-ups"
+      }
+    ]
+  }
+}

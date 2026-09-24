@@ -1,0 +1,67 @@
+{
+  "pass": "answers",
+  "key": "20cdb74e59744904e8a6e65697ba207f486f1e3e30abe75b196a2e021add89dd",
+  "id": "q-81a6de606e",
+  "model": "sonnet",
+  "excerpts": [
+    {
+      "path": "talk/notes.md",
+      "chunk": 15,
+      "sha256": "aae218cea2cef9db2ab5b5c83fbac7d0651e59f896ed69219de6376d1431da07"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 8,
+      "sha256": "bd29c57446abe015487ec16d808df003c5fbc7cac6c94a5fc2edcacc2bbe38ab"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 15,
+      "sha256": "ed6e0bbeeeda62971b82813b69cac9709fed0679f831f15393c979e79d88a451"
+    },
+    {
+      "path": "mining/findings/lot-top3-unlocked.md",
+      "chunk": 4,
+      "sha256": "6a851284cbb3b0eda8bcc7da4ed6e8760f925c31475f375f562c4a354e3601d2"
+    },
+    {
+      "path": "talk/plan/critique2/senior-swe.md",
+      "chunk": 1,
+      "sha256": "708ba8fbee5f0ae5669ea7ee262229cab505d78042088eef0389c6e05339de6d"
+    },
+    {
+      "path": "talk/slides/deck.md",
+      "chunk": 21,
+      "sha256": "1b70679a8eeeee7c74eacee159c557dd5ce0c0861df05a8fc8b9c1aaa9a63629"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+      "chunk": 43,
+      "sha256": "41199bde57214919a14aef0a509eafc6e4933703e67b6686d1e3b445ae868c1b"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+      "chunk": 62,
+      "sha256": "282b3c023ffa503bec93d684d74bdd5e4c5f90bbaf594ed2ba50ade07257ace5"
+    },
+    {
+      "path": "grailith:docs/experiments/EXP-E97-ring-budget-and-tap-health-2026-09-11.md",
+      "chunk": 21,
+      "sha256": "2167256d9dccca1e33e3c8a07989824426d1f7b228c5cdc5109cfc0150ef8737"
+    }
+  ],
+  "output": {
+    "answer": "No inter-rater reliability number exists for the 87-lot set. The caveats note is explicit: truth is my taps only, one tapper, EN-heavy, five UTC days of streams, and it flags a selection bias risk — I likely tap more when a pick is clearly right or clearly wrong than when it's ambiguous. There's no second labeler or re-shuffled re-check run against this set in the record, and no stated reason why a held-out labeler wasn't used — that part isn't in the record. A separate experiment (EXP-E35a, card-number legibility) did re-present crops to the same labeller for a stability check, but that's a different dataset and explicitly not inter-rater agreement either.",
+    "grounding": "sourced",
+    "citations": [
+      {
+        "path": "mining/findings/lot-top3-unlocked.md",
+        "locator": "§ 5 · Caveats"
+      },
+      {
+        "path": "grailith:docs/experiments/EXP-E35a-number-confirm-shadow-2026-09-06.md",
+        "locator": "not as inter-rater agreement"
+      }
+    ]
+  }
+}
