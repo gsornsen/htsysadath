@@ -84,6 +84,7 @@ talk/slides/
   assets/shots/    # lane 3: screenshots
   assets/charts/   # lane 4: pre-rendered SVG/PNG
   assets/demos/    # lane 2: GIF/MP4 fallbacks per live demo
+  scripts/         # shoot.mjs (lane 3), build-charts.mjs (lane 4)
   dist/            # git-ignored: build/pdf/pptx output
 ```
 
@@ -114,3 +115,32 @@ dist/deck.html`, `pdf`: `marp --html --pdf deck.md -o dist/deck.pdf`.
    server mode only for authoring?
 2. Iframe or link-out for demo handoff — pending lane 2 confirming target app frame headers?
 3. Any venue wifi guarantee, or plan the whole talk (deck + demos) for offline?
+
+## Convergence (round 2)
+
+**AGREE.** Lane 2's fallback ladder (live → labelled rehearsal → static slide → skip, never a
+faked "live" result) matches my PDF/GIF fallback stance. Its Demo 1 design (terminal, then a
+separate viewer app) is effectively app-switch already, not an iframe — endorse. Lane 4's chart
+path (`talk/slides/assets/charts/*.svg`, `<img>`, no client JS) matches my layout exactly. Dark-
+only theme (lanes 3/4) is a reasonable stage default.
+
+**CONFLICTS.**
+1. Asset path: lane 3 proposes `talk/assets/img/` (outside `talk/slides/`); I proposed
+   `talk/slides/assets/shots/`; lane 4 matches mine. *Resolution*: consolidate on
+   `talk/slides/assets/{shots,charts,demos}/` — keeps assets inside Marp's trusted input dir, so
+   the build never needs `--allow-local-files` for a path outside it (proved that flag/warning
+   triggers once a path escapes the input dir). Lane 3 retargets `shoot.mjs`'s manifest.
+2. Lane 2's pre-flight adds a second local server, the fan-out viewer at `:8090`, beside Marp's
+   `:8080` — not a port clash, but missing from my "one server" framing. *Resolution*: one shared
+   pre-flight port list; the proven hash-URL slide position means alt-tabbing terminal →
+   viewer(:8090) → deck(:8080) needs no extra logic.
+3. Lane 2 asks me to resolve iframe vs app-switch: **app-switch**, matching their own demo design.
+
+**ACCEPTED DEPENDENCIES.** Lane 2: Marp stays on `:8080`; demo slides get `<!-- _class: demo -->`
+titled per demo. Lane 3: images at `talk/slides/assets/shots/`, PNG, ≤1920×1080 or 390×844. Lane
+4: SVG charts at `talk/slides/assets/charts/`.
+
+**CHANGES.** Theme moves from light `default` to a dark custom theme (`#1a1a19`) to match lanes
+3/4. Add `talk/slides/scripts/` (shoot.mjs, build-charts.mjs) to repo layout. D9 (arc B now
+sequential, Art Binder dropped) doesn't change this plan; lane 4's swimlane visual #3 predates it
+and needs a content update — flagged for that lane, not fixed here.
