@@ -15,7 +15,7 @@ Mined for D17's focus slide: what made agent-run experiments safe to run overnig
 | Founder-only prod flip | Agent unilaterally changing production | Flip logged "PRODUCTION FLIP DONE (founder's word)" | [src: handoff-siglip2.md 00:03 PDT] |
 | Per-run tool/time/spend cap | Unattended agent looping or overspending | E84 labeler pilot: 8 calls · 60 s · $6/run; raised to 14 after agents hit the wall | [src: EXP-E84-...2026-09-09.md L5, 64] |
 | Env validation refuses prod drift | Box-only config reaching prod | `env-validation.ts` throws if `EMBED_SEARCH_LANGS` ≠ `"en"` — JA gate hadn't passed | [src: services/card-embed/src/env-validation.ts:150-158] |
-| Idle-tab / spend watchdog | A dead orchestrator leaving a capture running | Chrome left on a live stream burned the full daily allowance + ~3,900 purchased in ~7 h | [src: memory `park-the-scout-chrome-on-stop`, 2026-09-07] |
+| Idle-tab / spend watchdog | A dead orchestrator leaving a capture running | Chrome left on a live stream burned the full daily API allowance plus purchased credits in ~7 h | [src: memory `park-the-scout-chrome-on-stop`, 2026-09-07] |
 | Reviewer one tier above | Self-approved merges | Standing rule beside "never --amend/rebase/reset shared refs" | [src: 2026-09-18-trunk-consolidation-plan.md L159] |
 | Commit early / in chunks | Losing work to a usage-limit kill | Kill hit three lanes; all resumed from their last commit | [src: 2026-09-18-trunk-consolidation-plan.md, "Usage-limit kill"] |
 | Frozen eval split, reused | Gate bar drifting with the test set | `split_id fd4f57d5` frozen 09-08; founder 09-11: "stays frozen" | [src: handoff-siglip2.md; 2026-09-11 17:51 PDT decision] |
