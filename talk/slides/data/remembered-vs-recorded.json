@@ -5,8 +5,8 @@
     {
       "type": "record-corrects-memory",
       "instance": "D4 — the simplifying win",
-      "remembered": "Index composition / dedup was the simplifying win.",
-      "recorded": "Dedup (G3) LOST 14.43 pts print@1 (p = 0.00034) and was killed. The flat gallery + language head shipped instead (print@1 67.66 → 77.61%).",
+      "remembered": "The dedup / cross-language experiments were the simplifying win.",
+      "recorded": "Dedup itself lost 14.43 pts and was killed; the simplification was the flat gallery + a 1,538-param language head (67.66 → 77.61% print@1). The negative result was the win.",
       "source": "decisions.md D4"
     },
     {
@@ -19,9 +19,9 @@
     {
       "type": "record-corrects-memory",
       "instance": "E79 crop-vote win",
-      "remembered": "The 5-crop vote / proposer improved accuracy.",
-      "recorded": "On replay (41 scenes) the vote scored 26/41 vs 31/41 for one padded crop — the win didn’t hold.",
-      "source": "cross-arc.md; B-pivots.md §2"
+      "remembered": "One padded crop beat the 5-crop vote (31 vs 26 of 41).",
+      "recorded": "On the 09-13 replay it was a wash: top-1 25 vs 24, top-3 33 vs 33.",
+      "source": "cross-arc.md; top3-trajectory.md / experiments-index E79 row"
     },
     {
       "type": "record-corrects-memory",

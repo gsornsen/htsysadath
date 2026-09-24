@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
 <rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
 <text x="56" y="50" fill="#ffffff" font-size="30" font-weight="700">Remembered vs recorded</text>
-<text x="56" y="88" fill="#898781" font-size="13" font-weight="700" letter-spacing="0.5">INSTANCE</text>
+<text x="70" y="88" fill="#898781" font-size="13" font-weight="700" letter-spacing="0.5">INSTANCE</text>
 <text x="244" y="88" fill="#898781" font-size="13" font-weight="700" letter-spacing="0.5">REMEMBERED</text>
 <text x="636" y="88" fill="#898781" font-size="13" font-weight="700" letter-spacing="0.5">RECORDED</text>
 <text x="1028" y="88" fill="#898781" font-size="13" font-weight="700" letter-spacing="0.5">SOURCE</text>
 <line x1="56" y1="98" x2="1224" y2="98" stroke="#383835" stroke-width="2"/>
-<text x="56" y="131.5" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="56" y="131.5">D4 — the simplifying</tspan><tspan x="56" y="149">win</tspan></text>
-<text x="244" y="131.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="131.5">Index composition / dedup was the simplifying</tspan><tspan x="244" y="149">win.</tspan></text>
-<text x="636" y="131.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="131.5">Dedup (G3) LOST 14.43 pts print@1 (p = 0.00034)</tspan><tspan x="636" y="149">and was killed. The flat gallery + language head</tspan><tspan x="636" y="166.5">shipped instead (print@1 67.66 → 77.61%).</tspan></text>
+<text x="70" y="131.5" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="70" y="131.5">D4 — the</tspan><tspan x="70" y="149">simplifying win</tspan></text>
+<text x="244" y="131.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="131.5">The dedup / cross-language experiments were the</tspan><tspan x="244" y="149">simplifying win.</tspan></text>
+<text x="636" y="131.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="131.5">Dedup itself lost 14.43 pts and was killed; the</tspan><tspan x="636" y="149">simplification was the flat gallery + a</tspan><tspan x="636" y="166.5">1,538-param language head (67.66 → 77.61%</tspan><tspan x="636" y="184">print@1). The negative result was the win.</tspan></text>
 <text x="1028" y="131.5" fill="#898781" font-size="12.5"><tspan x="1028" y="131.5">decisions.md D4</tspan></text>
-<text x="56" y="202" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="56" y="202">the top-3 bar’s date</tspan></text>
-<text x="244" y="202" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="202">Founder set the top-3 bar 09-13 22:44.</tspan></text>
-<text x="636" y="202" fill="#ffffff" font-size="13.5"><tspan x="636" y="202">The bar first appears 09-11 19:37 PDT (evening</tspan><tspan x="636" y="219.5">plan); 09-13 is a restatement.</tspan></text>
-<text x="1028" y="202" fill="#898781" font-size="12.5"><tspan x="1028" y="202">top3-trajectory.md §0</tspan></text>
-<text x="56" y="255" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="56" y="255">E79 crop-vote win</tspan></text>
-<text x="244" y="255" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="255">The 5-crop vote / proposer improved accuracy.</tspan></text>
-<text x="636" y="255" fill="#ffffff" font-size="13.5"><tspan x="636" y="255">On replay (41 scenes) the vote scored 26/41 vs</tspan><tspan x="636" y="272.5">31/41 for one padded crop — the win didn’t hold.</tspan></text>
-<text x="1028" y="255" fill="#898781" font-size="12.5"><tspan x="1028" y="255">cross-arc.md;</tspan><tspan x="1028" y="272.5">B-pivots.md §2</tspan></text>
-<text x="56" y="308" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="56" y="308">76.9% top-3 at n =</tspan><tspan x="56" y="325.5">52</tspan></text>
-<text x="244" y="308" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="308">Lot-level top-3 held around 77%.</tspan></text>
-<text x="636" y="308" fill="#ffffff" font-size="13.5"><tspan x="636" y="308">Small-sample high. The pooled 87-lot run gives</tspan><tspan x="636" y="325.5">71.3% overall, 65.2% on non-locked lots.</tspan></text>
-<text x="1028" y="308" fill="#898781" font-size="12.5"><tspan x="1028" y="308">lot-top3-unlocked.md</tspan><tspan x="1028" y="325.5">§4</tspan></text>
-<rect x="52" y="344" width="1176" height="81" rx="6" fill="#199e70" opacity="0.12"/>
-<rect x="52" y="344" width="6" height="81" fill="#199e70"/>
-<text x="56" y="361" fill="#199e70" font-size="14.5" font-weight="700"><tspan x="56" y="361">D5 → D9 (arc B</tspan><tspan x="56" y="378.5">ordering)</tspan></text>
-<text x="56" y="397" fill="#199e70" font-size="11.5" font-weight="600"><tspan x="56" y="397">the record can be</tspan><tspan x="56" y="411.5">over-read too</tspan></text>
-<text x="244" y="361" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="361">Overlapping commit dates read as concurrent work</tspan><tspan x="244" y="378.5">— arc B rebuilt as parallel spines.</tspan></text>
-<text x="636" y="361" fill="#ffffff" font-size="13.5"><tspan x="636" y="361">Founder corrected it: not concurrent. Four</tspan><tspan x="636" y="378.5">sequential acts, each begun for a stated reason.</tspan></text>
-<text x="1028" y="361" fill="#898781" font-size="12.5"><tspan x="1028" y="361">decisions.md D5, D9</tspan></text>
-<rect x="52" y="432" width="1176" height="81" rx="6" fill="#199e70" opacity="0.12"/>
-<rect x="52" y="432" width="6" height="81" fill="#199e70"/>
-<text x="56" y="449" fill="#199e70" font-size="14.5" font-weight="700"><tspan x="56" y="449">D6 → D7 (the 3-min</tspan><tspan x="56" y="466.5">baseline)</tspan></text>
-<text x="56" y="485" fill="#199e70" font-size="11.5" font-weight="600"><tspan x="56" y="485">absence from the corpus ≠</tspan><tspan x="56" y="499.5">unsourced</tspan></text>
-<text x="244" y="449" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="449">Absent from the mined transcript corpus →</tspan><tspan x="244" y="466.5">treated as unsourced, dropped.</tspan></text>
-<text x="636" y="449" fill="#ffffff" font-size="13.5"><tspan x="636" y="449">Founder testimony stands; the message simply</tspan><tspan x="636" y="466.5">lived outside the mined corpus (a second</tspan><tspan x="636" y="484">account).</tspan></text>
-<text x="1028" y="449" fill="#898781" font-size="12.5"><tspan x="1028" y="449">decisions.md D6, D7</tspan></text>
-<text x="56" y="541.5" fill="#c3c2b7" font-size="15"><tspan x="56" y="541.5">Four rows where the record corrects memory. Two counter-example rows, marked apart: the record can be over-read too. Keep both records, and</tspan><tspan x="56" y="560.5">check in both directions.</tspan></text>
-<text x="56" y="595.5" fill="#898781" font-size="14">source: docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4</text>
+<text x="70" y="219.5" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="70" y="219.5">the top-3 bar’s</tspan><tspan x="70" y="237">date</tspan></text>
+<text x="244" y="219.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="219.5">Founder set the top-3 bar 09-13 22:44.</tspan></text>
+<text x="636" y="219.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="219.5">The bar first appears 09-11 19:37 PDT (evening</tspan><tspan x="636" y="237">plan); 09-13 is a restatement.</tspan></text>
+<text x="1028" y="219.5" fill="#898781" font-size="12.5"><tspan x="1028" y="219.5">top3-trajectory.md §0</tspan></text>
+<text x="70" y="272.5" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="70" y="272.5">E79 crop-vote win</tspan></text>
+<text x="244" y="272.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="272.5">One padded crop beat the 5-crop vote (31 vs 26</tspan><tspan x="244" y="290">of 41).</tspan></text>
+<text x="636" y="272.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="272.5">On the 09-13 replay it was a wash: top-1 25 vs</tspan><tspan x="636" y="290">24, top-3 33 vs 33.</tspan></text>
+<text x="1028" y="272.5" fill="#898781" font-size="12.5"><tspan x="1028" y="272.5">cross-arc.md;</tspan><tspan x="1028" y="290">top3-trajectory.md /</tspan><tspan x="1028" y="307.5">experiments-index E79</tspan><tspan x="1028" y="325">row</tspan></text>
+<text x="70" y="360.5" fill="#ffffff" font-size="14.5" font-weight="700"><tspan x="70" y="360.5">76.9% top-3 at n =</tspan><tspan x="70" y="378">52</tspan></text>
+<text x="244" y="360.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="360.5">Lot-level top-3 held around 77%.</tspan></text>
+<text x="636" y="360.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="360.5">Small-sample high. The pooled 87-lot run gives</tspan><tspan x="636" y="378">71.3% overall, 65.2% on non-locked lots.</tspan></text>
+<text x="1028" y="360.5" fill="#898781" font-size="12.5"><tspan x="1028" y="360.5">lot-top3-unlocked.md</tspan><tspan x="1028" y="378">§4</tspan></text>
+<rect x="52" y="396.5" width="1176" height="81" rx="6" fill="#199e70" opacity="0.12"/>
+<rect x="52" y="396.5" width="6" height="81" fill="#199e70"/>
+<text x="70" y="413.5" fill="#199e70" font-size="14.5" font-weight="700"><tspan x="70" y="413.5">D5 → D9 (arc B</tspan><tspan x="70" y="431">ordering)</tspan></text>
+<text x="70" y="449.5" fill="#199e70" font-size="11.5" font-weight="600"><tspan x="70" y="449.5">the record can be</tspan><tspan x="70" y="464">over-read too</tspan></text>
+<text x="244" y="413.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="413.5">Overlapping commit dates read as concurrent work</tspan><tspan x="244" y="431">— arc B rebuilt as parallel spines.</tspan></text>
+<text x="636" y="413.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="413.5">Founder corrected it: not concurrent. Four</tspan><tspan x="636" y="431">sequential acts, each begun for a stated reason.</tspan></text>
+<text x="1028" y="413.5" fill="#898781" font-size="12.5"><tspan x="1028" y="413.5">decisions.md D5, D9</tspan></text>
+<rect x="52" y="484.5" width="1176" height="81" rx="6" fill="#199e70" opacity="0.12"/>
+<rect x="52" y="484.5" width="6" height="81" fill="#199e70"/>
+<text x="70" y="501.5" fill="#199e70" font-size="14.5" font-weight="700"><tspan x="70" y="501.5">D6 → D7 (the 3-min</tspan><tspan x="70" y="519">baseline)</tspan></text>
+<text x="70" y="537.5" fill="#199e70" font-size="11.5" font-weight="600"><tspan x="70" y="537.5">absence from the corpus</tspan><tspan x="70" y="552">≠ unsourced</tspan></text>
+<text x="244" y="501.5" fill="#c3c2b7" font-size="13.5"><tspan x="244" y="501.5">Absent from the mined transcript corpus →</tspan><tspan x="244" y="519">treated as unsourced, dropped.</tspan></text>
+<text x="636" y="501.5" fill="#ffffff" font-size="13.5"><tspan x="636" y="501.5">Founder testimony stands; the message simply</tspan><tspan x="636" y="519">lived outside the mined corpus (a second</tspan><tspan x="636" y="536.5">account).</tspan></text>
+<text x="1028" y="501.5" fill="#898781" font-size="12.5"><tspan x="1028" y="501.5">decisions.md D6, D7</tspan></text>
+<text x="56" y="594" fill="#c3c2b7" font-size="15"><tspan x="56" y="594">Four rows where the record corrects memory. Two counter-example rows, marked apart: the record can be over-read too. Keep both records, and</tspan><tspan x="56" y="613">check in both directions.</tspan></text>
+<text x="56" y="648" fill="#898781" font-size="14">source: docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4</text>
 </svg>

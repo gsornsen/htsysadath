@@ -23,14 +23,14 @@
 <text x="342.5" y="524" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">@1</text>
 <text x="342.5" y="84" text-anchor="middle" fill="#c3c2b7" font-size="15">McNemar b = 0, c = 20, p = 1.9e-06</text>
 <rect x="675.5" y="172.38805970149252" width="84" height="317.6119402985075" rx="4" fill="#3987e5"/>
-<text x="717.5" y="160.38805970149252" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">83.6%</text>
-<text x="717.5" y="138.38805970149252" text-anchor="middle" fill="#898781" font-size="13">168/201</text>
+<text x="717.5" y="143.22000000000003" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">83.6%</text>
+<text x="717.5" y="121.22000000000003" text-anchor="middle" fill="#898781" font-size="13">168/201</text>
 <line x1="717.5" y1="194.36" x2="717.5" y2="155.22000000000003" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
 <line x1="711.5" y1="194.36" x2="723.5" y2="194.36" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
 <line x1="711.5" y1="155.22000000000003" x2="723.5" y2="155.22000000000003" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
 <rect x="775.5" y="151.592039800995" width="84" height="338.407960199005" rx="4" fill="#d95926"/>
-<text x="817.5" y="139.592039800995" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">89.1%</text>
-<text x="817.5" y="117.592039800995" text-anchor="middle" fill="#898781" font-size="13">179/201</text>
+<text x="817.5" y="125.74000000000001" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">89.1%</text>
+<text x="817.5" y="103.74000000000001" text-anchor="middle" fill="#898781" font-size="13">179/201</text>
 <line x1="817.5" y1="170.8" x2="817.5" y2="137.74" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
 <line x1="811.5" y1="170.8" x2="823.5" y2="170.8" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
 <line x1="811.5" y1="137.74" x2="823.5" y2="137.74" stroke="#ffffff" stroke-width="2" opacity="0.55"/>

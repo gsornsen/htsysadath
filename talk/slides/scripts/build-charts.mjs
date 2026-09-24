@@ -159,11 +159,20 @@ function buildD4Arms(d) {
       const barH = (pct / axisMax) * plotH;
       const y = plotY + plotH - barH;
       svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="4" fill="${seriesColor[b.series]}"/>\n`;
-      svg += `<text x="${x + barW / 2}" y="${y - 12}" text-anchor="middle" fill="${C.textPrimary}" font-size="22" font-weight="700">${fmt1(pct)}%</text>\n`;
-      svg += `<text x="${x + barW / 2}" y="${y - 34}" text-anchor="middle" fill="${C.textMuted}" font-size="13">${b.numerator}/${b.denominator}</text>\n`;
+
+      // When a CI is present, its upper whisker can sit above the bar top —
+      // anchor the value labels above the WHISKER, not the bar, so the
+      // whisker line never runs through the label text.
+      let yHi = null;
+      let yLo = null;
       if (b.ciLo != null) {
-        const yLo = plotY + plotH - (b.ciLo / axisMax) * plotH;
-        const yHi = plotY + plotH - (b.ciHi / axisMax) * plotH;
+        yLo = plotY + plotH - (b.ciLo / axisMax) * plotH;
+        yHi = plotY + plotH - (b.ciHi / axisMax) * plotH;
+      }
+      const labelTop = yHi != null ? Math.min(y, yHi) : y;
+      svg += `<text x="${x + barW / 2}" y="${labelTop - 12}" text-anchor="middle" fill="${C.textPrimary}" font-size="22" font-weight="700">${fmt1(pct)}%</text>\n`;
+      svg += `<text x="${x + barW / 2}" y="${labelTop - 34}" text-anchor="middle" fill="${C.textMuted}" font-size="13">${b.numerator}/${b.denominator}</text>\n`;
+      if (yHi != null) {
         const cx = x + barW / 2;
         svg += `<line x1="${cx}" y1="${yLo}" x2="${cx}" y2="${yHi}" stroke="${C.textPrimary}" stroke-width="2" opacity="0.55"/>\n`;
         svg += `<line x1="${cx - 6}" y1="${yLo}" x2="${cx + 6}" y2="${yLo}" stroke="${C.textPrimary}" stroke-width="2" opacity="0.55"/>\n`;
@@ -372,8 +381,10 @@ function buildTwoLevers(d) {
 // 5. remembered-vs-recorded.svg — table, counter-example rows marked apart
 // ---------------------------------------------------------------------------
 function buildRememberedTable(d) {
-  const colX = [56, 244, 636, 1028];
-  const colW = [178, 382, 382, 168];
+  // colX[0] sits clear of the counter-example accent bar (drawn at x=52,
+  // width 6) with a visible gap, so its text is never clipped by the bar.
+  const colX = [70, 244, 636, 1028];
+  const colW = [164, 382, 382, 168];
   const headerY = 88;
   let svg = svgOpen();
   svg += title(d.title, 56, 50);
