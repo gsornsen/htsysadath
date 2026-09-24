@@ -31,15 +31,17 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Revise R1 charts | revise/charts | running | Sonnet → coordinator | — | 9 charts at 1136×440, ≥24 px; fixed filename + number contract |
 | Revise R2 deck + notes | revise/deck | merged | Sonnet → coordinator | 5a7ea8b | 21 + backup, 34.5 + 0.5 min; D14 placeholders filled |
 | Revise R3 starter kit | revise/starter | merged | Sonnet → coordinator | see log | dry run 11–47 s |
-| Story v2: deck + notes | story/deck-v2 | running | Opus 5.5 → coordinator | — | structure-v2: 19 slides + backup, Gerald as protagonist, rvr cut |
-| Visuals V1: diagrams (svg-infographic) | visuals/diagrams | running | Opus 5.5 → coordinator | — | 7 diagrams: timeline, jitter, fork tree, loop, methods map, shared core, hybrid |
+| Story v3: deck + notes | story/deck-v2 | merged | Opus 5.5 → coordinator | 31e20c4 | 18 slides + 2 backup, 35.0 min; placeholders filled |
+| Visuals V1: diagrams (svg-infographic) | visuals/diagrams | merged | Opus 5.5 → coordinator | 53d87b9 | 7 diagrams incl. gates-flags; 2 honesty fixes |
 | Visuals V2: charts (svg-linyaosky) | visuals/charts2 | running | Sonnet → coordinator | — | jitter-drops, d4-slope; fix d4-arms/lot-bar; delete rvr |
-| Demo 0: scout single-crop | grAIde demo/scout-single-crop (worktree grAIde-demo) | running | Opus 5.5 → coordinator | — | cropMode default single (E79 b17); build; verify on the dev stack; demo options |
+| Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 11:3x PDT — D17/D18. Story v3 deck merged (18 + 2 backup). Diagrams merged (7). Gates research merged. Demo build flipped to proposals and rebuilt (7e38ca42). Waiting on V2 charts (jitter-drops, d4-slope at 556, lot-bar split). Then render and look, the critics re-run, and polish LAST.
 
 - 2026-09-24 11:1x PDT — D16 structure v2 (from Gerald's story-plan answers). Four lanes: story deck v2, V1 diagrams, V2 charts, Demo 0 single-crop build. Polish is LAST, after flow and visuals.
 
