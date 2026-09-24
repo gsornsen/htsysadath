@@ -382,3 +382,6 @@ still needs the vote until something better than rank-1 picks the quad.
 on the dev box). The Grailith branch `demo/scout-single-crop` (7afd3587, be24b57d, aa2104f6; tests
 1857 → 1864, all green) is NOT merged. Its default "single" should flip to "proposals" before any use
 (Gerald decides).
+**D18 decision (Gerald, 11:3x):** flip the demo build's default to `cropMode: "proposals"` and rebuild
+(done by the coordinator on Grailith `demo/scout-single-crop`; single mode stays available by storage
+key for experiments). Gerald records the fallback clip himself before the talk.
