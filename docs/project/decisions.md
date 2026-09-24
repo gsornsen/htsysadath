@@ -163,3 +163,11 @@ truth, so wrong-agreement can't be measured there.
   lock rate × lock precision.
 - **The ≥ 200-lot run:** run offline over every truth lot available, and report the actual n
   instead of padding to 200.
+
+**D8 outcomes (2026-09-24 09:3x PDT).** (1) The D4 win carries to top-3, at about half the size:
+print@3 83.58% → 89.05% (b=1/c=12, p=0.0034) vs @1 67.66% → 77.61%, after a positive control
+reproduced E67 exactly [mining/findings/E67-top3-replay.md]. The talk may now say "the negative
+result was the win" in the founder's own units, with the @1/@3 halving as the honest caveat.
+(2) The founder's bar on live lots: top-3 on non-locked lots 65.2% (45/69), lock 20.7% at 88.9%
+precision, n=87, the most recorded data allows [mining/findings/lot-top3-unlocked.md]. The
+remembered 76.9% was a small-sample high; the pooled level is about 70%.

@@ -15,7 +15,7 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
 | Mine: agent labeling (arc F) | mine/labeling → review/labeling | merged (Opus 5.5 reviewed) | Sonnet → Opus 5.5 | see log | optional: Gerald re-times one label with no agent pre-labels |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
-| E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | running | Opus 5.5 | — | positive control @1 must reproduce first |
+| E67 top-3 replay (D4 at @3) | mine/e67-top3-replay | merged | Opus 5.5 | 300488d | print@3 83.58→89.05% (p=0.0034); control reproduced E67 exactly |
 | Lot harness lock-state + offline run | grAIde eval/lot-top3-lock-state + mine/lot-top3-unlocked | merged (talk side) | Opus 5.5 | b4dd0b8 | non-locked top-3 65.2% (45/69); n=87 (no taps after 09-16); Grailith branch awaits Gerald's merge gate |
 | Presentation plan swarm (Marp) | plan/{marp-runtime,live-demos,visual-assets,data-viz} | round 1 running | Sonnet ×3 + Opus 5.5 | — | converge → Opus 5.5 synthesis → talk/plan/presentation-plan.md |
 | Outline v1 | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
@@ -23,6 +23,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 09:3x PDT — E67 top-3 replay merged: the D4 win holds at top-3 (+5.47 pts, about half the @1 gain). Data-viz lane sent both confirmed results.
 
 - 2026-09-24 09:2x PDT — Lot run merged: the founder's bar measured for the first time (non-locked top-3 65.2%, lock 20.7% at 88.9% precision, n=87). The earlier 76.9% was a small-sample high (pooled ~70%). Presentation-plan swarm round 1 running (4 lanes).
 

@@ -43,3 +43,9 @@ outside its own arc files it here instead of editing another arc's doc.
   e04b6433b; arc B review lane]
 - Arc B/A: a proxy that did not survive live data. E109 lifted six-crop top-3 by 12.6 pts, and
   the live lot measure (E100b) moved 0. [src: arc A review lane · E109, E100b]
+- Talk spine, instance 6: the lot-level top-3 "76.9%" (n=52, 09-13) was a small-sample high.
+  The same code on all 87 truth lots gives 71.3% overall and 65.2% on non-locked lots; later days
+  scored 11/15, 6/13, 5/7. [src: mining/findings/lot-top3-unlocked.md · 2026-09-24]
+- Arc A: a gain measured at @1 roughly halves at @3 (language head +9.95 → +5.47 pts), because
+  most @1 fixes were already rank 2–3. A metric choice can double or halve a headline.
+  [src: mining/findings/E67-top3-replay.md · 2026-09-24]
