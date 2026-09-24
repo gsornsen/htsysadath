@@ -232,7 +232,7 @@ section::after {
   line-height: 1;
   color: var(--ink-dim);
   background: none;
-  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  content: attr(data-marpit-pagination);
 }
 
 /* Source footer: small, dim, bottom-left, below the image box. */
@@ -290,26 +290,20 @@ section p.testimony cite {
   font-size: 0.6em;
   color: var(--ink-dim);
   margin-left: 0.5em;
+  white-space: nowrap;
+}
+.gate-card p.testimony cite {
+  display: block;
+  margin-left: 0;
 }
 
-/* Demo 1 kickoff chip, bottom-right of "What changed". */
-section .kickoff {
-  position: absolute;
-  right: 72px;
-  bottom: 16px;
-  font-family: "SF Mono", Menlo, Consolas, monospace;
-  font-size: 20px;
-  color: var(--accent-1);
-  background: var(--surface-raised);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 0.2em 0.6em;
-}
-section:has(.kickoff) img {
-  max-height: 400px;
+/* On-slide definitions (orchestration): one line, a step smaller. */
+section p.defs {
+  font-size: 0.8em;
+  margin: 0.2em 0 0;
 }
 
-/* Demo 0: a big target to switch windows on (no link: the stream is a
+/* Live demo: a big target to switch windows on (no link: the stream is a
    browser tab with the extension loaded). */
 section.demo .stage-target {
   display: inline-block;
@@ -320,10 +314,6 @@ section.demo .stage-target {
   background: var(--accent-2);
   padding: 0.3em 0.8em;
   border-radius: 8px;
-}
-section.demo img.chart-demo {
-  max-height: 330px;
-  margin-top: 0.6em;
 }
 
 /* Two charts side by side, sharing the 1136x440 box. */
