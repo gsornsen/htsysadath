@@ -39,7 +39,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Deck v4 (audience-first) | story/deck-v4 | MERGED on Gerald's call (fix forward) | Opus 5.5 | 2538683 | Gerald reviewing at localhost:8080 |
 | V4 visuals: four-problems + plain labels | fix/v4-visuals | merged | Opus 5.5 → coordinator | f91502e | all references resolve; no codes/kill/founder on screen |
 | Workplace wording (D22), text | fix/workplace-wording | merged | Sonnet → coordinator | 92f84a6 | 36 kill-family + others replaced |
-| Final-copy pass (D23) | story/final-pass | running | Opus 5.5 → coordinator | — | no danglers; stop-list grounded; live-browser personas; slide 8 pivot; then Q&A --live re-run |
+| Final-copy pass (D23) | story/final-pass | merged + pushed | Opus 5.5 → coordinator | ebed7bd | Gerald's 'the scout' button kept (conflict resolved in its favour) |
+| Q&A demo re-run on final slides | main | running (live) | coordinator | — | then check.sh with GRAILITH unset; commit fixtures |
 | Investigate: JA identify on dev | — | done (read-only) | Opus 5.5 + coordinator verify | — | not a regression: dev has IDENTIFY_LANG_SWITCH off (default false) + 0 JA rows in dev D1 (23,444 total); also /api/card/resolve hardcodes language EN (a prod mis-price path). Fixes proposed, NOT applied; Gerald decides |
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | merged; public replay verified | Opus 5.5 → coordinator | see log | site sha 8ed55e42…; check.sh OK with GRAILITH unset; 1 answer flagged stale (by design); re-run --live once the deck settles |
@@ -51,6 +52,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 13:4x PDT — Final copy merged and pushed (ebed7bd); demo button 'the scout'. Gerald moving to the demo computer (git pull). Q&A live re-run on the final slides in progress.
 
 - 2026-09-24 13:3x PDT — D22 text merged. The D23 final-copy pass is running; the Q&A live re-run follows it.
 
