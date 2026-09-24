@@ -320,3 +320,11 @@ of the true card for most test crops, which is the gallery, known at inference, 
 one knob set on a separate dev split, and none of the 201 test photos in any of that."
 **For Gerald:** EXP-E67 §4.1 (Grailith, line 643) says "The E65a head was fitted on 432 E11 crops". That's
 wrong: it was E11's older probe. Worth correcting before anyone quotes it.
+
+## D15 · 2026-09-24 · The orbs design competition stays out of the talk
+
+Gerald: leave it out. The pulled orbs material (`scratch/orbs/`: pitch brief, FACTS.json, story
+concepts, the champion build) is used ONLY as a reference for how the toolchain was applied. None
+of its content, numbers or imagery goes into slides, notes or the public repo. The six pulled skills
+(`.claude/skills/`, git-ignored) are used as TOOLS for this deck: svg-infographic for structural
+diagrams; svg-design / svg-linyaosky for hand-authored charts; impeccable + hallmark as design gates.
