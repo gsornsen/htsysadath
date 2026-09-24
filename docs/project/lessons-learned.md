@@ -54,3 +54,10 @@ entry; link the finding or commit that proves it.
   tree cannot work when the lanes run concurrently. Isolated worktrees held; the only collision was
   two lanes creating `mining/findings/cross-arc.md` from the same base, which conflicted add/add at
   merge. An append-only shared file wants to exist on trunk BEFORE the lanes branch.
+
+- `[method]` 2026-09-24: **"not in the corpus" is not "not sourced", so ask the witness before
+  ruling.** D6 dropped Gerald's 3-min/label baseline because no mined file contained it; he had
+  timed it himself, and the message sat on an account this laptop never saw (D7). The lane was
+  right to report NOT FOUND. The coordinator's error was upgrading that into a DECISION without
+  a one-line question to the person who was there. Rule: a NOT FOUND on a founder claim goes to
+  the open-questions list, never straight into decisions.md.

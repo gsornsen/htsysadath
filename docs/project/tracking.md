@@ -9,17 +9,25 @@ blocked · dropped. Newest changes at the top of the changelog.
 |---|---|---|---|---|---|
 | Scaffold | main | merged | Fable | beb5177 | pushed to github.com/gsornsen/htsysadath |
 | Transcript inventory | mine/inventory | merged | Haiku | 105d837 | 28 sessions indexed; Phase 2 slices against it |
-| Mine: experiments (arc A) | mine/experiments | merged, Opus review PENDING | Sonnet | 0c9e2d0 | D4 reconciled; 47-row index; 4/4 spot-checks held |
-| Mine: pivots (arc B) | mine/pivots | merged, Opus review PENDING | Sonnet | 6544205 | four-act ordering broken → D5; Art Binder unresolved |
+| Mine: experiments (arc A) | mine/experiments → review/experiments-top3 | review running | Sonnet → Opus 5.5 | e37492e | re-cut around TOP-3 on the non-locked remainder (Gerald 08:2x) + auto-lock numbers |
+| Mine: pivots (arc B) | mine/pivots → review/pivots | review running | Sonnet → Opus 5.5 | 6544205 | restructure to concurrent spines (D5); source the 5-crop proposer |
 | Mine: personas (arc C) | mine/personas | merged | Sonnet | a504755 | panel mechanism reconstructed; B19 failure case |
 | Mine: coordinator pattern (arc E) | mine/coordinator | merged | Sonnet | e29c1d8 | 4/5 anti-patterns grounded; 1 honestly refused |
-| Mine: agent labeling (arc F) | mine/labeling | merged, Opus review PENDING | Sonnet | 9a3f1c2 | 3min→10s REFUTED → D6; 4/4 spot-checks held |
+| Mine: agent labeling (arc F) | mine/labeling → review/labeling | review running | Sonnet → Opus 5.5 | 3de113f | two-lever rewrite per D7 (3 min founder stopwatch → agents 11–16 s + UI ~20 s) |
 | Interview Gerald (arc D) | — | done (Q1 deferred) | Gerald | — | answers in decisions.md D4 |
 | Outline v1 | talk/outline | planned | Opus | — | after any two arcs land |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 08:3x PDT — Client updated; **Opus tier re-probed: `claude-opus-5-5[1m]` (Opus 5.5)**.
+  Gerald chose 5.5 for the held reviews by upgrading. Three Opus 5.5 review lanes spawned (A re-cut
+  to top-3, B restructure + 5-crop proposer, F two-lever rewrite). **D7 reverses D6**: the 3-min
+  baseline is Gerald's own stopwatch measurement. **Corpus gap:** the first labeling sessions
+  most plausibly ran on the second account, and `-git-grAIde-main` plus one worktree folder were
+  never inventoried. Lanes told NOT to touch cross-arc.md (report instead), after this morning's
+  add/add conflicts.
 
 - 2026-09-24 08:3x PDT — **Phase 1 COMPLETE: all six lanes merged to main.** 17/17 coordinator
   spot-checks confirmed by re-opening cited sources. Three decisions logged, all the same shape:
