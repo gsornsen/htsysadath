@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">One identify core, two apps</title>
+<desc id="d">One identify core (image-to-image embeddings) serves two apps: bulk scan/lots, wired to it 2026-08-20, and the live-stream scout, switched 2026-09-02. The LLM vision call was demoted to a fallback 08-20 and removed from both apps 09-03. Method: solve the hardest shared piece once, then fan out. Sources: docs/project/decisions.md D11; mining/arcs/B-pivots.md act 3.</desc>
+<defs><marker id="ah-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
+<text x="568" y="28" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >Solve the hardest shared piece once, then fan out</text>
+<rect x="88" y="62" width="380" height="96" rx="14" data-fill-role="surface" fill="#242422" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="1.5" data-align-row="apps" data-align-row-count="2"/>
+<text x="278" y="94" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Bulk scan / lots</text>
+<text x="278" y="130" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >wired in 08-20</text>
+<rect x="668" y="62" width="380" height="96" rx="14" data-fill-role="surface" fill="#242422" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="1.5" data-align-row="apps" data-align-row-count="2"/>
+<text x="858" y="94" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Live-stream scout</text>
+<text x="858" y="130" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >switched 09-02</text>
+<rect x="188" y="242" width="760" height="100" rx="16" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<text x="568" y="274" font-size="32" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >One identify core</text>
+<text x="568" y="314" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >image-to-image embeddings, no LLM</text>
+<path d="M278 232 L278 168" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<path d="M858 232 L858 168" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<text x="568" y="200" font-size="24" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >serves both</text>
+<rect x="283" y="370" width="570" height="48" rx="24" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="568" y="394" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >LLM vision: fallback 08-20, removed 09-03</text>
+</svg>

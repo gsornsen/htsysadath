@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">From 6–15 s identify to 375 ms</title>
+<desc id="d">Roadmap, 2026-08-18 to 2026-09-14: identify end to end with LLM vision took 6–15 s live (10.4 s bakeoff median, 08-18); by 09-11 (E88) the identify round trip was 375 ms p50. Callouts after 09-11 are placed by order, not scale. Seven dated areas that could each have eaten weeks: identify latency, jitter, labeling throughput, accuracy and languages (E67), crop policy (E79b), measuring the right bar, knowing when the UI is done. Sources: talk/plan/structure-v2.md, mining/arcs/B-pivots.md, docs/project/decisions.md D14.</desc>
+<defs><marker id="ah-grey" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
+<rect x="16" y="160" width="220" height="140" rx="12" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2"/>
+<text x="126" y="186" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >08-18</text>
+<text x="126" y="230" font-size="40" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >6–15 s</text>
+<text x="126" y="272" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >10.4 s median</text>
+<rect x="900" y="160" width="220" height="140" rx="12" data-fill-role="surface-tint" fill="#35221a" data-stroke-role="focus" stroke="#d95926" stroke-width="2"/>
+<text x="1010" y="186" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >09-11 · E88</text>
+<text x="1010" y="230" font-size="40" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >375 ms</text>
+<text x="1010" y="272" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >p50</text>
+<text x="126" y="326" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >identify, end to end</text>
+<text x="126" y="356" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3" >(LLM vision)</text>
+<text x="1010" y="326" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="focus" fill="#f2a283" >identify round trip</text>
+<path d="M248 230 L888 230" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-grey)"/>
+<circle cx="300" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M300 164 L300 217" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="300" y="84" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Identify</text>
+<text x="300" y="114" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >latency</text>
+<text x="300" y="146" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >08-18 → 08-20</text>
+<circle cx="389" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M389 243 L389 296" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="389" y="314" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-02 → 09-05</text>
+<text x="389" y="346" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Jitter and</text>
+<text x="389" y="376" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >thrash</text>
+<circle cx="479" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M479 164 L479 217" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="479" y="84" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Labeling</text>
+<text x="479" y="114" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >throughput</text>
+<text x="479" y="146" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-06 → 09-14</text>
+<circle cx="568" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M568 243 L568 296" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="568" y="314" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-08 · E67</text>
+<text x="568" y="346" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Accuracy and</text>
+<text x="568" y="376" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >languages</text>
+<circle cx="657" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M657 164 L657 217" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="657" y="84" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Crop</text>
+<text x="657" y="114" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >policy</text>
+<text x="657" y="146" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-09 · E79b</text>
+<circle cx="747" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M747 243 L747 296" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="747" y="314" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-11</text>
+<text x="747" y="346" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Measuring the</text>
+<text x="747" y="376" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >right bar</text>
+<circle cx="836" cy="230" r="9" data-fill-role="canvas" fill="#1a1a19" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3"/>
+<path d="M836 164 L836 217" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<text x="836" y="84" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Is the UI</text>
+<text x="836" y="114" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >done?</text>
+<text x="836" y="146" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >09-13</text>
+<text x="568" y="30" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >Seven areas that could each have eaten weeks</text>
+<text x="568" y="418" font-size="20" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#898781" >2026 · spaced by order, not to scale</text>
+</svg>

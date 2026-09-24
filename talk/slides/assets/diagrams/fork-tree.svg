@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">45+ forks: 3 areas × 3 parts × ~5 experiments</title>
+<desc id="d">Fork tree: one jittery overlay branches into three areas (UI/UX, card detection, embedding generation), each into about three parts of the system, each into about five experiments, 45 or more forks for one person. The fan-out is Gerald's own estimate (testimony, not in the record). Sources: talk/abstract-rough.md; docs/project/decisions.md D14 (the 3x5 fork grid is testimony), D16.</desc>
+<defs></defs>
+<rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
+<rect x="418" y="14" width="300" height="52" rx="12" data-fill-role="edge-fill" fill="#1c2838" data-stroke-role="edge-line" stroke="#3987e5" stroke-width="2"/>
+<text x="568" y="40" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >A jittery overlay</text>
+<path d="M568 66 L568 88" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M192 88 L944 88" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M192 88 L192 110" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<rect x="40" y="110" width="304" height="56" rx="12" data-fill-role="surface" fill="#242422" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="1.5" data-layout-group="fa" data-distribution="equal-gap" data-axis="x" data-group-count="3" data-gap-tol="1" data-layout-item="fa"/>
+<text x="192" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >UI / UX</text>
+<path d="M192 166 L192 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M82 190 L302 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M82 190 L82 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="82" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M82 240 L82 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M42 262 L122 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M42 262 L42 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="42" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M62 262 L62 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="62" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M82 262 L82 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="82" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M102 262 L102 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="102" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M122 262 L122 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="122" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M192 190 L192 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="192" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M192 240 L192 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M152 262 L232 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M152 262 L152 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="152" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M172 262 L172 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="172" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M192 262 L192 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="192" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M212 262 L212 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="212" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M232 262 L232 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="232" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M302 190 L302 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="302" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M302 240 L302 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M262 262 L342 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M262 262 L262 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="262" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M282 262 L282 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="282" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M302 262 L302 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="302" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M322 262 L322 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="322" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M342 262 L342 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="342" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M568 88 L568 110" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<rect x="416" y="110" width="304" height="56" rx="12" data-fill-role="surface" fill="#242422" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="1.5" data-layout-item="fa"/>
+<text x="568" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Card detection</text>
+<path d="M568 166 L568 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M458 190 L678 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M458 190 L458 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="458" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M458 240 L458 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M418 262 L498 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M418 262 L418 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="418" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M438 262 L438 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="438" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M458 262 L458 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="458" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M478 262 L478 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="478" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M498 262 L498 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="498" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M568 190 L568 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="568" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M568 240 L568 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M528 262 L608 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M528 262 L528 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="528" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M548 262 L548 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="548" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M568 262 L568 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="568" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M588 262 L588 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="588" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M608 262 L608 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="608" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M678 190 L678 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="678" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M678 240 L678 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M638 262 L718 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M638 262 L638 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="638" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M658 262 L658 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="658" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M678 262 L678 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="678" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M698 262 L698 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="698" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M718 262 L718 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="718" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M944 88 L944 110" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<rect x="792" y="110" width="304" height="56" rx="12" data-fill-role="surface" fill="#242422" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="1.5" data-layout-item="fa"/>
+<text x="944" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Embedding generation</text>
+<path d="M944 166 L944 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M834 190 L1054 190" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<path d="M834 190 L834 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="834" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M834 240 L834 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M794 262 L874 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M794 262 L794 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="794" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M814 262 L814 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="814" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M834 262 L834 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="834" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M854 262 L854 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="854" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M874 262 L874 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="874" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M944 190 L944 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="944" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M944 240 L944 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M904 262 L984 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M904 262 L904 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="904" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M924 262 L924 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="924" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M944 262 L944 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="944" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M964 262 L964 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="964" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M984 262 L984 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="984" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M1054 190 L1054 208" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2" stroke-linecap="round"/>
+<circle cx="1054" cy="224" r="16" data-fill-role="data-fill" fill="#262624" data-stroke-role="ink" stroke="#c3c2b7" stroke-width="2"/>
+<path d="M1054 240 L1054 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M1014 262 L1094 262" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M1014 262 L1014 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="1014" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M1034 262 L1034 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="1034" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M1054 262 L1054 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="1054" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M1074 262 L1074 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="1074" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<path d="M1094 262 L1094 292" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="1094" cy="300" r="8" data-fill-role="compute-line" fill="#199e70"/>
+<text x="520" y="360" font-size="28" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >3 areas × 3 parts × ~5 experiments</text>
+<text x="520" y="404" font-size="32" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >= 45+ forks, one of me</text>
+<rect x="715.5" y="388" width="149" height="32" rx="16" data-fill-role="surface" fill="#242422" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5" stroke-dasharray="5 4"/><text x="790" y="404" font-size="20" font-style="italic" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#c3c2b7" >my estimate</text>
+</svg>
