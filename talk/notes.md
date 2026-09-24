@@ -249,13 +249,14 @@ on the day; it was 75 at 09:5x PDT on 09-24.⟩
 
 ## Slide 20 · Remembered vs recorded
 
-Four times, the record corrected my memory [plan §2]. I remembered the dedup work as the
-simplifying win. The record says dedup's kill fired and a small head shipped [D4; arc A]. I dated
-my top-3 bar to the 13th. The docs have it on the 11th [cross-arc]. A padded-crop win didn't
-hold on replay: 25 versus 24 at top-1, 33 versus 33 at top-3 [cross-arc]. And 76.9 % on 52 lots
-was a small-sample high. On 87 lots it's 71.3 % [lot-top3]. Twice, it went the other way. The
-record was over-read, and the person who was there corrected it [D7; D9]. So keep both records,
-and check in both directions.
+Three times, the record corrected my memory [plan §2]. I remembered the dedup work as the
+simplifying win. The record says dedup's own kill fired and a small head shipped: the negative
+result was the win [D4; arc A]. I dated my top-3 bar to the 13th. The docs have it on the 11th
+[cross-arc]. And 76.9 % on 52 lots was a small-sample high. On 87 lots it's 71.3 % [lot-top3].
+Three times, it went the other way. Overlapping dates were read as concurrent work [D9]. A
+message outside the corpus was read as unsourced [D7]. And a replay that compared two single
+crops was read as undoing my single-crop win over the five-crop vote. It never re-ran the vote;
+that win stands, 31 versus 26 of 41 [D12; E79b]. So keep both records, and check in both directions.
 
 ## Slide 21 · Against paralysis
 

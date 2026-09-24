@@ -115,3 +115,10 @@ entry; link the finding or commit that proves it.
   original result shown as the thing that failed, and D4 framed as a wrong memory when D4 found a
   framing difference. A chart about "the record corrects memory" can misquote the record too. The
   reviewer has to read the sentence, not just re-derive the digits.
+
+- `[method]` 2026-09-24: **before counting a replay against a result, check that it compared the
+  same two arms.** E79 was single crop vs the 5-crop vote; the 09-13 "replay" was single crop vs
+  single crop (padding only). Two lanes and the coordinator (who approved the chart row) accepted it
+  as a failed replication, because the numbers were real and the doc was right there. Third time
+  today the record was over-read and the founder was right (D7, D9, D12). This one survived a
+  numeric review because the numbers were accurate; only the arms were wrong.

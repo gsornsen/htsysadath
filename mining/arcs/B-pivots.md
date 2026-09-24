@@ -76,7 +76,9 @@ and the server keeps the best-scoring crop. The ship gate scored 19 correct / 0 
 1 / 30 for the old path [src: `3079bbc68` · 2026-09-02; `3b66e82cc` · 2026-09-03]. By 09-09 the
 founder called it "a hack/optimization around poor accuracy prior to fixing catalog issues". On
 41 scenes, E79b scored the vote 26/41 at 1,893 ms and one padded crop 31/41 at 337 ms
-[src: docs/experiments/EXP-E79-single-crop-vs-proposal-vote-2026-09-09.md].
+[src: docs/experiments/EXP-E79-single-crop-vs-proposal-vote-2026-09-09.md]. The ledger's verdict: "drop the vote
+hack" (E79 status done, not shipped). The extension still sends five crops; the follow-up never reached
+it [src: experiment-ledger E79 @ f75d531d; content.ts captureProposals; D12].
 
 **The counter-example (D5).** A review lane read the overlapping commit dates as parallel work
 and rebuilt this arc as concurrent spines. The founder corrected it: dates show when commits
@@ -98,10 +100,11 @@ write down why the next act starts and which number from the last act justifies 
 - **The baseline that earned its keep.** Vision 5/6 at 10.4 s beside embedding ~130 ms, then
   SigLIP 0.84 top-1 at 44 ms (08-18 → 08-20).
 - **The LLM's exit in two dates.** Demoted to fallback on 08-20, gone on 09-03.
-- **The proposer's life.** 0/36 → 19/0 → 26 vs 31 of 41.
+- **The proposer's life.** 0/36 → 19/0 → 26 vs 31 of 41 → verdict "drop the vote hack" (09-09), not yet shipped.
 
 ## 5. Open questions for Gerald
 
 1. ~~Where image-to-image first ran~~. **Resolved (D11):** a shared identify core for both apps, not a port.
 2. ~~Where act 4 starts~~. **Resolved (D11):** 2026-09-06; 08-23 is a precursor.
-3. **"5 crop proposer gone" (09-11).** No commit retires it. Shipped outside this repo?
+3. **"5 crop proposer gone" (09-11).** Partly resolved (D12): the single-crop win stands and the ledger says drop the
+   vote, but no ref in any copy removes it from the extension. Planned, or built from an uncommitted tree?

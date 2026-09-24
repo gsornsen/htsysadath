@@ -54,3 +54,7 @@ outside its own arc files it here instead of editing another arc's doc.
   commit dates ≠ concurrent work; Art Binder is out of the talk. D5 is now the counter-example
   to the talk spine ("the record can be over-read too"), not an instance of it.
   [src: founder testimony · 2026-09-24 · D9]
+- CORRECTION (D12, 2026-09-24): the earlier line "E79's padded-crop win did not hold on replay" is
+  wrong. The 09-13 B1 replay compared two single crops (b00 vs b17), never the vote; E79b's single
+  crop beat the vote 31 vs 26 of 41 and stands. Now a counter-example ("a 'replication' that tested
+  different arms"), not a record-corrects-memory instance. [src: EXP-E79 177749ea6; ledger E79; D12]

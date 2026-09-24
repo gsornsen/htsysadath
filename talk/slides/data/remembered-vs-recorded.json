@@ -1,5 +1,5 @@
 {
-  "source": "docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4",
+  "source": "docs/project/decisions.md D4, D5→D9, D6→D7; mining/findings/top3-trajectory.md §0; mining/findings/cross-arc.md; mining/findings/lot-top3-unlocked.md §4; docs/experiments/EXP-E79 (Grailith 177749ea6); experiment-ledger E79; decisions.md D12",
   "title": "Remembered vs recorded",
   "rows": [
     {
@@ -15,13 +15,6 @@
       "remembered": "Founder set the top-3 bar 09-13 22:44.",
       "recorded": "The bar first appears 09-11 19:37 PDT (evening plan); 09-13 is a restatement.",
       "source": "top3-trajectory.md §0"
-    },
-    {
-      "type": "record-corrects-memory",
-      "instance": "E79 crop-vote win",
-      "remembered": "One padded crop beat the 5-crop vote (31 vs 26 of 41).",
-      "recorded": "On the 09-13 replay it was a wash: top-1 25 vs 24, top-3 33 vs 33.",
-      "source": "cross-arc.md; top3-trajectory.md / experiments-index E79 row"
     },
     {
       "type": "record-corrects-memory",
@@ -45,7 +38,15 @@
       "recorded": "Founder testimony stands; the message simply lived outside the mined corpus (a second account).",
       "source": "decisions.md D6, D7",
       "label": "absence from the corpus ≠ unsourced"
+    },
+    {
+      "type": "counter-example",
+      "instance": "E79: one crop vs the 5-crop vote",
+      "remembered": "A 09-13 replay read as undoing the single-crop win (25 vs 24).",
+      "recorded": "Founder: the single crop won, and E79b stands: 31 vs 26 of 41 at 337 vs 1,893 ms; ledger verdict ‘drop the vote hack’. The 09-13 replay compared two single crops (b00 vs b17), never the vote.",
+      "source": "EXP-E79 (177749ea6); experiment-ledger E79; D12",
+      "label": "a ‘replication’ that tested different arms"
     }
   ],
-  "caption": "Four rows where the record corrects memory. Two counter-example rows, marked apart: the record can be over-read too. Keep both records, and check in both directions."
+  "caption": "Three rows where the record corrects memory. Three counter-examples, marked apart, where the record was over-read and the person who was there corrected it. Keep both records, and check in both directions."
 }

@@ -234,3 +234,30 @@ concurrency swimlane and Art Binder.
 
 Applied: `mining/arcs/B-pivots.md` (act 3/4 text, §5 resolved), brief.md arc B row; L2 (chart #3
 JSON) and L5 (notes, slides 7–8) told while running.
+
+## D12 · 2026-09-24 · The single-crop win stands; "the replay undid it" was our over-read
+
+**Context.** The arc-B review lane, the cross-arc log and the coordinator-approved chart row all said
+E79's single-crop win "didn't hold on replay" (09-13: 25 vs 24 top-1, 33 vs 33 top-3). Gerald
+disputed it: single crop clearly raised accuracy. A verification lane (Opus 5.5) swept every clone,
+every ref (laptop and devbox, after fetch), every experiment markdown file, the backlog and the ledger.
+
+**Finding (verified by the coordinator against the sources).**
+- E79b (Grailith `177749ea6`, 2026-09-09 02:11 PDT), 41 human-truth scenes: vote **26/41** at 1,893 ms;
+  one tight+17 px crop (b17) **31/41** at 337 ms; oracle 33. Wider crops LOST (b34 21, outer17 6).
+- Ledger (`experiment-ledger.md` @ f75d531d): E79 status **D** (done, not shipped). Verdict: "Vote
+  WORSE than single 17px-padded crop and 5.6x slower; drop the vote hack."
+- The 09-13 "replay" (prod-readiness B1) compared **b00 vs b17**, two single crops, padding only, in
+  the pregrade-web app. It never re-ran the vote. The same doc restates E79b as standing.
+- No git hygiene gap: laptop and devbox trunks are both at `f75d531d`, even with origin. The
+  extension still sends five crops (`content.ts` → `captureProposals`; no flag). The E79
+  recommendation never reached the extension.
+
+**Decision.** The E79 row moves from "record corrects memory" to a THIRD counter-example: "a
+'replication' that tested different arms". The talk says: the single crop won (31 vs 26 of 41,
+5.6× faster), the verdict was to drop the vote, and it hadn't shipped to the extension as of the
+record. Chart, slide 20 notes, arc B and cross-arc corrected.
+
+**Still open with Gerald.** (1) The winning crop was tight + ~17 px, not WIDE; wide variants lost.
+Is "wide" meant relative to the old tight detect crop? (2) "5 crop proposer gone" (09-11) isn't in
+any ref. Was it retired in an uncommitted build, or planned?
