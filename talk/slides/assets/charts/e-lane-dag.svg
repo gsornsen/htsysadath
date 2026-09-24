@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
+<rect x="0" y="0" width="1280" height="720" fill="#1a1a19"/>
+<text x="56" y="56" fill="#ffffff" font-size="30" font-weight="700">Coordinator: the reviewer sits one tier above</text>
+<defs>
+    <pattern id="hatch-fable" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#199e70"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#0f3b2c" stroke-width="3"/>
+    </pattern>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#898781"/>
+    </marker></defs>
+<text x="90" y="525" text-anchor="end" fill="#898781" font-size="14">Haiku</text>
+<line x1="100" y1="520" x2="1220" y2="520" stroke="#2c2c2a" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="90" y="395" text-anchor="end" fill="#898781" font-size="14">Sonnet</text>
+<line x1="100" y1="390" x2="1220" y2="390" stroke="#2c2c2a" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="90" y="265" text-anchor="end" fill="#898781" font-size="14">Opus 5.5</text>
+<line x1="100" y1="260" x2="1220" y2="260" stroke="#2c2c2a" stroke-width="1" stroke-dasharray="2,4"/>
+<text x="90" y="135" text-anchor="end" fill="#898781" font-size="14">Fable</text>
+<line x1="100" y1="130" x2="1220" y2="130" stroke="#2c2c2a" stroke-width="1" stroke-dasharray="2,4"/>
+<line x1="220" y1="520" x2="1050" y2="640" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="220" y1="390" x2="560" y2="260" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="560" y1="260" x2="1050" y2="640" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="220" y1="390" x2="560" y2="260" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="560" y1="260" x2="1050" y2="640" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="220" y1="260" x2="560" y2="130" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="560" y1="130" x2="1050" y2="640" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="990" y="616" width="120" height="48" rx="8" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<text x="1050" y="646" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">main</text>
+<rect x="130" y="496" width="180" height="48" rx="8" fill="#3987e5" stroke="#1a1a19" stroke-width="3"/>
+<text x="220" y="518" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">mine/inventory</text>
+<text x="220" y="536" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">105d837</text>
+<rect x="130" y="366" width="180" height="48" rx="8" fill="#d95926" stroke="#1a1a19" stroke-width="3"/>
+<text x="220" y="388" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">mine/experiments</text>
+<text x="220" y="406" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">e37492e</text>
+<rect x="470" y="236" width="180" height="48" rx="8" fill="#199e70" stroke="#1a1a19" stroke-width="3"/>
+<text x="560" y="258" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">review/experiments-top3</text>
+<text x="560" y="276" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">6b0d9b9</text>
+<rect x="130" y="366" width="180" height="48" rx="8" fill="#d95926" stroke="#1a1a19" stroke-width="3"/>
+<text x="220" y="388" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">mine/pivots</text>
+<text x="220" y="406" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">6544205</text>
+<rect x="470" y="236" width="180" height="48" rx="8" fill="#199e70" stroke="#1a1a19" stroke-width="3"/>
+<text x="560" y="258" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">review/pivots</text>
+<text x="560" y="276" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">1f3a3f7</text>
+<rect x="130" y="236" width="180" height="48" rx="8" fill="#199e70" stroke="#1a1a19" stroke-width="3"/>
+<text x="220" y="258" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">plan/synthesis</text>
+<text x="220" y="276" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">4c5c773</text>
+<rect x="470" y="106" width="180" height="48" rx="8" fill="url(#hatch-fable)" stroke="#1a1a19" stroke-width="3"/>
+<text x="560" y="128" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">coordinator review</text>
+<text x="560" y="146" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.85">8e3553c</text>
+<text x="100" y="608" fill="#898781" font-size="13">tier (reviewer one tier above implementer)</text>
+<rect x="100" y="624" width="18" height="18" rx="3" fill="#3987e5"/>
+<text x="126" y="638" fill="#c3c2b7" font-size="14">Haiku</text>
+<rect x="250" y="624" width="18" height="18" rx="3" fill="#d95926"/>
+<text x="276" y="638" fill="#c3c2b7" font-size="14">Sonnet</text>
+<rect x="400" y="624" width="18" height="18" rx="3" fill="#199e70"/>
+<text x="426" y="638" fill="#c3c2b7" font-size="14">Opus 5.5</text>
+<rect x="550" y="624" width="18" height="18" rx="3" fill="url(#hatch-fable)"/>
+<text x="576" y="638" fill="#c3c2b7" font-size="14">Fable</text>
+<text x="56" y="676" fill="#898781" font-size="14">source: docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)</text>
+</svg>
