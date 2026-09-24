@@ -30,6 +30,6 @@
 <line x1="423.38" y1="228" x2="423.38" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
 <line x1="483.08000000000004" y1="228" x2="483.08000000000004" y2="240" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
 <text x="469.23" y="289" fill="#ffffff" font-size="28" font-weight="700">31–46s total</text>
-<text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s (instrumented, E84)</text>
+<text x="300" y="338" fill="#c3c2b7" font-size="22" font-weight="600">Agent first pass: 11–16s (measured)</text>
 <text x="300" y="366" fill="#c3c2b7" font-size="22" font-weight="600">Human review: 20–30s (my estimate — not instrumented)</text>
 </svg>

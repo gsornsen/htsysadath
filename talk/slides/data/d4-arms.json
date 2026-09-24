@@ -1,12 +1,54 @@
 {
-  "source": "grAIde-main docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.2 (arm print@1 table) and §4.3 (a) (kill criterion, ~line 662); G0h found after the kill, same 201-crop test split: mining/arcs/A-experiments.md (2026-09-08/09 entry)",
-  "title": "The dedup arm failed its pre-registered kill line",
-  "desc": "Top-1 accuracy on the same 201 test crops: G0 (flat gallery, no head) 136 of 201, 67.7%; G3 (dedup) 107 of 201, 53.2%, below the pre-registered kill line of G0 minus 2.0 points (65.7%), so it was killed; G0h (flat gallery plus a language head), found after the kill on the same split, 156 of 201, 77.6%.",
+  "source": "grAIde-main docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.2 (arm print@1 table) and §4.3 (a) (pass/fail criterion, ~line 662); G0h found after G3 was dropped, same 201-crop test split: mining/arcs/A-experiments.md (2026-09-08/09 entry)",
+  "title": "My favourite idea failed the pass/fail bar I wrote first",
+  "desc": "First-guess accuracy on the same 201 test photos. Before (G0: flat index, no language head): 136 of 201, 67.7%. My favourite idea, dedupe the index (G3): 107 of 201, 53.2%, below the pass/fail bar written before the run of G0 minus 2.0 points (65.7%), so it was dropped. What shipped, the flat index plus a language re-rank (G0h, flat gallery plus a language head), found afterwards on the same split: 156 of 201, 77.6%.",
   "bars": [
-    { "key": "G0",  "label": "G0 — flat, no head",           "numerator": 136, "denominator": 201, "role": "baseline" },
-    { "key": "G3",  "label": "G3 — dedup",                     "numerator": 107, "denominator": 201, "role": "context", "killed": true },
-    { "key": "G0h", "label": "G0h — flat + language head",     "numerator": 156, "denominator": 201, "role": "after",
-      "tag": ["found after the kill ·", "same 201 test crops"] }
+    {
+      "key": "G0",
+      "label": "before",
+      "numerator": 136,
+      "denominator": 201,
+      "role": "baseline",
+      "lines": [
+        "before"
+      ]
+    },
+    {
+      "key": "G3",
+      "label": "my favourite idea: dedupe the index",
+      "numerator": 107,
+      "denominator": 201,
+      "role": "context",
+      "lines": [
+        "my favourite idea:",
+        "dedupe the index"
+      ],
+      "dropped": true,
+      "status": "failed its bar · dropped"
+    },
+    {
+      "key": "G0h",
+      "label": "what shipped: flat index + a language re-rank",
+      "numerator": 156,
+      "denominator": 201,
+      "role": "after",
+      "tag": [
+        "found afterwards ·",
+        "same 201 test photos"
+      ],
+      "lines": [
+        "what shipped: flat index",
+        "+ a language re-rank"
+      ]
+    }
   ],
-  "killLine": { "pct": 65.66, "lines": ["pre-registered", "kill line {pct}", "(G0 − 2.0 pts)"] }
+  "killLine": {
+    "pct": 65.66,
+    "lines": [
+      "pass/fail bar,",
+      "written first:",
+      "{pct}",
+      "before − 2.0 pts"
+    ]
+  }
 }

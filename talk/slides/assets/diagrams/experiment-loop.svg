@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">The experiment loop</title>
-<desc id="d">Process loop: (1) instrument key transitions, (2) record live sessions, (3) replay the same recorded data offline, then a loop: (4) gated experiments in isolated git worktrees overnight, (5) the gate passes against a bar set before the run, (6) merge behind a feature flag with production left off (I flip production myself), (7) the next experiment unlocks. Sources: talk/abstract-rough.md; docs/project/decisions.md D14, D16.</desc>
+<desc id="d">Process loop: (1) log what the app does at each key moment (instrument key transitions), (2) record live sessions, (3) replay the same recorded data offline, then a loop: (4) gated experiments in isolated git worktrees overnight, (5) the gate passes against a bar set before the run, (6) merge behind a feature flag with production left off (I flip production myself), (7) the next experiment unlocks. Sources: talk/abstract-rough.md; docs/project/decisions.md D14, D16.</desc>
 <defs><marker id="ah-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
 <rect x="16" y="66" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-group="es" data-distribution="equal-gap" data-axis="y" data-group-count="3" data-gap-tol="1" data-layout-item="es"/>
 <circle cx="52" cy="110" r="18" data-fill-role="compute-line" fill="#199e70"/>
 <text x="52" y="110" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >1</text>
-<text x="82" y="95" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Instrument</text>
-<text x="82" y="127" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >key transitions</text>
+<text x="82" y="95" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Log</text>
+<text x="82" y="127" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >each key moment</text>
 <rect x="16" y="176" width="290" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5" data-layout-item="es"/>
 <circle cx="52" cy="220" r="18" data-fill-role="compute-line" fill="#199e70"/>
 <text x="52" y="220" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >2</text>
@@ -32,7 +32,7 @@
 <circle cx="821" cy="150" r="18" data-fill-role="compute-line" fill="#199e70"/>
 <text x="821" y="150" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >6</text>
 <text x="851" y="135" font-size="24" font-weight="700" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff" >Merge behind a flag</text>
-<text x="851" y="167" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >prod stays off</text>
+<text x="851" y="167" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6" >production stays off</text>
 <rect x="366" y="106" width="335" height="88" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
 <circle cx="402" cy="150" r="18" data-fill-role="compute-line" fill="#199e70"/>
 <text x="402" y="150" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff" >7</text>

@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<title id="t">Coordinator: the reviewer sits one tier above</title>
-<desc id="d">Lanes from this repo, one column each, merging into main. Rows are model tiers, bottom to top: Haiku, Sonnet, Opus 5.5, and the coordinator (Fable). Grey boxes do the work; green boxes review it one tier up; the coordinator's review is a white outline. Haiku mined the inventory and merged. Sonnet mined experiments and pivots; Opus reviewed each (top-3, pivots) before merge. Opus wrote the synthesis plan; the coordinator reviewed it before merge. Source: docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)</desc>
+<title id="t">A lane per fix: a smaller model builds, a stronger model reviews, I decide</title>
+<desc id="d">Lanes from this repo, one column each, merging into the shared code (main). Rows are model tiers, bottom to top: smallest model (Haiku), smaller model (Sonnet), stronger model (Opus 5.5), and the coordinator (Fable), where I make the calls. Grey boxes build; green boxes review the work one tier up; the coordinator's review is a white outline. Haiku mined the source inventory and merged. Sonnet mined the experiments and the pivots; Opus reviewed each (top-3, pivots) before merge. Opus wrote the synthesis plan; the coordinator reviewed it before merge. Source: docs/project/tracking.md lane table + this repo's own merge log (`git log main --oneline --merges`, 2026-09-24) — curated, not git log --all (dominated by ambient worktree-agent-* branches)</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <defs>
     <marker id="dag-arrow" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M2,2 L10,6 L2,10" fill="none" stroke="#c3c2b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker></defs>
-<text x="150" y="342" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="150" y="342">Haiku</tspan></text>
-<text x="150" y="248" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="150" y="248">Sonnet</tspan></text>
-<text x="150" y="154" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="150" y="154">Opus 5.5</tspan></text>
-<text x="150" y="47" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="150" y="47">coordinator</tspan><tspan x="150" y="73">(Fable)</tspan></text>
-<rect x="170" y="396" width="950" height="38" rx="8" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
-<text x="186" y="423" fill="#ffffff" font-size="24" font-weight="700">main</text>
-<line x1="281" y1="361" x2="281" y2="388" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<line x1="517" y1="213" x2="517" y2="181" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<path d="M 624 146 L 629.5 146 L 629.5 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<text x="206" y="329" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="206" y="329">smallest</tspan><tspan x="206" y="355">model</tspan></text>
+<text x="206" y="235" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="206" y="235">smaller</tspan><tspan x="206" y="261">model</tspan></text>
+<text x="206" y="141" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="206" y="141">stronger</tspan><tspan x="206" y="167">model</tspan></text>
+<text x="206" y="47" text-anchor="end" fill="#c3c2b7" font-size="24"><tspan x="206" y="47">coordinator;</tspan><tspan x="206" y="73">I decide</tspan></text>
+<rect x="226" y="396" width="894" height="38" rx="8" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<text x="242" y="423" fill="#ffffff" font-size="24" font-weight="700">merged</text>
+<line x1="325" y1="361" x2="325" y2="388" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<line x1="539" y1="213" x2="539" y2="181" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<path d="M 634 146 L 640 146 L 640 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
 <line x1="753" y1="213" x2="753" y2="181" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<path d="M 860 146 L 865.5 146 L 865.5 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<line x1="989" y1="119" x2="989" y2="87" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<path d="M 1096 52 L 1101.5 52 L 1101.5 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
-<rect x="174" y="307" width="214" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
-<text x="281" y="342" text-anchor="middle" fill="#ffffff" font-size="24" >mine: inventory</text>
-<rect x="410" y="213" width="214" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
-<text x="517" y="248" text-anchor="middle" fill="#ffffff" font-size="24" >mine: experiments</text>
-<rect x="410" y="119" width="214" height="54" rx="8" fill="#162c24" stroke="#199e70" stroke-width="2"/>
-<text x="517" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >review: top-3</text>
-<rect x="646" y="213" width="214" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
-<text x="753" y="248" text-anchor="middle" fill="#ffffff" font-size="24" >mine: pivots</text>
-<rect x="646" y="119" width="214" height="54" rx="8" fill="#162c24" stroke="#199e70" stroke-width="2"/>
-<text x="753" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >review: pivots</text>
-<rect x="882" y="119" width="214" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
-<text x="989" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >plan: synthesis</text>
-<rect x="882" y="25" width="214" height="54" rx="8" fill="#1a1a19" stroke="#ffffff" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="989" y="60" text-anchor="middle" fill="#ffffff" font-size="24" >final review</text>
-<rect x="174" y="74" width="214" height="142" rx="8" fill="none" stroke="#383835" stroke-width="1.5"/>
-<rect x="190" y="91" width="22" height="22" rx="4" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
-<text x="224" y="110" fill="#c3c2b7" font-size="24"><tspan x="224" y="110">does the work</tspan></text>
-<rect x="190" y="141" width="22" height="22" rx="4" fill="#162c24" stroke="#199e70" stroke-width="2"/>
-<text x="224" y="160" fill="#c3c2b7" font-size="24"><tspan x="224" y="160">reviews it,</tspan><tspan x="224" y="188">one tier up</tspan></text>
+<path d="M 848 146 L 854 146 L 854 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<line x1="967" y1="119" x2="967" y2="87" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<path d="M 1062 52 L 1068 52 L 1068 388" fill="none" stroke="#c3c2b7" stroke-width="2.5" marker-end="url(#dag-arrow)"/>
+<rect x="230" y="307" width="190" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
+<text x="325" y="342" text-anchor="middle" fill="#ffffff" font-size="24" >inventory</text>
+<rect x="444" y="213" width="190" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
+<text x="539" y="248" text-anchor="middle" fill="#ffffff" font-size="24" >experiments</text>
+<rect x="444" y="119" width="190" height="54" rx="8" fill="#162c24" stroke="#199e70" stroke-width="2"/>
+<text x="539" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >review</text>
+<rect x="658" y="213" width="190" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
+<text x="753" y="248" text-anchor="middle" fill="#ffffff" font-size="24" >pivots</text>
+<rect x="658" y="119" width="190" height="54" rx="8" fill="#162c24" stroke="#199e70" stroke-width="2"/>
+<text x="753" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >review</text>
+<rect x="872" y="119" width="190" height="54" rx="8" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
+<text x="967" y="154" text-anchor="middle" fill="#ffffff" font-size="24" >the plan</text>
+<rect x="872" y="25" width="190" height="54" rx="8" fill="#1a1a19" stroke="#ffffff" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="967" y="60" text-anchor="middle" fill="#ffffff" font-size="24" >final review</text>
+<rect x="230" y="74" width="190" height="142" rx="8" fill="none" stroke="#383835" stroke-width="1.5"/>
+<rect x="246" y="91" width="22" height="22" rx="4" fill="#2a2927" stroke="#726f68" stroke-width="1.5"/>
+<text x="280" y="110" fill="#c3c2b7" font-size="24"><tspan x="280" y="110">builds</tspan></text>
+<rect x="246" y="141" width="22" height="22" rx="4" fill="#162c24" stroke="#199e70" stroke-width="2"/>
+<text x="280" y="160" fill="#c3c2b7" font-size="24"><tspan x="280" y="160">reviews it,</tspan><tspan x="280" y="188">one tier up</tspan></text>
 </svg>

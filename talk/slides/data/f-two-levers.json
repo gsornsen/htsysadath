@@ -3,17 +3,36 @@
   "title": "3 minutes fell through two levers",
   "barA": {
     "label": "By hand, fresh label",
-    "low": 180, "high": 180, "unit": "s",
+    "low": 180,
+    "high": 180,
+    "unit": "s",
     "testimony": true,
     "tierLabel": "my testimony (D7) — original message not in the mined corpus"
   },
   "barB": {
     "label": "With agents",
     "segments": [
-      { "key": "agent", "label": "Agent first pass",  "low": 11, "high": 16, "unit": "s", "tierLabel": "instrumented — E84, Gemini 2.5 Flash / Haiku 4.5" },
-      { "key": "human", "label": "Human review",      "low": 20, "high": 30, "unit": "s", "tierLabel": "my estimate, not instrumented — 09-13/09-14" }
+      {
+        "key": "agent",
+        "label": "Agent first pass",
+        "low": 11,
+        "high": 16,
+        "unit": "s",
+        "tierLabel": "instrumented — E84, Gemini 2.5 Flash / Haiku 4.5",
+        "shortTag": "measured"
+      },
+      {
+        "key": "human",
+        "label": "Human review",
+        "low": 20,
+        "high": 30,
+        "unit": "s",
+        "tierLabel": "my estimate, not instrumented — 09-13/09-14",
+        "shortTag": "my estimate — not instrumented"
+      }
     ],
-    "totalLow": 31, "totalHigh": 46
+    "totalLow": 31,
+    "totalHigh": 46
   },
   "caveat": "Task-shape caveat: the 3-min figure is a FRESH label by hand; 11–16s and 20–30s are per REVIEW task, made with agent pre-labels already on screen — different task shapes."
 }

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<title id="t">The dedup arm failed its pre-registered kill line</title>
-<desc id="d">Top-1 accuracy on the same 201 test crops: G0 (flat gallery, no head) 136 of 201, 67.7%; G3 (dedup) 107 of 201, 53.2%, below the pre-registered kill line of G0 minus 2.0 points (65.7%), so it was killed; G0h (flat gallery plus a language head), found after the kill on the same split, 156 of 201, 77.6%. Source: grAIde-main docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.2 (arm print@1 table) and §4.3 (a) (kill criterion, ~line 662); G0h found after the kill, same 201-crop test split: mining/arcs/A-experiments.md (2026-09-08/09 entry)</desc>
+<title id="t">My favourite idea failed the pass/fail bar I wrote first</title>
+<desc id="d">First-guess accuracy on the same 201 test photos. Before (G0: flat index, no language head): 136 of 201, 67.7%. My favourite idea, dedupe the index (G3): 107 of 201, 53.2%, below the pass/fail bar written before the run of G0 minus 2.0 points (65.7%), so it was dropped. What shipped, the flat index plus a language re-rank (G0h, flat gallery plus a language head), found afterwards on the same split: 156 of 201, 77.6%. Source: grAIde-main docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.2 (arm print@1 table) and §4.3 (a) (pass/fail criterion, ~line 662); G0h found after G3 was dropped, same 201-crop test split: mining/arcs/A-experiments.md (2026-09-08/09 entry)</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <line x1="90" y1="286" x2="886" y2="286" stroke="#2c2c2a" stroke-width="1"/>
 <text x="76" y="293" text-anchor="end" fill="#898781" font-size="22">0%</text>
@@ -18,17 +18,17 @@
 <rect x="147.66666666666666" y="116.84577114427859" width="150" height="169.1542288557214" rx="4" fill="#3987e5"/>
 <text x="222.66666666666666" y="152.8457711442786" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">67.7%</text>
 <text x="222.66666666666666" y="182.8457711442786" text-anchor="middle" fill="#ffffff" font-size="22">136 of 201</text>
-<text x="222.66666666666666" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="222.66666666666666" y="320">G0 — flat, no head</tspan></text>
+<text x="222.66666666666666" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="222.66666666666666" y="320">before</tspan></text>
 <rect x="413" y="152.91542288557213" width="150" height="133.08457711442787" rx="4" fill="#726f68"/>
 <text x="488" y="188.91542288557213" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">53.2%</text>
 <text x="488" y="218.91542288557213" text-anchor="middle" fill="#ffffff" font-size="22">107 of 201</text>
-<text x="488" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="488" y="320">G3 — dedup</tspan></text>
-<text x="488" y="352" text-anchor="middle" fill="#e66767" font-size="22" font-weight="700">KILLED</text>
+<text x="488" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="488" y="320">my favourite idea:</tspan><tspan x="488" y="348">dedupe the index</tspan></text>
+<text x="488" y="380" text-anchor="middle" fill="#e66767" font-size="22" font-weight="700">failed its bar · dropped</text>
 <rect x="678.3333333333333" y="91.97014925373134" width="150" height="194.02985074626866" rx="4" fill="#d95926"/>
 <text x="753.3333333333333" y="127.97014925373134" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700">77.6%</text>
 <text x="753.3333333333333" y="157.97014925373134" text-anchor="middle" fill="#ffffff" font-size="22">156 of 201</text>
-<text x="753.3333333333333" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="753.3333333333333" y="320">G0h — flat +</tspan><tspan x="753.3333333333333" y="348">language head</tspan></text>
-<text x="753.3333333333333" y="380" text-anchor="middle" fill="#c3c2b7" font-size="22">found after the kill ·</text>
-<text x="753.3333333333333" y="406" text-anchor="middle" fill="#c3c2b7" font-size="22">same 201 test crops</text>
-<text x="910" y="101.85000000000002" fill="#e66767" font-size="24" font-weight="600"><tspan x="910" y="101.85000000000002">pre-registered</tspan><tspan x="910" y="129.85000000000002">kill line 65.7%</tspan><tspan x="910" y="157.85000000000002">(G0 − 2.0 pts)</tspan></text>
+<text x="753.3333333333333" y="320" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="753.3333333333333" y="320">what shipped: flat index</tspan><tspan x="753.3333333333333" y="348">+ a language re-rank</tspan></text>
+<text x="753.3333333333333" y="380" text-anchor="middle" fill="#c3c2b7" font-size="22">found afterwards ·</text>
+<text x="753.3333333333333" y="406" text-anchor="middle" fill="#c3c2b7" font-size="22">same 201 test photos</text>
+<text x="910" y="87.85000000000002" fill="#e66767" font-size="24" font-weight="600"><tspan x="910" y="87.85000000000002">pass/fail bar,</tspan><tspan x="910" y="115.85000000000002">written first:</tspan><tspan x="910" y="143.85000000000002">65.7%</tspan><tspan x="910" y="171.85000000000002">before − 2.0 pts</tspan></text>
 </svg>

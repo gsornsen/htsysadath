@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">Which method fits which problem</title>
-<desc id="d">Map of eight rows, in slide order: problem, then the method that fits it, then the slide that shows it. Too many forks, one of you → lanes + a reviewer one tier up → slide 10; Runs you can’t watch → gates + flags → slide 11; A tempting favourite → a pre-registered kill line → slide 12; “Is it better?” → measure the bar that matters → slide 13–14; Too much to try → let the gates tell you what to stop → slide 15; One hard core, many products → solve it once, first → slide 16; “Is the UI done?” → a persona review gate → slide 17; Repetitive judgement work → agents first, human verdict → slide 18. Source: talk/plan/critique2.md F1 (final slide numbering); talk/plan/structure-v2.md; docs/project/decisions.md D17.</desc>
+<desc id="d">Map of eight rows, in slide order: problem, then the method that fits it, then the slide that shows it. Too many forks, one of you → lanes + a reviewer one tier up → slide 10; Runs you can’t watch → gates + flags → slide 11; A tempting favourite → a pass/fail bar, set first → slide 12; “Is it better?” → measure the bar that matters → slide 13–14; Too much to try → let the gates tell you what to stop → slide 15; One hard core, many products → solve it once, first → slide 16; “Is the UI done?” → a persona review gate → slide 17; Repetitive judgement work → agents first, human verdict → slide 18. Source: talk/plan/critique2.md F1 (final slide numbering); talk/plan/structure-v2.md; docs/project/decisions.md D17.</desc>
 <defs></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
 <text x="32" y="16" font-size="20" font-weight="700" letter-spacing="1.5" text-anchor="start" dominant-baseline="central" data-fill-role="edge-ink" fill="#9cc3f3">PROBLEM</text>
@@ -26,7 +26,7 @@
 <text x="32" y="158" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">A tempting favourite</text>
 <path d="M468 151 L476 158 L468 165" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="484" y="136" width="520" height="44" rx="8" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1"/>
-<text x="500" y="158" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">a pre-registered kill line</text>
+<text x="500" y="158" font-size="24" text-anchor="start" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">a pass/fail bar, set first</text>
 <path d="M1012 151 L1020 158 L1012 165" fill="none" data-stroke-role="data-line" stroke="#726f68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="1030" y="136" width="90" height="44" rx="8" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1"/>
 <text x="1075" y="158" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">12</text>

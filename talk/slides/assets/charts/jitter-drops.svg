@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<title id="t">Jitter, resolved: answers thrown away per 100</title>
-<desc id="d">Answers thrown away per 100, on a linear 0-40 axis. BASE (old client, slow server): 35.8. CTRL (old client, 3x faster server, p50 1,157 to 433 ms): 15.4. F5 (cancel the request, keep the answer): 0.14, about 1 in 700; its bar is drawn at a 6 px minimum so it stays visible. Source: grAIde-main docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md §0 headline table (lines ~21-24) — measured against a control, 09-05</desc>
+<title id="t">The flapping, fixed: answers thrown away per 100</title>
+<desc id="d">Answers thrown away per 100, on a linear 0-40 axis. Before (BASE: old client, slow server): 35.8. Faster server (CTRL: old client, 3x faster server, p50 1,157 to 433 ms): 15.4. Plus keep the answer (F5: cancel the request, keep the answer): 0.14, about 1 in 700; its bar is drawn at a 6 px minimum so it stays visible. Source: grAIde-main docs/experiments/EXP-E19-drops-thrash-with-f5-2026-09-05.md §0 headline table (lines ~21-24) — measured against a control, 09-05</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <defs>
-    <marker id="jitter-arrow" viewBox="0 0 12 12" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+    <marker id="jitter-arrow" viewBox="0 0 12 12" markerWidth="9" markerHeight="9" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M2,2 L10,6 L2,10" fill="none" stroke="#898781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
     <marker id="jitter-pointer" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
@@ -23,15 +23,15 @@
 <text x="90" y="66" fill="#898781" font-size="22">per 100 answers</text>
 <rect x="182.66666666666663" y="121.00000000000003" width="150" height="178.99999999999997" rx="3" fill="#3987e5"/>
 <text x="257.66666666666663" y="107.00000000000003" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">35.8</text>
-<text x="257.66666666666663" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="257.66666666666663" y="334">BASE — old client, slow</tspan><tspan x="257.66666666666663" y="363">server</tspan></text>
+<text x="257.66666666666663" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="257.66666666666663" y="334">before</tspan></text>
 <rect x="518" y="223" width="150" height="77" rx="3" fill="#726f68"/>
 <text x="593" y="209" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">15.4</text>
-<text x="593" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="593" y="334">CTRL — old client, 3×</tspan><tspan x="593" y="363">faster server (p50</tspan><tspan x="593" y="392">1,157→433ms)</tspan></text>
+<text x="593" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="593" y="334">faster server</tspan></text>
 <rect x="853.3333333333333" y="294" width="150" height="6" rx="3" fill="#d95926"/>
 <line x1="928.3333333333333" y1="244" x2="928.3333333333333" y2="286" stroke="#d95926" stroke-width="2.5" marker-end="url(#jitter-pointer)"/>
 <text x="928.3333333333333" y="232" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="700">0.14</text>
 <text x="928.3333333333333" y="188" text-anchor="middle" fill="#c3c2b7" font-size="24">≈ 1 in 700</text>
-<text x="928.3333333333333" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="928.3333333333333" y="334">F5 — cancel the</tspan><tspan x="928.3333333333333" y="363">request, keep the</tspan><tspan x="928.3333333333333" y="392">answer</tspan></text>
+<text x="928.3333333333333" y="334" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700"><tspan x="928.3333333333333" y="334">+ keep the answer</tspan></text>
 <line x1="90" y1="300" x2="1096" y2="300" stroke="#383835" stroke-width="2"/>
 <text x="425.3333333333333" y="40" text-anchor="middle" fill="#c3c2b7" font-size="24" font-weight="600">3× faster server</text>
 <line x1="342.66666666666663" y1="64" x2="508" y2="64" stroke="#898781" stroke-width="2" marker-end="url(#jitter-arrow)"/>

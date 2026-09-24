@@ -1,31 +1,55 @@
 {
   "source": "mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75)",
-  "title": "Top-1 to top-3: the gain halves",
-  "desc": "Slopegraph on the same 201 test crops, y-axis 60 to 95 percent. G0 (flat, no head): 67.7% top-1, 83.6% top-3. G0h (flat plus language head): 77.6% top-1, 89.1% top-3. The gap between them is 9.95 points at top-1 and 5.47 points at top-3: the gain roughly halves.",
-  "yRange": [60, 95],
-  "columns": ["top-1", "top-3"],
+  "title": "Scored on what the user sees, the gain halves",
+  "desc": "Slopegraph on the same 201 test photos, y-axis 60 to 95 percent. Before (G0: flat, no language head): 67.7% on the first guess, 83.6% right card among the 3 shown (top-3). What shipped (G0h: flat plus language head): 77.6% first guess, 89.1% among the 3 shown. The gap is 9.95 points on the first guess and 5.47 points among the 3 shown: the gain roughly halves.",
+  "yRange": [
+    60,
+    95
+  ],
+  "columns": [
+    "first guess",
+    "right card among the 3 shown"
+  ],
   "series": [
     {
       "key": "g0",
-      "label": "G0 — flat, no head",
+      "label": "before",
       "role": "baseline",
       "points": [
-        { "numerator": 136, "denominator": 201 },
-        { "numerator": 168, "denominator": 201 }
+        {
+          "numerator": 136,
+          "denominator": 201
+        },
+        {
+          "numerator": 168,
+          "denominator": 201
+        }
       ]
     },
     {
       "key": "g0h",
-      "label": "G0h — flat + language head",
+      "label": "what shipped",
       "role": "after",
       "points": [
-        { "numerator": 156, "denominator": 201 },
-        { "numerator": 179, "denominator": 201 }
+        {
+          "numerator": 156,
+          "denominator": 201
+        },
+        {
+          "numerator": 179,
+          "denominator": 201
+        }
       ]
     }
   ],
   "gaps": [
-    { "column": 0, "delta": "+9.95 pts" },
-    { "column": 1, "delta": "+5.47 pts" }
+    {
+      "column": 0,
+      "delta": "+9.95 pts"
+    },
+    {
+      "column": 1,
+      "delta": "+5.47 pts"
+    }
   ]
 }

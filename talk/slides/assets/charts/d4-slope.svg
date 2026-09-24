@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'>
-<title id="t">Top-1 to top-3: the gain halves</title>
-<desc id="d">Slopegraph on the same 201 test crops, y-axis 60 to 95 percent. G0 (flat, no head): 67.7% top-1, 83.6% top-3. G0h (flat plus language head): 77.6% top-1, 89.1% top-3. The gap between them is 9.95 points at top-1 and 5.47 points at top-3: the gain roughly halves. Source: mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75)</desc>
+<title id="t">Scored on what the user sees, the gain halves</title>
+<desc id="d">Slopegraph on the same 201 test photos, y-axis 60 to 95 percent. Before (G0: flat, no language head): 67.7% on the first guess, 83.6% right card among the 3 shown (top-3). What shipped (G0h: flat plus language head): 77.6% first guess, 89.1% among the 3 shown. The gap is 9.95 points on the first guess and 5.47 points among the 3 shown: the gain roughly halves. Source: mining/findings/E67-top3-replay.md — positive control @1 (lines 55-64), @3 results (lines 66-75)</desc>
 <rect x="0" y="0" width="1136" height="440" fill="#1a1a19"/>
 <line x1="120" y1="360" x2="1096" y2="360" stroke="#2c2c2a" stroke-width="1"/>
 <text x="106" y="367" text-anchor="end" fill="#898781" font-size="22">60%</text>
@@ -20,16 +20,16 @@
 <text x="378" y="207.9765458422175" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">77.6%</text>
 <text x="758" y="153.3923240938167" text-anchor="start" fill="#ffffff" font-size="26" font-weight="700">83.6%</text>
 <text x="758" y="103.35678749111582" text-anchor="start" fill="#ffffff" font-size="26" font-weight="700">89.1%</text>
-<text x="400" y="400" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">top-1</text>
-<text x="736" y="400" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">top-3</text>
+<text x="400" y="400" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">first guess</text>
+<text x="736" y="400" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">right card among the 3 shown</text>
 <path d="M 278 198.9765458422175 L 268 198.9765458422175 L 268 289.9502487562188 L 278 289.9502487562188" fill="none" stroke="#c3c2b7" stroke-width="2"/>
 <text x="254" y="253.46339729921814" text-anchor="end" fill="#ffffff" font-size="26" font-weight="700">+9.95 pts</text>
 <path d="M 858 94.35678749111582 L 868 94.35678749111582 L 868 144.3923240938167 L 858 144.3923240938167" fill="none" stroke="#c3c2b7" stroke-width="2"/>
 <text x="882" y="128.37455579246625" text-anchor="start" fill="#ffffff" font-size="26" font-weight="700">+5.47 pts</text>
 <line x1="140" y1="56" x2="170" y2="56" stroke="#3987e5" stroke-width="3"/>
 <circle cx="155" cy="56" r="7" fill="#3987e5"/>
-<text x="182" y="64" fill="#c3c2b7" font-size="24">G0 — flat, no head</text>
+<text x="182" y="64" fill="#c3c2b7" font-size="24">before</text>
 <line x1="140" y1="96" x2="170" y2="96" stroke="#d95926" stroke-width="3"/>
 <circle cx="155" cy="96" r="7" fill="#d95926"/>
-<text x="182" y="104" fill="#c3c2b7" font-size="24">G0h — flat + language head</text>
+<text x="182" y="104" fill="#c3c2b7" font-size="24">what shipped</text>
 </svg>
