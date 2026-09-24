@@ -714,7 +714,7 @@ function buildTwoLevers(d) {
   svg += `<text x="${plotX - 24}" y="${yA + 8}" text-anchor="end" fill="${C.textPrimary}" font-size="26" font-weight="700">${esc(a.label)}</text>\n`;
   svg += `<rect x="${xOf(0)}" y="${yA - barThick / 2}" width="${xOf(a.high) - xOf(0)}" height="${barThick}" rx="4" fill="url(#hatch-hand)" stroke="${C.blue}" stroke-width="2"/>\n`;
   svg += `<text x="${xOf(a.high) + 16}" y="${yA + 9}" fill="${C.textPrimary}" font-size="28" font-weight="700">${a.high}${a.unit}</text>\n`;
-  svg += `<text x="${xOf(0)}" y="${yA + barThick / 2 + 26}" fill="${C.textMuted}" font-size="22">my stopwatch — not instrumented</text>\n`;
+  svg += `<text x="${xOf(0)}" y="${yA + barThick / 2 + 26}" fill="${C.textMuted}" font-size="22">${esc(a.caption || 'on my stopwatch')}</text>\n`;
 
   // Bar B — with agents: stacked agent-pass + human-review, midpoints for
   // the stack geometry, a whisker bracket for the honest total range.
@@ -752,8 +752,8 @@ function buildTwoLevers(d) {
   const segTag = (seg) => seg.shortTag || (/^instrumented/.test(seg.tierLabel) ? 'measured' : 'my estimate — not instrumented');
   const segLabelY1 = yB + barThick / 2 + 26;
   const segLabelY2 = segLabelY1 + 28;
-  svg += `<text x="${xOf(0)}" y="${segLabelY1}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg1.label)}: ${seg1.low}–${seg1.high}${seg1.unit} (${segTag(seg1)})</text>\n`;
-  svg += `<text x="${xOf(0)}" y="${segLabelY2}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg2.label)}: ${seg2.low}–${seg2.high}${seg2.unit} (${segTag(seg2)})</text>\n`;
+  svg += `<text x="${xOf(0)}" y="${segLabelY1}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg1.onScreen || `${seg1.label}: ${seg1.low}–${seg1.high}${seg1.unit} (${segTag(seg1)})`)}</text>\n`;
+  svg += `<text x="${xOf(0)}" y="${segLabelY2}" fill="${C.textSecondary}" font-size="22" font-weight="600">${esc(seg2.onScreen || `${seg2.label}: ${seg2.low}–${seg2.high}${seg2.unit} (${segTag(seg2)})`)}</text>\n`;
 
   svg += svgClose;
   return svg;

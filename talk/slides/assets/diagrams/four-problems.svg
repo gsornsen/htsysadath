@@ -1,56 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1136 440" width="1136" height="440" role="img" aria-labelledby="t d" style="font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
 <title id="t">Four problems you'll hit, four methods</title>
-<desc id="d">Four columns, in the order the talk takes them. Each grey card is a problem in the audience's words; an arrow leads down to the green method that answers it. A, too many forks, one of you: explore in parallel, safely (lanes, gates and flags; slides 9–10). B, is my favourite idea better: draw the line before the run (a pass/fail bar written first, and scoring what the user sees; slides 11–13). C, is it actually done: put a gate in front of "done" (a persona panel, then a real device; slides 14–15). D, where do we even start: build the hardest shared piece first (slide 16). Each method gets card scout evidence and a first step for next week. Source: talk/slides/deck.md slide 8 and its notes; talk/plan/structure-v4.md (D19).</desc>
+<desc id="d">The talk's pivot. Four columns, in the order the talk takes them. Each grey card is a problem in the audience's words; an arrow leads down to the green method that answers it. A, too many forks, one of you: explore in parallel, safely (lanes, gates and flags; slides 9–10). B, is my favourite idea better: draw the line before the run (a pass/fail bar written first, and scoring what the user sees; slides 11–13). C, is it actually done: put a gate in front of "done" (a persona panel on a live browser, then a real device; slides 14–15). D, where do we even start: build the shared hard part first (slide 16). Source: talk/slides/deck.md slide 8 and its notes; talk/plan/structure-v4.md (D19); talk/plan/final-pass.md (D23).</desc>
 <defs><marker id="ah-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13.5" markerHeight="13.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="1136" height="440" data-fill-role="canvas" fill="#1a1a19"/>
 
 <!-- A -->
-<rect x="16" y="20" width="261" height="150" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
-<circle cx="146.5" cy="58" r="22" data-fill-role="data-line" fill="#726f68"/>
-<text x="146.5" y="58" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">A</text>
-<text x="146.5" y="108" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Too many forks,</text>
-<text x="146.5" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">one of you</text>
-<path d="M146.5 180 L146.5 222" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<rect x="16" y="232" width="261" height="150" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<text x="146.5" y="268" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
-<text x="146.5" y="312" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Explore in</text>
-<text x="146.5" y="342" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">parallel, safely</text>
+<rect x="16" y="16" width="261" height="176" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
+<circle cx="146.5" cy="58" r="24" data-fill-role="data-line" fill="#726f68"/>
+<text x="146.5" y="58" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">A</text>
+<text x="146.5" y="118" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Too many forks,</text>
+<text x="146.5" y="154" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">one of you</text>
+<path d="M146.5 202 L146.5 240" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<rect x="16" y="250" width="261" height="174" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<text x="146.5" y="290" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
+<text x="146.5" y="340" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Explore in</text>
+<text x="146.5" y="376" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">parallel, safely</text>
 
 <!-- B -->
-<rect x="297" y="20" width="261" height="150" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
-<circle cx="427.5" cy="58" r="22" data-fill-role="data-line" fill="#726f68"/>
-<text x="427.5" y="58" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">B</text>
-<text x="427.5" y="108" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Is my favourite</text>
-<text x="427.5" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">idea better?</text>
-<path d="M427.5 180 L427.5 222" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<rect x="297" y="232" width="261" height="150" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<text x="427.5" y="268" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
-<text x="427.5" y="312" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Draw the line</text>
-<text x="427.5" y="342" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">before the run</text>
+<rect x="297" y="16" width="261" height="176" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
+<circle cx="427.5" cy="58" r="24" data-fill-role="data-line" fill="#726f68"/>
+<text x="427.5" y="58" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">B</text>
+<text x="427.5" y="118" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Is my favourite</text>
+<text x="427.5" y="154" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">idea better?</text>
+<path d="M427.5 202 L427.5 240" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<rect x="297" y="250" width="261" height="174" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<text x="427.5" y="290" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
+<text x="427.5" y="340" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Draw the line</text>
+<text x="427.5" y="376" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">before the run</text>
 
 <!-- C -->
-<rect x="578" y="20" width="261" height="150" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
-<circle cx="708.5" cy="58" r="22" data-fill-role="data-line" fill="#726f68"/>
-<text x="708.5" y="58" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">C</text>
-<text x="708.5" y="108" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Is it actually</text>
-<text x="708.5" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">done?</text>
-<path d="M708.5 180 L708.5 222" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<rect x="578" y="232" width="261" height="150" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<text x="708.5" y="268" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
-<text x="708.5" y="312" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Put a gate in</text>
-<text x="708.5" y="342" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">front of “done”</text>
+<rect x="578" y="16" width="261" height="176" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
+<circle cx="708.5" cy="58" r="24" data-fill-role="data-line" fill="#726f68"/>
+<text x="708.5" y="58" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">C</text>
+<text x="708.5" y="118" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Is it actually</text>
+<text x="708.5" y="154" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">done?</text>
+<path d="M708.5 202 L708.5 240" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<rect x="578" y="250" width="261" height="174" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<text x="708.5" y="290" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
+<text x="708.5" y="340" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Put a gate in</text>
+<text x="708.5" y="376" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">front of “done”</text>
 
 <!-- D -->
-<rect x="859" y="20" width="261" height="150" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
-<circle cx="989.5" cy="58" r="22" data-fill-role="data-line" fill="#726f68"/>
-<text x="989.5" y="58" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">D</text>
-<text x="989.5" y="108" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Where do we</text>
-<text x="989.5" y="138" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">even start?</text>
-<path d="M989.5 180 L989.5 222" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
-<rect x="859" y="232" width="261" height="150" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
-<text x="989.5" y="268" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
-<text x="989.5" y="312" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Build the hardest</text>
-<text x="989.5" y="342" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">shared piece first</text>
-
-<text x="568" y="414" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="muted" fill="#c3c2b7">Each one: card scout evidence, then a first step for next week.</text>
+<rect x="859" y="16" width="261" height="176" rx="12" data-fill-role="data-fill" fill="#262624" data-stroke-role="data-line" stroke="#726f68" stroke-width="1.5"/>
+<circle cx="989.5" cy="58" r="24" data-fill-role="data-line" fill="#726f68"/>
+<text x="989.5" y="58" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="on-focus" fill="#ffffff">D</text>
+<text x="989.5" y="118" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Where do we</text>
+<text x="989.5" y="154" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">even start?</text>
+<path d="M989.5 202 L989.5 240" fill="none" data-stroke-role="compute-line" stroke="#199e70" stroke-width="3" stroke-linecap="round" marker-end="url(#ah-green)"/>
+<rect x="859" y="250" width="261" height="174" rx="12" data-fill-role="compute-fill" fill="#162c24" data-stroke-role="compute-line" stroke="#199e70" stroke-width="1.5"/>
+<text x="989.5" y="290" font-size="24" text-anchor="middle" dominant-baseline="central" data-fill-role="compute-ink" fill="#86d4b6">try this</text>
+<text x="989.5" y="340" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">Build the shared</text>
+<text x="989.5" y="376" font-size="26" font-weight="700" text-anchor="middle" dominant-baseline="central" data-fill-role="ink" fill="#ffffff">hard part first</text>
 </svg>

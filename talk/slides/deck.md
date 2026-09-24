@@ -91,7 +91,7 @@ being parked [D4]. The old move: pick the fix I know, and push.
 ---
 
 <!-- _class: changed -->
-<!-- _footer: "Source: decisions.md D13 (cost, ~100 experiments), D14 (3 days), D16 (my estimate); talk/notes.md P2–P4" -->
+<!-- _footer: "Source: decisions.md D13 (cost, ~100 experiments), D14 (3 days), D16 (my time); talk/notes.md P2–P4" -->
 
 ## What changed: trying an idea got cheap
 
@@ -99,7 +99,7 @@ being parked [D4]. The old move: pick the fix I know, and push.
 
 ![](assets/diagrams/experiment-loop.svg)
 
-<p class="costline"><span class="testimony">~30 min a day of my time <cite>my estimate</cite></span> · a flat Claude Max subscription<br>~100 experiments in two weeks · the flapping fixed in 3 days</p>
+<p class="costline">About half an hour a day of my time, by my count · a flat Claude Max subscription<br>About 100 experiments in two weeks · the flapping fixed in 3 days</p>
 
 <!--
 What changed wasn't a smarter model; trying an idea got cheap. Three words. A worktree is a
@@ -109,7 +109,7 @@ on. Then the loop: record what the app does at the key moments during live sessi
 [P2; G:1267e680e · 08-22; G:3c52c2b72 · 09-04], replay those recordings offline [P2], and run gated
 experiments in worktrees, many overnight [P3; P4]. When a gate cleared, the work merged and the next
 experiment unlocked [P4]. The cost, along the bottom: about half an hour a day of my time setting it
-up, my estimate, not counting mornings reading results [D16]. A
+up, by my count, not counting mornings reading results [D16]. A
 flat Claude Max subscription; the only metered spend was about $9 of labeling calls on another
 provider [D13]. About a hundred experiments in two weeks [D13]. The flapping, fixed in three days
 [D14].
@@ -174,9 +174,9 @@ identifies, and it holds. If it misses, that's the one in three I'll show you in
 
 ---
 
-## Four problems you'll hit, four methods
+<!-- _class: pivot -->
 
-<p class="defs"><b>A</b> Too many forks, one of you · <b>B</b> Is my favourite idea better? · <b>C</b> Is it done? · <b>D</b> Where to start?</p>
+## Four problems you'll hit, four methods
 
 ![](assets/diagrams/four-problems.svg)
 
@@ -260,8 +260,8 @@ English twin with the same art [arc A]. My favourite idea was to remove the dupl
 pass/fail bar down first: lose more than two points and it's dropped. It lost 14.43 points, and it
 was dropped [arc A]. Then we tried something not in the plan: keep every image, add a small re-rank by
 language. On the same 201 test photos, the first guess went from 67.66 % to 77.61 % right: 20 fixed,
-none broken [arc A; E67-top3]. Found after it failed the bar, on the same photos, so a lead, not proof; it
-shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
+none broken [arc A; E67-top3]. It was found after my favourite failed the bar, on the same photos, so I
+treated it as a lead, not proof: it shipped behind a flag and flipped after a replay [gates-and-flags]. Try it: put one sentence in the
 ticket before you start: "we drop this if…".
 -->
 
@@ -294,37 +294,40 @@ Try it: write the number your user feels next to the one on your dashboard.
 ---
 
 <!-- _header: "Problem B · Is my favourite idea better?" -->
-<!-- _footer: "Source: Grailith experiment ledger, 09-18 (E57, E58, E53d, E12, E39, E119); accuracy = first guess on the 201-photo test set" -->
+<!-- _footer: "Source: Grailith EXP-E12, EXP-E39 (09-05); EXP-E119 (09-12); Japanese→TCGplayer map (09-20); training-set plan (09-14); experiment ledger (09-18)" -->
 
 ## What should we stop working on?
 
-<p class="method">Give every expensive idea a bar before it starts. A clean no is a result.</p>
+<p class="method">Give every expensive idea a bar before it starts. A clean no is a result, and it tells you what to do first.</p>
 
-- A newer image model: 9.55 points less accurate. Stopped.
-- Retraining the model, and a smaller copy of it: both missed their bars.
-- Re-processing every reference image: never started.
-- Paying for more Japanese card art: no gain. Not scaled.
+- **Re-processing every reference image:** tested on a sample first, it made matches worse or changed nothing. Never started.
+- **Buying more Japanese card art:** no extra art needed. Our catalogue plus the Japanese→TCGplayer mapping already cover it; the added art showed no measurable gain.
+- **What we do instead: labeling first.** A smaller, faster "student" model comes later, once there are 1,000 labels I've checked to train it on.
 
 <!--
-You'll see this when the backlog has four expensive ideas, each with a champion, and nobody wants to
-be the one who says no. Gates pay off as much in what they let you stop. We stopped a newer image
-model that came in 9.55 points less accurate on the test photos [G:ledger · E57]. Retraining the
-model and a smaller copy of it both failed their bars [G:ledger · E58, E53d]. We never re-processed
-the reference images [G:ledger · E12, E39]. And paying for more Japanese card art showed no gain, so
-we didn't scale it [G:ledger · E119]. A lot of the hundred experiments were like these: a clean no,
-and nobody had to argue about it afterwards. Try it: give each expensive idea its bar before anyone
-starts on it. A clean no is a result.
+You'll see this when the backlog has a few expensive ideas, each with a champion, and nobody wants to
+be the one who says no. Gates pay off as much in what they let you stop. Re-processing every
+reference image looked like an obvious clean-up. We measured it on a sample first: one version made
+Japanese images steal English matches about three times as often, the other fixed one card in 41.
+So we never started it [G:exp · E12, E39; G:ledger]. Buying more Japanese card art: we pulled in
+992 images and the measured gain was zero. Our catalogue already named all 11 Japanese test photos,
+and the Japanese-to-TCGplayer mapping links 3,401 Japanese cards to their prices [G:exp · E119;
+G:ja-map]. Eleven photos is a small test, so that's no gain we can see, not proof of none [G:exp ·
+E119]. That experiment's own advice was to label first, so the test can see those cards. And that's
+what we do instead: labeling first. The plan's own bar for training a smaller "student"
+model is a thousand labels I've checked, so that model comes later [G:trainset]. Try it: give each
+expensive idea its bar before anyone starts on it. A clean no is a result.
 -->
 
 ---
 
 <!-- _header: "Problem C · Is it actually done?" -->
-<!-- _class: measure -->
-<!-- _footer: "Source: mining/arcs/C-personas-review.md (panel verdicts, 09-13; bug ledger B19, 09-14 09:40)" -->
+<!-- _class: gate -->
+<!-- _footer: "Source: mining/arcs/C-personas-review.md (panel verdicts, 09-13; bug ledger B19, 09-14 09:40); Grailith labeler stability plan (09-15); finish-selector build plan (09-21)" -->
 
 ## The tests pass. Is it actually done?
 
-<p class="method">Put a panel of personas (fictional users, each with a device and a job) in front of "done". Then use a real device.</p>
+<p class="method">Put a panel of personas (fictional users, each with a device and a job) in front of "done". Give them a live browser, then use a real device.</p>
 
 ![](assets/diagrams/persona-gate.svg)
 
@@ -338,8 +341,12 @@ device and a job, plus three critics [arc C]. One is Dez: phone only, one thumb,
 went from 30 seconds to 9, simulated, not a human [arc C]. Then the gate failed. The panel said DONE
 at 21:50. At 09:40 the next morning I opened it on my own iPhone, and it was pretty much unusable:
 three scrolling sections, a help pop-up on every task, rotating the phone to reach options. The panel
-had walked a fixed screen size [arc C]. Try it: three persona briefs, an agent walks the build,
-then your phone. `starter/persona-gate/`.
+had walked a fixed screen size [arc C]. So the personas got a live browser: a real Chrome to walk,
+not rendered screens. From then on every labeler test ran at phone, tablet and desktop widths
+[G:three-widths], and the next panel's plan walks the build at all three [G:finish-selector]. In my
+experience the gates got much better after that, with far fewer surprises and less rework before a
+merge; I haven't measured it [D23]. Try it: three persona briefs, an agent walks the build in a
+real browser, then your phone. `starter/persona-gate/`.
 -->
 
 ---
@@ -396,7 +403,7 @@ the hardest of those first.
 |---|---|---|
 | **A** · Five fixes that might work, and one of you | A lane per fix, a gate written first, runs behind a flag overnight | `starter/two-lanes/` |
 | **B** · Everyone's sure one idea is better | Write the pass/fail bar before the run; score what the user sees | `starter/two-lanes/unattended.md`, step 1 |
-| **C** · The tests pass, but is it usable? | A persona panel in front of "done", then your own phone | `starter/persona-gate/` |
+| **C** · The tests pass, but is it usable? | A persona panel on a live browser in front of "done", then your own phone | `starter/persona-gate/` |
 | **D** · Two things need the same hard part | Build that part first, once, and share it | your next planning meeting |
 
 <!--
@@ -404,8 +411,8 @@ Here's the whole talk on one slide; this is the one to photograph. A: you can se
 there's one of you. Give each fix a lane, write the gate first, and let them run behind a flag while
 you do something else [arc E; gates-and-flags]. B: everyone's sure one idea is better. Write the
 pass/fail bar before the run, and score what the user actually sees, not the easiest number [arc A; E67-top3].
-C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done",
-then pick it up on your own phone [arc C]. D: two things need the same hard part. Build that part
+C: the tests pass, but you're not sure a person can use it. Put a persona panel in front of "done", let
+it walk a live browser, then pick it up on your own phone [arc C; D23]. D: two things need the same hard part. Build that part
 first, once [D11]. The starter kit covers A, B and C; D is a conversation for your next planning
 meeting [starter].
 -->
@@ -419,9 +426,9 @@ meeting [starter].
 1. **Run your next fork as gated experiments that can run unattended.**
    <span class="step">First step: before you pick a fix, write the pass/fail bar, give each option a worktree, put it behind a flag. → `starter/two-lanes/` · `starter/two-lanes/unattended.md`</span>
 2. **Put a persona review gate in front of “done” for UI and design work.**
-   <span class="step">First step: write three persona briefs (a device, a job), have an agent walk the build, then use your own phone. → `starter/persona-gate/`</span>
+   <span class="step">First step: write three persona briefs (a device, a job), have an agent walk the build in a real browser, then use your own phone. → `starter/persona-gate/`</span>
 
-<p class="testimony">“Before we pick a fix, let’s write down what would drop each option, run three of them overnight, and ship the winner behind a flag.” <cite>my framing: one sentence for your boss</cite></p>
+<p class="takeaway">At your next planning meeting: “Before we pick a fix, let’s write down what would drop each option, run three of them overnight, and ship the winner behind a flag.”</p>
 
 github.com/gsornsen/htsysadath · starter kit: `starter/`
 
@@ -432,11 +439,12 @@ First step: before you pick a fix, write the pass/fail bar, give each option its
 behind a flag. `starter/two-lanes/` has the lane brief, and `unattended.md` has the flags, caps and
 the morning report [starter; gates-and-flags; arc E]. Two: put a persona review gate in front of
 "done". First step: write three persona briefs, each a device and a job, have an agent walk the
-build, then pick it up on your own phone. That's `starter/persona-gate/` [starter; arc C]. And if you
-need one sentence for your boss, this is how I'd put it; it's my framing, not a finding. It's all in
-the repo. Thanks.
+build in a real browser, then pick it up on your own phone. That's `starter/persona-gate/` [starter; arc C]. And if you
+need one sentence for your next planning meeting, this is how I'd put it. It's all in the repo.
+Thanks.
 
-**Stage.** Read the boss sentence on the slide aloud as written; don't paraphrase it into a claim.
+**Stage.** Read the planning-meeting sentence aloud as written; it's a suggestion, not a finding, so
+don't paraphrase it into a claim.
 -->
 
 ---
@@ -447,7 +455,7 @@ the repo. Thanks.
 ## Backup · cost, hours, hold-out
 
 - **Cost:** all Claude work within a Claude Max subscription; the only metered model spend was the labeling pilots, ~$9 for 760 tasks on another provider.
-- **Hours:** ~30 minutes a day, spread across the day, setting agents up for overnight runs: my estimate.
+- **Hours:** about 30 minutes a day by my count, spread across the day, setting agents up for overnight runs.
 - **Held out:** the language re-rank trained on catalogue images only, its one knob set on a separate dev split; none of the 201 test photos in any of it.
 
 <!--

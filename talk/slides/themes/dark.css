@@ -267,14 +267,6 @@ section blockquote {
 section blockquote p {
   margin: 0;
 }
-section.story blockquote::after {
-  content: "— my account";
-  display: block;
-  margin-top: 0.2em;
-  font-size: 0.6em;
-  font-style: normal;
-  color: var(--ink-dim);
-}
 section.story img {
   max-height: 400px;
 }
@@ -323,15 +315,15 @@ section span.testimony {
   border-left-color: var(--ink-dim);
 }
 
-/* Slide 6: definitions above the loop, the cost line below it. The loop
-   diagram is cropped to its top 350px so its own "30 min" bar does not
-   repeat the cost line. */
+/* Slide 5: definitions above the loop, the cost line below it. The loop's
+   boxes sit in y 66–374 of its 1136x440 box, so a centred 328px crop trims
+   only empty margin and shows all seven steps. */
 section.changed img {
   width: 1136px;
-  height: 350px;
-  max-height: 350px;
+  height: 328px;
+  max-height: 328px;
   object-fit: cover;
-  object-position: top center;
+  object-position: center center;
 }
 section p.costline {
   font-size: 0.75em;
@@ -378,8 +370,10 @@ section.close .step code {
   color: var(--ink);
   font-size: 0.95em;
 }
-section.close p.testimony {
+section.close p.takeaway {
   margin: 0.4em 0 0.6em;
+  padding-left: 0.6em;
+  border-left: 6px solid var(--accent-3);
   font-size: 0.9em;
 }
 
@@ -478,4 +472,31 @@ section.cheat code {
 }
 section.cheat td:last-child {
   width: 30%;
+}
+
+/* ---- final pass (story/final-pass, D23) ----------------------------- */
+
+/* Slide 8, the pivot: title plus the four-problems map, large and centred. */
+section.pivot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.pivot img {
+  width: 100%;
+  max-height: 480px;
+  margin: 0.6em auto 0;
+}
+
+/* Slide 7: the demo cue is audience copy, one line. */
+section.demo .stage-target {
+  font-size: 1.05em;
+}
+
+/* Slide 14: the five-step persona gate, as large as the punchline allows. */
+section.gate img {
+  max-height: 372px;
+}
+section.gate p.bigline {
+  margin-top: 0.2em;
 }
