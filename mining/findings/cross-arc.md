@@ -49,3 +49,8 @@ outside its own arc files it here instead of editing another arc's doc.
 - Arc A: a gain measured at @1 roughly halves at @3 (language head +9.95 → +5.47 pts), because
   most @1 fixes were already rank 2–3. A metric choice can double or halve a headline.
   [src: mining/findings/E67-top3-replay.md · 2026-09-24]
+- CORRECTION (D9, founder, 2026-09-24): earlier lines treating arc B as concurrent spines, and
+  citing Art Binder as an example, are superseded. Arc B is four sequential acts; overlapping
+  commit dates ≠ concurrent work; Art Binder is out of the talk. D5 is now the counter-example
+  to the talk spine ("the record can be over-read too"), not an instance of it.
+  [src: founder testimony · 2026-09-24 · D9]

@@ -24,6 +24,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 
 ## Changelog
 
+- 2026-09-24 09:2x PDT — **D9 supersedes D5**: arc B is four sequential acts (pregrade LLM-vision PoC → scout image-to-image → bulk scan/lots as port + failure-mode isolation → comps when condition-tiered raw comps outgrew an API). Art Binder out. Arc B revision lane (Opus 5.5) spawned; data-viz lane told to drop the concurrency swimlane.
+
 - 2026-09-24 09:3x PDT — E67 top-3 replay merged: the D4 win holds at top-3 (+5.47 pts, about half the @1 gain). Data-viz lane sent both confirmed results.
 
 - 2026-09-24 09:2x PDT — Lot run merged: the founder's bar measured for the first time (non-locked top-3 65.2%, lock 20.7% at 88.9% precision, n=87). The earlier 76.9% was a small-sample high (pooled ~70%). Presentation-plan swarm round 1 running (4 lanes).

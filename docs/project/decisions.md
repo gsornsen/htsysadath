@@ -171,3 +171,34 @@ result was the win" in the founder's own units, with the @1/@3 halving as the ho
 (2) The founder's bar on live lots: top-3 on non-locked lots 65.2% (45/69), lock 20.7% at 88.9%
 precision, n=87, the most recorded data allows [mining/findings/lot-top3-unlocked.md]. The
 remembered 76.9% was a small-sample high; the pooled level is about 70%.
+
+## D9 · 2026-09-24 · D5 superseded: arc B is four sequential acts, each with its own reason
+
+**Context.** D5 read the git log's overlapping dates (scout Wave 1 08-18, lots roadmap 08-19,
+comps store 07-04) as concurrent work and restructured arc B into parallel spines. Gerald
+(09:5x PDT), who did the work, corrects it on every point:
+
+1. **Comps/pricing WAS a fourth act.** The comps store existing from day two is true, but the
+   *problem* changed later: pregrade got by with graded comps and NM raw via a service/API; the
+   act began when the need grew to raw comps across conditions (NM / LP / MP / HP / DMG), a far
+   bigger problem than "use an API".
+2. **LLM-vision identify was a proof of concept**, to establish feasibility and a baseline before
+   moving to an image-to-image model. It's a deliberate stage, not a false start.
+3. **Scout and bulk scan/lots overlapped in time but were NOT worked concurrently.** Once identify
+   worked well enough in the scout, it was ported to bulk scan to remove the LLM portion, and bulk
+   scan was used to strip out failure modes of the bigger system (the ways detection and live
+   streams fail oddly). The order is pregrade → scout → bulk scan/lots → comps, each act with a reason.
+4. **Art Binder / michi-binder is out of the presentation entirely.**
+
+**Decision.** Arc B returns to four sequential acts, told with the REASON each began. The `mine/pivots`
+review lane sources the transition dates for acts 3 and 4 and the LLM→image-to-image switch; the
+founder's account of the ORDER and the REASONS is testimony and is not re-litigated from commit dates.
+
+**Alternatives not taken.** Keep D5 and cite overlapping dates: rejected. Dates show when commits
+landed, not where attention was. D5 made the same error D6 made, in the other direction:
+inference from a partial record was allowed to overrule the person who was there.
+
+**Consequences.** brief.md arc B corrected. D5 no longer counts as a "remembered vs recorded"
+instance; it becomes the counter-example, **the record can be over-read too**, which the talk's
+spine needs so it doesn't become "trust the logs over people". Data-viz lane told to drop the
+concurrency swimlane and Art Binder.
