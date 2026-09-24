@@ -8,7 +8,7 @@ Mined for D17's focus slide: what made agent-run experiments safe to run overnig
 | Mechanism | Prevents | Example | src |
 |---|---|---|---|
 | Pre-registered PASS/KILL bar | Moving goalposts after the result | E67 KILL: `print@1(G3) ≥ print@1(G0) − 2.0 pts`; loss 14.43 pts → FIRES | [src: EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.9] |
-| Pre-registration, standard practice | Unfalsifiable writeups | 71 of 151 sampled docs carry PRE-REGISTERED; 3 carry a named KILL condition | [src: EXP-*.md, grep sample 2026-09-24] |
+| Pre-registration, standard practice | Unfalsifiable writeups | 83 of 151 `EXP-*` docs mention pre-registration (case-insensitive `pre-regist`); 12 carry an explicit KILL line (E67's kill fired at a 14.43-pt loss) | [src: coordinator grep over docs/experiments/EXP-*.md, 2026-09-24; talk/notes.md P3a] |
 | Flag, dev ON / prod OFF | Unproven behaviour reaching users early | `IDENTIFY_LANG_HEAD_SERVE` flipped prod ON 09-09 after replay: +5.97 pts, 12 fixed/0 broken | [src: EXPERIMENT-BACKLOG.md; handoff-siglip2.md 00:03 PDT] |
 | Flag default OFF pending corroboration | Overnight-only code in normal builds | `FAST_TIMERS` dev ON/prod OFF; boundary-enter "defaulted OFF until the replay shows a lift" | [src: EXP-E88-...2026-09-11.md §1; EXP-E116-...2026-09-12.md] |
 | Inert knob default | Silent behaviour change pre-evaluation | `hashVeto` null ⇒ shipped `sameCard` unchanged | [src: EXP-E91-...2026-09-11.md] |
@@ -40,7 +40,7 @@ Mined for D17's focus slide: what made agent-run experiments safe to run overnig
 ## (c) Honest failures
 
 1. **Idle-tab leak.** A dead orchestrator left Chrome on a live stream; no gate caught it — the
-   full daily PPT allowance plus ~3,900 purchased credits burned in ~7 h. [src: memory `park-the-scout-chrome-on-stop`, 2026-09-07]
+   a full day's pricing-API allowance plus purchased credits burned in ~7 h. [src: memory `park-the-scout-chrome-on-stop`, 2026-09-07]
 2. **A cap that bit the founder, not the leak.** The box's minute-bucket governor, left at an
    overnight rail (8/5), throttled Gerald's own live session with 429s next afternoon. [src: EXPERIMENT-BACKLOG.md, GOV-BOX-RATE]
 3. **A default cap that denied nothing.** SCOUT-IDLE-WATCHDOG's proposed 5,000/day cap, replayed
