@@ -59,3 +59,29 @@ E84 agent-tools pilot (09-09: $/task, tool calls, wall time, agreement/dissent r
 **Model routing.** Opus 5.5 (`claude-opus-5-5`) for Opus-tier lanes once the client is updated;
 fall back to Opus 5 if 5.5 is unavailable. Gerald updates the client after this turn.
 **Remote.** Public GitHub repo `gsornsen/htsysadath` created via gh; `origin` set.
+
+## D5 · 2026-09-24 · Arc B is a concurrency story, not a four-act sequence
+
+**Context.** brief.md framed arc B as four pivots in order: pregrade identify → bulk/lots →
+live-stream scout → comps/pricing. The `mine/pivots` lane tested that against the Grailith git
+log and it does not hold. The D1 comps store shipped 2026-07-04 (`8b009b9f9`) and
+`packages/pricing` the same day (`e3772c771`) — day two of a repo whose first commit is
+2026-07-02. Lots (08-19) and whatnot-scout (08-18, `e04b6433b`) launched one day apart and ran
+concurrently through August. Coordinator re-derived all four dates from `git log` directly.
+
+**Decision.** Keep the four pivots as the arc's beats, but stop presenting them as a sequence.
+Arc B is retold as *parallel spines with pivotal decision moments on each*, which is in fact a
+better fit for the talk's own thesis — the claim is that agentic tools let you run several
+threads at once, and the record shows Gerald already was.
+
+**Alternatives not taken.** (a) Keep the linear framing as "narrative compression" — rejected: the
+talk's credibility rests on the record matching the story, and someone will read the public repo.
+(b) Drop the ordering claim silently — rejected: the gap between the remembered tidy sequence and
+the messy concurrent record is itself talk material, and it pairs with D4's memory-vs-frame
+finding as a second instance of the same lesson.
+
+**Consequences.** talk/outline.md needs arc B restructured before Phase 3. The "what the
+retrospective tidies away" beat now has two independent examples (D4 framing, D5 ordering) and
+may deserve its own slide. Open: the Art Binder detour (08-12 → 08-18) has no founder-quoted
+scope conversation in the mined docs — an honest counter-example to the "every pivot was an
+evidence conversation" claim, unresolved pending Gerald.
