@@ -43,7 +43,7 @@ so you can check me [D1; D16]. But first, here's where it ended up.
 
 This is the scout, today. It's a browser extension I built that identifies trading cards on live
 auction streams [arc B]. A card comes up on the stream, and the scout's overlay says which card it
-is ⟨check against the shot: name the card and what the overlay shows⟩. The usernames are pixelated; the rest is as it looked. What
+is here Gengar, Stormfront 18 of 100: my capture beside the reference art, then the raw prices by condition and the graded comps. The usernames are pixelated; the rest is as it looked. What
 you can't see in a still is the part I care about: it lands and it stays put. In August the same
 step took somewhere between six and fifteen seconds, and then it changed its mind on screen
 [arc B; D14]. I'll show it to you live in a few minutes. First, how it got here.
@@ -112,8 +112,7 @@ it misses, that's the one-in-three I'll show you in a few minutes [lot-top3].
 **Stage (5.0 min, the live demo).**
 1. Before the talk: load the dev-box build in the presenting browser with the vote ON
    (`cropMode: "proposals"`) and point it at the dev stack; confirm the stack answers from the
-   venue network; open a stream tab with cards on screen [D18]. ⟨from demo lane: the exact build,
-   the health check and the stream to use; no hostnames in the repo⟩.
+   venue network; open a stream tab with cards on screen [D18]. The build: Grailith branch `demo/scout-single-crop` at `7e38ca42`, v0.4.37, loaded unpacked (disable the regular scout build first, or every card fires twice). Options → the dev-box preset. Sign in to the dev web app in the same browser profile. The vote is the default; nothing to set [D18]. Health: the dev stack's `/api/health` answers 200 from the venue network. Stream: any live show with cards on screen. Afterwards, park the tab on about:blank, because an idle live tab keeps spending pricing calls [gates-and-flags].
 2. On this slide, switch to the stream tab. Wait for a card. Point at the overlay as it identifies,
    then leave it alone for a few seconds so the room sees it hold. Let two or three cards go by.
 3. If a card is wrong, say: "That's one of the misses." Don't retry on stage.
