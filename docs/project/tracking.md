@@ -22,7 +22,7 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Build L2 charts | build/charts | merged | Sonnet → coordinator check | 3142b3e | 7 SVGs; 4 review fixes (2 content) confirmed by render |
 | Build L6 integrate | build/integrate | merged | Sonnet → coordinator | 112694c | deck assembled; 22 slides render; D12 applied to slide 20 on merge |
 | Devbox health | — | tailscaled restarted by Gerald 10:30; DNS + :8443 verified | Opus 5.5 | — | open: mcpo-github still looping; :8989 down since 09-21; mirror unit (178.7 MB file) |
-| L7 persona critique | critique/{senior-swe,pm,designer,mid-swe} | running | Opus 5.5 ×4 → Fable converges | — | DONE/NOT per slide → talk/plan/critique.md |
+| L7 persona critique | critique/* → talk/plan/critique.md | converged | Opus 5.5 ×4 → Fable | 9da5470 | 1/22 DONE for all four; 8 blocking fixes; 3 story gaps need Gerald (jitter ending, total cost, hold-out) |
 | Build L3 shots | build/shots | merged | Sonnet → coordinator check | e6dd10c | 7 shots; slides 5/7 timeline-only (§8); env-dump incident logged, nothing committed |
 | Build L4 demo tooling | build/demo | merged | Sonnet → coordinator check | 3980758 | dry run p50 52.5 s / max 77 s; 4 more runs owed at rehearsal |
 | Build L5 outline v1 + notes | build/outline | merged (1 review fix) | Opus 5.5 → Fable | 812f9c0 | 2 questions for Gerald: what ~500 ms measures; which set 'nearly 100' counts |
@@ -31,6 +31,8 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 10:3x PDT — L7 critique converged: only slide 3 DONE for all four personas; charts render at 0.53× (text ~6–8 px); slides 9/11/12/17 disagree with their own charts (verified); slide 16 placeholder; no repo URL. Revision swarm awaits Gerald's go plus answers on the jitter ending, total cost and the hold-out.
 
 - 2026-09-24 10:3x PDT — Proposer confirmed ON on main (no toggle); winning crop = tight + padding. Devbox tailnet/DNS restored by Gerald and verified. Deck served for Gerald at localhost:8080 (author mode). L7 critique: 4 Opus 5.5 persona lanes running.
 
