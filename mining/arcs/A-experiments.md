@@ -1,104 +1,98 @@
 # Arc A — the experiments track (SIGLIP2-TRACK)
 
+*Re-cut 2026-09-24 around Gerald's accuracy bar: the right card in the TOP 3 of the candidate picker
+whenever the scout does not auto-lock. Number table: `mining/findings/top3-trajectory.md`. grAIde-main
+paths below are relative to its `docs/`.*
+
 ## 1 · The arc in one paragraph
 
-Between 2026-09-05 and 2026-09-21, the identify pipeline was worked through 155 pre-registered
-experiment documents (of "229 entries" counting raw-data folders), each with a question, a bar
-fixed before the run, and a documented KILL condition. The spine: detection/search housekeeping
-(E1-E44) → an encoder freeze (E46b, E53d, E57, E58 all NO-GO on changing or fine-tuning the model)
-→ most "wrong card" errors are actually artwork misses, not print misses (E62) → the truth set
-itself is structurally blind to catalogue coverage gaps (E63) → the language/dedup question the
-founder asked directly (E61's own epigraph quotes him) → a pre-registered kill of his own
-hypothesis (E67) that produced a cheaper fix nobody had asked for → a local-gallery serving stack
-(E75-E81) that made the index question mostly moot for latency. The throughline is method, not any
-one technique: every non-trivial call is pre-registered, bar-fixed, and the falsifying result stays
-in the document rather than getting edited away.
+Between 2026-09-05 and 2026-09-21 the identify pipeline was worked through 155 experiment documents,
+about half of them explicitly pre-registered with a bar and a KILL condition (83 of 151 `EXP-*` docs use
+the word). For its first week the track scored itself on **print@1**:
+encoder swaps and fine-tunes all failed (E57, E58, E53d), E62 and E63 showed misses were embedding and
+catalogue gaps, and the language/dedup test of D4 (E61 → E67) was decided at @1. On **2026-09-11**
+Gerald changed the bar. Identification means the right card is in the top 3 per lot. Top-1 is the
+stretch, and auto-lock perfection is not a goal. From then on the track measured what the picker shows:
+a crop-level top-3 yardstick (E108, 78.2 %), then a per-lot harness (76.9 % at the last fire, n = 52). The new lesson: **the metric you pre-register is itself a decision, and
+it can be wrong.**
+[src: plan/2026-09-11-evening-plan.md · Bars · 2026-09-11; experiments/EXP-E108-top3-baseline-2026-09-11.md]
 
 ## 2 · Pivotal moments
 
-**2026-09-08, ~13:xx PDT — the founder names the shape (D4).** Quoted verbatim in the E61
-pre-registration: *"I'd like to strive for EN only first and work towards a solution of only
-adding language exclusive cards to the index and solve for the multi language support without
-having duplicated art across languages."* This is the fork: dedupe the gallery by artwork, keep
-one language-exclusive tail, and stop paying for language-duplicated vectors.
-[src: docs/experiments/EXP-E61-cross-language-art-dedup-2026-09-08.md §0]
+**2026-09-02 — the scout gets a lock rule.** The rule is "Auto-lock only on a clear win": top-1 ≥ 0.62
+and top-1 beats top-2 by ≥ 0.03. Otherwise the scout shows candidates and asserts nothing. So its accuracy
+is three numbers: how often it locks, how often a lock is right, and whether the truth is in the top 3
+when it does not lock.
+[src: grAIde-main commit `ab1eba28` · 2026-09-02; experiments/EXP-ALT-PICK-2026-09-07.md §1]
 
-**2026-09-08, 11:52 PDT — the census says the shape is real, and prices the trade.** 96.14% of
-19,258 JA renders have an identical-art EN twin (hand-checked on 50+30 stratified pairs). But
-deduping also collapses 4,387 EN reprints — already the hardest class in the eval — into shared
-vectors. E61-proper (the real hypothesis test) is pre-registered but explicitly not run yet; it
-waits on the catalogue growing (CATALOG-JA-1, PikaQian zh-cn) first, per E63's finding.
-[src: docs/experiments/EXP-E61-cross-language-art-dedup-2026-09-08.md §0, §6]
+**2026-09-08/09 — D4, scored at @1.** Gerald asked for "EN only first … without having duplicated art
+across languages" (E61 §0). The E61 census found that 96.14 % of 19,258 JA renders have an identical-art
+EN twin. E67 then tested dedup against a pre-registered KILL line. The dedup arm lost 14.43 pts of
+print@1, and **the KILL fired**. A post-hoc arm kept the flat gallery and added the language head as a
+soft re-rank. It lifted print@1 from 67.66 % to 77.61 % on the 201-crop test split (20 fixed, 0 broken).
+That head shipped on 2026-09-09 00:03 PDT. **None of this was measured at top-3.** E67 reports @1 only,
+and the first top-3 yardstick arrived three days later on a stack that already served the head.
+[src: experiments/EXP-E61-cross-language-art-dedup-2026-09-08.md §0; EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.3, §4.9; plan/2026-09-08-handoff-siglip2.md 00:03 entry]
 
-**2026-09-08, 20:02 PDT → 22:00 PDT — E67 runs the real test, and kills the dedup arm.**
-Pre-registered H1-H5 plus an explicit KILL condition, run on the frozen split once inputs landed.
-Result: the deduped gallery + language-head soft re-rank (arm G3) loses 14.43 points of print
-accuracy against a 4.0-point KILL line — **KILL FIRES**. The failure is root-caused, not waved
-away: the medoid-selection rule silently handed 11,021 of 21,128 artwork groups a non-English
-render as their single representative vector, because a continuous provenance score never reached
-the tie-break it was supposed to win. A **post-hoc, not-pre-registered** diagnostic arm — the flat,
-never-deduped gallery with the same language head applied as a soft re-rank and nothing else
-("G0h") — beats every dedup arm on every metric: print accuracy 67.66%→77.61%, wrong-language
-misses 34→1, McNemar b=0/c=20 (twenty fixed, none broken).
-[src: docs/experiments/EXP-E67-artwork-dedup-gallery-2026-09-08.md §4.3, §4.6, §4.9]
+**2026-09-11 — the bar moves to top-3, and the lock turns out to be a sideshow.** The evening plan
+records the new bar, and E108 set the yardstick the same day. On 335 frozen crops the right print was top-1 62.1 % of the
+time and in the top 3 78.2 % (test split 89.6 %). The 16-point gap was 54 "sibling-wander" crops, where
+the right print sat at rank 2–3 within a hair of rank 1. On the lock side, E89 replayed the lock rule on
+426 crops. At the shipped 0.03 margin it locked 14 % of cards at 0.90 precision. At the 0.01/0.02 point
+Gerald then chose, it locked 40 % at 0.92. Live it was near-silent: 8 priced locks in 334 fires, and the
+one lock in a 49-fire run was wrong (a gold Mew locked as a Pikachu). Most fires never lock: the
+picker is the product.
+[src: plan/2026-09-11-evening-plan.md §0, §1; experiments/e108-top3/RESULT-2026-09-11.md; EXP-E89-back-gate-under-s1-2026-09-11.md §5; EXP-E99-no-answer-segments-2026-09-11.md §2; EXP-E88-identify-timer-retune-2026-09-11.md §3]
 
-**2026-09-09, 00:03 PDT — what actually shipped.** Production flips `IDENTIFY_LANG_HEAD_SERVE=on`
-(pregrade-production build `1e7e03d8`): the language head serves as an additive soft-rerank
-penalty on the **flat, still-duplicated** gallery — not a gate, not a scope, not an index rebuild.
-Search scope stays EN-only at first; a same-night attempt to also union JA into the search scope is
-explicitly **not** flipped (17 English records broken vs 5 Japanese fixed at the tested depth — the
-trade was declined). A re-registered dedup experiment, E67b, is later **closed without being run**,
-because E67's own post-hoc numbers already show the deduped arm trailing the flat one.
-[src: docs/plan/2026-09-08-handoff-siglip2.md 00:03 PDT and 00:35 PDT entries; docs/experiments/EXPERIMENT-BACKLOG.md "E67" row]
+**2026-09-11/12 — a proxy that did not survive live lots.** E109 aggregated six crops of one photo with a
+Σ-score order. Top-3 rose from 70.3 % to 82.9 %, with 0 of 41 groups hurt. The shipped version (0.4.33)
+was narrowed at review to reorder the alternatives without changing the served card. On 31 live tapped
+lots it was **inert on top-3**: 45.2 % both ways. The same data showed the real gap: the right card was in
+some fire's top-3 in 71 % of lots, but in the last fire's top-3 in only 45 %. E112 built the alternatives
+from every fire in the lot. Offline, the first three rose from 45.2 % to 64.5 %. On the 18 lots where the
+header was wrong, the right card appeared in the first three alternates 44.4 % of the time, against
+5.6 % before. That shipped as 0.4.35 the same night.
+[src: experiments/EXP-E109-consensus-proxy-2026-09-11.md; EXP-E100b-consensus-live-2026-09-12.md; EXP-E112-lot-candidate-pool-2026-09-12.md · REVIEW FIX]
 
-**2026-09-19 — the memory is precise; the tension with Gerald's recollection is framing, not
-fact.** Memory `index-design-evidence-2026-09-19` states: flat, one vector per print, no dedup;
-language head as soft scope, "served in prod: `IDENTIFY_LANG_HEAD_SERVE = "on"`" — exactly what
-E67 and the 09-09 flip show. Gerald remembers the dedup/cross-language work as "the single
-experiment that most changed his mind" and "simplified the system and cut training and
-maintenance." Read next to "dedup loses 14-20pts, flat kept," that sounds opposed. It is not: **the
-index itself was never simplified — it stayed flat, at full size**, and no rebuild ever shipped
-(E67b closed unrun). What Gerald is describing is what *testing* his own dedup hypothesis produced:
-it talked him out of a costly rebuild (index migration, medoid maintenance, per-language galleries)
-and out of the encoder-retraining path that had already failed twice (E57, E58), in favor of a
-1,538-parameter head — "a 768x2 matmul already on the identify path," zero new Vectorize writes
-beyond catalogue growth that had to land anyway. "Simplified" refers to **language handling and
-training/maintenance burden**, not index composition — the index is what specifically did *not*
-change.
-[src: memory index-design-evidence-2026-09-19; docs/experiments/EXP-E65a-language-head-2026-09-08.md §6; docs/project/decisions.md D4]
+**2026-09-12 23:21 PDT — the yardstick is corrected, not the product.** A review found that the lot join
+E100b and E112 used under-counted: it failed its own built-in check on 5 of 29 lots. The fixed harness
+read top-3 at the last fire as 67.6 % on 34 lots, then 76.9 % on 52: more lots, not an improvement. The plan's own verdict: thin, and ≥ 200 truth lots are needed.
+[src: plan/2026-09-11-evening-plan.md §10a; EXP-E100b-consensus-live-2026-09-12.md · Addendum]
+
+**Reconciling D4 with the record, in top-3 terms.** Gerald remembers the dedup/cross-language work as
+the experiment that simplified the system. The record agrees on what shipped: the index stayed flat, and
+a 1,538-parameter head replaced a gallery rebuild and more encoder training (E67b was closed without a
+run). **Its accuracy win exists only at @1.** The one before/after figure at the strip level is E83, where
+the founder's truth sat in the strip 12/26 times before and 15/26 after. That number is confounded by
+four simultaneous changes, and n = 26. The record cannot say what the language head did to top-3. A
+head-off/head-on replay of the 335 at top-3 would answer it.
+[src: memory index-design-evidence-2026-09-19; experiments/EXP-E65a-language-head-2026-09-08.md §6; EXP-E83-recandidate-2026-09-09.md; docs/project/decisions.md D4 (this repo)]
 
 ## 3 · The transferable move
 
-Pre-register the bar and the kill condition *before* the run, and — the part that generalises past
-this codebase — **treat a killed hypothesis as a source document, not a dead end.** E67 did not
-stop at "dedup loses 14 points"; its own pre-registration said in advance that a result like that
-would be "a bug report on the medoid rule, not a finding about dedup," so the next step was already
-specified: diagnose the bug, and keep scoring the diagnostic arms regardless of whether they answer
-the original question. That is how a negative, pre-registered result (H1 FAIL, H3 FAIL, KILL FIRES)
-produced the actual shipped win (G0h, never itself a hypothesis in the document). A colleague can
-reuse this directly: write the KILL condition before running anything, and keep scoring past it —
-the diagnostic you weren't testing is often the answer.
+**Pre-register the metric, not just the bar, and re-check that the metric is the user's.** For a week
+this track pre-registered carefully and ran against print@1. The product's user was looking at a
+candidate list and would tap the right card if it was there. Once the bar became "in the top 3 when we
+don't lock", the question changed. It was no longer "which model is best". It became "what does the
+list show at the moment of the auction". The biggest measured lift came from which fires feed the list
+(E112), not from the model. The older half still holds: E67's KILL fired, and scoring past it found the arm that shipped.
 
 ## 4 · Slide candidates
 
-- **The E67 kill-and-recover table** (§4.2/§4.6 of the E67 doc): five pre-registered arms losing to
-  the flat gallery, one post-hoc arm (G0h) beating all of them — a single table that shows a
-  falsified hypothesis producing the actual fix.
-- **The founder-quote-to-verdict arc**: the exact D4 quote ("without having duplicated art across
-  languages") next to the 2026-09-09 00:03 PDT production-flip line — juxtaposed to show the gap
-  between the shape someone asks for and the shape that measurably wins, and that both can be true
-  at once (his instinct to solve language was right; his specific mechanism was not the one that
-  shipped).
-- **A small multiples chart of the encoder-freeze trio**: E57 (SigLIP2 swap, -9.55 pts), E58
-  (fine-tune, FAIL), E53d-student (distillation, NO-GO) — three independent "obvious" model
-  upgrades, three kills, in the same week, before the language-head win. Shows the discipline cost
-  of the method (a lot of "no") that made the eventual "yes" credible.
+- **Two denominators.** One bar split in two: lock rate × lock precision (E89: 40 % locked at 0.92), then
+  the top-3 containment on everything that does not lock. The second is unmeasured; the derived
+  bound is 77–83 % (top3-trajectory §2).
+- **Last fire vs any fire.** 45 % against 71 % in E100b's biased count, then E112's pool. The right card
+  was on screen earlier in the lot and gone by the time bidding closed.
+- **Proxy vs live.** E109's +12.6 pts on six crops of one photo next to E100b's 0.0 on live lots.
+- **The E67 kill-and-recover table**, captioned honestly: an @1 win, decided before the bar moved.
 
 ## 5 · Open questions for Gerald
 
-- Was the 2026-09-09 00:03 PDT flip ("founder's word") a live conversation or a standing
-  instruction? The plan doc records it as done without quoting the exchange.
-- Is there one moment you'd call "the mind-changing one" — the E61 census (96% twin rate), the E67
-  KILL, or the G0h post-hoc number — or is it the sequence as a whole?
-- E67b (provenance-first medoid) was closed without a run. Is dedup-as-a-storage-lever (3.04x
-  smaller index) still worth telling, or fully off the table now?
+- The docs record the top-3 bar on 2026-09-11 (evening plan, E108) and your auto-lock remark on
+  2026-09-12. The brief dates the bar to 09-13 22:44. Was 09-13 a restatement?
+- The live number your bar asks for is top-3 on the non-locked lots, and it has never been measured by
+  lock state. Is it worth one harness flag before the talk?
+- Did the language head help top-3, or only top-1? Is a head-off/head-on replay worth running for the
+  slide?
+- Is 76.9 % at n = 52 (2026-09-12) still the latest lot-level number, or has the ≥ 200-lot run happened?
