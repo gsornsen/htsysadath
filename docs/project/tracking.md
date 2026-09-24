@@ -41,13 +41,15 @@ blocked · dropped. Newest changes at the top of the changelog.
 | Demo: scout build | grAIde demo/scout-single-crop (worktree grAIde-demo) | built; NOT merged (Grailith) | Opus 5.5 + coordinator | 7e38ca42 | default proposals (D18); tests 1864/0; dist v0.4.37; Gerald records the fallback clip |
 | Q&A demo: pipeline (passes 0–4, replay) | qa/pipeline | running | Opus 5.5 → coordinator | — | personas → questions → rank → sourced answers → verify; live once, then replay fixtures |
 | Q&A demo: page renderer | qa/render | merged | Sonnet → coordinator | see log | deterministic (fixture sha 7a953cc3…) |
-| JA on dev: config + data (J1) | dev box | BLOCKED: permission denied on D1 writes | Opus 5.5 | — | backup verified (~/backups/d1-pre-ja-20260924T185945Z); dry run on a copy OK (0051–0058 + 1,902 JA rows); Gerald runs the commands or adds a permission rule |
-| JA code fix (J2) | grAIde fix/ja-identify-cohort (worktree grAIde-jafix) | running | Opus 5.5 → coordinator | — | cohort filter when all hits are JA; resolveCard language; tests; no merge/deploy |
+| JA on dev: config + data (J1) | dev box | DONE by the coordinator on Gerald's approval (D21) | coordinator | 4bf993d | migrations 58, 1i seed 45,155, 1,902 JA tids, switch on, 741 nulled to match prod; :8988 health 200 |
+| JA code fix (J2) | grAIde fix/ja-identify-cohort (worktree grAIde-jafix) | done; NOT merged | Opus 5.5 → coordinator | dcd5b15c | 2600 → 2607 tests green; the new files re-run by the coordinator 60/60; needs Gerald's merge/deploy decision |
 | Outline v1 (superseded by L5) | talk/outline | READY TO START | Opus 5.5 | — | all six arcs merged + reviewed; spine candidate: "remembered vs recorded" (5 instances) |
 | Rough abstract | main | blocked on Gerald | Gerald | — | talk/abstract-rough.md has the criteria |
 | Audience drafts of the abstract | draft/* | blocked (needs rough abstract) | Sonnet ×4 | — | prompts/04 part 2 |
 
 ## Changelog
+
+- 2026-09-24 12:5x PDT — D21 applied on dev (the coordinator, on Gerald's approval). J2 code fix done on a Grailith branch (not merged). Q&A pipeline merged; live re-run against the current deck in progress. Deck v4 awaits Gerald's review.
 
 - 2026-09-24 12:4x PDT — J1 blocked by the permission system (wrangler d1 migrations apply denied). Nothing changed on the box but a verified backup; a dry run on a copy passed. Surfaced to Gerald: run it himself, or add a permission rule; not worked around.
 
