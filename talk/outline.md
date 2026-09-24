@@ -51,9 +51,9 @@ no numbers as data; EVIDENCE beats carry a visual and a source footer. Colour: o
 | 8 | 1.0 | Four problems you'll hit, four methods | The map: A–D, problem → method. | `four-problems.svg` (to be drawn) |
 | **A** | | **Too many forks, one of you** | | |
 | 9 | 2.0 | How do I chase five fixes at once? | A lane per fix (own copy of the code, own agent, own gate); a smaller model builds, a stronger one reviews, I decide. | `e-lane-dag.svg`: this repo's lanes |
-| 10 | 3.5 | Can it keep working while I sleep? (focus) | Pass/kill bar first, flag, caps per run; the gate decides the merge, I flip production. Honest failure: the idle tab. | `gates-flags.svg` |
+| 10 | 3.5 | Can it keep working while I sleep? (focus) | Pass/fail bar first, flag, caps per run; the gate decides the merge, I flip production. Honest failure: the idle tab. | `gates-flags.svg` |
 | **B** | | **Is my favourite idea better?** | | |
-| 11 | 1.5 | Is my favourite idea actually better? | Write the score that kills the idea before the run, then let it. Dedup lost 14.43 points and died; the shipped re-rank came after the kill, on the same photos: a lead, then a flag and a replay. | `d4-arms.svg` |
+| 11 | 1.5 | Is my favourite idea actually better? | Write the score that drops the idea before the run, then let it. Dedup lost 14.43 points and was dropped; the shipped re-rank came after it failed the bar, on the same photos: a lead, then a flag and a replay. | `d4-arms.svg` |
 | 12 | 1.5 | Are we measuring what users feel? | Score what the user sees: the win halves (+9.95 first guess → +5.47 right card among the 3 shown). Live: about 2 in 3 (45/69 non-locked lots, one tapper). | `d4-slope.svg` + one line |
 | 13 | 1.0 | What should we stop working on? | Give every expensive idea a bar before it starts; a clean no is a result. Four stops from the ledger. | text list |
 | **C** | | **Is it actually done?** | | |

@@ -17,6 +17,9 @@ Rules:
   as a whole.
 - Address the speaker as "you" in the question; in `why`, call him "the speaker". Never write
   his name or the word "founder". Do not name any real person, company or customer.
+- Use workplace language: no violent, war-like or slangy wording (no "kill", "fire", "attack",
+  "hack", "guys", profanity). If the slides or notes use a term like "kill line"/"kill bar" or
+  "fired", refer to it in your own words as "pass/fail bar" or "failed the bar" instead.
 - Output STRICT JSON only: no Markdown fences, no prose before or after. The exact shape:
 
 {"questions":[{"question":"…","likelihood":4,"why":"…","slide_ref":12}]}

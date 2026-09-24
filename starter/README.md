@@ -9,7 +9,7 @@ directory anywhere and use it on your own work.
 1. **Run your next fork as gated experiments that can run unattended.** Start with
    [`two-lanes/checklist.md`](two-lanes/checklist.md) (a first, watched run), then
    [`two-lanes/unattended.md`](two-lanes/unattended.md) for what makes it safe to leave
-   running while you sleep: the pass/kill bar, flags, per-run caps, a named end time, and a
+   running while you sleep: the pass/fail bar, flags, per-run caps, a named end time, and a
    morning-report template.
 2. **Put a persona review gate in front of "done" for UI and design work.** Start with
    [`persona-gate/README.md`](persona-gate/README.md): 3–5 personas with a job (not a

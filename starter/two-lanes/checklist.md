@@ -28,7 +28,7 @@
 
 ## Rules that came from pain (keep)
 
-1. **Commit early, on every lane.** A crash or a usage limit kills only uncommitted work —
+1. **Commit early, on every lane.** A crash or a usage limit drops only uncommitted work —
    commit in small chunks as you go, not once at the end.
 2. **A "cleaned up" claim is a claim, not a fact — verify it.** If a lane says it stopped a
    process or freed a port, check with `lsof` (or equivalent) before you believe it; don't
